@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="144" height="144" viewBox="0 0 144 144">
+  <rect width="144" height="144" fill="#1a1a2e"/>
+  <!-- Eye shape -->
+  <path d="M42 72c0 0 15-24 30-24s30 24 30 24-15 24-30 24S42 72 42 72z" fill="none" stroke="#ffffff" stroke-width="3" stroke-linejoin="round"/>
+  <!-- Iris -->
+  <circle cx="72" cy="72" r="10" fill="none" stroke="#ffffff" stroke-width="2.5"/>
+  <!-- Pupil -->
+  <circle cx="75" cy="72" r="4" fill="#ffffff"/>
+  <!-- Right arrow -->
+  <polyline points="106 108 120 108 120 94" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <line x1="120" y1="108" x2="96" y2="84" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
+</svg>

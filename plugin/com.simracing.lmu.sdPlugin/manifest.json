@@ -1,0 +1,412 @@
+{
+    "$schema": "https://schemas.elgato.com/streamdeck/plugins/manifest.json",
+    "Name": "LMU Sim Racing",
+    "Version": "1.0.0.0",
+    "Author": "Charles Costello",
+    "Description": "Stream Deck hotkey actions for Le Mans Ultimate sim racing. Control pit limiter, headlights, wipers, MFD navigation, brake bias, traction control, and more.",
+    "Icon": "imgs/plugin-icon",
+    "UUID": "com.simracing.lmu",
+    "SDKVersion": 2,
+    "CodePath": "bin/plugin.js",
+    "Category": "LMU Sim Racing",
+    "CategoryIcon": "imgs/category-icon",
+    "Nodejs": {
+        "Version": "20",
+        "Debug": "enabled"
+    },
+    "Software": {
+        "MinimumVersion": "6.7"
+    },
+    "OS": [
+        {
+            "Platform": "windows",
+            "MinimumVersion": "10"
+        }
+    ],
+    "Actions": [
+        {
+            "UUID": "com.simracing.lmu.pit-limiter",
+            "Name": "Pit Limiter",
+            "Icon": "imgs/actions/pit-limiter",
+            "Tooltip": "Toggle pit lane speed limiter (Default: L)",
+            "Controllers": ["Keypad"],
+            "States": [
+                {
+                    "Image": "imgs/actions/pit-limiter",
+                    "Name": "Pit Limiter",
+                    "ShowTitle": true,
+                    "TitleAlignment": "bottom",
+                    "TitleColor": "#FFFFFF"
+                }
+            ]
+        },
+        {
+            "UUID": "com.simracing.lmu.headlights",
+            "Name": "Headlights",
+            "Icon": "imgs/actions/headlights",
+            "Tooltip": "Toggle headlights (Default: H)",
+            "Controllers": ["Keypad"],
+            "States": [
+                {
+                    "Image": "imgs/actions/headlights",
+                    "Name": "Headlights",
+                    "ShowTitle": true,
+                    "TitleAlignment": "bottom",
+                    "TitleColor": "#FFFFFF"
+                }
+            ]
+        },
+        {
+            "UUID": "com.simracing.lmu.headlight-flash",
+            "Name": "Headlight Flash",
+            "Icon": "imgs/actions/headlight-flash",
+            "Tooltip": "Flash headlights",
+            "Controllers": ["Keypad"],
+            "States": [
+                {
+                    "Image": "imgs/actions/headlight-flash",
+                    "Name": "Headlight Flash",
+                    "ShowTitle": true,
+                    "TitleAlignment": "bottom",
+                    "TitleColor": "#FFFFFF"
+                }
+            ]
+        },
+        {
+            "UUID": "com.simracing.lmu.wipers",
+            "Name": "Wipers",
+            "Icon": "imgs/actions/wipers",
+            "Tooltip": "Toggle windshield wipers (Default: ')",
+            "Controllers": ["Keypad"],
+            "States": [
+                {
+                    "Image": "imgs/actions/wipers",
+                    "Name": "Wipers",
+                    "ShowTitle": true,
+                    "TitleAlignment": "bottom",
+                    "TitleColor": "#FFFFFF"
+                }
+            ]
+        },
+        {
+            "UUID": "com.simracing.lmu.ignition",
+            "Name": "Ignition",
+            "Icon": "imgs/actions/ignition",
+            "Tooltip": "Toggle ignition (Default: ;)",
+            "Controllers": ["Keypad"],
+            "States": [
+                {
+                    "Image": "imgs/actions/ignition",
+                    "Name": "Ignition",
+                    "ShowTitle": true,
+                    "TitleAlignment": "bottom",
+                    "TitleColor": "#FFFFFF"
+                }
+            ]
+        },
+        {
+            "UUID": "com.simracing.lmu.starter",
+            "Name": "Starter",
+            "Icon": "imgs/actions/starter",
+            "Tooltip": "Engage starter motor",
+            "Controllers": ["Keypad"],
+            "States": [
+                {
+                    "Image": "imgs/actions/starter",
+                    "Name": "Starter",
+                    "ShowTitle": true,
+                    "TitleAlignment": "bottom",
+                    "TitleColor": "#FFFFFF"
+                }
+            ]
+        },
+        {
+            "UUID": "com.simracing.lmu.request-pitstop",
+            "Name": "Request Pit Stop",
+            "Icon": "imgs/actions/request-pitstop",
+            "Tooltip": "Request a pit stop (Default: E)",
+            "Controllers": ["Keypad"],
+            "States": [
+                {
+                    "Image": "imgs/actions/request-pitstop",
+                    "Name": "Request Pit Stop",
+                    "ShowTitle": true,
+                    "TitleAlignment": "bottom",
+                    "TitleColor": "#FFFFFF"
+                }
+            ]
+        },
+        {
+            "UUID": "com.simracing.lmu.ai-takeover",
+            "Name": "AI Takeover",
+            "Icon": "imgs/actions/ai-takeover",
+            "Tooltip": "Toggle AI driver takeover (Default: I)",
+            "Controllers": ["Keypad"],
+            "States": [
+                {
+                    "Image": "imgs/actions/ai-takeover",
+                    "Name": "AI Takeover",
+                    "ShowTitle": true,
+                    "TitleAlignment": "bottom",
+                    "TitleColor": "#FFFFFF"
+                }
+            ]
+        },
+        {
+            "UUID": "com.simracing.lmu.mfd-next",
+            "Name": "MFD Next Page",
+            "Icon": "imgs/actions/mfd-next",
+            "Tooltip": "Next MFD page (Default: Enter)",
+            "Controllers": ["Keypad"],
+            "States": [
+                {
+                    "Image": "imgs/actions/mfd-next",
+                    "Name": "MFD Next Page",
+                    "ShowTitle": true,
+                    "TitleAlignment": "bottom",
+                    "TitleColor": "#FFFFFF"
+                }
+            ]
+        },
+        {
+            "UUID": "com.simracing.lmu.mfd-up",
+            "Name": "MFD Up",
+            "Icon": "imgs/actions/mfd-up",
+            "Tooltip": "MFD navigate up (Default: Up Arrow)",
+            "Controllers": ["Keypad"],
+            "States": [
+                {
+                    "Image": "imgs/actions/mfd-up",
+                    "Name": "MFD Up",
+                    "ShowTitle": true,
+                    "TitleAlignment": "bottom",
+                    "TitleColor": "#FFFFFF"
+                }
+            ]
+        },
+        {
+            "UUID": "com.simracing.lmu.mfd-down",
+            "Name": "MFD Down",
+            "Icon": "imgs/actions/mfd-down",
+            "Tooltip": "MFD navigate down (Default: Down Arrow)",
+            "Controllers": ["Keypad"],
+            "States": [
+                {
+                    "Image": "imgs/actions/mfd-down",
+                    "Name": "MFD Down",
+                    "ShowTitle": true,
+                    "TitleAlignment": "bottom",
+                    "TitleColor": "#FFFFFF"
+                }
+            ]
+        },
+        {
+            "UUID": "com.simracing.lmu.mfd-increase",
+            "Name": "MFD Increase",
+            "Icon": "imgs/actions/mfd-increase",
+            "Tooltip": "MFD increase setting (Default: Right Arrow)",
+            "Controllers": ["Keypad"],
+            "States": [
+                {
+                    "Image": "imgs/actions/mfd-increase",
+                    "Name": "MFD Increase",
+                    "ShowTitle": true,
+                    "TitleAlignment": "bottom",
+                    "TitleColor": "#FFFFFF"
+                }
+            ]
+        },
+        {
+            "UUID": "com.simracing.lmu.mfd-decrease",
+            "Name": "MFD Decrease",
+            "Icon": "imgs/actions/mfd-decrease",
+            "Tooltip": "MFD decrease setting (Default: Left Arrow)",
+            "Controllers": ["Keypad"],
+            "States": [
+                {
+                    "Image": "imgs/actions/mfd-decrease",
+                    "Name": "MFD Decrease",
+                    "ShowTitle": true,
+                    "TitleAlignment": "bottom",
+                    "TitleColor": "#FFFFFF"
+                }
+            ]
+        },
+        {
+            "UUID": "com.simracing.lmu.brake-bias-forward",
+            "Name": "Brake Bias Forward",
+            "Icon": "imgs/actions/brake-bias-fwd",
+            "Tooltip": "Shift brake bias forward",
+            "Controllers": ["Keypad"],
+            "States": [
+                {
+                    "Image": "imgs/actions/brake-bias-fwd",
+                    "Name": "Brake Bias Fwd",
+                    "ShowTitle": true,
+                    "TitleAlignment": "bottom",
+                    "TitleColor": "#FFFFFF"
+                }
+            ]
+        },
+        {
+            "UUID": "com.simracing.lmu.brake-bias-backward",
+            "Name": "Brake Bias Backward",
+            "Icon": "imgs/actions/brake-bias-bwd",
+            "Tooltip": "Shift brake bias backward",
+            "Controllers": ["Keypad"],
+            "States": [
+                {
+                    "Image": "imgs/actions/brake-bias-bwd",
+                    "Name": "Brake Bias Bwd",
+                    "ShowTitle": true,
+                    "TitleAlignment": "bottom",
+                    "TitleColor": "#FFFFFF"
+                }
+            ]
+        },
+        {
+            "UUID": "com.simracing.lmu.tc-increase",
+            "Name": "TC Increase",
+            "Icon": "imgs/actions/tc-increase",
+            "Tooltip": "Increase traction control",
+            "Controllers": ["Keypad"],
+            "States": [
+                {
+                    "Image": "imgs/actions/tc-increase",
+                    "Name": "TC Increase",
+                    "ShowTitle": true,
+                    "TitleAlignment": "bottom",
+                    "TitleColor": "#FFFFFF"
+                }
+            ]
+        },
+        {
+            "UUID": "com.simracing.lmu.tc-decrease",
+            "Name": "TC Decrease",
+            "Icon": "imgs/actions/tc-decrease",
+            "Tooltip": "Decrease traction control",
+            "Controllers": ["Keypad"],
+            "States": [
+                {
+                    "Image": "imgs/actions/tc-decrease",
+                    "Name": "TC Decrease",
+                    "ShowTitle": true,
+                    "TitleAlignment": "bottom",
+                    "TitleColor": "#FFFFFF"
+                }
+            ]
+        },
+        {
+            "UUID": "com.simracing.lmu.abs-increase",
+            "Name": "ABS Increase",
+            "Icon": "imgs/actions/abs-increase",
+            "Tooltip": "Increase ABS level",
+            "Controllers": ["Keypad"],
+            "States": [
+                {
+                    "Image": "imgs/actions/abs-increase",
+                    "Name": "ABS Increase",
+                    "ShowTitle": true,
+                    "TitleAlignment": "bottom",
+                    "TitleColor": "#FFFFFF"
+                }
+            ]
+        },
+        {
+            "UUID": "com.simracing.lmu.abs-decrease",
+            "Name": "ABS Decrease",
+            "Icon": "imgs/actions/abs-decrease",
+            "Tooltip": "Decrease ABS level",
+            "Controllers": ["Keypad"],
+            "States": [
+                {
+                    "Image": "imgs/actions/abs-decrease",
+                    "Name": "ABS Decrease",
+                    "ShowTitle": true,
+                    "TitleAlignment": "bottom",
+                    "TitleColor": "#FFFFFF"
+                }
+            ]
+        },
+        {
+            "UUID": "com.simracing.lmu.motor-map-up",
+            "Name": "Motor Map Up",
+            "Icon": "imgs/actions/motor-map-up",
+            "Tooltip": "Increase hybrid motor map (Hypercar)",
+            "Controllers": ["Keypad"],
+            "States": [
+                {
+                    "Image": "imgs/actions/motor-map-up",
+                    "Name": "Motor Map Up",
+                    "ShowTitle": true,
+                    "TitleAlignment": "bottom",
+                    "TitleColor": "#FFFFFF"
+                }
+            ]
+        },
+        {
+            "UUID": "com.simracing.lmu.motor-map-down",
+            "Name": "Motor Map Down",
+            "Icon": "imgs/actions/motor-map-down",
+            "Tooltip": "Decrease hybrid motor map (Hypercar)",
+            "Controllers": ["Keypad"],
+            "States": [
+                {
+                    "Image": "imgs/actions/motor-map-down",
+                    "Name": "Motor Map Down",
+                    "ShowTitle": true,
+                    "TitleAlignment": "bottom",
+                    "TitleColor": "#FFFFFF"
+                }
+            ]
+        },
+        {
+            "UUID": "com.simracing.lmu.look-left",
+            "Name": "Look Left",
+            "Icon": "imgs/actions/look-left",
+            "Tooltip": "Look left (Default: S)",
+            "Controllers": ["Keypad"],
+            "States": [
+                {
+                    "Image": "imgs/actions/look-left",
+                    "Name": "Look Left",
+                    "ShowTitle": true,
+                    "TitleAlignment": "bottom",
+                    "TitleColor": "#FFFFFF"
+                }
+            ]
+        },
+        {
+            "UUID": "com.simracing.lmu.look-right",
+            "Name": "Look Right",
+            "Icon": "imgs/actions/look-right",
+            "Tooltip": "Look right (Default: D)",
+            "Controllers": ["Keypad"],
+            "States": [
+                {
+                    "Image": "imgs/actions/look-right",
+                    "Name": "Look Right",
+                    "ShowTitle": true,
+                    "TitleAlignment": "bottom",
+                    "TitleColor": "#FFFFFF"
+                }
+            ]
+        },
+        {
+            "UUID": "com.simracing.lmu.look-behind",
+            "Name": "Look Behind",
+            "Icon": "imgs/actions/look-behind",
+            "Tooltip": "Look behind (Default: B)",
+            "Controllers": ["Keypad"],
+            "States": [
+                {
+                    "Image": "imgs/actions/look-behind",
+                    "Name": "Look Behind",
+                    "ShowTitle": true,
+                    "TitleAlignment": "bottom",
+                    "TitleColor": "#FFFFFF"
+                }
+            ]
+        }
+    ]
+}

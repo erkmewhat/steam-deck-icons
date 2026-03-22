@@ -1,0 +1,8 @@
+node_modules/
+dist/
+*.streamDeckPlugin
+*.streamDeckIconPack
+.DS_Store
+Thumbs.db
+*.log
+plugin/com.simracing.lmu.sdPlugin/logs/

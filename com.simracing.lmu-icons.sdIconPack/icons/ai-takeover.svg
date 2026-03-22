@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144 144" width="144" height="144">
+  <rect width="144" height="144" fill="#1a1a2e"/>
+  <!-- Steering wheel outer ring -->
+  <circle cx="72" cy="60" r="36" fill="none" stroke="#ffffff" stroke-width="5"/>
+  <!-- Steering wheel inner hub -->
+  <circle cx="72" cy="60" r="10" fill="none" stroke="#ffffff" stroke-width="3"/>
+  <!-- Steering wheel spokes -->
+  <line x1="62" y1="60" x2="36" y2="60" stroke="#ffffff" stroke-width="4" stroke-linecap="round"/>
+  <line x1="82" y1="60" x2="108" y2="60" stroke="#ffffff" stroke-width="4" stroke-linecap="round"/>
+  <line x1="72" y1="70" x2="72" y2="96" stroke="#ffffff" stroke-width="4" stroke-linecap="round"/>
+  <!-- AI text in center of wheel -->
+  <text x="72" y="66" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-weight="bold" font-size="16" fill="#b44dff">AI</text>
+  <!-- Label -->
+  <text x="72" y="124" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#b44dff" opacity="0.9">AI DRIVER</text>
+</svg>

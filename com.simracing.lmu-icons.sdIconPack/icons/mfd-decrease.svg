@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144 144" width="144" height="144">
+  <rect width="144" height="144" rx="12" fill="#1a1a2e"/>
+  <!-- Monitor body -->
+  <rect x="28" y="28" width="88" height="64" rx="6" fill="none" stroke="#ff4444" stroke-width="4"/>
+  <!-- Screen inner glow -->
+  <rect x="34" y="34" width="76" height="52" rx="3" fill="#2e1a1a"/>
+  <!-- Monitor stand -->
+  <line x1="72" y1="92" x2="72" y2="106" stroke="#ff4444" stroke-width="4" stroke-linecap="round"/>
+  <line x1="54" y1="106" x2="90" y2="106" stroke="#ff4444" stroke-width="4" stroke-linecap="round"/>
+  <!-- Left arrow -->
+  <path d="M54 60 L66 60 M60 54 L54 60 L60 66" fill="none" stroke="#ff4444" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Minus symbol on screen -->
+  <line x1="72" y1="60" x2="88" y2="60" stroke="#ff4444" stroke-width="4" stroke-linecap="round"/>
+  <!-- Label -->
+  <text x="72" y="128" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" font-weight="bold" fill="#ff4444" opacity="0.8">DECREASE</text>
+</svg>

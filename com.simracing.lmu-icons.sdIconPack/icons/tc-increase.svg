@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144 144" width="144" height="144">
+  <rect width="144" height="144" rx="12" fill="#1a1a2e"/>
+  <!-- TC text -->
+  <text x="72" y="82" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="44" font-weight="bold" fill="#ffd700">TC</text>
+  <!-- Up arrow -->
+  <path d="M72 18 L84 34 L76 34 L76 44 L68 44 L68 34 L60 34 Z" fill="white"/>
+  <!-- Label -->
+  <text x="72" y="128" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="11" font-weight="bold" fill="white" opacity="0.8">TC UP</text>
+</svg>

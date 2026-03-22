@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="144" height="144" viewBox="0 0 144 144">
+  <rect width="144" height="144" fill="#1a1a2e"/>
+  <!-- Eye shape -->
+  <path d="M42 62c0 0 15-24 30-24s30 24 30 24-15 24-30 24S42 62 42 62z" fill="none" stroke="#ffffff" stroke-width="3" stroke-linejoin="round"/>
+  <!-- Iris -->
+  <circle cx="72" cy="62" r="10" fill="none" stroke="#ffffff" stroke-width="2.5"/>
+  <!-- Pupil -->
+  <circle cx="72" cy="62" r="4" fill="#ffffff"/>
+  <!-- 180-degree U-turn arrow -->
+  <path d="M56 96 L56 108 Q56 120 68 120 L76 120 Q88 120 88 108 L88 96" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <polyline points="50 102 56 96 62 102" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <polyline points="82 102 88 96 94 102" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
