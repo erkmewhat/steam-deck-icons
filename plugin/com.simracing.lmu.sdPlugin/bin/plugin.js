@@ -1,0 +1,55 @@
+import streamDeck, { LogLevel } from "@elgato/streamdeck";
+import { PitLimiter } from "./actions/pit-limiter";
+import { Headlights } from "./actions/headlights";
+import { HeadlightFlash } from "./actions/headlight-flash";
+import { Wipers } from "./actions/wipers";
+import { Ignition } from "./actions/ignition";
+import { Starter } from "./actions/starter";
+import { RequestPitstop } from "./actions/request-pitstop";
+import { AiTakeover } from "./actions/ai-takeover";
+import { MfdNext } from "./actions/mfd-next";
+import { MfdUp } from "./actions/mfd-up";
+import { MfdDown } from "./actions/mfd-down";
+import { MfdIncrease } from "./actions/mfd-increase";
+import { MfdDecrease } from "./actions/mfd-decrease";
+import { BrakeBiasForward } from "./actions/brake-bias-fwd";
+import { BrakeBiasBackward } from "./actions/brake-bias-bwd";
+import { TcIncrease } from "./actions/tc-increase";
+import { TcDecrease } from "./actions/tc-decrease";
+import { AbsIncrease } from "./actions/abs-increase";
+import { AbsDecrease } from "./actions/abs-decrease";
+import { MotorMapUp } from "./actions/motor-map-up";
+import { MotorMapDown } from "./actions/motor-map-down";
+import { LookLeft } from "./actions/look-left";
+import { LookRight } from "./actions/look-right";
+import { LookBehind } from "./actions/look-behind";
+streamDeck.logger.setLevel(LogLevel.DEBUG);
+// Car Systems
+streamDeck.actions.registerAction(new PitLimiter());
+streamDeck.actions.registerAction(new Headlights());
+streamDeck.actions.registerAction(new HeadlightFlash());
+streamDeck.actions.registerAction(new Wipers());
+streamDeck.actions.registerAction(new Ignition());
+streamDeck.actions.registerAction(new Starter());
+streamDeck.actions.registerAction(new RequestPitstop());
+streamDeck.actions.registerAction(new AiTakeover());
+// MFD Navigation
+streamDeck.actions.registerAction(new MfdNext());
+streamDeck.actions.registerAction(new MfdUp());
+streamDeck.actions.registerAction(new MfdDown());
+streamDeck.actions.registerAction(new MfdIncrease());
+streamDeck.actions.registerAction(new MfdDecrease());
+// Performance Adjustments
+streamDeck.actions.registerAction(new BrakeBiasForward());
+streamDeck.actions.registerAction(new BrakeBiasBackward());
+streamDeck.actions.registerAction(new TcIncrease());
+streamDeck.actions.registerAction(new TcDecrease());
+streamDeck.actions.registerAction(new AbsIncrease());
+streamDeck.actions.registerAction(new AbsDecrease());
+streamDeck.actions.registerAction(new MotorMapUp());
+streamDeck.actions.registerAction(new MotorMapDown());
+// Camera
+streamDeck.actions.registerAction(new LookLeft());
+streamDeck.actions.registerAction(new LookRight());
+streamDeck.actions.registerAction(new LookBehind());
+streamDeck.connect();
