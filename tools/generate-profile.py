@@ -185,7 +185,7 @@ def convert_all_page_icons(profiles_dir):
     for page_uuid, icons in _page_icons.items():
         if not icons:
             continue
-        images_dir = os.path.join(profiles_dir, page_uuid, "Images")
+        images_dir = os.path.join(profiles_dir, page_uuid.upper(), "Images")
         os.makedirs(images_dir, exist_ok=True)
         seen = set()
         for svg_path, png_name in icons:
@@ -557,7 +557,8 @@ def build_hud_page():
 
 def write_profile(output_dir):
     """Write the complete profile directory structure."""
-    profile_dir = os.path.join(output_dir, f"{PROFILE_UUID}.sdProfile")
+    # Directory names use UPPERCASE UUIDs, JSON content uses lowercase
+    profile_dir = os.path.join(output_dir, f"{PROFILE_UUID.upper()}.sdProfile")
 
     # Clean previous
     if os.path.exists(profile_dir):
@@ -565,9 +566,9 @@ def write_profile(output_dir):
 
     profiles_dir = os.path.join(profile_dir, "Profiles")
 
-    # Create page directories
+    # Create page directories (uppercase dir names)
     for page_uuid in [MAIN_PAGE, MFD_PAGE, PERF_PAGE, CAMERA_PAGE, LOOK_PAGE, HUD_PAGE]:
-        os.makedirs(os.path.join(profiles_dir, page_uuid), exist_ok=True)
+        os.makedirs(os.path.join(profiles_dir, page_uuid.upper()), exist_ok=True)
 
     # Top-level profile manifest
     profile_manifest = {
@@ -599,7 +600,7 @@ def write_profile(output_dir):
     for page_uuid, builder in pages:
         set_current_page(page_uuid)
         page_data = builder()
-        with open(os.path.join(profiles_dir, page_uuid, "manifest.json"), "w") as f:
+        with open(os.path.join(profiles_dir, page_uuid.upper(), "manifest.json"), "w") as f:
             json.dump(page_data, f, indent=2)
 
     # Convert SVGs to 72x72 PNGs in each page's Images/ subdirectory

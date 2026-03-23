@@ -75,7 +75,7 @@ def convert_all_page_icons(profiles_dir):
     for page_uuid, icons in _page_icons.items():
         if not icons:
             continue
-        images_dir = os.path.join(profiles_dir, page_uuid, "Images")
+        images_dir = os.path.join(profiles_dir, page_uuid.upper(), "Images")
         os.makedirs(images_dir, exist_ok=True)
         seen = set()
         for svg_path, png_name in icons:
@@ -244,13 +244,14 @@ def build_race_page():
 
 
 def write_profile(output_dir):
-    profile_dir = os.path.join(output_dir, f"{PROFILE_UUID}.sdProfile")
+    # Directory names use UPPERCASE UUIDs, JSON content uses lowercase
+    profile_dir = os.path.join(output_dir, f"{PROFILE_UUID.upper()}.sdProfile")
     if os.path.exists(profile_dir):
         shutil.rmtree(profile_dir)
 
     profiles_dir = os.path.join(profile_dir, "Profiles")
     for page_uuid in [MAIN_PAGE, ADJUST_PAGE, CAMERA_PAGE, RACE_PAGE]:
-        os.makedirs(os.path.join(profiles_dir, page_uuid), exist_ok=True)
+        os.makedirs(os.path.join(profiles_dir, page_uuid.upper()), exist_ok=True)
 
     manifest = {
         "Version": "3.0",
@@ -272,7 +273,7 @@ def write_profile(output_dir):
     for page_uuid, builder in pages:
         set_current_page(page_uuid)
         page_data = builder()
-        with open(os.path.join(profiles_dir, page_uuid, "manifest.json"), "w") as f:
+        with open(os.path.join(profiles_dir, page_uuid.upper(), "manifest.json"), "w") as f:
             json.dump(page_data, f, indent=2)
 
     # Convert SVGs to 72x72 PNGs in each page's Images/ subdirectory
