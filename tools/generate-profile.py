@@ -581,7 +581,7 @@ def write_profile(output_dir):
         "Pages": {
             "Default": MAIN_PAGE,
             "Current": MAIN_PAGE,
-            "Pages": [MAIN_PAGE, MFD_PAGE, PERF_PAGE, CAMERA_PAGE, LOOK_PAGE, HUD_PAGE]
+            "Pages": [MAIN_PAGE]
         }
     }
 
