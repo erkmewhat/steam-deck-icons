@@ -216,37 +216,16 @@ def make_hotkey_action(title, key, ctrl=False, shift=False, alt=False,
 
 
 def make_folder_button(title, target_page_uuid, title_color="#00BFFF", icon_id=""):
-    """Create a folder navigation button (opens child page).
-
-    If icon_id is provided, embeds the nav icon from the icon pack
-    and hides the text title (the icon has the label baked in).
-    """
+    """Create a folder navigation button (opens child page)."""
     image = icon_to_image_ref(icon_id) if icon_id else ""
-    show_title = not bool(image)
     return {
         "ActionID": str(uuid.uuid4()),
         "LinkedTitle": True,
         "Name": "Create Folder",
-        "Plugin": {
-            "Name": "Create Folder",
-            "UUID": "com.elgato.streamdeck.profile.openchild",
-            "Version": "1.0"
-        },
         "Resources": None,
         "Settings": {"ProfileUUID": target_page_uuid},
         "State": 0,
-        "States": [{
-            "FontFamily": "",
-            "FontSize": 11,
-            "FontStyle": "Bold",
-            "FontUnderline": False,
-            "Image": image,
-            "OutlineThickness": 2,
-            "ShowTitle": show_title,
-            "Title": title if show_title else "",
-            "TitleAlignment": "middle",
-            "TitleColor": title_color
-        }],
+        "States": [{"Image": image}] if image else [{}],
         "UUID": "com.elgato.streamdeck.profile.openchild"
     }
 
@@ -257,26 +236,10 @@ def make_back_button():
         "ActionID": str(uuid.uuid4()),
         "LinkedTitle": True,
         "Name": "Parent Folder",
-        "Plugin": {
-            "Name": "Parent Folder",
-            "UUID": "com.elgato.streamdeck.profile.backtoparent",
-            "Version": "1.0"
-        },
         "Resources": None,
         "Settings": {},
         "State": 0,
-        "States": [{
-            "FontFamily": "",
-            "FontSize": 12,
-            "FontStyle": "Bold",
-            "FontUnderline": False,
-            "Image": "",
-            "OutlineThickness": 2,
-            "ShowTitle": True,
-            "Title": "\u2190 Back",
-            "TitleAlignment": "middle",
-            "TitleColor": "#FF6B6B"
-        }],
+        "States": [{}],
         "UUID": "com.elgato.streamdeck.profile.backtoparent"
     }
 

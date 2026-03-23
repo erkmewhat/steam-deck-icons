@@ -3,7 +3,7 @@
     {
       "Actions": {
         "2,0": {
-          "ActionID": "af91348e-d04d-4cd8-8249-bdb216c3fd2d",
+          "ActionID": "d5daf167-d4ed-4545-a163-3bbbef173312",
           "LinkedTitle": true,
           "Name": "Hotkey",
           "Resources": null,
@@ -61,7 +61,7 @@
           "UUID": "com.elgato.streamdeck.system.hotkey"
         },
         "1,1": {
-          "ActionID": "b48020be-6185-462e-a10e-e4bd58740e69",
+          "ActionID": "a4bb533b-6a96-4816-9d1a-2106d329952d",
           "LinkedTitle": true,
           "Name": "Hotkey",
           "Resources": null,
@@ -119,7 +119,7 @@
           "UUID": "com.elgato.streamdeck.system.hotkey"
         },
         "2,1": {
-          "ActionID": "e460d826-a9af-4fdb-a175-8255364a36f2",
+          "ActionID": "b007556b-07bc-42ea-9bac-9b3ef28be4b4",
           "LinkedTitle": true,
           "Name": "Hotkey",
           "Resources": null,
@@ -177,7 +177,7 @@
           "UUID": "com.elgato.streamdeck.system.hotkey"
         },
         "3,1": {
-          "ActionID": "1f857b6b-c17b-416d-b70a-94d0a874110a",
+          "ActionID": "7d4e5c4b-6b7b-4ae0-a53b-05dee1c203e6",
           "LinkedTitle": true,
           "Name": "Hotkey",
           "Resources": null,
@@ -235,7 +235,7 @@
           "UUID": "com.elgato.streamdeck.system.hotkey"
         },
         "2,2": {
-          "ActionID": "e847c250-9b9c-4ef2-973c-e03ea3e6e60a",
+          "ActionID": "8f302ebc-cb00-4f31-a2fb-f74944f35851",
           "LinkedTitle": true,
           "Name": "Hotkey",
           "Resources": null,
@@ -293,30 +293,14 @@
           "UUID": "com.elgato.streamdeck.system.hotkey"
         },
         "0,2": {
-          "ActionID": "f55f9839-3da1-4e10-9e7e-965bdf77b252",
+          "ActionID": "030fbe97-c4a4-4aae-bdc2-519cd0e2d11f",
           "LinkedTitle": true,
           "Name": "Parent Folder",
-          "Plugin": {
-            "Name": "Parent Folder",
-            "UUID": "com.elgato.streamdeck.profile.backtoparent",
-            "Version": "1.0"
-          },
           "Resources": null,
           "Settings": {},
           "State": 0,
           "States": [
-            {
-              "FontFamily": "",
-              "FontSize": 12,
-              "FontStyle": "Bold",
-              "FontUnderline": false,
-              "Image": "",
-              "OutlineThickness": 2,
-              "ShowTitle": true,
-              "Title": "\u2190 Back",
-              "TitleAlignment": "middle",
-              "TitleColor": "#FF6B6B"
-            }
+            {}
           ],
           "UUID": "com.elgato.streamdeck.profile.backtoparent"
         }

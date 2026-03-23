@@ -3,7 +3,7 @@
     {
       "Actions": {
         "0,0": {
-          "ActionID": "0bb48789-1253-43e6-bd82-7fd7ef5eb68a",
+          "ActionID": "22f4e879-0a31-4281-a5c4-f96a6d40ebbe",
           "LinkedTitle": true,
           "Name": "Hotkey",
           "Resources": null,
@@ -61,7 +61,7 @@
           "UUID": "com.elgato.streamdeck.system.hotkey"
         },
         "1,0": {
-          "ActionID": "62e3c5b3-05c7-4ff3-8b60-7ca7d17cea30",
+          "ActionID": "66d44245-798a-4c3d-b83f-37bc4e109d63",
           "LinkedTitle": true,
           "Name": "Hotkey",
           "Resources": null,
@@ -119,7 +119,7 @@
           "UUID": "com.elgato.streamdeck.system.hotkey"
         },
         "2,0": {
-          "ActionID": "1e46786d-ee9c-4288-be53-94874124e07d",
+          "ActionID": "c445a2b2-aea6-46b5-8d8f-6f51ff1ce968",
           "LinkedTitle": true,
           "Name": "Hotkey",
           "Resources": null,
@@ -177,7 +177,7 @@
           "UUID": "com.elgato.streamdeck.system.hotkey"
         },
         "3,0": {
-          "ActionID": "90d11850-3fbb-4731-acda-03b5862ce2fe",
+          "ActionID": "7e3002f9-e5d2-4f6b-ab9d-cab70993c887",
           "LinkedTitle": true,
           "Name": "Hotkey",
           "Resources": null,
@@ -235,7 +235,7 @@
           "UUID": "com.elgato.streamdeck.system.hotkey"
         },
         "4,0": {
-          "ActionID": "735ea24f-20dd-4cbd-b580-5d5052cb4514",
+          "ActionID": "9d2a742c-b0cf-4ded-a6d5-63d693f1b8f6",
           "LinkedTitle": true,
           "Name": "Hotkey",
           "Resources": null,
@@ -293,7 +293,7 @@
           "UUID": "com.elgato.streamdeck.system.hotkey"
         },
         "0,1": {
-          "ActionID": "d0afd1da-d452-4297-b3f3-15ec14b24fec",
+          "ActionID": "d8636977-095e-4a01-bb8a-00a34273b5d0",
           "LinkedTitle": true,
           "Name": "Hotkey",
           "Resources": null,
@@ -351,7 +351,7 @@
           "UUID": "com.elgato.streamdeck.system.hotkey"
         },
         "1,1": {
-          "ActionID": "8492e73b-ebc0-4572-bc4a-6f69b6a0fffa",
+          "ActionID": "fbbe94b4-271d-4abe-b51b-5238d9baf87d",
           "LinkedTitle": true,
           "Name": "Hotkey",
           "Resources": null,
@@ -409,7 +409,7 @@
           "UUID": "com.elgato.streamdeck.system.hotkey"
         },
         "2,1": {
-          "ActionID": "08298738-39e7-43a0-b5bf-1fdbf58250e4",
+          "ActionID": "dfeef8c0-2400-4db7-8a02-b7e85626e4ed",
           "LinkedTitle": true,
           "Name": "Hotkey",
           "Resources": null,
@@ -467,7 +467,7 @@
           "UUID": "com.elgato.streamdeck.system.hotkey"
         },
         "3,1": {
-          "ActionID": "8a0c120e-9dd7-4522-a453-8f4cb7df909f",
+          "ActionID": "73dbd3e5-c8cd-4ecf-a724-62db734a1904",
           "LinkedTitle": true,
           "Name": "Hotkey",
           "Resources": null,
@@ -525,14 +525,9 @@
           "UUID": "com.elgato.streamdeck.system.hotkey"
         },
         "0,2": {
-          "ActionID": "d8cab489-9029-4ea9-bad7-14ee5084defd",
+          "ActionID": "ce430275-3bb9-44d9-9af4-1fd2062224dc",
           "LinkedTitle": true,
           "Name": "Create Folder",
-          "Plugin": {
-            "Name": "Create Folder",
-            "UUID": "com.elgato.streamdeck.profile.openchild",
-            "Version": "1.0"
-          },
           "Resources": null,
           "Settings": {
             "ProfileUUID": "C68F250F-93F5-41F9-B888-D9DD28D9DF3E"
@@ -540,29 +535,15 @@
           "State": 0,
           "States": [
             {
-              "FontFamily": "",
-              "FontSize": 11,
-              "FontStyle": "Bold",
-              "FontUnderline": false,
-              "Image": "Images/7DCFCFB05B7608986D3890B27A.png",
-              "OutlineThickness": 2,
-              "ShowTitle": false,
-              "Title": "",
-              "TitleAlignment": "middle",
-              "TitleColor": "#00BFFF"
+              "Image": "Images/7DCFCFB05B7608986D3890B27A.png"
             }
           ],
           "UUID": "com.elgato.streamdeck.profile.openchild"
         },
         "1,2": {
-          "ActionID": "967680f0-0913-4a6d-a0f2-aa1027723df1",
+          "ActionID": "31a86995-a14a-435b-87b8-d5130bcf3992",
           "LinkedTitle": true,
           "Name": "Create Folder",
-          "Plugin": {
-            "Name": "Create Folder",
-            "UUID": "com.elgato.streamdeck.profile.openchild",
-            "Version": "1.0"
-          },
           "Resources": null,
           "Settings": {
             "ProfileUUID": "3AA706B4-3603-4898-B84A-E320A619C8F7"
@@ -570,29 +551,15 @@
           "State": 0,
           "States": [
             {
-              "FontFamily": "",
-              "FontSize": 11,
-              "FontStyle": "Bold",
-              "FontUnderline": false,
-              "Image": "Images/D4825811DDF6B77295A1DC913C.png",
-              "OutlineThickness": 2,
-              "ShowTitle": false,
-              "Title": "",
-              "TitleAlignment": "middle",
-              "TitleColor": "#FFD700"
+              "Image": "Images/D4825811DDF6B77295A1DC913C.png"
             }
           ],
           "UUID": "com.elgato.streamdeck.profile.openchild"
         },
         "2,2": {
-          "ActionID": "a5db1890-2522-475c-b833-1dab40e9a414",
+          "ActionID": "1e3b029b-a4c2-411f-9af9-4ab0f9a2bfd2",
           "LinkedTitle": true,
           "Name": "Create Folder",
-          "Plugin": {
-            "Name": "Create Folder",
-            "UUID": "com.elgato.streamdeck.profile.openchild",
-            "Version": "1.0"
-          },
           "Resources": null,
           "Settings": {
             "ProfileUUID": "A1F2B3C4-D5E6-4789-ABCD-100000000001"
@@ -600,29 +567,15 @@
           "State": 0,
           "States": [
             {
-              "FontFamily": "",
-              "FontSize": 11,
-              "FontStyle": "Bold",
-              "FontUnderline": false,
-              "Image": "Images/1C87E362E7E0BE0AE2C12AF8D2.png",
-              "OutlineThickness": 2,
-              "ShowTitle": false,
-              "Title": "",
-              "TitleAlignment": "middle",
-              "TitleColor": "#00B4D8"
+              "Image": "Images/1C87E362E7E0BE0AE2C12AF8D2.png"
             }
           ],
           "UUID": "com.elgato.streamdeck.profile.openchild"
         },
         "3,2": {
-          "ActionID": "5d13e8e4-fb73-4e26-80a7-d290ad228940",
+          "ActionID": "233db138-830f-4c78-a09a-2aba13873b6e",
           "LinkedTitle": true,
           "Name": "Create Folder",
-          "Plugin": {
-            "Name": "Create Folder",
-            "UUID": "com.elgato.streamdeck.profile.openchild",
-            "Version": "1.0"
-          },
           "Resources": null,
           "Settings": {
             "ProfileUUID": "A1F2B3C4-D5E6-4789-ABCD-100000000003"
@@ -630,29 +583,15 @@
           "State": 0,
           "States": [
             {
-              "FontFamily": "",
-              "FontSize": 11,
-              "FontStyle": "Bold",
-              "FontUnderline": false,
-              "Image": "Images/034151B0616F2FCADE00686F9F.png",
-              "OutlineThickness": 2,
-              "ShowTitle": false,
-              "Title": "",
-              "TitleAlignment": "middle",
-              "TitleColor": "#00B4D8"
+              "Image": "Images/034151B0616F2FCADE00686F9F.png"
             }
           ],
           "UUID": "com.elgato.streamdeck.profile.openchild"
         },
         "4,2": {
-          "ActionID": "9c8dbb0b-a5fd-4777-81d0-2fe71d79ad24",
+          "ActionID": "0266016c-69b1-4e70-b72b-e2215739c2e4",
           "LinkedTitle": true,
           "Name": "Create Folder",
-          "Plugin": {
-            "Name": "Create Folder",
-            "UUID": "com.elgato.streamdeck.profile.openchild",
-            "Version": "1.0"
-          },
           "Resources": null,
           "Settings": {
             "ProfileUUID": "A1F2B3C4-D5E6-4789-ABCD-100000000002"
@@ -660,16 +599,7 @@
           "State": 0,
           "States": [
             {
-              "FontFamily": "",
-              "FontSize": 11,
-              "FontStyle": "Bold",
-              "FontUnderline": false,
-              "Image": "Images/AEC6ECBCC04D9CF6F03A001126.png",
-              "OutlineThickness": 2,
-              "ShowTitle": false,
-              "Title": "",
-              "TitleAlignment": "middle",
-              "TitleColor": "#4a9eff"
+              "Image": "Images/AEC6ECBCC04D9CF6F03A001126.png"
             }
           ],
           "UUID": "com.elgato.streamdeck.profile.openchild"
