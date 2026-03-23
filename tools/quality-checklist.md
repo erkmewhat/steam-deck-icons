@@ -24,13 +24,47 @@ Last updated: 2026-03-23
 - [ ] Using existing project tooling (setup.sh, deploy.sh, new-game.py) not reinventing
 - [ ] Following git workflow: develop → feature branches → main via release only
 
-## Before Generating Profiles or Icon Packs
+## Stream Deck Profile Rules (MANDATORY — read before ANY profile work)
 
-- [ ] Profile icons are 72x72 PNGs in `Images/` dir, referenced as `Images/HASH.png`
-- [ ] Icon packs have `previews/` dir with 1920x960 PNG mosaic
-- [ ] Icon packs are copied to `$APPDATA/Elgato/StreamDeck/Plugins/com.elgato.StreamDeck/Icons/` (NOT IconPacks/)
-- [ ] Profiles are copied to `$APPDATA/Elgato/StreamDeck/ProfilesV3/`
-- [ ] Verified against a known-working installed pack/profile structure
+These rules were learned through painful debugging. Violating ANY of them causes
+silent failures — SD gives zero error feedback, buttons just disappear or go blank.
+
+### Action Format
+- [ ] ALL hotkey buttons use `com.elgato.streamdeck.system.hotkey` UUID
+- [ ] NEVER use custom plugin UUIDs (com.simracing.lmu.*, com.simracing.ace.*)
+      unless the plugin is actually installed and running on the target machine
+- [ ] Hotkey Settings must include Coalesce, Hotkeys array with scan/VKey/Qt codes
+- [ ] States must be minimal: `[{"Image": "Images/HASH.png"}]` or `[{}]`
+
+### Folder / Navigation Buttons
+- [ ] Folder buttons use `com.elgato.streamdeck.profile.openchild` UUID
+- [ ] Back buttons use `com.elgato.streamdeck.profile.backtoparent` UUID
+- [ ] Both MUST include `Plugin` key (unlike hotkey actions which omit it)
+- [ ] Child pages must NOT be in top-level `Pages` array — only the main page goes there
+- [ ] Child pages are discovered via openchild `Settings.ProfileUUID` references
+
+### UUID Case Rules
+- [ ] Directory names: UPPERCASE (e.g., `EBAAB49C-EFF9-4A7F-9C43-FFCE95C09427.sdProfile`)
+- [ ] JSON UUID values: lowercase (e.g., `"ProfileUUID": "c68f250f-93f5-41f9-b888-d9dd28d9df3e"`)
+- [ ] This includes: Pages array, Default, Current, ProfileUUID in folder Settings
+
+### Icon Images
+- [ ] Icons are 72x72 PNGs (converted from SVG via `tools/svg-to-png.js`)
+- [ ] PNGs stored per-page: `Profiles/<PAGE_UUID>/Images/HASH.png`
+- [ ] Referenced as `"Image": "Images/HASH.png"` (relative path, NOT data URI)
+- [ ] NEVER use base64 inline images — SD ignores them
+
+### Icon Packs
+- [ ] Local dev packs go in `$APPDATA/Elgato/StreamDeck/Plugins/com.elgato.StreamDeck/Icons/`
+- [ ] NOT in `$APPDATA/Elgato/StreamDeck/IconPacks/` (marketplace only)
+- [ ] Must have `previews/1-preview.png` (1920x960 PNG)
+
+### Profile Structure
+- [ ] Top-level `Pages` array contains ONLY the main page UUID
+- [ ] Profile dir: `UPPERCASE-UUID.sdProfile/`
+- [ ] Page dirs: `Profiles/UPPERCASE-UUID/manifest.json`
+- [ ] After changes, restart SD: `bash tools/restart-streamdeck.sh`
+- [ ] ALWAYS verify by comparing against a working profile on the same device
 
 ## Before Every Commit
 
@@ -76,30 +110,24 @@ architecture docs, and current status. Claude skipped it and tried to figure eve
 out from scratch by reading random files.
 **Rule:** CLAUDE.md is the single source of truth. Read it first, always.
 
-### 2026-03-23 — Profile icons never displayed (multiple root causes, hours wasted)
-**What happened:** Icons never appeared on Stream Deck buttons despite multiple fix attempts.
-Three separate issues were discovered over several hours of debugging:
+### 2026-03-23 — Stream Deck profile icons: 5 cascading failures over several hours
+**What happened:** Icons never appeared on Stream Deck buttons. Five separate root causes
+were discovered one at a time, each requiring a full restart cycle to test:
 
-1. **Wrong action UUID** (THE MAIN BLOCKER): Profile actions used custom plugin UUIDs
-   (`com.simracing.lmu.*`, `com.simracing.ace.*`) but those plugins were never installed.
-   Stream Deck silently renders blank buttons for unknown plugin actions. The fix was to use
-   the built-in `com.elgato.streamdeck.system.hotkey` action with proper scan/VKey/Qt codes.
-   Working profiles on the machine (ACC by Hana, AMS2) all use this built-in action.
+1. **Wrong action UUID**: Used custom plugin UUIDs (`com.simracing.lmu.*`) but plugin wasn't
+   installed. SD silently shows blank buttons. Fix: use `com.elgato.streamdeck.system.hotkey`.
+2. **Wrong image format**: Base64 SVG data URIs. SD ignores them. Fix: 72x72 PNGs in
+   per-page `Images/` dirs referenced as `Images/HASH.png`.
+3. **Wrong icon pack location**: `IconPacks/` is marketplace only. Fix: install to
+   `Plugins/com.elgato.StreamDeck/Icons/`.
+4. **Wrong UUID case**: Uppercase UUIDs in JSON. SD uses lowercase internally, so folder
+   buttons couldn't resolve targets. Fix: lowercase in JSON, uppercase for directory names.
+5. **Child pages in top-level Pages array**: SD treats `Pages` entries as swipe-pages, which
+   conflicts with folder navigation. Fix: only main page in `Pages` array.
 
-2. **Wrong image format**: Originally embedded as `data:image/svg+xml;base64,...` inline.
-   SD expects PNG files in `Profiles/<PAGE_UUID>/Images/` referenced as `Images/HASH.png`.
-
-3. **Wrong icon pack location**: Icon packs were copied to `IconPacks/` (marketplace only).
-   Local dev packs go in `Plugins/com.elgato.StreamDeck/Icons/`.
-
-**Rules — Stream Deck Profile Icons:**
-- Actions MUST use `com.elgato.streamdeck.system.hotkey` UUID (NOT custom plugin UUIDs)
-  unless the custom plugin is actually installed and running
-- States should be minimal: `[{"Image": "Images/HASH.png"}]`
-- Images are 72x72 PNGs in per-page `Profiles/<PAGE_UUID>/Images/` directories
-- Icon packs for local dev: `$APPDATA/Elgato/StreamDeck/Plugins/com.elgato.StreamDeck/Icons/`
-- Preview images: `1-preview.png` in `previews/` dir, 1920x960 PNG
-- ALWAYS verify by comparing against a known-working profile on the same device
+**Rule:** See "Stream Deck Profile Rules" checklist section above. EVERY rule was learned
+from a silent failure. When debugging SD profiles, ALWAYS compare the full JSON structure
+of a known-working profile on the same device before guessing.
 
 ---
 

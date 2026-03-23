@@ -105,34 +105,43 @@ tools/
 
 ### How Stream Deck Profiles Work (CRITICAL — read before touching profiles)
 
-Profiles use the **built-in hotkey action** (`com.elgato.streamdeck.system.hotkey`), NOT
-custom plugin UUIDs. SD silently shows blank buttons for uninstalled plugins. Every hotkey
-button needs Windows scan codes, VKey codes, and Qt key codes in its Settings.
+All rules documented in `tools/quality-checklist.md` under "Stream Deck Profile Rules".
+Violating ANY rule causes silent failures — SD gives zero error feedback.
+
+**5 rules that must ALL be followed:**
+1. **Action UUID**: Use `com.elgato.streamdeck.system.hotkey`. Never custom plugin UUIDs.
+2. **Images**: 72x72 PNGs in per-page `Profiles/<PAGE>/Images/`. Never base64 data URIs.
+3. **UUID case**: UPPERCASE for directory names, lowercase for JSON values.
+4. **Pages array**: Only main page in top-level `Pages[]`. Child pages via folder buttons only.
+5. **Icon packs**: Install to `Plugins/com.elgato.StreamDeck/Icons/`, not `IconPacks/`.
 
 **Profile icon pipeline:**
 1. SVGs live in icon pack `icons/` dirs (144x144, source of truth)
 2. `generate-profile*.py` converts SVGs → 72x72 PNGs via `tools/svg-to-png.js` (resvg-js)
-3. PNGs stored in each page's `Images/` dir: `Profiles/<PAGE_UUID>/Images/HASH.png`
+3. PNGs stored per-page: `Profiles/<UPPERCASE-PAGE-UUID>/Images/HASH.png`
 4. Manifest references: `"States": [{"Image": "Images/HASH.png"}]` (minimal state object)
-5. Profile copied to `%APPDATA%/Elgato/StreamDeck/ProfilesV3/`
+5. Profile copied to `%APPDATA%/Elgato/StreamDeck/ProfilesV3/UPPERCASE-UUID.sdProfile/`
 
-**Action format (must match exactly):**
+**Hotkey action format:**
 ```json
 {
-  "ActionID": "<uuid>",
-  "LinkedTitle": true,
-  "Name": "Hotkey",
-  "Resources": null,
+  "ActionID": "<uuid>", "LinkedTitle": true, "Name": "Hotkey", "Resources": null,
   "Settings": {"Coalesce": true, "Hotkeys": [<key>, <empty>, <empty>, <empty>]},
-  "State": 0,
-  "States": [{"Image": "Images/HASH.png"}],
+  "State": 0, "States": [{"Image": "Images/HASH.png"}],
   "UUID": "com.elgato.streamdeck.system.hotkey"
 }
 ```
 
-**Icon pack install location (local dev):**
-`%APPDATA%/Elgato/StreamDeck/Plugins/com.elgato.StreamDeck/Icons/`
-(NOT `IconPacks/` — that's marketplace only)
+**Folder button format:**
+```json
+{
+  "ActionID": "<uuid>", "LinkedTitle": true, "Name": "Create Folder",
+  "Plugin": {"Name": "Create Folder", "UUID": "com.elgato.streamdeck.profile.openchild", "Version": "1.0"},
+  "Resources": null, "Settings": {"ProfileUUID": "<lowercase-target-page-uuid>"},
+  "State": 0, "States": [{"Image": "Images/HASH.png"}],
+  "UUID": "com.elgato.streamdeck.profile.openchild"
+}
+```
 
 ### Components
 - **Icons** are SVGs in icon pack `icons/` dirs
