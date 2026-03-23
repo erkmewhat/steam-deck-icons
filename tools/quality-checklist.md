@@ -43,6 +43,14 @@ Last updated: 2026-03-23
 > These are added automatically when Claude makes a mistake. Each entry includes
 > the date, what went wrong, and the corrective rule.
 
+### 2026-03-23 — Skipped session greeting
+**What happened:** Claude did not present the mandatory session greeting on session start,
+despite instructions in CLAUDE.md, the quality checklist, and the SessionStart hook output.
+User had to repeatedly ask for it. The greeting instruction was buried in `additionalContext`
+where it was easy to deprioritize.
+**Rule:** The session greeting is the FIRST thing Claude outputs. Before addressing any user
+message, before doing any work. Show the greeting. Every. Single. Time.
+
 ### 2026-03-23 — Missed develop branch
 **What happened:** Started session on main, never ran git fetch, missed entire develop
 branch with CLAUDE.md and project context. Manually rebuilt knowledge that was already
