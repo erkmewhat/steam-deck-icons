@@ -44,11 +44,11 @@
   </g>
   <!-- AI text in center with glow -->
   <g filter="url(#glow)">
-    <text x="72" y="64" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-weight="800" font-size="15" fill="url(#purpleGrad)" letter-spacing="1">AI</text>
+    <text x="72" y="64" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-weight="800" font-size="23" fill="url(#purpleGrad)" letter-spacing="1">AI</text>
   </g>
   <!-- Pulsing rings around wheel (automation feel) -->
   <circle cx="72" cy="58" r="40" fill="none" stroke="#B44DFF" stroke-width="0.8" opacity="0.2"/>
   <circle cx="72" cy="58" r="46" fill="none" stroke="#B44DFF" stroke-width="0.5" opacity="0.1"/>
   <rect x="20" y="138" width="104" height="2" rx="1" fill="url(#borderAccent)"/>
-  <text x="72" y="132" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="15" font-weight="700" fill="#ffffff" opacity="0.85" letter-spacing="1">AI DRIVER</text>
+  <text x="72" y="132" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="20" font-weight="700" fill="#ffffff" opacity="0.85" letter-spacing="1">AI DRIVER</text>
 </svg>

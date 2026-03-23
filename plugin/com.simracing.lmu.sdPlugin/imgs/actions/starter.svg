@@ -44,5 +44,5 @@
   <!-- Subtle energy rings -->
   <circle cx="72" cy="62" r="38" fill="none" stroke="#4CAF50" stroke-width="0.6" opacity="0.15"/>
   <rect x="20" y="138" width="104" height="2" rx="1" fill="url(#borderAccent)"/>
-  <text x="72" y="132" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="15" font-weight="700" fill="#ffffff" opacity="0.85" letter-spacing="1">STARTER</text>
+  <text x="72" y="132" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="22" font-weight="700" fill="#ffffff" opacity="0.85" letter-spacing="1">STARTER</text>
 </svg>

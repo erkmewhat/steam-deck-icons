@@ -45,5 +45,5 @@
     <path d="M76 56 L88 56 M82 50 L88 56 L82 62" fill="none" stroke="#81C784" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
   </g>
   <rect x="20" y="138" width="104" height="2" rx="1" fill="url(#borderAccent)"/>
-  <text x="72" y="132" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="15" font-weight="700" fill="#ffffff" opacity="0.85" letter-spacing="1">INCREASE</text>
+  <text x="72" y="132" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="22" font-weight="700" fill="#ffffff" opacity="0.85" letter-spacing="1">INCREASE</text>
 </svg>

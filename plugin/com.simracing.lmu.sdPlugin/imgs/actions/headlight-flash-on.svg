@@ -83,5 +83,5 @@
   <rect x="16" y="137" width="112" height="3" rx="1.5" fill="url(#hf-on-borderAccent)"/>
 
   <!-- Label in accent color -->
-  <text x="72" y="132" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="15" font-weight="700" fill="#FFE082" opacity="1" letter-spacing="1">FLASH</text>
+  <text x="72" y="132" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="24" font-weight="700" fill="#FFE082" opacity="1" letter-spacing="1">FLASH</text>
 </svg>

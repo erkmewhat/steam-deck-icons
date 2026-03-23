@@ -49,5 +49,5 @@
     <circle cx="72" cy="66" r="6" fill="none" stroke="#ffffff" stroke-width="1.5" opacity="0.5"/>
   </g>
   <rect x="20" y="138" width="104" height="2" rx="1" fill="url(#borderAccent)"/>
-  <text x="72" y="132" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="13" font-weight="700" fill="#ffffff" opacity="0.85" letter-spacing="0.5">SCREENSHOT</text>
+  <text x="72" y="132" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="20" font-weight="700" fill="#ffffff" opacity="0.85" letter-spacing="0.5">SCREENSHOT</text>
 </svg>

@@ -49,8 +49,8 @@
     <!-- Rec light -->
     <circle cx="41" cy="54" r="2" fill="#FF1D43" opacity="0.8"/>
     <!-- TV text -->
-    <text x="76" y="82" font-family="'Segoe UI', Arial, sans-serif" font-size="18" font-weight="700" fill="url(#camGrad)" opacity="0.5">TV</text>
+    <text x="76" y="82" font-family="'Segoe UI', Arial, sans-serif" font-size="26" font-weight="700" fill="url(#camGrad)" opacity="0.5">TV</text>
   </g>
   <rect x="20" y="138" width="104" height="2" rx="1" fill="url(#borderAccent)"/>
-  <text x="72" y="132" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="15" font-weight="700" fill="#ffffff" opacity="0.85" letter-spacing="1">TV CAM</text>
+  <text x="72" y="132" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="24" font-weight="700" fill="#ffffff" opacity="0.85" letter-spacing="1">TV CAM</text>
 </svg>

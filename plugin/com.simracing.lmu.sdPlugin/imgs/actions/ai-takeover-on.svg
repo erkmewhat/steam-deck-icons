@@ -60,7 +60,7 @@
 
   <!-- AI text in center with strong glow -->
   <g filter="url(#ai-on-glow)">
-    <text x="72" y="64" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-weight="800" font-size="16" fill="url(#ai-on-purpleGrad)" letter-spacing="1">AI</text>
+    <text x="72" y="64" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-weight="800" font-size="24" fill="url(#ai-on-purpleGrad)" letter-spacing="1">AI</text>
   </g>
 
   <!-- Pulsing rings - more visible -->
@@ -72,5 +72,5 @@
   <rect x="16" y="137" width="112" height="3" rx="1.5" fill="url(#ai-on-borderAccent)"/>
 
   <!-- Label in accent color -->
-  <text x="72" y="132" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="15" font-weight="700" fill="#D080FF" opacity="1" letter-spacing="1">AI DRIVER</text>
+  <text x="72" y="132" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="20" font-weight="700" fill="#D080FF" opacity="1" letter-spacing="1">AI DRIVER</text>
 </svg>

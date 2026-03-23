@@ -42,7 +42,7 @@
     <path d="M72 104 L84 88 L77 88 L77 78 L67 78 L67 88 L60 88 Z" fill="url(#arrowDown)"/>
   </g>
   <!-- REAR indicator -->
-  <text x="72" y="76" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="9" font-weight="600" fill="#FF5252" opacity="0.6" letter-spacing="2">REAR</text>
+  <text x="72" y="76" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="22" font-weight="600" fill="#FF5252" opacity="0.6" letter-spacing="2">REAR</text>
   <rect x="20" y="138" width="104" height="2" rx="1" fill="url(#borderAccent)"/>
-  <text x="72" y="132" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="15" font-weight="700" fill="#ffffff" opacity="0.85" letter-spacing="1">BIAS BWD</text>
+  <text x="72" y="132" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="22" font-weight="700" fill="#ffffff" opacity="0.85" letter-spacing="1">BIAS BWD</text>
 </svg>

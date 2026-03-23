@@ -89,5 +89,5 @@
   <rect x="10" y="137" width="124" height="3" rx="1.5" fill="url(#on-accent)"/>
 
   <!-- Label with glow -->
-  <text x="72" y="132" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="15" font-weight="700" fill="#FFD54F" letter-spacing="1">HEADLIGHTS</text>
+  <text x="72" y="132" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="20" font-weight="700" fill="#FFD54F" letter-spacing="1">HEADLIGHTS</text>
 </svg>

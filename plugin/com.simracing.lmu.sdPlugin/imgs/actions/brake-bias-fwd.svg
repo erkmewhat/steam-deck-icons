@@ -42,7 +42,7 @@
     <path d="M72 14 L84 30 L77 30 L77 40 L67 40 L67 30 L60 30 Z" fill="url(#arrowUp)"/>
   </g>
   <!-- FRONT indicator -->
-  <text x="72" y="96" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="9" font-weight="600" fill="#81C784" opacity="0.6" letter-spacing="2">FRONT</text>
+  <text x="72" y="96" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="22" font-weight="600" fill="#81C784" opacity="0.6" letter-spacing="2">FRONT</text>
   <rect x="20" y="138" width="104" height="2" rx="1" fill="url(#borderAccent)"/>
-  <text x="72" y="132" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="15" font-weight="700" fill="#ffffff" opacity="0.85" letter-spacing="1">BIAS FWD</text>
+  <text x="72" y="132" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="22" font-weight="700" fill="#ffffff" opacity="0.85" letter-spacing="1">BIAS FWD</text>
 </svg>

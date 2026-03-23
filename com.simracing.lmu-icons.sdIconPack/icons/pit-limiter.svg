@@ -51,10 +51,10 @@
 
   <!-- Speed number / PIT text -->
   <g filter="url(#glow)">
-    <text x="72" y="64" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="18" font-weight="800" fill="#ffffff" letter-spacing="1">PIT</text>
+    <text x="72" y="64" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="26" font-weight="800" fill="#ffffff" letter-spacing="1">PIT</text>
     <!-- Speed indicator lines -->
     <line x1="58" y1="71" x2="86" y2="71" stroke="#FF8A5C" stroke-width="1.5" opacity="0.5"/>
-    <text x="72" y="82" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="14" font-weight="700" fill="#FF8A5C" opacity="0.9">60</text>
+    <text x="72" y="82" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="22" font-weight="700" fill="#FF8A5C" opacity="0.9">60</text>
   </g>
 
   <!-- Diagonal line through sign (limiter active) -->
@@ -70,5 +70,5 @@
   <rect x="20" y="138" width="104" height="2" rx="1" fill="url(#borderAccent)"/>
 
   <!-- Label -->
-  <text x="72" y="132" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="15" font-weight="700" fill="#ffffff" opacity="0.85" letter-spacing="1">PIT LIMITER</text>
+  <text x="72" y="132" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="18" font-weight="700" fill="#ffffff" opacity="0.85" letter-spacing="1">PIT LIMITER</text>
 </svg>

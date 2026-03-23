@@ -66,5 +66,5 @@
     <path d="M42 32 Q48 32 48 40 L48 86 Q48 94 42 94 L42 32 Z" fill="url(#lensGrad)" opacity="0.8"/>
   </g>
   <rect x="20" y="138" width="104" height="2" rx="1" fill="url(#borderAccent)"/>
-  <text x="72" y="132" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="15" font-weight="700" fill="#ffffff" opacity="0.85" letter-spacing="1">FLASH</text>
+  <text x="72" y="132" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="24" font-weight="700" fill="#ffffff" opacity="0.85" letter-spacing="1">FLASH</text>
 </svg>

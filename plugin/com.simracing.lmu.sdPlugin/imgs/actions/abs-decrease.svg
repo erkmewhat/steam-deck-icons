@@ -46,5 +46,5 @@
     <line x1="102" y1="56" x2="112" y2="56" stroke="#FF5252" stroke-width="2" stroke-linecap="round"/>
   </g>
   <rect x="20" y="138" width="104" height="2" rx="1" fill="url(#borderAccent)"/>
-  <text x="72" y="132" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="15" font-weight="700" fill="#ffffff" opacity="0.85" letter-spacing="1">ABS DOWN</text>
+  <text x="72" y="132" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="22" font-weight="700" fill="#ffffff" opacity="0.85" letter-spacing="1">ABS DOWN</text>
 </svg>
