@@ -48,16 +48,16 @@
             "Name": "Headlights",
             "Icon": "imgs/actions/headlights",
             "Tooltip": "Toggle headlights (Key: H)",
-            "Controllers": [
-                "Keypad"
-            ],
+            "Controllers": ["Keypad"],
+            "DisableAutomaticStates": true,
             "States": [
                 {
                     "Image": "imgs/actions/headlights",
-                    "Name": "Headlights",
-                    "ShowTitle": true,
-                    "TitleAlignment": "bottom",
-                    "TitleColor": "#FFFFFF"
+                    "Name": "Off"
+                },
+                {
+                    "Image": "imgs/actions/headlights-on",
+                    "Name": "On"
                 }
             ],
             "PropertyInspectorPath": "ui/pi.html"

@@ -1,7 +1,4 @@
 import { SingletonAction, type KeyDownEvent, type WillAppearEvent } from "@elgato/streamdeck";
-import { readFileSync } from "fs";
-import { join, dirname } from "path";
-import { fileURLToPath } from "url";
 import { sendKey } from "./send-key";
 
 /**
@@ -13,29 +10,41 @@ export type HotkeySettings = {
 
 /**
  * Base class for LMU hotkey actions. Each action sends a configurable
- * keyboard shortcut when the Stream Deck key is pressed, and sets its
- * icon via the SDK on appear.
+ * keyboard shortcut when the Stream Deck key is pressed.
+ *
+ * Toggle actions (isToggle = true) use manifest-defined States[0] (off)
+ * and States[1] (on). SD renders the correct icon per state automatically.
+ * We call setState() to flip between them on key press.
+ * Manifest must set DisableAutomaticStates: true for toggle actions so
+ * we control the state change (SD won't auto-toggle on press).
  */
 export abstract class HotkeyAction extends SingletonAction<HotkeySettings> {
     abstract readonly defaultHotkey: string;
     abstract readonly actionName: string;
     abstract readonly iconFile: string;
 
+    /** Override to true for actions that toggle on/off (headlights, ignition, etc.) */
+    readonly isToggle: boolean = false;
+
+    /** Per-action-context toggle state: false = state 0 (off), true = state 1 (on) */
+    private toggleStates = new Map<string, boolean>();
+
     override async onWillAppear(ev: WillAppearEvent<HotkeySettings>): Promise<void> {
-        try {
-            const __dirname = dirname(fileURLToPath(import.meta.url));
-            const svgPath = join(__dirname, "..", "imgs", "actions", `${this.iconFile}.svg`);
-            const svgContent = readFileSync(svgPath, "utf-8");
-            const base64 = Buffer.from(svgContent).toString("base64");
-            await ev.action.setImage(`data:image/svg+xml;base64,${base64}`);
-        } catch {
-            // Fall back to manifest icon if file read fails
-        }
+        // Initialize to off state
+        this.toggleStates.set(ev.action.id, false);
     }
 
     override async onKeyDown(ev: KeyDownEvent<HotkeySettings>): Promise<void> {
         const hotkey = ev.payload.settings.hotkey || this.defaultHotkey;
         sendKey(hotkey);
-        await ev.action.showOk();
+
+        if (this.isToggle) {
+            const currentState = this.toggleStates.get(ev.action.id) || false;
+            const newState = !currentState;
+            this.toggleStates.set(ev.action.id, newState);
+            await ev.action.setState(newState ? 1 : 0);
+        } else {
+            await ev.action.showOk();
+        }
     }
 }
