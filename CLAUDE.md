@@ -2,11 +2,34 @@
 
 ## On Session Start (MANDATORY)
 
-1. Run `bash tools/setup.sh` to fetch latest code and verify dependencies/build
-2. Run `git branch --show-current` — ensure you're on `develop` or a feature branch, never `main`
-3. Check `.current-game` for active game context
-4. Read the **Current Status** and **Next Steps** sections below to know what to work on
-5. Tell the user: current branch, version, and what's next on the roadmap
+The `tools/session-preflight.sh` hook runs automatically and injects project state.
+After it fires, Claude MUST:
+
+1. If on `main`, switch to `develop` immediately
+2. If behind remote, pull
+3. Read this entire CLAUDE.md for roadmap, status, and procedures
+4. Read `tools/quality-checklist.md` for self-check rules and learned failure patterns
+5. Check `.current-game` for active game context
+6. **Present the session greeting** (see format below)
+
+### Session Greeting Format
+
+Always greet the user with this structure:
+
+```
+**[Project Name] — [branch] @ [version]**
+
+**Recent accomplishments:**
+- [bullet points from git log and Current Status section]
+
+**Up next on roadmap:**
+- [next milestone from Roadmap section with status]
+
+**What do you want to work on?**
+```
+
+Keep it concise — 3-5 bullets for accomplishments, 2-3 for what's next. Always end
+with "What do you want to work on?" to hand control to the user.
 
 ## User Preferences
 

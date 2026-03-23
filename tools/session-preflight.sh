@@ -35,7 +35,20 @@ if [ "$BRANCH" = "main" ]; then
     ON_MAIN="true"
 fi
 
-# 5. Output as system message
+# 5. Recent activity (last 10 commits, one-line)
+RECENT_COMMITS=$(git log --oneline -10 2>/dev/null | sed 's/"/\\"/g' | tr '\n' '|')
+
+# 6. Days since last commit
+LAST_COMMIT_DATE=$(git log -1 --format="%ci" 2>/dev/null | cut -d' ' -f1)
+TODAY=$(date +%Y-%m-%d)
+
+# 7. Check for quality checklist
+CHECKLIST_EXISTS="false"
+if [ -f "$ROOT/tools/quality-checklist.md" ]; then
+    CHECKLIST_EXISTS="true"
+fi
+
+# 8. Output as system message
 cat <<HOOKEOF
-{"systemMessage": "SESSION PREFLIGHT — Branch: $BRANCH | Game: $CURRENT_GAME | Version: $LATEST_TAG (+$COMMITS_SINCE) | Behind remote: $BEHIND commits | On main (violation): $ON_MAIN | All branches: $ALL_BRANCHES | Dirty: $(echo "$DIRTY" | tr '\n' '; ') | MANDATORY: Read CLAUDE.md now. If on main, switch to develop immediately. If behind remote, pull before doing anything.", "hookSpecificOutput": {"hookEventName": "SessionStart", "additionalContext": "PROJECT STATE: branch=$BRANCH game=$CURRENT_GAME version=$LATEST_TAG commits_since_tag=$COMMITS_SINCE behind_remote=$BEHIND on_main=$ON_MAIN branches=$ALL_BRANCHES. ACTION REQUIRED: 1) Read CLAUDE.md for roadmap and status. 2) If on main, run: git checkout develop. 3) If behind remote, run: git pull. 4) Report branch, version, game, and next roadmap step to user."}}
+{"systemMessage": "SESSION PREFLIGHT — Branch: $BRANCH | Game: $CURRENT_GAME | Version: $LATEST_TAG (+$COMMITS_SINCE) | Behind remote: $BEHIND | On main: $ON_MAIN | All branches: $ALL_BRANCHES | Last commit: $LAST_COMMIT_DATE | Dirty: $(echo "$DIRTY" | tr '\n' '; ')", "hookSpecificOutput": {"hookEventName": "SessionStart", "additionalContext": "PROJECT STATE: branch=$BRANCH game=$CURRENT_GAME version=$LATEST_TAG commits_since_tag=$COMMITS_SINCE behind_remote=$BEHIND on_main=$ON_MAIN branches=$ALL_BRANCHES last_commit_date=$LAST_COMMIT_DATE quality_checklist=$CHECKLIST_EXISTS recent_commits=$RECENT_COMMITS --- MANDATORY SESSION START PROCEDURE: 1) If on main, switch to develop immediately. 2) If behind remote, pull. 3) Read CLAUDE.md for full roadmap and status. 4) Read tools/quality-checklist.md for self-check rules. 5) Present greeting to user: recent accomplishments (from git log and CLAUDE.md status), whats next on roadmap, then ask: What do you want to work on? 6) Run quality checklist silently before every major action."}}
 HOOKEOF
