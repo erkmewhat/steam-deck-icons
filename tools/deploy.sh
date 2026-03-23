@@ -90,11 +90,15 @@ echo "  ✓ Build complete (entry: $ENTRY_SRC)"
 
 # 2. Bundle node_modules into .sdPlugin
 echo "[2/8] Bundling dependencies..."
-for dep in @elgato/streamdeck koffi; do
-    cp -r "node_modules/$dep" "$ROOT/plugin/$PLUGIN_ID/node_modules/" 2>/dev/null || true
+PLUGIN_NM="$ROOT/plugin/$PLUGIN_ID/node_modules"
+rm -rf "$PLUGIN_NM"
+mkdir -p "$PLUGIN_NM/@elgato"
+# SDK v2 requires: @elgato/streamdeck, @elgato/schemas, @elgato/utils, ws, koffi
+for dep in streamdeck schemas utils; do
+    [ -d "node_modules/@elgato/$dep" ] && cp -r "node_modules/@elgato/$dep" "$PLUGIN_NM/@elgato/"
 done
-for dep in node_modules/@elgato/streamdeck/node_modules/*; do
-    [ -d "$dep" ] && cp -r "$dep" "$ROOT/plugin/$PLUGIN_ID/node_modules/" 2>/dev/null || true
+for dep in koffi ws; do
+    [ -d "node_modules/$dep" ] && cp -r "node_modules/$dep" "$PLUGIN_NM/"
 done
 echo "  ✓ Dependencies bundled"
 

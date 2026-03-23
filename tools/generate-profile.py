@@ -201,6 +201,16 @@ def convert_all_page_icons(profiles_dir):
     print(f"  Converted {total} icons to 72x72 PNG across {len(_page_icons)} pages")
 
 
+# Actions that toggle on/off — use plugin UUID so setState() works.
+# All others use built-in hotkey UUID.
+TOGGLE_ACTIONS = {
+    "headlights", "ignition", "pit-limiter", "wipers", "starter",
+    "headlight-flash", "request-pitstop", "ai-takeover", "launch-control",
+}
+
+PLUGIN_UUID = "com.simracing.lmu"
+
+
 def make_hotkey_action(title, key, ctrl=False, shift=False, alt=False,
                        font_size=10, title_color="#FFFFFF", icon_id=""):
     """Create a built-in hotkey action button with icon from icon pack."""
@@ -215,6 +225,35 @@ def make_hotkey_action(title, key, ctrl=False, shift=False, alt=False,
         "States": [{"Image": image}] if image else [{}],
         "UUID": "com.elgato.streamdeck.system.hotkey"
     }
+
+
+def make_plugin_toggle_action(title, action_id, hotkey="", icon_id=""):
+    """Create a plugin action with 2 states for on/off toggle.
+
+    Uses the custom plugin UUID so the plugin's setState() controls the icon.
+    The manifest defines the off/on images; the plugin toggles between them.
+    """
+    image = icon_to_image_ref(icon_id) if icon_id else ""
+    return {
+        "ActionID": str(uuid.uuid4()),
+        "LinkedTitle": True,
+        "Name": title,
+        "Plugin": {"Name": "LMU Sim Racing", "UUID": PLUGIN_UUID, "Version": "1.0.0.0"},
+        "Resources": None,
+        "Settings": {"hotkey": hotkey},
+        "State": 0,
+        "States": [{"Image": image}],
+        "UUID": f"{PLUGIN_UUID}.{action_id}"
+    }
+
+
+def make_action(action_id):
+    """Create the right action type based on whether it's a toggle or not."""
+    b = BINDINGS[action_id]
+    if action_id in TOGGLE_ACTIONS:
+        return make_plugin_toggle_action(b["title"], action_id, hotkey=b["key"], icon_id=action_id)
+    else:
+        return make_hotkey_action(b["title"], b["key"], icon_id=action_id)
 
 
 def make_folder_button(title, target_page_uuid, title_color="#00BFFF", icon_id=""):
@@ -362,7 +401,7 @@ def build_main_page():
     ]
     for coord, action_id in row0:
         b = BINDINGS[action_id]
-        actions[coord] = make_hotkey_action(b["title"], b["key"], icon_id=action_id)
+        actions[coord] = make_action(action_id)
 
     # Row 1: Engine & pit
     row1 = [
@@ -373,7 +412,7 @@ def build_main_page():
     ]
     for coord, action_id in row1:
         b = BINDINGS[action_id]
-        actions[coord] = make_hotkey_action(b["title"], b["key"], icon_id=action_id)
+        actions[coord] = make_action(action_id)
 
     # Row 2: Navigation bar — one folder per sub-page (with nav icons)
     actions["0,2"] = make_folder_button("MFD\n▶", MFD_PAGE, title_color="#00BFFF", icon_id="nav-mfd")
@@ -403,7 +442,7 @@ def build_mfd_page():
     ]
     for coord, action_id in mfd:
         b = BINDINGS[action_id]
-        actions[coord] = make_hotkey_action(b["title"], b["key"], icon_id=action_id)
+        actions[coord] = make_action(action_id)
 
     actions["0,2"] = make_back_button()
 
@@ -428,7 +467,7 @@ def build_perf_page():
     ]
     for coord, action_id in inc:
         b = BINDINGS[action_id]
-        actions[coord] = make_hotkey_action(b["title"], b["key"], icon_id=action_id)
+        actions[coord] = make_action(action_id)
 
     # Row 1: decrease row
     dec = [
@@ -439,7 +478,7 @@ def build_perf_page():
     ]
     for coord, action_id in dec:
         b = BINDINGS[action_id]
-        actions[coord] = make_hotkey_action(b["title"], b["key"], icon_id=action_id)
+        actions[coord] = make_action(action_id)
 
     actions["0,2"] = make_back_button()
 
@@ -465,7 +504,7 @@ def build_camera_page():
     ]
     for coord, action_id in cameras:
         b = BINDINGS[action_id]
-        actions[coord] = make_hotkey_action(b["title"], b["key"], icon_id=action_id)
+        actions[coord] = make_action(action_id)
 
     # Row 1: Seat adjustments
     seats = [
@@ -476,7 +515,7 @@ def build_camera_page():
     ]
     for coord, action_id in seats:
         b = BINDINGS[action_id]
-        actions[coord] = make_hotkey_action(b["title"], b["key"], icon_id=action_id)
+        actions[coord] = make_action(action_id)
 
     # Row 2: Back + FOV/Zoom
     actions["0,2"] = make_back_button()
@@ -489,7 +528,7 @@ def build_camera_page():
     ]
     for coord, action_id in fov_zoom:
         b = BINDINGS[action_id]
-        actions[coord] = make_hotkey_action(b["title"], b["key"], icon_id=action_id)
+        actions[coord] = make_action(action_id)
 
     return make_page(actions, "Camera & Seat")
 
@@ -511,7 +550,7 @@ def build_look_page():
     ]
     for coord, action_id in look:
         b = BINDINGS[action_id]
-        actions[coord] = make_hotkey_action(b["title"], b["key"], icon_id=action_id)
+        actions[coord] = make_action(action_id)
 
     # Row 1: Session utilities
     session = [
@@ -521,7 +560,7 @@ def build_look_page():
     ]
     for coord, action_id in session:
         b = BINDINGS[action_id]
-        actions[coord] = make_hotkey_action(b["title"], b["key"], icon_id=action_id)
+        actions[coord] = make_action(action_id)
 
     actions["0,2"] = make_back_button()
 
@@ -547,7 +586,7 @@ def build_hud_page():
     ]
     for coord, action_id in hud:
         b = BINDINGS[action_id]
-        actions[coord] = make_hotkey_action(b["title"], b["key"], icon_id=action_id)
+        actions[coord] = make_action(action_id)
 
     # Row 2: Back
     actions["0,2"] = make_back_button()

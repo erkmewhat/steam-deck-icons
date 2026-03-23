@@ -1,75 +1,35 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144 144" width="144" height="144">
   <defs>
-    <radialGradient id="bg" cx="50%" cy="40%" r="70%">
+    <radialGradient id="nh-bg" cx="50%" cy="40%" r="70%">
       <stop offset="0%" stop-color="#32373C"/>
       <stop offset="100%" stop-color="#0a0a0f"/>
     </radialGradient>
-    <radialGradient id="accentGlow" cx="50%" cy="45%" r="45%">
-      <stop offset="0%" stop-color="#4a9eff" stop-opacity="0.3"/>
-      <stop offset="100%" stop-color="#4a9eff" stop-opacity="0"/>
-    </radialGradient>
-    <linearGradient id="iconGrad" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#7BB8FF"/>
-      <stop offset="100%" stop-color="#4a9eff"/>
+    <linearGradient id="nh-pill" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#4a9eff" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#4a9eff" stop-opacity="0.3"/>
     </linearGradient>
-    <linearGradient id="chevronGrad" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#4a9eff" stop-opacity="0.6"/>
-      <stop offset="100%" stop-color="#4a9eff" stop-opacity="1"/>
-    </linearGradient>
-    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+    <filter id="nh-glow" x="-30%" y="-30%" width="160%" height="160%">
       <feGaussianBlur in="SourceGraphic" stdDeviation="3" result="blur"/>
-      <feMerge>
-        <feMergeNode in="blur"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
     </filter>
-    <filter id="shadow" x="-10%" y="-10%" width="130%" height="130%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#000000" flood-opacity="0.5"/>
-    </filter>
-    <linearGradient id="borderAccent" x1="0" y1="0" x2="1" y2="0">
+    <linearGradient id="nh-acc" x1="0" y1="0" x2="1" y2="0">
       <stop offset="0%" stop-color="#4a9eff" stop-opacity="0"/>
       <stop offset="50%" stop-color="#4a9eff" stop-opacity="0.8"/>
       <stop offset="100%" stop-color="#4a9eff" stop-opacity="0"/>
     </linearGradient>
   </defs>
-
-  <!-- Background -->
-  <rect width="144" height="144" fill="url(#bg)"/>
-
-  <!-- Ambient glow -->
-  <ellipse cx="72" cy="55" rx="55" ry="48" fill="url(#accentGlow)"/>
-
-  <!-- Dashboard/HUD display icon -->
-  <g filter="url(#glow)">
-    <!-- Outer dashboard frame -->
-    <rect x="28" y="34" width="88" height="56" rx="5" fill="none" stroke="url(#iconGrad)" stroke-width="3.5"/>
-    <rect x="30" y="36" width="84" height="52" rx="4" fill="url(#iconGrad)" opacity="0.06"/>
-
-    <!-- Top status bar -->
-    <line x1="36" y1="44" x2="62" y2="44" stroke="url(#iconGrad)" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
-    <rect x="96" y="41" width="12" height="6" rx="2" fill="url(#iconGrad)" opacity="0.4"/>
-
-    <!-- Speed/RPM bar graph -->
-    <rect x="38" y="72" width="6" height="12" rx="1" fill="url(#iconGrad)" opacity="0.4"/>
-    <rect x="48" y="66" width="6" height="18" rx="1" fill="url(#iconGrad)" opacity="0.5"/>
-    <rect x="58" y="60" width="6" height="24" rx="1" fill="url(#iconGrad)" opacity="0.6"/>
-    <rect x="68" y="54" width="6" height="30" rx="1" fill="url(#iconGrad)" opacity="0.75"/>
-    <rect x="78" y="58" width="6" height="26" rx="1" fill="url(#iconGrad)" opacity="0.65"/>
-    <rect x="88" y="64" width="6" height="20" rx="1" fill="url(#iconGrad)" opacity="0.5"/>
-    <rect x="98" y="70" width="6" height="14" rx="1" fill="url(#iconGrad)" opacity="0.35"/>
-
-    <!-- Divider line -->
-    <line x1="36" y1="50" x2="108" y2="50" stroke="url(#iconGrad)" stroke-width="1" opacity="0.3"/>
+  <rect width="144" height="144" fill="url(#nh-bg)"/>
+  <g filter="url(#nh-glow)">
+    <rect x="16" y="30" width="112" height="54" rx="27" fill="url(#nh-pill)" stroke="#4a9eff" stroke-width="2"/>
   </g>
-
-  <!-- Right chevron -->
-  <g filter="url(#shadow)" opacity="0.75">
-    <path d="M118 100 L126 108 L118 116" fill="none" stroke="url(#chevronGrad)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="52" y="64" text-anchor="middle" font-family="'Segoe UI',Arial,sans-serif" font-size="20" font-weight="700" fill="#ffffff" opacity="0.95">HUD</text>
+  <g filter="url(#nh-glow)">
+    <path d="M90 45 L108 57 L90 69" fill="none" stroke="#4a9eff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
   </g>
-
-  <!-- Bottom accent line -->
-  <rect x="20" y="138" width="104" height="2" rx="1" fill="url(#borderAccent)"/>
-
-  <!-- Label -->
-  <text x="72" y="132" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="15" font-weight="700" fill="#ffffff" opacity="0.85" letter-spacing="1">HUD</text>
+  <line x1="80" y1="38" x2="80" y2="76" stroke="#4a9eff" stroke-width="1" opacity="0.3"/>
+  <circle cx="56" cy="100" r="3" fill="#4a9eff" opacity="0.5"/>
+  <circle cx="72" cy="100" r="3" fill="#4a9eff" opacity="0.35"/>
+  <circle cx="88" cy="100" r="3" fill="#4a9eff" opacity="0.2"/>
+  <text x="72" y="128" text-anchor="middle" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#ffffff" opacity="0.45">5 controls</text>
+  <rect x="20" y="138" width="104" height="2" rx="1" fill="url(#nh-acc)"/>
 </svg>
