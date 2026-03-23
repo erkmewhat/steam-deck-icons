@@ -10,6 +10,7 @@
     },
     "dependencies": {
         "@elgato/streamdeck": "^1.0.0",
+        "@resvg/resvg-js": "^2.6.2",
         "koffi": "^2.15.2"
     },
     "devDependencies": {

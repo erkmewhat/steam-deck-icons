@@ -109,11 +109,13 @@ rm -rf "$SD_PLUGINS/$PLUGIN_ID"
 cp -r "$ROOT/plugin/$PLUGIN_ID" "$SD_PLUGINS/"
 echo "  ✓ Plugin installed"
 
-# 5. Install icon pack
+# 5. Generate icon pack preview + install
 echo "[5/8] Installing icon pack..."
+cd "$ROOT"
+node tools/generate-previews.js "$ICON_PACK_ID"
 rm -rf "$SD_ICONS/$ICON_PACK_ID"
 cp -r "$ROOT/$ICON_PACK_ID" "$SD_ICONS/"
-echo "  ✓ Icon pack installed"
+echo "  ✓ Icon pack installed (with preview)"
 
 # 6. Regenerate profile (use game-specific generator if it exists)
 echo "[6/8] Regenerating profile..."

@@ -5,10 +5,11 @@ Generate a Stream Deck profile for Assetto Corsa EVO.
 Grid: 5 columns x 3 rows, coordinates are (col, row) zero-indexed.
 """
 
-import base64
+import hashlib
 import json
 import os
 import shutil
+import subprocess
 import uuid
 
 PROFILE_UUID = "D7E4F2A8-91B3-4C6D-A5E7-8F2B1C3D4E5A"
@@ -30,20 +31,54 @@ for slug, b in _config["bindings"].items():
     BINDINGS[slug] = {"key": b["key"], "title": b["game_action"], "game_action": b["game_action"]}
 
 
-def icon_to_base64(action_id):
-    """Read icon SVG and return base64 data URI."""
+_pending_icons = []
+
+
+def _generate_image_key(action_id):
+    """Generate a short hash-based filename like Stream Deck uses."""
+    h = hashlib.sha256(action_id.encode()).hexdigest()[:26].upper()
+    return f"{h}.png"
+
+
+def icon_to_image_ref(action_id):
+    """Find the SVG for action_id and return an Images/HASH.png reference.
+
+    Registers the icon for PNG conversion (done later by convert_pending_icons).
+    """
     script_dir = os.path.dirname(os.path.abspath(__file__))
     icon_pack = os.path.join(script_dir, "..", "com.simracing.ace-icons.sdIconPack", "icons")
     path = os.path.join(icon_pack, f"{action_id}.svg")
     if os.path.isfile(path):
-        with open(path, "rb") as f:
-            encoded = base64.b64encode(f.read()).decode("ascii")
-        return f"data:image/svg+xml;base64,{encoded}"
+        png_name = _generate_image_key(action_id)
+        _pending_icons.append((os.path.abspath(path), png_name))
+        return f"Images/{png_name}"
     return ""
 
 
+def convert_pending_icons(profile_dir):
+    """Convert all registered SVGs to PNGs in the profile's Images/ directory."""
+    if not _pending_icons:
+        return
+    images_dir = os.path.join(profile_dir, "Images")
+    os.makedirs(images_dir, exist_ok=True)
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    converter = os.path.join(script_dir, "svg-to-png.js")
+
+    seen = set()
+    for svg_path, png_name in _pending_icons:
+        if png_name in seen:
+            continue
+        seen.add(png_name)
+        png_path = os.path.join(images_dir, png_name)
+        subprocess.run(
+            ["node", converter, svg_path, png_path, "72"],
+            check=True, capture_output=True
+        )
+    print(f"  Converted {len(seen)} icons to 72x72 PNG")
+
+
 def make_plugin_action(title, action_uuid, hotkey="", font_size=10):
-    image = icon_to_base64(action_uuid)
+    image = icon_to_image_ref(action_uuid)
     show_title = not bool(image)
     return {
         "ActionID": str(uuid.uuid4()),
@@ -203,6 +238,9 @@ def write_profile(output_dir):
     for page_uuid, page_data in pages:
         with open(os.path.join(profiles_dir, page_uuid, "manifest.json"), "w") as f:
             json.dump(page_data, f, indent=2)
+
+    # Convert all SVG icons to PNG in the Images/ directory
+    convert_pending_icons(profile_dir)
 
     print(f"Profile generated at: {profile_dir}")
     print(f"  Main page:   {MAIN_PAGE}")

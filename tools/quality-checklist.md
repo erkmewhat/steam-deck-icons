@@ -24,6 +24,14 @@ Last updated: 2026-03-23
 - [ ] Using existing project tooling (setup.sh, deploy.sh, new-game.py) not reinventing
 - [ ] Following git workflow: develop → feature branches → main via release only
 
+## Before Generating Profiles or Icon Packs
+
+- [ ] Profile icons are 72x72 PNGs in `Images/` dir, referenced as `Images/HASH.png`
+- [ ] Icon packs have `previews/` dir with 1920x960 PNG mosaic
+- [ ] Icon packs are copied to `$APPDATA/Elgato/StreamDeck/IconPacks/`
+- [ ] Profiles are copied to `$APPDATA/Elgato/StreamDeck/ProfilesV3/`
+- [ ] Verified against a known-working installed pack/profile structure
+
 ## Before Every Commit
 
 - [ ] On correct branch (develop or feature/*)
@@ -67,6 +75,18 @@ being told to act autonomously. User had to correct this multiple times.
 architecture docs, and current status. Claude skipped it and tried to figure everything
 out from scratch by reading random files.
 **Rule:** CLAUDE.md is the single source of truth. Read it first, always.
+
+### 2026-03-23 — Profile icons embedded as base64 SVG instead of PNG files
+**What happened:** Profile generators used `data:image/svg+xml;base64,...` inline data URIs
+in the Image field. Stream Deck ignores these — it expects PNG files in an `Images/` directory
+referenced as `Images/HASH.png`. Icons were also rendered at 144x144 but SD profiles use 72x72.
+Additionally, icon packs were missing the required `previews/` directory (1920x960 PNG mosaic)
+which prevented them from appearing in the Stream Deck icon library.
+**Rule:** Stream Deck profile icons must be:
+- 72x72 PNG files stored in `<profile>.sdProfile/Images/`
+- Referenced as `"Image": "Images/HASH.png"` (relative path, not data URI)
+- Icon packs MUST have a `previews/` directory with at least one 1920x960 PNG
+- Always compare against a working installed profile/pack before assuming format
 
 ---
 
