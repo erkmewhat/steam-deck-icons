@@ -3,307 +3,587 @@
     {
       "Actions": {
         "0,0": {
-          "ActionID": "2951398c-9470-46f9-a313-e717322e6147",
+          "ActionID": "f2d016be-6ed5-449c-8b6c-af54fccdfcc3",
           "LinkedTitle": true,
-          "Name": "Glance Left",
-          "Plugin": {
-            "Name": "Assetto Corsa EVO",
-            "UUID": "com.simracing.ace",
-            "Version": "1.0"
-          },
+          "Name": "Hotkey",
           "Resources": null,
           "Settings": {
-            "hotkey": "Q"
+            "Coalesce": true,
+            "Hotkeys": [
+              {
+                "KeyCmd": false,
+                "KeyCtrl": false,
+                "KeyModifiers": 0,
+                "KeyOption": false,
+                "KeyShift": false,
+                "NativeCode": 16,
+                "QTKeyCode": 81,
+                "VKeyCode": 81
+              },
+              {
+                "KeyCmd": false,
+                "KeyCtrl": false,
+                "KeyModifiers": 0,
+                "KeyOption": false,
+                "KeyShift": false,
+                "NativeCode": 146,
+                "QTKeyCode": 33554431,
+                "VKeyCode": -1
+              },
+              {
+                "KeyCmd": false,
+                "KeyCtrl": false,
+                "KeyModifiers": 0,
+                "KeyOption": false,
+                "KeyShift": false,
+                "NativeCode": 146,
+                "QTKeyCode": 33554431,
+                "VKeyCode": -1
+              },
+              {
+                "KeyCmd": false,
+                "KeyCtrl": false,
+                "KeyModifiers": 0,
+                "KeyOption": false,
+                "KeyShift": false,
+                "NativeCode": 146,
+                "QTKeyCode": 33554431,
+                "VKeyCode": -1
+              }
+            ]
           },
           "State": 0,
           "States": [
             {
-              "FontFamily": "",
-              "FontSize": 10,
-              "FontStyle": "Bold",
-              "FontUnderline": false,
-              "Image": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNDQgMTQ0IiB3aWR0aD0iMTQ0IiBoZWlnaHQ9IjE0NCI+DQogIDxyZWN0IHg9IjQiIHk9IjQiIHdpZHRoPSIxMzYiIGhlaWdodD0iMTM2IiByeD0iMTIiIGZpbGw9IiMyMTI1MjkiIHN0cm9rZT0iI2UyMDYxMyIgc3Ryb2tlLXdpZHRoPSIyIi8+DQogIDxyZWN0IHg9IjgiIHk9IjgiIHdpZHRoPSIxMjgiIGhlaWdodD0iMTI4IiByeD0iMTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzJkMzIzOCIgc3Ryb2tlLXdpZHRoPSIxIi8+DQogIDwhLS0gQWxtb25kIGV5ZSBzaGFwZSAtLT4NCiAgPHBhdGggZD0iTTUyLDY0IFE3OCwzNiAxMDgsNjQgUTc4LDkyIDUyLDY0IFoiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2ZmZmZmZiIgc3Ryb2tlLXdpZHRoPSIyLjUiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4NCiAgPCEtLSBPdXRlciBpcmlzIHJpbmcgLS0+DQogIDxjaXJjbGUgY3g9Ijc2IiBjeT0iNjQiIHI9IjEyIiBmaWxsPSJub25lIiBzdHJva2U9IiNmZmZmZmYiIHN0cm9rZS13aWR0aD0iMS41Ii8+DQogIDwhLS0gSXJpcyB3aXRoIGdyYWRpZW50IGZlZWwgLS0+DQogIDxjaXJjbGUgY3g9Ijc2IiBjeT0iNjQiIHI9IjEwIiBmaWxsPSIjNGE5ZWZmIiBvcGFjaXR5PSIwLjMiLz4NCiAgPCEtLSBQdXBpbCBsb29raW5nIGxlZnQgLS0+DQogIDxjaXJjbGUgY3g9IjcyIiBjeT0iNjQiIHI9IjYiIGZpbGw9IiNmZmZmZmYiLz4NCiAgPGNpcmNsZSBjeD0iNzAiIGN5PSI2MyIgcj0iMiIgZmlsbD0iIzIxMjUyOSIvPg0KICA8IS0tIEJvbGQgbGVmdCBhcnJvdyAtLT4NCiAgPHBvbHlnb24gcG9pbnRzPSIyMiw2NCAzOCw0OCAzOCw1NyA1MCw1NyA1MCw3MSAzOCw3MSAzOCw4MCIgZmlsbD0iIzRhOWVmZiIvPg0KICA8cG9seWdvbiBwb2ludHM9IjIyLDY0IDM4LDQ4IDM4LDU3IDUwLDU3IDUwLDcxIDM4LDcxIDM4LDgwIiBmaWxsPSJub25lIiBzdHJva2U9IiM0YTllZmYiIHN0cm9rZS13aWR0aD0iMC41IiBvcGFjaXR5PSIwLjYiLz4NCiAgPCEtLSBBcnJvdyBoaWdobGlnaHQgLS0+DQogIDxsaW5lIHgxPSIzOCIgeTE9IjUyIiB4Mj0iMzgiIHkyPSI1NyIgc3Ryb2tlPSIjN2JiZmZmIiBzdHJva2Utd2lkdGg9IjEiIG9wYWNpdHk9IjAuNSIvPg0KDQogIDx0ZXh0IHg9IjcyIiB5PSIxMjYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJBcmlhbCxIZWx2ZXRpY2Esc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNiIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IndoaXRlIj5MT09LIEw8L3RleHQ+DQo8L3N2Zz4=",
-              "OutlineThickness": 2,
-              "ShowTitle": false,
-              "Title": "",
-              "TitleAlignment": "bottom",
-              "TitleColor": "#FFFFFF"
+              "Image": "Images/AD220830B7CA2873EC862F168B.png"
             }
           ],
-          "UUID": "com.simracing.ace.glance-left"
+          "UUID": "com.elgato.streamdeck.system.hotkey"
         },
         "1,0": {
-          "ActionID": "be2a4e2d-e4a4-4724-97f6-f8d6c7a36c89",
+          "ActionID": "53ffdd27-4288-4096-ac3f-42e8e5a721b0",
           "LinkedTitle": true,
-          "Name": "Look Behind",
-          "Plugin": {
-            "Name": "Assetto Corsa EVO",
-            "UUID": "com.simracing.ace",
-            "Version": "1.0"
-          },
+          "Name": "Hotkey",
           "Resources": null,
           "Settings": {
-            "hotkey": "C"
+            "Coalesce": true,
+            "Hotkeys": [
+              {
+                "KeyCmd": false,
+                "KeyCtrl": false,
+                "KeyModifiers": 0,
+                "KeyOption": false,
+                "KeyShift": false,
+                "NativeCode": 46,
+                "QTKeyCode": 67,
+                "VKeyCode": 67
+              },
+              {
+                "KeyCmd": false,
+                "KeyCtrl": false,
+                "KeyModifiers": 0,
+                "KeyOption": false,
+                "KeyShift": false,
+                "NativeCode": 146,
+                "QTKeyCode": 33554431,
+                "VKeyCode": -1
+              },
+              {
+                "KeyCmd": false,
+                "KeyCtrl": false,
+                "KeyModifiers": 0,
+                "KeyOption": false,
+                "KeyShift": false,
+                "NativeCode": 146,
+                "QTKeyCode": 33554431,
+                "VKeyCode": -1
+              },
+              {
+                "KeyCmd": false,
+                "KeyCtrl": false,
+                "KeyModifiers": 0,
+                "KeyOption": false,
+                "KeyShift": false,
+                "NativeCode": 146,
+                "QTKeyCode": 33554431,
+                "VKeyCode": -1
+              }
+            ]
           },
           "State": 0,
           "States": [
             {
-              "FontFamily": "",
-              "FontSize": 10,
-              "FontStyle": "Bold",
-              "FontUnderline": false,
-              "Image": "data:image/png;base64,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",
-              "OutlineThickness": 2,
-              "ShowTitle": false,
-              "Title": "",
-              "TitleAlignment": "bottom",
-              "TitleColor": "#FFFFFF"
+              "Image": "Images/EDE11439A7A7E4065C7408D668.png"
             }
           ],
-          "UUID": "com.simracing.ace.look-behind"
+          "UUID": "com.elgato.streamdeck.system.hotkey"
         },
         "2,0": {
-          "ActionID": "e4642f75-ff13-4787-b487-cbf44497e20b",
+          "ActionID": "29824be9-0d5f-41b0-8fe7-d1f7f828a2f2",
           "LinkedTitle": true,
-          "Name": "Glance Right",
-          "Plugin": {
-            "Name": "Assetto Corsa EVO",
-            "UUID": "com.simracing.ace",
-            "Version": "1.0"
-          },
+          "Name": "Hotkey",
           "Resources": null,
           "Settings": {
-            "hotkey": "W"
+            "Coalesce": true,
+            "Hotkeys": [
+              {
+                "KeyCmd": false,
+                "KeyCtrl": false,
+                "KeyModifiers": 0,
+                "KeyOption": false,
+                "KeyShift": false,
+                "NativeCode": 17,
+                "QTKeyCode": 87,
+                "VKeyCode": 87
+              },
+              {
+                "KeyCmd": false,
+                "KeyCtrl": false,
+                "KeyModifiers": 0,
+                "KeyOption": false,
+                "KeyShift": false,
+                "NativeCode": 146,
+                "QTKeyCode": 33554431,
+                "VKeyCode": -1
+              },
+              {
+                "KeyCmd": false,
+                "KeyCtrl": false,
+                "KeyModifiers": 0,
+                "KeyOption": false,
+                "KeyShift": false,
+                "NativeCode": 146,
+                "QTKeyCode": 33554431,
+                "VKeyCode": -1
+              },
+              {
+                "KeyCmd": false,
+                "KeyCtrl": false,
+                "KeyModifiers": 0,
+                "KeyOption": false,
+                "KeyShift": false,
+                "NativeCode": 146,
+                "QTKeyCode": 33554431,
+                "VKeyCode": -1
+              }
+            ]
           },
           "State": 0,
           "States": [
             {
-              "FontFamily": "",
-              "FontSize": 10,
-              "FontStyle": "Bold",
-              "FontUnderline": false,
-              "Image": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNDQgMTQ0IiB3aWR0aD0iMTQ0IiBoZWlnaHQ9IjE0NCI+DQogIDxyZWN0IHg9IjQiIHk9IjQiIHdpZHRoPSIxMzYiIGhlaWdodD0iMTM2IiByeD0iMTIiIGZpbGw9IiMyMTI1MjkiIHN0cm9rZT0iI2UyMDYxMyIgc3Ryb2tlLXdpZHRoPSIyIi8+DQogIDxyZWN0IHg9IjgiIHk9IjgiIHdpZHRoPSIxMjgiIGhlaWdodD0iMTI4IiByeD0iMTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzJkMzIzOCIgc3Ryb2tlLXdpZHRoPSIxIi8+DQogIDwhLS0gQWxtb25kIGV5ZSBzaGFwZSAtLT4NCiAgPHBhdGggZD0iTTM2LDY0IFE2MiwzNiA5Miw2NCBRNjIsOTIgMzYsNjQgWiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZmZmZmZmIiBzdHJva2Utd2lkdGg9IjIuNSIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPg0KICA8IS0tIE91dGVyIGlyaXMgcmluZyAtLT4NCiAgPGNpcmNsZSBjeD0iNjgiIGN5PSI2NCIgcj0iMTIiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2ZmZmZmZiIgc3Ryb2tlLXdpZHRoPSIxLjUiLz4NCiAgPCEtLSBJcmlzIHdpdGggZ3JhZGllbnQgZmVlbCAtLT4NCiAgPGNpcmNsZSBjeD0iNjgiIGN5PSI2NCIgcj0iMTAiIGZpbGw9IiM0YTllZmYiIG9wYWNpdHk9IjAuMyIvPg0KICA8IS0tIFB1cGlsIGxvb2tpbmcgcmlnaHQgLS0+DQogIDxjaXJjbGUgY3g9IjcyIiBjeT0iNjQiIHI9IjYiIGZpbGw9IiNmZmZmZmYiLz4NCiAgPGNpcmNsZSBjeD0iNzQiIGN5PSI2MyIgcj0iMiIgZmlsbD0iIzIxMjUyOSIvPg0KICA8IS0tIEJvbGQgcmlnaHQgYXJyb3cgLS0+DQogIDxwb2x5Z29uIHBvaW50cz0iMTIyLDY0IDEwNiw0OCAxMDYsNTcgOTQsNTcgOTQsNzEgMTA2LDcxIDEwNiw4MCIgZmlsbD0iIzRhOWVmZiIvPg0KICA8cG9seWdvbiBwb2ludHM9IjEyMiw2NCAxMDYsNDggMTA2LDU3IDk0LDU3IDk0LDcxIDEwNiw3MSAxMDYsODAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzRhOWVmZiIgc3Ryb2tlLXdpZHRoPSIwLjUiIG9wYWNpdHk9IjAuNiIvPg0KICA8IS0tIEFycm93IGhpZ2hsaWdodCAtLT4NCiAgPGxpbmUgeDE9IjEwNiIgeTE9IjUyIiB4Mj0iMTA2IiB5Mj0iNTciIHN0cm9rZT0iIzdiYmZmZiIgc3Ryb2tlLXdpZHRoPSIxIiBvcGFjaXR5PSIwLjUiLz4NCg0KICA8dGV4dCB4PSI3MiIgeT0iMTI2IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwsSGVsdmV0aWNhLHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTYiIGZvbnQtd2VpZ2h0PSJib2xkIiBmaWxsPSJ3aGl0ZSI+TE9PSyBSPC90ZXh0Pg0KPC9zdmc+",
-              "OutlineThickness": 2,
-              "ShowTitle": false,
-              "Title": "",
-              "TitleAlignment": "bottom",
-              "TitleColor": "#FFFFFF"
+              "Image": "Images/777ACAD33277C0C0575565A722.png"
             }
           ],
-          "UUID": "com.simracing.ace.glance-right"
+          "UUID": "com.elgato.streamdeck.system.hotkey"
         },
         "3,0": {
-          "ActionID": "f2f5ac1d-8586-468d-9da0-144d9bb47b40",
+          "ActionID": "e1fa5856-ec37-4296-ab39-c6c1af193a5f",
           "LinkedTitle": true,
-          "Name": "Free Camera",
-          "Plugin": {
-            "Name": "Assetto Corsa EVO",
-            "UUID": "com.simracing.ace",
-            "Version": "1.0"
-          },
+          "Name": "Hotkey",
           "Resources": null,
           "Settings": {
-            "hotkey": "F5"
+            "Coalesce": true,
+            "Hotkeys": [
+              {
+                "KeyCmd": false,
+                "KeyCtrl": false,
+                "KeyModifiers": 0,
+                "KeyOption": false,
+                "KeyShift": false,
+                "NativeCode": 63,
+                "QTKeyCode": 16777268,
+                "VKeyCode": 116
+              },
+              {
+                "KeyCmd": false,
+                "KeyCtrl": false,
+                "KeyModifiers": 0,
+                "KeyOption": false,
+                "KeyShift": false,
+                "NativeCode": 146,
+                "QTKeyCode": 33554431,
+                "VKeyCode": -1
+              },
+              {
+                "KeyCmd": false,
+                "KeyCtrl": false,
+                "KeyModifiers": 0,
+                "KeyOption": false,
+                "KeyShift": false,
+                "NativeCode": 146,
+                "QTKeyCode": 33554431,
+                "VKeyCode": -1
+              },
+              {
+                "KeyCmd": false,
+                "KeyCtrl": false,
+                "KeyModifiers": 0,
+                "KeyOption": false,
+                "KeyShift": false,
+                "NativeCode": 146,
+                "QTKeyCode": 33554431,
+                "VKeyCode": -1
+              }
+            ]
           },
           "State": 0,
           "States": [
             {
-              "FontFamily": "",
-              "FontSize": 10,
-              "FontStyle": "Bold",
-              "FontUnderline": false,
-              "Image": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNDQgMTQ0IiB3aWR0aD0iMTQ0IiBoZWlnaHQ9IjE0NCI+DQogIDxyZWN0IHg9IjQiIHk9IjQiIHdpZHRoPSIxMzYiIGhlaWdodD0iMTM2IiByeD0iMTIiIGZpbGw9IiMyMTI1MjkiIHN0cm9rZT0iI2UyMDYxMyIgc3Ryb2tlLXdpZHRoPSIyIi8+DQogIDxyZWN0IHg9IjgiIHk9IjgiIHdpZHRoPSIxMjgiIGhlaWdodD0iMTI4IiByeD0iMTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzJkMzIzOCIgc3Ryb2tlLXdpZHRoPSIxIi8+DQogIDwhLS0gVmlkZW8gY2FtZXJhIGJvZHkgLS0+DQogIDxyZWN0IHg9IjI4IiB5PSI0NCIgd2lkdGg9IjYwIiBoZWlnaHQ9IjQwIiByeD0iNiIgZmlsbD0iIzRhOWVmZiIgb3BhY2l0eT0iMC44NSIvPg0KICA8cmVjdCB4PSIyOCIgeT0iNDQiIHdpZHRoPSI2MCIgaGVpZ2h0PSI0MCIgcng9IjYiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzRhOWVmZiIgc3Ryb2tlLXdpZHRoPSIxLjUiLz4NCiAgPCEtLSBDYW1lcmEgbGVucyBkZXRhaWwgLS0+DQogIDxjaXJjbGUgY3g9IjU4IiBjeT0iNjQiIHI9IjEwIiBmaWxsPSIjMjEyNTI5IiBzdHJva2U9IiM3YmJmZmYiIHN0cm9rZS13aWR0aD0iMS41Ii8+DQogIDxjaXJjbGUgY3g9IjU4IiBjeT0iNjQiIHI9IjUiIGZpbGw9IiMyYTVhOGYiLz4NCiAgPGNpcmNsZSBjeD0iNTYiIGN5PSI2MiIgcj0iMS41IiBmaWxsPSIjN2JiZmZmIiBvcGFjaXR5PSIwLjUiLz4NCiAgPCEtLSBDYW1lcmEgdmlld2ZpbmRlciBidW1wIC0tPg0KICA8cmVjdCB4PSIzMCIgeT0iNDAiIHdpZHRoPSIxNiIgaGVpZ2h0PSI2IiByeD0iMiIgZmlsbD0iIzNhOGFlZiIvPg0KICA8IS0tIENhbWVyYSBsZW5zIGhvb2QgLyBmcm9udCBleHRlbnNpb24gLS0+DQogIDxwb2x5Z29uIHBvaW50cz0iODgsNTAgMTA4LDQwIDEwOCw4OCA4OCw3OCIgZmlsbD0iIzRhOWVmZiIgb3BhY2l0eT0iMC43IiBzdHJva2U9IiM0YTllZmYiIHN0cm9rZS13aWR0aD0iMSIvPg0KICA8IS0tIENyb3NzaGFpci9naW1iYWwgb3ZlcmxheSAtLT4NCiAgPGNpcmNsZSBjeD0iNzIiIGN5PSI2NCIgcj0iMjIiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2ZmZmZmZiIgc3Ryb2tlLXdpZHRoPSIxLjUiIG9wYWNpdHk9IjAuNyIgc3Ryb2tlLWRhc2hhcnJheT0iNCwzIi8+DQogIDxsaW5lIHgxPSI3MiIgeTE9IjM4IiB4Mj0iNzIiIHkyPSI1MCIgc3Ryb2tlPSIjZmZmZmZmIiBzdHJva2Utd2lkdGg9IjEuNSIgb3BhY2l0eT0iMC44Ii8+DQogIDxsaW5lIHgxPSI3MiIgeTE9Ijc4IiB4Mj0iNzIiIHkyPSI5MCIgc3Ryb2tlPSIjZmZmZmZmIiBzdHJva2Utd2lkdGg9IjEuNSIgb3BhY2l0eT0iMC44Ii8+DQogIDxsaW5lIHgxPSI0NiIgeTE9IjY0IiB4Mj0iNTgiIHkyPSI2NCIgc3Ryb2tlPSIjZmZmZmZmIiBzdHJva2Utd2lkdGg9IjEuNSIgb3BhY2l0eT0iMC44Ii8+DQogIDxsaW5lIHgxPSI4NiIgeTE9IjY0IiB4Mj0iOTgiIHkyPSI2NCIgc3Ryb2tlPSIjZmZmZmZmIiBzdHJva2Utd2lkdGg9IjEuNSIgb3BhY2l0eT0iMC44Ii8+DQogIDwhLS0gQ2VudGVyIGRvdCAtLT4NCiAgPGNpcmNsZSBjeD0iNzIiIGN5PSI2NCIgcj0iMiIgZmlsbD0iI2ZmZmZmZiIgb3BhY2l0eT0iMC45Ii8+DQoNCiAgPHRleHQgeD0iNzIiIHk9IjEyNiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IkFyaWFsLEhlbHZldGljYSxzYW5zLXNlcmlmIiBmb250LXNpemU9IjE2IiBmb250LXdlaWdodD0iYm9sZCIgZmlsbD0id2hpdGUiPkZSRUUgQ0FNPC90ZXh0Pg0KPC9zdmc+",
-              "OutlineThickness": 2,
-              "ShowTitle": false,
-              "Title": "",
-              "TitleAlignment": "bottom",
-              "TitleColor": "#FFFFFF"
+              "Image": "Images/F2AE8D5DF9682A04D3C8A4B0C6.png"
             }
           ],
-          "UUID": "com.simracing.ace.free-camera"
+          "UUID": "com.elgato.streamdeck.system.hotkey"
         },
         "4,0": {
-          "ActionID": "ddabc194-efe1-456d-a9d3-89ebb6566c39",
+          "ActionID": "e2ca107a-fba6-44df-a8cb-4c3de77d7708",
           "LinkedTitle": true,
-          "Name": "Track Camera",
-          "Plugin": {
-            "Name": "Assetto Corsa EVO",
-            "UUID": "com.simracing.ace",
-            "Version": "1.0"
-          },
+          "Name": "Hotkey",
           "Resources": null,
           "Settings": {
-            "hotkey": "F1"
+            "Coalesce": true,
+            "Hotkeys": [
+              {
+                "KeyCmd": false,
+                "KeyCtrl": false,
+                "KeyModifiers": 0,
+                "KeyOption": false,
+                "KeyShift": false,
+                "NativeCode": 0,
+                "QTKeyCode": 0,
+                "VKeyCode": 0
+              },
+              {
+                "KeyCmd": false,
+                "KeyCtrl": false,
+                "KeyModifiers": 0,
+                "KeyOption": false,
+                "KeyShift": false,
+                "NativeCode": 146,
+                "QTKeyCode": 33554431,
+                "VKeyCode": -1
+              },
+              {
+                "KeyCmd": false,
+                "KeyCtrl": false,
+                "KeyModifiers": 0,
+                "KeyOption": false,
+                "KeyShift": false,
+                "NativeCode": 146,
+                "QTKeyCode": 33554431,
+                "VKeyCode": -1
+              },
+              {
+                "KeyCmd": false,
+                "KeyCtrl": false,
+                "KeyModifiers": 0,
+                "KeyOption": false,
+                "KeyShift": false,
+                "NativeCode": 146,
+                "QTKeyCode": 33554431,
+                "VKeyCode": -1
+              }
+            ]
           },
           "State": 0,
           "States": [
             {
-              "FontFamily": "",
-              "FontSize": 10,
-              "FontStyle": "Bold",
-              "FontUnderline": false,
-              "Image": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNDQgMTQ0IiB3aWR0aD0iMTQ0IiBoZWlnaHQ9IjE0NCI+DQogIDxyZWN0IHg9IjQiIHk9IjQiIHdpZHRoPSIxMzYiIGhlaWdodD0iMTM2IiByeD0iMTIiIGZpbGw9IiMyMTI1MjkiIHN0cm9rZT0iI2UyMDYxMyIgc3Ryb2tlLXdpZHRoPSIyIi8+DQogIDxyZWN0IHg9IjgiIHk9IjgiIHdpZHRoPSIxMjgiIGhlaWdodD0iMTI4IiByeD0iMTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzJkMzIzOCIgc3Ryb2tlLXdpZHRoPSIxIi8+DQogIDwhLS0gVHJpcG9kIGxlZ3MgLS0+DQogIDxsaW5lIHgxPSI3MiIgeTE9IjcyIiB4Mj0iNDQiIHkyPSIxMDgiIHN0cm9rZT0iIzc3NyIgc3Ryb2tlLXdpZHRoPSIzIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4NCiAgPGxpbmUgeDE9IjcyIiB5MT0iNzIiIHgyPSIxMDAiIHkyPSIxMDgiIHN0cm9rZT0iIzc3NyIgc3Ryb2tlLXdpZHRoPSIzIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4NCiAgPGxpbmUgeDE9IjcyIiB5MT0iNzIiIHgyPSI3MiIgeTI9IjExMCIgc3Ryb2tlPSIjNzc3IiBzdHJva2Utd2lkdGg9IjMiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPg0KICA8IS0tIFRyaXBvZCBoZWFkIHBsYXRlIC0tPg0KICA8cmVjdCB4PSI2MiIgeT0iNjYiIHdpZHRoPSIyMCIgaGVpZ2h0PSI4IiByeD0iMiIgZmlsbD0iIzg4OCIvPg0KICA8IS0tIENhbWVyYSBib2R5IC0tPg0KICA8cmVjdCB4PSI0MCIgeT0iMzQiIHdpZHRoPSI1NiIgaGVpZ2h0PSIzNCIgcng9IjUiIGZpbGw9IiM0YTllZmYiLz4NCiAgPHJlY3QgeD0iNDAiIHk9IjM0IiB3aWR0aD0iNTYiIGhlaWdodD0iMzQiIHJ4PSI1IiBmaWxsPSJub25lIiBzdHJva2U9IiMzYThhZWYiIHN0cm9rZS13aWR0aD0iMSIvPg0KICA8IS0tIExlbnMgLS0+DQogIDxyZWN0IHg9IjkyIiB5PSI0MiIgd2lkdGg9IjE2IiBoZWlnaHQ9IjE4IiByeD0iMyIgZmlsbD0iIzNhOGFlZiIgc3Ryb2tlPSIjNGE5ZWZmIiBzdHJva2Utd2lkdGg9IjEiLz4NCiAgPGNpcmNsZSBjeD0iMTA4IiBjeT0iNTEiIHI9IjYiIGZpbGw9IiMyMTI1MjkiIHN0cm9rZT0iIzVhYjBmZiIgc3Ryb2tlLXdpZHRoPSIxLjUiLz4NCiAgPGNpcmNsZSBjeD0iMTA4IiBjeT0iNTEiIHI9IjMiIGZpbGw9IiMxYTIwMzAiLz4NCiAgPCEtLSBWaWV3ZmluZGVyIC0tPg0KICA8cmVjdCB4PSI0MiIgeT0iMzYiIHdpZHRoPSIxNCIgaGVpZ2h0PSIxMCIgcng9IjIiIGZpbGw9IiMzYThhZWYiIHN0cm9rZT0iIzVhYjBmZiIgc3Ryb2tlLXdpZHRoPSIwLjUiLz4NCiAgPCEtLSBDYW1lcmEgZGV0YWlsIGxpbmVzIC0tPg0KICA8bGluZSB4MT0iNDYiIHkxPSI1OCIgeDI9IjYwIiB5Mj0iNTgiIHN0cm9rZT0iIzJhNmFiZiIgc3Ryb2tlLXdpZHRoPSIxIi8+DQogIDxsaW5lIHgxPSI0NiIgeTE9IjYxIiB4Mj0iNTUiIHkyPSI2MSIgc3Ryb2tlPSIjMmE2YWJmIiBzdHJva2Utd2lkdGg9IjEiLz4NCiAgPCEtLSBCcm9hZGNhc3QgcmVjb3JkaW5nIGRvdCAtLT4NCiAgPGNpcmNsZSBjeD0iMTE0IiBjeT0iMzAiIHI9IjYiIGZpbGw9IiNlMjA2MTMiLz4NCiAgPGNpcmNsZSBjeD0iMTE0IiBjeT0iMzAiIHI9IjMiIGZpbGw9IiNmZjQ0NDQiIG9wYWNpdHk9IjAuOCIvPg0KICA8Y2lyY2xlIGN4PSIxMTQiIGN5PSIzMCIgcj0iNiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZTIwNjEzIiBzdHJva2Utd2lkdGg9IjEiIG9wYWNpdHk9IjAuNCIvPg0KDQogIDx0ZXh0IHg9IjcyIiB5PSIxMjYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJBcmlhbCxIZWx2ZXRpY2Esc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNiIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IndoaXRlIj5UUkFDSyBDQU08L3RleHQ+DQo8L3N2Zz4=",
-              "OutlineThickness": 2,
-              "ShowTitle": false,
-              "Title": "",
-              "TitleAlignment": "bottom",
-              "TitleColor": "#FFFFFF"
+              "Image": "Images/F60FCE485C50BFB753BCD76A39.png"
             }
           ],
-          "UUID": "com.simracing.ace.track-camera"
+          "UUID": "com.elgato.streamdeck.system.hotkey"
         },
         "0,1": {
-          "ActionID": "3eb977cf-6748-49c0-9e65-c77f523ccbbb",
+          "ActionID": "fb535531-6b2e-48a4-aab6-7c16e31e718a",
           "LinkedTitle": true,
-          "Name": "Chase Camera",
-          "Plugin": {
-            "Name": "Assetto Corsa EVO",
-            "UUID": "com.simracing.ace",
-            "Version": "1.0"
-          },
+          "Name": "Hotkey",
           "Resources": null,
           "Settings": {
-            "hotkey": "F3"
+            "Coalesce": true,
+            "Hotkeys": [
+              {
+                "KeyCmd": false,
+                "KeyCtrl": false,
+                "KeyModifiers": 0,
+                "KeyOption": false,
+                "KeyShift": false,
+                "NativeCode": 0,
+                "QTKeyCode": 0,
+                "VKeyCode": 0
+              },
+              {
+                "KeyCmd": false,
+                "KeyCtrl": false,
+                "KeyModifiers": 0,
+                "KeyOption": false,
+                "KeyShift": false,
+                "NativeCode": 146,
+                "QTKeyCode": 33554431,
+                "VKeyCode": -1
+              },
+              {
+                "KeyCmd": false,
+                "KeyCtrl": false,
+                "KeyModifiers": 0,
+                "KeyOption": false,
+                "KeyShift": false,
+                "NativeCode": 146,
+                "QTKeyCode": 33554431,
+                "VKeyCode": -1
+              },
+              {
+                "KeyCmd": false,
+                "KeyCtrl": false,
+                "KeyModifiers": 0,
+                "KeyOption": false,
+                "KeyShift": false,
+                "NativeCode": 146,
+                "QTKeyCode": 33554431,
+                "VKeyCode": -1
+              }
+            ]
           },
           "State": 0,
           "States": [
             {
-              "FontFamily": "",
-              "FontSize": 10,
-              "FontStyle": "Bold",
-              "FontUnderline": false,
-              "Image": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNDQgMTQ0IiB3aWR0aD0iMTQ0IiBoZWlnaHQ9IjE0NCI+DQogIDxyZWN0IHg9IjQiIHk9IjQiIHdpZHRoPSIxMzYiIGhlaWdodD0iMTM2IiByeD0iMTIiIGZpbGw9IiMyMTI1MjkiIHN0cm9rZT0iI2UyMDYxMyIgc3Ryb2tlLXdpZHRoPSIyIi8+DQogIDxyZWN0IHg9IjgiIHk9IjgiIHdpZHRoPSIxMjgiIGhlaWdodD0iMTI4IiByeD0iMTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzJkMzIzOCIgc3Ryb2tlLXdpZHRoPSIxIi8+DQogIDwhLS0gQ2FtZXJhL2V5ZSBhYm92ZSAtLT4NCiAgPHJlY3QgeD0iNDgiIHk9IjI0IiB3aWR0aD0iNDgiIGhlaWdodD0iMzAiIHJ4PSI2IiBmaWxsPSIjNGE5ZWZmIiBvcGFjaXR5PSIwLjg1Ii8+DQogIDxyZWN0IHg9IjQ4IiB5PSIyNCIgd2lkdGg9IjQ4IiBoZWlnaHQ9IjMwIiByeD0iNiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjNWFiMGZmIiBzdHJva2Utd2lkdGg9IjEiLz4NCiAgPCEtLSBDYW1lcmEgbGVucyAtLT4NCiAgPGNpcmNsZSBjeD0iNzIiIGN5PSIzOSIgcj0iOSIgZmlsbD0iIzIxMjUyOSIgc3Ryb2tlPSIjN2JiZmZmIiBzdHJva2Utd2lkdGg9IjEuNSIvPg0KICA8Y2lyY2xlIGN4PSI3MiIgY3k9IjM5IiByPSI0LjUiIGZpbGw9IiMyYTVhOGYiLz4NCiAgPGNpcmNsZSBjeD0iNzAiIGN5PSIzNyIgcj0iMS41IiBmaWxsPSIjN2JiZmZmIiBvcGFjaXR5PSIwLjQiLz4NCiAgPCEtLSBSZWNvcmRpbmcgaW5kaWNhdG9yIC0tPg0KICA8Y2lyY2xlIGN4PSI5MCIgY3k9IjMwIiByPSIzIiBmaWxsPSIjZTIwNjEzIi8+DQogIDwhLS0gRG90dGVkIHNpZ2h0IGxpbmVzIGZyb20gY2FtZXJhIHRvIGNhciAtLT4NCiAgPGxpbmUgeDE9IjU4IiB5MT0iNTQiIHgyPSI1MCIgeTI9IjgyIiBzdHJva2U9IiM0YTllZmYiIHN0cm9rZS13aWR0aD0iMS41IiBzdHJva2UtZGFzaGFycmF5PSIzLDMiIG9wYWNpdHk9IjAuNiIvPg0KICA8bGluZSB4MT0iODYiIHkxPSI1NCIgeDI9Ijk0IiB5Mj0iODIiIHN0cm9rZT0iIzRhOWVmZiIgc3Ryb2tlLXdpZHRoPSIxLjUiIHN0cm9rZS1kYXNoYXJyYXk9IjMsMyIgb3BhY2l0eT0iMC42Ii8+DQogIDwhLS0gQ2FyIHNpbGhvdWV0dGUgYXQgYm90dG9tIC0tPg0KICA8ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSg3MiwgOTYpIj4NCiAgICA8IS0tIENhciBib2R5IC0tPg0KICAgIDxyZWN0IHg9Ii0yMiIgeT0iLTYiIHdpZHRoPSI0NCIgaGVpZ2h0PSIxMiIgcng9IjQiIGZpbGw9IiM3NzciLz4NCiAgICA8IS0tIENhciByb29mL2NhYmluIC0tPg0KICAgIDxyZWN0IHg9Ii0xNCIgeT0iLTEyIiB3aWR0aD0iMjgiIGhlaWdodD0iOCIgcng9IjMiIGZpbGw9IiM4ODgiLz4NCiAgICA8IS0tIFdoZWVscyAtLT4NCiAgICA8Y2lyY2xlIGN4PSItMTYiIGN5PSI4IiByPSI0IiBmaWxsPSIjNTU1IiBzdHJva2U9IiM3NzciIHN0cm9rZS13aWR0aD0iMSIvPg0KICAgIDxjaXJjbGUgY3g9IjE2IiBjeT0iOCIgcj0iNCIgZmlsbD0iIzU1NSIgc3Ryb2tlPSIjNzc3IiBzdHJva2Utd2lkdGg9IjEiLz4NCiAgICA8IS0tIFdpbmRzaGllbGQgLS0+DQogICAgPHJlY3QgeD0iLTEyIiB5PSItMTEiIHdpZHRoPSIyNCIgaGVpZ2h0PSI1IiByeD0iMiIgZmlsbD0iIzRhOWVmZiIgb3BhY2l0eT0iMC4zIi8+DQogICAgPCEtLSBUYWlsbGlnaHRzIC0tPg0KICAgIDxyZWN0IHg9Ii0yMCIgeT0iLTMiIHdpZHRoPSI0IiBoZWlnaHQ9IjMiIHJ4PSIxIiBmaWxsPSIjZTIwNjEzIiBvcGFjaXR5PSIwLjYiLz4NCiAgICA8cmVjdCB4PSIxNiIgeT0iLTMiIHdpZHRoPSI0IiBoZWlnaHQ9IjMiIHJ4PSIxIiBmaWxsPSIjZTIwNjEzIiBvcGFjaXR5PSIwLjYiLz4NCiAgPC9nPg0KDQogIDx0ZXh0IHg9IjcyIiB5PSIxMjYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJBcmlhbCxIZWx2ZXRpY2Esc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNiIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IndoaXRlIj5DSEFTRSBDQU08L3RleHQ+DQo8L3N2Zz4=",
-              "OutlineThickness": 2,
-              "ShowTitle": false,
-              "Title": "",
-              "TitleAlignment": "bottom",
-              "TitleColor": "#FFFFFF"
+              "Image": "Images/9DA7FA46C04A353FE75AF465DC.png"
             }
           ],
-          "UUID": "com.simracing.ace.chase-camera"
+          "UUID": "com.elgato.streamdeck.system.hotkey"
         },
         "1,1": {
-          "ActionID": "091db973-a05a-4729-9c83-d01bc65e93c2",
+          "ActionID": "d7cb346e-54d6-4e93-98b1-88c4f87fe53a",
           "LinkedTitle": true,
-          "Name": "Virtual Mirror",
-          "Plugin": {
-            "Name": "Assetto Corsa EVO",
-            "UUID": "com.simracing.ace",
-            "Version": "1.0"
-          },
+          "Name": "Hotkey",
           "Resources": null,
           "Settings": {
-            "hotkey": "F8"
+            "Coalesce": true,
+            "Hotkeys": [
+              {
+                "KeyCmd": false,
+                "KeyCtrl": false,
+                "KeyModifiers": 0,
+                "KeyOption": false,
+                "KeyShift": false,
+                "NativeCode": 0,
+                "QTKeyCode": 0,
+                "VKeyCode": 0
+              },
+              {
+                "KeyCmd": false,
+                "KeyCtrl": false,
+                "KeyModifiers": 0,
+                "KeyOption": false,
+                "KeyShift": false,
+                "NativeCode": 146,
+                "QTKeyCode": 33554431,
+                "VKeyCode": -1
+              },
+              {
+                "KeyCmd": false,
+                "KeyCtrl": false,
+                "KeyModifiers": 0,
+                "KeyOption": false,
+                "KeyShift": false,
+                "NativeCode": 146,
+                "QTKeyCode": 33554431,
+                "VKeyCode": -1
+              },
+              {
+                "KeyCmd": false,
+                "KeyCtrl": false,
+                "KeyModifiers": 0,
+                "KeyOption": false,
+                "KeyShift": false,
+                "NativeCode": 146,
+                "QTKeyCode": 33554431,
+                "VKeyCode": -1
+              }
+            ]
           },
           "State": 0,
           "States": [
             {
-              "FontFamily": "",
-              "FontSize": 10,
-              "FontStyle": "Bold",
-              "FontUnderline": false,
-              "Image": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNDQgMTQ0IiB3aWR0aD0iMTQ0IiBoZWlnaHQ9IjE0NCI+DQogIDxyZWN0IHg9IjQiIHk9IjQiIHdpZHRoPSIxMzYiIGhlaWdodD0iMTM2IiByeD0iMTIiIGZpbGw9IiMyMTI1MjkiIHN0cm9rZT0iI2UyMDYxMyIgc3Ryb2tlLXdpZHRoPSIyIi8+DQogIDxyZWN0IHg9IjgiIHk9IjgiIHdpZHRoPSIxMjgiIGhlaWdodD0iMTI4IiByeD0iMTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzJkMzIzOCIgc3Ryb2tlLXdpZHRoPSIxIi8+DQogIDwhLS0gV2lkZSByZWN0YW5ndWxhciBtaXJyb3IgLS0+DQogIDxyZWN0IHg9IjE4IiB5PSIzNiIgd2lkdGg9IjEwOCIgaGVpZ2h0PSI0OCIgcng9IjYiIGZpbGw9IiMxYTIwMzAiIHN0cm9rZT0iI2ZmZmZmZiIgc3Ryb2tlLXdpZHRoPSIyIi8+DQogIDwhLS0gTWlycm9yIGdsYXNzIGlubmVyIGhpZ2hsaWdodCAtLT4NCiAgPGxpbmUgeDE9IjIyIiB5MT0iNDAiIHgyPSI1MCIgeTI9IjQwIiBzdHJva2U9IiM0NDQiIHN0cm9rZS13aWR0aD0iMSIgb3BhY2l0eT0iMC41Ii8+DQogIDwhLS0gUmVmbGVjdGVkIGNhciAxIChjZW50ZXIsIGNsb3Nlc3QpIC0tPg0KICA8ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSg3MiwgNjApIj4NCiAgICA8cmVjdCB4PSItOCIgeT0iLTQiIHdpZHRoPSIxNiIgaGVpZ2h0PSI4IiByeD0iMiIgZmlsbD0iIzRhOWVmZiIgb3BhY2l0eT0iMC43Ii8+DQogICAgPHJlY3QgeD0iLTUiIHk9Ii03IiB3aWR0aD0iMTAiIGhlaWdodD0iNCIgcng9IjEuNSIgZmlsbD0iIzRhOWVmZiIgb3BhY2l0eT0iMC41Ii8+DQogICAgPGNpcmNsZSBjeD0iLTUiIGN5PSIwIiByPSIxLjIiIGZpbGw9IiNmZmYzMDAiIG9wYWNpdHk9IjAuNiIvPg0KICAgIDxjaXJjbGUgY3g9IjUiIGN5PSIwIiByPSIxLjIiIGZpbGw9IiNmZmYzMDAiIG9wYWNpdHk9IjAuNiIvPg0KICA8L2c+DQogIDwhLS0gUmVmbGVjdGVkIGNhciAyIChsZWZ0LCBmYXJ0aGVyKSAtLT4NCiAgPGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoNDAsIDYyKSI+DQogICAgPHJlY3QgeD0iLTUiIHk9Ii0zIiB3aWR0aD0iMTAiIGhlaWdodD0iNiIgcng9IjEuNSIgZmlsbD0iIzRhOWVmZiIgb3BhY2l0eT0iMC41Ii8+DQogICAgPHJlY3QgeD0iLTMiIHk9Ii01IiB3aWR0aD0iNiIgaGVpZ2h0PSIzIiByeD0iMSIgZmlsbD0iIzRhOWVmZiIgb3BhY2l0eT0iMC4zNSIvPg0KICAgIDxjaXJjbGUgY3g9Ii0zIiBjeT0iMCIgcj0iMSIgZmlsbD0iI2ZmZjMwMCIgb3BhY2l0eT0iMC40Ii8+DQogICAgPGNpcmNsZSBjeD0iMyIgY3k9IjAiIHI9IjEiIGZpbGw9IiNmZmYzMDAiIG9wYWNpdHk9IjAuNCIvPg0KICA8L2c+DQogIDwhLS0gUmVmbGVjdGVkIGNhciAzIChyaWdodCwgZmFydGhlcikgLS0+DQogIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDEwNCwgNjIpIj4NCiAgICA8cmVjdCB4PSItNSIgeT0iLTMiIHdpZHRoPSIxMCIgaGVpZ2h0PSI2IiByeD0iMS41IiBmaWxsPSIjNGE5ZWZmIiBvcGFjaXR5PSIwLjUiLz4NCiAgICA8cmVjdCB4PSItMyIgeT0iLTUiIHdpZHRoPSI2IiBoZWlnaHQ9IjMiIHJ4PSIxIiBmaWxsPSIjNGE5ZWZmIiBvcGFjaXR5PSIwLjM1Ii8+DQogICAgPGNpcmNsZSBjeD0iLTMiIGN5PSIwIiByPSIxIiBmaWxsPSIjZmZmMzAwIiBvcGFjaXR5PSIwLjQiLz4NCiAgICA8Y2lyY2xlIGN4PSIzIiBjeT0iMCIgcj0iMSIgZmlsbD0iI2ZmZjMwMCIgb3BhY2l0eT0iMC40Ii8+DQogIDwvZz4NCiAgPCEtLSBSb2FkIGxpbmVzIGluIG1pcnJvciByZWZsZWN0aW9uIC0tPg0KICA8bGluZSB4MT0iNzIiIHkxPSI3MiIgeDI9IjcyIiB5Mj0iODAiIHN0cm9rZT0iIzU1NSIgc3Ryb2tlLXdpZHRoPSIxIiBzdHJva2UtZGFzaGFycmF5PSIyLDIiIG9wYWNpdHk9IjAuNCIvPg0KICA8bGluZSB4MT0iNTIiIHkxPSI3NiIgeDI9IjQyIiB5Mj0iODAiIHN0cm9rZT0iIzU1NSIgc3Ryb2tlLXdpZHRoPSIwLjUiIG9wYWNpdHk9IjAuMyIvPg0KICA8bGluZSB4MT0iOTIiIHkxPSI3NiIgeDI9IjEwMiIgeTI9IjgwIiBzdHJva2U9IiM1NTUiIHN0cm9rZS13aWR0aD0iMC41IiBvcGFjaXR5PSIwLjMiLz4NCiAgPCEtLSBNaXJyb3IgYnJhY2tldCAtLT4NCiAgPHJlY3QgeD0iNjQiIHk9Ijg0IiB3aWR0aD0iMTYiIGhlaWdodD0iNiIgcng9IjIiIGZpbGw9IiM1NTUiLz4NCiAgPCEtLSBWaXJ0dWFsIGluZGljYXRvciBkb3RzIC0tPg0KICA8Y2lyY2xlIGN4PSIzMCIgY3k9IjEwMCIgcj0iMiIgZmlsbD0iIzRhOWVmZiIgb3BhY2l0eT0iMC41Ii8+DQogIDxjaXJjbGUgY3g9IjcyIiBjeT0iMTAwIiByPSIyIiBmaWxsPSIjNGE5ZWZmIiBvcGFjaXR5PSIwLjUiLz4NCiAgPGNpcmNsZSBjeD0iMTE0IiBjeT0iMTAwIiByPSIyIiBmaWxsPSIjNGE5ZWZmIiBvcGFjaXR5PSIwLjUiLz4NCg0KICA8dGV4dCB4PSI3MiIgeT0iMTI2IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwsSGVsdmV0aWNhLHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTYiIGZvbnQtd2VpZ2h0PSJib2xkIiBmaWxsPSJ3aGl0ZSI+TUlSUk9SPC90ZXh0Pg0KPC9zdmc+",
-              "OutlineThickness": 2,
-              "ShowTitle": false,
-              "Title": "",
-              "TitleAlignment": "bottom",
-              "TitleColor": "#FFFFFF"
+              "Image": "Images/5FA82BE0541ACE79A637F369BE.png"
             }
           ],
-          "UUID": "com.simracing.ace.virtual-mirror"
+          "UUID": "com.elgato.streamdeck.system.hotkey"
         },
         "2,1": {
-          "ActionID": "cf04bffb-49ef-4222-9c09-00b24cc830da",
+          "ActionID": "fce24178-b8fa-41f2-8e48-e143f937b56e",
           "LinkedTitle": true,
-          "Name": "Toggle HUD",
-          "Plugin": {
-            "Name": "Assetto Corsa EVO",
-            "UUID": "com.simracing.ace",
-            "Version": "1.0"
-          },
+          "Name": "Hotkey",
           "Resources": null,
           "Settings": {
-            "hotkey": "F4"
+            "Coalesce": true,
+            "Hotkeys": [
+              {
+                "KeyCmd": false,
+                "KeyCtrl": false,
+                "KeyModifiers": 0,
+                "KeyOption": false,
+                "KeyShift": false,
+                "NativeCode": 0,
+                "QTKeyCode": 0,
+                "VKeyCode": 0
+              },
+              {
+                "KeyCmd": false,
+                "KeyCtrl": false,
+                "KeyModifiers": 0,
+                "KeyOption": false,
+                "KeyShift": false,
+                "NativeCode": 146,
+                "QTKeyCode": 33554431,
+                "VKeyCode": -1
+              },
+              {
+                "KeyCmd": false,
+                "KeyCtrl": false,
+                "KeyModifiers": 0,
+                "KeyOption": false,
+                "KeyShift": false,
+                "NativeCode": 146,
+                "QTKeyCode": 33554431,
+                "VKeyCode": -1
+              },
+              {
+                "KeyCmd": false,
+                "KeyCtrl": false,
+                "KeyModifiers": 0,
+                "KeyOption": false,
+                "KeyShift": false,
+                "NativeCode": 146,
+                "QTKeyCode": 33554431,
+                "VKeyCode": -1
+              }
+            ]
           },
           "State": 0,
           "States": [
             {
-              "FontFamily": "",
-              "FontSize": 10,
-              "FontStyle": "Bold",
-              "FontUnderline": false,
-              "Image": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNDQgMTQ0IiB3aWR0aD0iMTQ0IiBoZWlnaHQ9IjE0NCI+DQogIDxyZWN0IHg9IjQiIHk9IjQiIHdpZHRoPSIxMzYiIGhlaWdodD0iMTM2IiByeD0iMTIiIGZpbGw9IiMyMTI1MjkiIHN0cm9rZT0iI2UyMDYxMyIgc3Ryb2tlLXdpZHRoPSIyIi8+DQogIDxyZWN0IHg9IjgiIHk9IjgiIHdpZHRoPSIxMjgiIGhlaWdodD0iMTI4IiByeD0iMTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzJkMzIzOCIgc3Ryb2tlLXdpZHRoPSIxIi8+DQogIDwhLS0gU3RlZXJpbmcgd2hlZWwgKHBhcnRpYWwsIGJvdHRvbSBhcmMpIC0tPg0KICA8Y2lyY2xlIGN4PSI3MiIgY3k9IjgwIiByPSIzNiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjNzc3IiBzdHJva2Utd2lkdGg9IjUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPg0KICA8Y2lyY2xlIGN4PSI3MiIgY3k9IjgwIiByPSIzNiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjODg4IiBzdHJva2Utd2lkdGg9IjMiLz4NCiAgPCEtLSBXaGVlbCBzcG9rZXMgLS0+DQogIDxsaW5lIHgxPSI3MiIgeTE9IjgwIiB4Mj0iNzIiIHkyPSIxMTYiIHN0cm9rZT0iIzc3NyIgc3Ryb2tlLXdpZHRoPSI0IiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4NCiAgPGxpbmUgeDE9IjcyIiB5MT0iODAiIHgyPSI0MCIgeTI9IjY4IiBzdHJva2U9IiM3NzciIHN0cm9rZS13aWR0aD0iNCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+DQogIDxsaW5lIHgxPSI3MiIgeTE9IjgwIiB4Mj0iMTA0IiB5Mj0iNjgiIHN0cm9rZT0iIzc3NyIgc3Ryb2tlLXdpZHRoPSI0IiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4NCiAgPCEtLSBXaGVlbCBjZW50ZXIgaHViIC0tPg0KICA8Y2lyY2xlIGN4PSI3MiIgY3k9IjgwIiByPSI4IiBmaWxsPSIjNTU1IiBzdHJva2U9IiM3NzciIHN0cm9rZS13aWR0aD0iMS41Ii8+DQogIDwhLS0gSFVEIG92ZXJsYXkgLSBzcGVlZCBkaXNwbGF5IC0tPg0KICA8cmVjdCB4PSI1MiIgeT0iMjYiIHdpZHRoPSI0MCIgaGVpZ2h0PSIyMiIgcng9IjMiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzRhZGU4MCIgc3Ryb2tlLXdpZHRoPSIxLjUiIG9wYWNpdHk9IjAuOCIvPg0KICA8IS0tIEhVRCBnZWFyIGluZGljYXRvciAtLT4NCiAgPHJlY3QgeD0iNjIiIHk9IjUwIiB3aWR0aD0iMjAiIGhlaWdodD0iMTgiIHJ4PSIyIiBmaWxsPSJub25lIiBzdHJva2U9IiM0YWRlODAiIHN0cm9rZS13aWR0aD0iMSIgb3BhY2l0eT0iMC43Ii8+DQogIDwhLS0gSFVEIFJQTSBiYXIgaW5kaWNhdG9ycyAtLT4NCiAgPHJlY3QgeD0iMjIiIHk9IjMyIiB3aWR0aD0iNCIgaGVpZ2h0PSI4IiByeD0iMSIgZmlsbD0iIzRhZGU4MCIgb3BhY2l0eT0iMC41Ii8+DQogIDxyZWN0IHg9IjI4IiB5PSIzMCIgd2lkdGg9IjQiIGhlaWdodD0iMTAiIHJ4PSIxIiBmaWxsPSIjNGFkZTgwIiBvcGFjaXR5PSIwLjYiLz4NCiAgPHJlY3QgeD0iMzQiIHk9IjI4IiB3aWR0aD0iNCIgaGVpZ2h0PSIxMiIgcng9IjEiIGZpbGw9IiM0YWRlODAiIG9wYWNpdHk9IjAuNyIvPg0KICA8cmVjdCB4PSI0MCIgeT0iMjYiIHdpZHRoPSI0IiBoZWlnaHQ9IjE0IiByeD0iMSIgZmlsbD0iIzRhZGU4MCIgb3BhY2l0eT0iMC44Ii8+DQogIDxyZWN0IHg9IjEwMCIgeT0iMjYiIHdpZHRoPSI0IiBoZWlnaHQ9IjE0IiByeD0iMSIgZmlsbD0iIzRhZGU4MCIgb3BhY2l0eT0iMC44Ii8+DQogIDxyZWN0IHg9IjEwNiIgeT0iMjgiIHdpZHRoPSI0IiBoZWlnaHQ9IjEyIiByeD0iMSIgZmlsbD0iIzRhZGU4MCIgb3BhY2l0eT0iMC43Ii8+DQogIDxyZWN0IHg9IjExMiIgeT0iMzAiIHdpZHRoPSI0IiBoZWlnaHQ9IjEwIiByeD0iMSIgZmlsbD0iIzRhZGU4MCIgb3BhY2l0eT0iMC42Ii8+DQogIDxyZWN0IHg9IjExOCIgeT0iMzIiIHdpZHRoPSI0IiBoZWlnaHQ9IjgiIHJ4PSIxIiBmaWxsPSIjNGFkZTgwIiBvcGFjaXR5PSIwLjUiLz4NCg0KICA8dGV4dCB4PSI3MiIgeT0iMTI2IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwsSGVsdmV0aWNhLHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTYiIGZvbnQtd2VpZ2h0PSJib2xkIiBmaWxsPSJ3aGl0ZSI+SFVEPC90ZXh0Pg0KPC9zdmc+",
-              "OutlineThickness": 2,
-              "ShowTitle": false,
-              "Title": "",
-              "TitleAlignment": "bottom",
-              "TitleColor": "#FFFFFF"
+              "Image": "Images/1C599EC1BF35B93B7EB036A8A5.png"
             }
           ],
-          "UUID": "com.simracing.ace.hud-toggle"
+          "UUID": "com.elgato.streamdeck.system.hotkey"
         },
         "3,1": {
-          "ActionID": "83ce82a3-c4df-498e-b675-07851bf0ec20",
+          "ActionID": "c60d1c2a-88ad-4ceb-a9c7-f5d4b24d76ab",
           "LinkedTitle": true,
-          "Name": "Leaderboard",
-          "Plugin": {
-            "Name": "Assetto Corsa EVO",
-            "UUID": "com.simracing.ace",
-            "Version": "1.0"
-          },
+          "Name": "Hotkey",
           "Resources": null,
           "Settings": {
-            "hotkey": "F7"
+            "Coalesce": true,
+            "Hotkeys": [
+              {
+                "KeyCmd": false,
+                "KeyCtrl": false,
+                "KeyModifiers": 0,
+                "KeyOption": false,
+                "KeyShift": false,
+                "NativeCode": 0,
+                "QTKeyCode": 0,
+                "VKeyCode": 0
+              },
+              {
+                "KeyCmd": false,
+                "KeyCtrl": false,
+                "KeyModifiers": 0,
+                "KeyOption": false,
+                "KeyShift": false,
+                "NativeCode": 146,
+                "QTKeyCode": 33554431,
+                "VKeyCode": -1
+              },
+              {
+                "KeyCmd": false,
+                "KeyCtrl": false,
+                "KeyModifiers": 0,
+                "KeyOption": false,
+                "KeyShift": false,
+                "NativeCode": 146,
+                "QTKeyCode": 33554431,
+                "VKeyCode": -1
+              },
+              {
+                "KeyCmd": false,
+                "KeyCtrl": false,
+                "KeyModifiers": 0,
+                "KeyOption": false,
+                "KeyShift": false,
+                "NativeCode": 146,
+                "QTKeyCode": 33554431,
+                "VKeyCode": -1
+              }
+            ]
           },
           "State": 0,
           "States": [
             {
-              "FontFamily": "",
-              "FontSize": 10,
-              "FontStyle": "Bold",
-              "FontUnderline": false,
-              "Image": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNDQgMTQ0IiB3aWR0aD0iMTQ0IiBoZWlnaHQ9IjE0NCI+DQogIDxyZWN0IHg9IjQiIHk9IjQiIHdpZHRoPSIxMzYiIGhlaWdodD0iMTM2IiByeD0iMTIiIGZpbGw9IiMyMTI1MjkiIHN0cm9rZT0iI2UyMDYxMyIgc3Ryb2tlLXdpZHRoPSIyIi8+DQogIDxyZWN0IHg9IjgiIHk9IjgiIHdpZHRoPSIxMjgiIGhlaWdodD0iMTI4IiByeD0iMTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzJkMzIzOCIgc3Ryb2tlLXdpZHRoPSIxIi8+DQogIDwhLS0gTGVhZGVyYm9hcmQgcGFuZWwgYmFja2dyb3VuZCAtLT4NCiAgPHJlY3QgeD0iMjIiIHk9IjI0IiB3aWR0aD0iMTAwIiBoZWlnaHQ9Ijg4IiByeD0iNCIgZmlsbD0iIzFhMWUyNCIgc3Ryb2tlPSIjM2EzZjQ3IiBzdHJva2Utd2lkdGg9IjEiLz4NCiAgPCEtLSBIZWFkZXIgYmFyIC0tPg0KICA8cmVjdCB4PSIyMiIgeT0iMjQiIHdpZHRoPSIxMDAiIGhlaWdodD0iMTQiIHJ4PSI0IiBmaWxsPSIjMmQzMjM4Ii8+DQogIDwhLS0gUm93IDEgLSBHb2xkICMxIC0tPg0KICA8cmVjdCB4PSIyNiIgeT0iNDIiIHdpZHRoPSI5MiIgaGVpZ2h0PSIyMCIgcng9IjIiIGZpbGw9IiNmZmYzMDAiIG9wYWNpdHk9IjAuMDgiLz4NCiAgPGxpbmUgeDE9IjQ2IiB5MT0iNDYiIHgyPSI0NiIgeTI9IjU4IiBzdHJva2U9IiMzYTNmNDciIHN0cm9rZS13aWR0aD0iMC41Ii8+DQogIDxyZWN0IHg9IjUwIiB5PSI0OCIgd2lkdGg9IjQyIiBoZWlnaHQ9IjYiIHJ4PSIyIiBmaWxsPSIjZmZmMzAwIiBvcGFjaXR5PSIwLjYiLz4NCiAgPCEtLSBSb3cgMiAtIFNpbHZlciAjMiAtLT4NCiAgPHJlY3QgeD0iMjYiIHk9IjY0IiB3aWR0aD0iOTIiIGhlaWdodD0iMjAiIHJ4PSIyIiBmaWxsPSIjYzBjMGMwIiBvcGFjaXR5PSIwLjA2Ii8+DQogIDxsaW5lIHgxPSI0NiIgeTE9IjY4IiB4Mj0iNDYiIHkyPSI4MCIgc3Ryb2tlPSIjM2EzZjQ3IiBzdHJva2Utd2lkdGg9IjAuNSIvPg0KICA8cmVjdCB4PSI1MCIgeT0iNzAiIHdpZHRoPSIzNiIgaGVpZ2h0PSI2IiByeD0iMiIgZmlsbD0iI2MwYzBjMCIgb3BhY2l0eT0iMC41Ii8+DQogIDwhLS0gUm93IDMgLSBCcm9uemUgIzMgLS0+DQogIDxyZWN0IHg9IjI2IiB5PSI4NiIgd2lkdGg9IjkyIiBoZWlnaHQ9IjIwIiByeD0iMiIgZmlsbD0iI2NkN2YzMiIgb3BhY2l0eT0iMC4wNiIvPg0KICA8bGluZSB4MT0iNDYiIHkxPSI5MCIgeDI9IjQ2IiB5Mj0iMTAyIiBzdHJva2U9IiMzYTNmNDciIHN0cm9rZS13aWR0aD0iMC41Ii8+DQogIDxyZWN0IHg9IjUwIiB5PSI5MiIgd2lkdGg9IjMwIiBoZWlnaHQ9IjYiIHJ4PSIyIiBmaWxsPSIjY2Q3ZjMyIiBvcGFjaXR5PSIwLjQiLz4NCg0KICA8dGV4dCB4PSI3MiIgeT0iMTI2IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwsSGVsdmV0aWNhLHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTYiIGZvbnQtd2VpZ2h0PSJib2xkIiBmaWxsPSJ3aGl0ZSI+TEVBREVSQk9BUkQ8L3RleHQ+DQo8L3N2Zz4=",
-              "OutlineThickness": 2,
-              "ShowTitle": false,
-              "Title": "",
-              "TitleAlignment": "bottom",
-              "TitleColor": "#FFFFFF"
+              "Image": "Images/6A86DD616A5812D947EC5F71D1.png"
             }
           ],
-          "UUID": "com.simracing.ace.leaderboard"
+          "UUID": "com.elgato.streamdeck.system.hotkey"
         },
         "4,1": {
-          "ActionID": "aee489f4-643e-4812-862b-b10e7099fef5",
+          "ActionID": "aec79b84-e34a-4097-8ad8-74e12b505841",
           "LinkedTitle": true,
-          "Name": "Damage Display",
-          "Plugin": {
-            "Name": "Assetto Corsa EVO",
-            "UUID": "com.simracing.ace",
-            "Version": "1.0"
-          },
+          "Name": "Hotkey",
           "Resources": null,
           "Settings": {
-            "hotkey": "F9"
+            "Coalesce": true,
+            "Hotkeys": [
+              {
+                "KeyCmd": false,
+                "KeyCtrl": false,
+                "KeyModifiers": 0,
+                "KeyOption": false,
+                "KeyShift": false,
+                "NativeCode": 67,
+                "QTKeyCode": 16777272,
+                "VKeyCode": 120
+              },
+              {
+                "KeyCmd": false,
+                "KeyCtrl": false,
+                "KeyModifiers": 0,
+                "KeyOption": false,
+                "KeyShift": false,
+                "NativeCode": 146,
+                "QTKeyCode": 33554431,
+                "VKeyCode": -1
+              },
+              {
+                "KeyCmd": false,
+                "KeyCtrl": false,
+                "KeyModifiers": 0,
+                "KeyOption": false,
+                "KeyShift": false,
+                "NativeCode": 146,
+                "QTKeyCode": 33554431,
+                "VKeyCode": -1
+              },
+              {
+                "KeyCmd": false,
+                "KeyCtrl": false,
+                "KeyModifiers": 0,
+                "KeyOption": false,
+                "KeyShift": false,
+                "NativeCode": 146,
+                "QTKeyCode": 33554431,
+                "VKeyCode": -1
+              }
+            ]
           },
           "State": 0,
           "States": [
             {
-              "FontFamily": "",
-              "FontSize": 10,
-              "FontStyle": "Bold",
-              "FontUnderline": false,
-              "Image": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNDQgMTQ0IiB3aWR0aD0iMTQ0IiBoZWlnaHQ9IjE0NCI+DQogIDxyZWN0IHg9IjQiIHk9IjQiIHdpZHRoPSIxMzYiIGhlaWdodD0iMTM2IiByeD0iMTIiIGZpbGw9IiMyMTI1MjkiIHN0cm9rZT0iI2UyMDYxMyIgc3Ryb2tlLXdpZHRoPSIyIi8+DQogIDxyZWN0IHg9IjgiIHk9IjgiIHdpZHRoPSIxMjgiIGhlaWdodD0iMTI4IiByeD0iMTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzJkMzIzOCIgc3Ryb2tlLXdpZHRoPSIxIi8+DQogIDwhLS0gVG9wLWRvd24gY2FyIG91dGxpbmUgLS0+DQogIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDcyLCA2MikiPg0KICAgIDwhLS0gQ2FyIGJvZHkgb3V0bGluZSAtLT4NCiAgICA8cGF0aCBkPSJNLTE2LC0zOCBRLTE4LC0zOCAtMjAsLTM0IEwtMjIsLTE4IEwtMjIsMjIgUS0yMiwzMiAtMTYsMzYgTDE2LDM2IFEyMiwzMiAyMiwyMiBMMjIsLTE4IEwyMCwtMzQgUTE4LC0zOCAxNiwtMzggWiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZmZmZmZmIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4NCiAgICA8IS0tIFdpbmRzaGllbGQgLS0+DQogICAgPHBhdGggZD0iTS0xNCwtMjAgUTAsLTI0IDE0LC0yMCBMMTIsLTEyIFEwLC0xNCAtMTIsLTEyIFoiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2ZmZmZmZiIgc3Ryb2tlLXdpZHRoPSIxIiBvcGFjaXR5PSIwLjUiLz4NCiAgICA8IS0tIFJlYXIgd2luZG93IC0tPg0KICAgIDxwYXRoIGQ9Ik0tMTIsMTYgUTAsMTQgMTIsMTYgTDE0LDI0IFEwLDIyIC0xNCwyNCBaIiBmaWxsPSJub25lIiBzdHJva2U9IiNmZmZmZmYiIHN0cm9rZS13aWR0aD0iMSIgb3BhY2l0eT0iMC41Ii8+DQogICAgPCEtLSBGcm9udCBkYW1hZ2Ugem9uZSAtIFJFRCAtLT4NCiAgICA8cmVjdCB4PSItMTYiIHk9Ii0zOCIgd2lkdGg9IjMyIiBoZWlnaHQ9IjE0IiByeD0iNCIgZmlsbD0iI2UyMDYxMyIgb3BhY2l0eT0iMC40NSIvPg0KICAgIDxsaW5lIHgxPSItMTIiIHkxPSItMzQiIHgyPSIxMiIgeTI9Ii0zNCIgc3Ryb2tlPSIjZTIwNjEzIiBzdHJva2Utd2lkdGg9IjIiIG9wYWNpdHk9IjAuOCIvPg0KICAgIDxsaW5lIHgxPSItMTAiIHkxPSItMzAiIHgyPSIxMCIgeTI9Ii0zMCIgc3Ryb2tlPSIjZTIwNjEzIiBzdHJva2Utd2lkdGg9IjEuNSIgb3BhY2l0eT0iMC42Ii8+DQogICAgPCEtLSBMZWZ0IHNpZGUgZGFtYWdlIHpvbmUgLSBZRUxMT1cgLS0+DQogICAgPHJlY3QgeD0iLTI0IiB5PSItMTYiIHdpZHRoPSI4IiBoZWlnaHQ9IjM0IiByeD0iMiIgZmlsbD0iI2ZmZjMwMCIgb3BhY2l0eT0iMC4zNSIvPg0KICAgIDxsaW5lIHgxPSItMjIiIHkxPSItMTAiIHgyPSItMjIiIHkyPSIxMiIgc3Ryb2tlPSIjZmZmMzAwIiBzdHJva2Utd2lkdGg9IjIiIG9wYWNpdHk9IjAuNyIvPg0KICAgIDwhLS0gUmlnaHQgc2lkZSBkYW1hZ2Ugem9uZSAtIFlFTExPVyAtLT4NCiAgICA8cmVjdCB4PSIxNiIgeT0iLTE2IiB3aWR0aD0iOCIgaGVpZ2h0PSIzNCIgcng9IjIiIGZpbGw9IiNmZmYzMDAiIG9wYWNpdHk9IjAuMzUiLz4NCiAgICA8bGluZSB4MT0iMjIiIHkxPSItMTAiIHgyPSIyMiIgeTI9IjEyIiBzdHJva2U9IiNmZmYzMDAiIHN0cm9rZS13aWR0aD0iMiIgb3BhY2l0eT0iMC43Ii8+DQogICAgPCEtLSBSZWFyIGRhbWFnZSB6b25lIC0gR1JFRU4gKG9rKSAtLT4NCiAgICA8cmVjdCB4PSItMTQiIHk9IjI2IiB3aWR0aD0iMjgiIGhlaWdodD0iMTIiIHJ4PSI0IiBmaWxsPSIjNGFkZTgwIiBvcGFjaXR5PSIwLjMiLz4NCiAgICA8bGluZSB4MT0iLTEwIiB5MT0iMzIiIHgyPSIxMCIgeTI9IjMyIiBzdHJva2U9IiM0YWRlODAiIHN0cm9rZS13aWR0aD0iMS41IiBvcGFjaXR5PSIwLjYiLz4NCiAgICA8IS0tIFdoZWVscyAtLT4NCiAgICA8cmVjdCB4PSItMjYiIHk9Ii0xNCIgd2lkdGg9IjYiIGhlaWdodD0iMTIiIHJ4PSIyIiBmaWxsPSIjNTU1Ii8+DQogICAgPHJlY3QgeD0iMjAiIHk9Ii0xNCIgd2lkdGg9IjYiIGhlaWdodD0iMTIiIHJ4PSIyIiBmaWxsPSIjNTU1Ii8+DQogICAgPHJlY3QgeD0iLTI2IiB5PSIxMCIgd2lkdGg9IjYiIGhlaWdodD0iMTIiIHJ4PSIyIiBmaWxsPSIjNTU1Ii8+DQogICAgPHJlY3QgeD0iMjAiIHk9IjEwIiB3aWR0aD0iNiIgaGVpZ2h0PSIxMiIgcng9IjIiIGZpbGw9IiM1NTUiLz4NCiAgPC9nPg0KICA8IS0tIFdhcm5pbmcgdHJpYW5nbGUgaWNvbiB0b3AtcmlnaHQgLS0+DQogIDxwb2x5Z29uIHBvaW50cz0iMTE2LDE4IDEyMiwyOCAxMTAsMjgiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2ZmZjMwMCIgc3Ryb2tlLXdpZHRoPSIxLjUiIG9wYWNpdHk9IjAuNiIvPg0KDQogIDx0ZXh0IHg9IjcyIiB5PSIxMjYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJBcmlhbCxIZWx2ZXRpY2Esc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNiIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IndoaXRlIj5EQU1BR0U8L3RleHQ+DQo8L3N2Zz4=",
-              "OutlineThickness": 2,
-              "ShowTitle": false,
-              "Title": "",
-              "TitleAlignment": "bottom",
-              "TitleColor": "#FFFFFF"
+              "Image": "Images/1EEDDD9BBEA12F1C3EFD311C13.png"
             }
           ],
-          "UUID": "com.simracing.ace.damage-display"
+          "UUID": "com.elgato.streamdeck.system.hotkey"
         },
         "0,2": {
-          "ActionID": "619f56a4-2ddd-406a-aac2-66a345ec0d72",
+          "ActionID": "191e84be-eb17-4496-8223-89d932362f87",
           "LinkedTitle": true,
           "Name": "Parent Folder",
           "Plugin": {
@@ -315,50 +595,67 @@
           "Settings": {},
           "State": 0,
           "States": [
-            {
-              "FontFamily": "",
-              "FontSize": 12,
-              "FontStyle": "Bold",
-              "FontUnderline": false,
-              "Image": "",
-              "OutlineThickness": 2,
-              "ShowTitle": true,
-              "Title": "← Back",
-              "TitleAlignment": "middle",
-              "TitleColor": "#FF6B6B"
-            }
+            {}
           ],
           "UUID": "com.elgato.streamdeck.profile.backtoparent"
         },
         "1,2": {
-          "ActionID": "636e8f8c-f609-4881-bb98-0afa5abca06d",
+          "ActionID": "0b4526b7-9dc4-4181-b4f9-8a195975a405",
           "LinkedTitle": true,
-          "Name": "Ideal Racing Line",
-          "Plugin": {
-            "Name": "Assetto Corsa EVO",
-            "UUID": "com.simracing.ace",
-            "Version": "1.0"
-          },
+          "Name": "Hotkey",
           "Resources": null,
           "Settings": {
-            "hotkey": "F10"
+            "Coalesce": true,
+            "Hotkeys": [
+              {
+                "KeyCmd": false,
+                "KeyCtrl": false,
+                "KeyModifiers": 0,
+                "KeyOption": false,
+                "KeyShift": false,
+                "NativeCode": 0,
+                "QTKeyCode": 0,
+                "VKeyCode": 0
+              },
+              {
+                "KeyCmd": false,
+                "KeyCtrl": false,
+                "KeyModifiers": 0,
+                "KeyOption": false,
+                "KeyShift": false,
+                "NativeCode": 146,
+                "QTKeyCode": 33554431,
+                "VKeyCode": -1
+              },
+              {
+                "KeyCmd": false,
+                "KeyCtrl": false,
+                "KeyModifiers": 0,
+                "KeyOption": false,
+                "KeyShift": false,
+                "NativeCode": 146,
+                "QTKeyCode": 33554431,
+                "VKeyCode": -1
+              },
+              {
+                "KeyCmd": false,
+                "KeyCtrl": false,
+                "KeyModifiers": 0,
+                "KeyOption": false,
+                "KeyShift": false,
+                "NativeCode": 146,
+                "QTKeyCode": 33554431,
+                "VKeyCode": -1
+              }
+            ]
           },
           "State": 0,
           "States": [
             {
-              "FontFamily": "",
-              "FontSize": 10,
-              "FontStyle": "Bold",
-              "FontUnderline": false,
-              "Image": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNDQgMTQ0IiB3aWR0aD0iMTQ0IiBoZWlnaHQ9IjE0NCI+DQogIDxyZWN0IHg9IjQiIHk9IjQiIHdpZHRoPSIxMzYiIGhlaWdodD0iMTM2IiByeD0iMTIiIGZpbGw9IiMyMTI1MjkiIHN0cm9rZT0iI2UyMDYxMyIgc3Ryb2tlLXdpZHRoPSIyIi8+DQogIDxyZWN0IHg9IjgiIHk9IjgiIHdpZHRoPSIxMjgiIGhlaWdodD0iMTI4IiByeD0iMTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzJkMzIzOCIgc3Ryb2tlLXdpZHRoPSIxIi8+DQogIDwhLS0gVHJhY2sgc3VyZmFjZSAtIFMtY3VydmUgLS0+DQogIDxwYXRoIGQ9Ik0yNCwxMDggUTI0LDcwIDUyLDU4IFE4MCw0NiA4MCwzNCBRODAsMjIgOTgsMjIgTDEyMCwyMiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjNTU1IiBzdHJva2Utd2lkdGg9IjIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4NCiAgPCEtLSBUcmFjayBlZGdlIG1hcmtpbmdzIC0tPg0KICA8cGF0aCBkPSJNMjQsMTA4IFEyNCw3MCA1Miw1OCBRODAsNDYgODAsMzQgUTgwLDIyIDk4LDIyIEwxMjAsMjIiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzY2NiIgc3Ryb2tlLXdpZHRoPSIyNCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBvcGFjaXR5PSIwLjMiLz4NCiAgPCEtLSBUcmFjayBjZW50ZXIgbGluZSAoc3VidGxlKSAtLT4NCiAgPHBhdGggZD0iTTI0LDEwOCBRMjQsNzAgNTIsNTggUTgwLDQ2IDgwLDM0IFE4MCwyMiA5OCwyMiBMMTIwLDIyIiBmaWxsPSJub25lIiBzdHJva2U9IiM0NDQiIHN0cm9rZS13aWR0aD0iMSIgc3Ryb2tlLWRhc2hhcnJheT0iNCw2IiBvcGFjaXR5PSIwLjUiLz4NCiAgPCEtLSBJZGVhbCByYWNpbmcgbGluZSAoZGFzaGVkIGdyZWVuKSAtLT4NCiAgPHBhdGggZD0iTTIwLDEwNCBRMzAsNzggNDgsNjIgUTY2LDQ2IDc0LDM2IFE4MiwyNiA5NiwyNCBMMTE4LDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiM0YWRlODAiIHN0cm9rZS13aWR0aD0iMyIgc3Ryb2tlLWRhc2hhcnJheT0iNiw0IiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4NCiAgPCEtLSBJZGVhbCBsaW5lIGdsb3cgLS0+DQogIDxwYXRoIGQ9Ik0yMCwxMDQgUTMwLDc4IDQ4LDYyIFE2Niw0NiA3NCwzNiBRODIsMjYgOTYsMjQgTDExOCwyNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjNGFkZTgwIiBzdHJva2Utd2lkdGg9IjYiIG9wYWNpdHk9IjAuMTUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPg0KICA8IS0tIENvcm5lciBhcGV4IG1hcmtlcnMgLS0+DQogIDxjaXJjbGUgY3g9IjQwIiBjeT0iNzIiIHI9IjQiIGZpbGw9IiNlMjA2MTMiIG9wYWNpdHk9IjAuOCIvPg0KICA8Y2lyY2xlIGN4PSI0MCIgY3k9IjcyIiByPSI2IiBmaWxsPSJub25lIiBzdHJva2U9IiNlMjA2MTMiIHN0cm9rZS13aWR0aD0iMSIgb3BhY2l0eT0iMC40Ii8+DQogIDxjaXJjbGUgY3g9Ijg2IiBjeT0iMjgiIHI9IjQiIGZpbGw9IiNlMjA2MTMiIG9wYWNpdHk9IjAuOCIvPg0KICA8Y2lyY2xlIGN4PSI4NiIgY3k9IjI4IiByPSI2IiBmaWxsPSJub25lIiBzdHJva2U9IiNlMjA2MTMiIHN0cm9rZS13aWR0aD0iMSIgb3BhY2l0eT0iMC40Ii8+DQogIDwhLS0gU3BlZWQvZGlyZWN0aW9uIGFycm93cyBhbG9uZyB0aGUgbGluZSAtLT4NCiAgPHBvbHlnb24gcG9pbnRzPSIzNCw4NiAzMCw5MiAzOCw5MiIgZmlsbD0iIzRhZGU4MCIgb3BhY2l0eT0iMC42IiB0cmFuc2Zvcm09InJvdGF0ZSgtMzAsIDM0LCA4OSkiLz4NCiAgPHBvbHlnb24gcG9pbnRzPSI2MCw1MCA1Niw1NiA2NCw1NiIgZmlsbD0iIzRhZGU4MCIgb3BhY2l0eT0iMC42IiB0cmFuc2Zvcm09InJvdGF0ZSgtNDAsIDYwLCA1MykiLz4NCiAgPHBvbHlnb24gcG9pbnRzPSIxMDYsMjQgMTAyLDMwIDExMCwzMCIgZmlsbD0iIzRhZGU4MCIgb3BhY2l0eT0iMC42IiB0cmFuc2Zvcm09InJvdGF0ZSgtNSwgMTA2LCAyNykiLz4NCg0KICA8dGV4dCB4PSI3MiIgeT0iMTI2IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwsSGVsdmV0aWNhLHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTYiIGZvbnQtd2VpZ2h0PSJib2xkIiBmaWxsPSJ3aGl0ZSI+UkFDRSBMSU5FPC90ZXh0Pg0KPC9zdmc+",
-              "OutlineThickness": 2,
-              "ShowTitle": false,
-              "Title": "",
-              "TitleAlignment": "bottom",
-              "TitleColor": "#FFFFFF"
+              "Image": "Images/023D6298508737A50AFD29521E.png"
             }
           ],
-          "UUID": "com.simracing.ace.ideal-line"
+          "UUID": "com.elgato.streamdeck.system.hotkey"
         }
       },
       "Type": "Keypad"

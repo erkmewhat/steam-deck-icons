@@ -1,4 +1,4 @@
-import streamDeck, { LogLevel } from "@elgato/streamdeck";
+import streamDeck from "@elgato/streamdeck";
 
 import { PitLimiter } from "./actions/pit-limiter";
 import { Headlights } from "./actions/headlights";
@@ -25,11 +25,24 @@ import { LookLeft } from "./actions/look-left";
 import { LookRight } from "./actions/look-right";
 import { LookBehind } from "./actions/look-behind";
 
-streamDeck.logger.setLevel(LogLevel.DEBUG);
+// streamDeck.logger.setLevel("TRACE");
+
+streamDeck.logger.info("=== LMU Plugin starting, registering actions ===");
+
+// Log ALL incoming events for debugging
+streamDeck.actions.onWillAppear((ev: any) => {
+    streamDeck.logger.info(`=== GLOBAL willAppear: ${ev.action.manifestId} ===`);
+});
+
+streamDeck.actions.onKeyDown((ev: any) => {
+    streamDeck.logger.info(`=== GLOBAL keyDown: ${ev.action.manifestId} ===`);
+});
 
 // Car Systems
 streamDeck.actions.registerAction(new PitLimiter());
-streamDeck.actions.registerAction(new Headlights());
+const hl = new Headlights();
+streamDeck.logger.info(`Headlights manifestId: ${(hl as any).manifestId}`);
+streamDeck.actions.registerAction(hl);
 streamDeck.actions.registerAction(new HeadlightFlash());
 streamDeck.actions.registerAction(new Wipers());
 streamDeck.actions.registerAction(new Ignition());

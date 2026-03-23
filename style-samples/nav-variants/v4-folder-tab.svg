@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144 144" width="144" height="144">
+  <defs>
+    <radialGradient id="v4bg" cx="50%" cy="40%" r="70%">
+      <stop offset="0%" stop-color="#32373C"/>
+      <stop offset="100%" stop-color="#0a0a0f"/>
+    </radialGradient>
+    <linearGradient id="v4folder" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#00BFFF" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#00BFFF" stop-opacity="0.08"/>
+    </linearGradient>
+    <filter id="v4glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="2" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <linearGradient id="v4acc" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#00BFFF" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#00BFFF" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#00BFFF" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="144" height="144" fill="url(#v4bg)"/>
+  <!-- Folder shape with tab -->
+  <g filter="url(#v4glow)">
+    <!-- Folder tab -->
+    <path d="M24 36 L24 28 Q24 22 30 22 L58 22 Q62 22 64 28 L68 36" fill="url(#v4folder)" stroke="#00BFFF" stroke-width="1.5"/>
+    <!-- Folder body -->
+    <rect x="24" y="36" width="96" height="66" rx="4" fill="url(#v4folder)" stroke="#00BFFF" stroke-width="1.5"/>
+  </g>
+  <!-- Category label inside folder -->
+  <text x="72" y="62" text-anchor="middle" font-family="'Segoe UI',Arial,sans-serif" font-size="22" font-weight="800" fill="#00BFFF" opacity="0.9">MFD</text>
+  <!-- Small arrow indicator -->
+  <path d="M62 78 L72 88 L82 78" fill="none" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.5"/>
+  <!-- Subtitle -->
+  <text x="72" y="128" text-anchor="middle" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#ffffff" opacity="0.5">tap to open</text>
+  <rect x="20" y="138" width="104" height="2" rx="1" fill="url(#v4acc)"/>
+</svg>

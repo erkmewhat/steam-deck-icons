@@ -5,21 +5,22 @@ Generate a Stream Deck profile for Assetto Corsa EVO.
 Grid: 5 columns x 3 rows, coordinates are (col, row) zero-indexed.
 """
 
-import base64
+import hashlib
 import json
 import os
 import shutil
+import subprocess
 import uuid
 
-PROFILE_UUID = "D7E4F2A8-91B3-4C6D-A5E7-8F2B1C3D4E5A"
+# NOTE: UUIDs MUST be lowercase — Stream Deck uses lowercase internally
+PROFILE_UUID = "d7e4f2a8-91b3-4c6d-a5e7-8f2b1c3d4e5a"
 DEVICE_MODEL = "20GBA9901"
 DEVICE_UUID = "@(1)[4057/128/A00SA3272JF6DK]"
-PLUGIN_UUID = "com.simracing.ace"
 
-MAIN_PAGE    = "B9C8D7E6-F5A4-4321-8765-1A2B3C4D5E6F"
-ADJUST_PAGE  = "E3F4A5B6-C7D8-4E9F-0A1B-2C3D4E5F6A7B"
-CAMERA_PAGE  = "A1B2C3D4-E5F6-4789-ABCD-EF0123456789"
-RACE_PAGE    = "F1E2D3C4-B5A6-4978-8765-432109876543"
+MAIN_PAGE    = "b9c8d7e6-f5a4-4321-8765-1a2b3c4d5e6f"
+ADJUST_PAGE  = "e3f4a5b6-c7d8-4e9f-0a1b-2c3d4e5f6a7b"
+CAMERA_PAGE  = "a1b2c3d4-e5f6-4789-abcd-ef0123456789"
+RACE_PAGE    = "f1e2d3c4-b5a6-4978-8765-432109876543"
 
 # Load bindings from game config
 _config_path = os.path.join(os.path.dirname(__file__), "games", "ace.json")
@@ -30,36 +31,113 @@ for slug, b in _config["bindings"].items():
     BINDINGS[slug] = {"key": b["key"], "title": b["game_action"], "game_action": b["game_action"]}
 
 
-def icon_to_base64(action_id):
-    """Read icon SVG and return base64 data URI."""
-    script_dir = os.path.dirname(os.path.abspath(__file__))
-    icon_pack = os.path.join(script_dir, "..", "com.simracing.ace-icons.sdIconPack", "icons")
-    path = os.path.join(icon_pack, f"{action_id}.svg")
+# Collects (svg_path, png_filename) per page UUID for deferred PNG conversion.
+_page_icons = {}
+_current_page = None
+
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+ICON_PACK_DIR = os.path.join(SCRIPT_DIR, "..", "com.simracing.ace-icons.sdIconPack", "icons")
+
+
+def _generate_image_key(action_id):
+    """Generate a short hash-based filename like Stream Deck uses."""
+    h = hashlib.sha256(action_id.encode()).hexdigest()[:26].upper()
+    return f"{h}.png"
+
+
+def set_current_page(page_uuid):
+    """Set which page is currently being built (icons register to this page)."""
+    global _current_page
+    _current_page = page_uuid
+    if page_uuid not in _page_icons:
+        _page_icons[page_uuid] = []
+
+
+def icon_to_image_ref(action_id):
+    """Find the SVG for action_id and return an Images/HASH.png reference.
+
+    Registers the icon for PNG conversion into the current page's Images/ dir.
+    """
+    path = os.path.join(ICON_PACK_DIR, f"{action_id}.svg")
     if os.path.isfile(path):
-        with open(path, "rb") as f:
-            encoded = base64.b64encode(f.read()).decode("ascii")
-        return f"data:image/svg+xml;base64,{encoded}"
+        png_name = _generate_image_key(action_id)
+        if _current_page:
+            _page_icons[_current_page].append((os.path.abspath(path), png_name))
+        return f"Images/{png_name}"
     return ""
 
 
-def make_plugin_action(title, action_uuid, hotkey="", font_size=10):
-    image = icon_to_base64(action_uuid)
-    show_title = not bool(image)
+def convert_all_page_icons(profiles_dir):
+    """Convert all registered SVGs to 72x72 PNGs in each page's Images/ dir."""
+    converter = os.path.join(SCRIPT_DIR, "svg-to-png.js")
+    total = 0
+
+    for page_uuid, icons in _page_icons.items():
+        if not icons:
+            continue
+        images_dir = os.path.join(profiles_dir, page_uuid.upper(), "Images")
+        os.makedirs(images_dir, exist_ok=True)
+        seen = set()
+        for svg_path, png_name in icons:
+            if png_name in seen:
+                continue
+            seen.add(png_name)
+            png_path = os.path.join(images_dir, png_name)
+            subprocess.run(
+                ["node", converter, svg_path, png_path, "72"],
+                check=True, capture_output=True
+            )
+        total += len(seen)
+    print(f"  Converted {total} icons to 72x72 PNG across {len(_page_icons)} pages")
+
+
+# Windows scan codes, VKey codes, Qt key codes for hotkey actions
+VKEYS = {
+    "A": 65, "B": 66, "C": 67, "D": 68, "E": 69, "F": 70, "G": 71, "H": 72,
+    "I": 73, "J": 74, "K": 75, "L": 76, "M": 77, "N": 78, "O": 79, "P": 80,
+    "Q": 81, "R": 82, "S": 83, "T": 84, "U": 85, "V": 86, "W": 87, "X": 88,
+    "Y": 89, "Z": 90, "F12": 123, "F5": 116, "F9": 120,
+    "Up": 38, "Down": 40, "Left": 37, "Right": 39,
+}
+SCAN_CODES = {
+    "A": 30, "B": 48, "C": 46, "D": 32, "E": 18, "F": 33, "G": 34, "H": 35,
+    "I": 23, "J": 36, "K": 37, "L": 38, "M": 50, "N": 49, "O": 24, "P": 25,
+    "Q": 16, "R": 19, "S": 31, "T": 20, "U": 22, "V": 47, "W": 17, "X": 45,
+    "Y": 21, "Z": 44, "F12": 88, "F5": 63, "F9": 67,
+    "Up": 328, "Down": 336, "Left": 331, "Right": 333,
+}
+QT_KEYS = {
+    "Up": 16777235, "Down": 16777237, "Left": 16777234, "Right": 16777236,
+    "F12": 16777275, "F5": 16777268, "F9": 16777272,
+}
+EMPTY_SLOT = {"KeyCmd": False, "KeyCtrl": False, "KeyModifiers": 0,
+              "KeyOption": False, "KeyShift": False,
+              "NativeCode": 146, "QTKeyCode": 33554431, "VKeyCode": -1}
+
+
+def make_hotkey_action(title, key, icon_id=""):
+    """Create a built-in hotkey action with icon from icon pack."""
+    image = icon_to_image_ref(icon_id) if icon_id else ""
+    vk = VKEYS.get(key, ord(key) if len(key) == 1 else 0)
+    sc = SCAN_CODES.get(key, 0)
+    qt = QT_KEYS.get(key, ord(key) if len(key) == 1 else 0)
     return {
         "ActionID": str(uuid.uuid4()),
         "LinkedTitle": True,
-        "Name": title,
-        "Plugin": {"Name": "Assetto Corsa EVO", "UUID": PLUGIN_UUID, "Version": "1.0"},
+        "Name": "Hotkey",
         "Resources": None,
-        "Settings": {"hotkey": hotkey} if hotkey else {},
+        "Settings": {
+            "Coalesce": True,
+            "Hotkeys": [
+                {"KeyCmd": False, "KeyCtrl": False, "KeyModifiers": 0,
+                 "KeyOption": False, "KeyShift": False,
+                 "NativeCode": sc, "QTKeyCode": qt, "VKeyCode": vk},
+                EMPTY_SLOT.copy(), EMPTY_SLOT.copy(), EMPTY_SLOT.copy()
+            ]
+        },
         "State": 0,
-        "States": [{
-            "FontFamily": "", "FontSize": font_size, "FontStyle": "Bold",
-            "FontUnderline": False, "Image": image, "OutlineThickness": 2,
-            "ShowTitle": show_title, "Title": title if show_title else "",
-            "TitleAlignment": "bottom", "TitleColor": "#FFFFFF"
-        }],
-        "UUID": f"{PLUGIN_UUID}.{action_uuid}"
+        "States": [{"Image": image}] if image else [{}],
+        "UUID": "com.elgato.streamdeck.system.hotkey"
     }
 
 
@@ -72,12 +150,7 @@ def make_folder_button(title, target_page_uuid, title_color="#00BFFF"):
         "Resources": None,
         "Settings": {"ProfileUUID": target_page_uuid},
         "State": 0,
-        "States": [{
-            "FontFamily": "", "FontSize": 11, "FontStyle": "Bold",
-            "FontUnderline": False, "Image": "", "OutlineThickness": 2,
-            "ShowTitle": True, "Title": title, "TitleAlignment": "middle",
-            "TitleColor": title_color
-        }],
+        "States": [{}],
         "UUID": "com.elgato.streamdeck.profile.openchild"
     }
 
@@ -91,12 +164,7 @@ def make_back_button():
         "Resources": None,
         "Settings": {},
         "State": 0,
-        "States": [{
-            "FontFamily": "", "FontSize": 12, "FontStyle": "Bold",
-            "FontUnderline": False, "Image": "", "OutlineThickness": 2,
-            "ShowTitle": True, "Title": "\u2190 Back", "TitleAlignment": "middle",
-            "TitleColor": "#FF6B6B"
-        }],
+        "States": [{}],
         "UUID": "com.elgato.streamdeck.profile.backtoparent"
     }
 
@@ -107,7 +175,7 @@ def make_page(actions_dict, name=""):
 
 def _a(slug):
     b = BINDINGS[slug]
-    return make_plugin_action(b["title"], slug, hotkey=b["key"])
+    return make_hotkey_action(b["title"], b["key"], icon_id=slug)
 
 
 def build_main_page():
@@ -176,13 +244,14 @@ def build_race_page():
 
 
 def write_profile(output_dir):
-    profile_dir = os.path.join(output_dir, f"{PROFILE_UUID}.sdProfile")
+    # Directory names use UPPERCASE UUIDs, JSON content uses lowercase
+    profile_dir = os.path.join(output_dir, f"{PROFILE_UUID.upper()}.sdProfile")
     if os.path.exists(profile_dir):
         shutil.rmtree(profile_dir)
 
     profiles_dir = os.path.join(profile_dir, "Profiles")
     for page_uuid in [MAIN_PAGE, ADJUST_PAGE, CAMERA_PAGE, RACE_PAGE]:
-        os.makedirs(os.path.join(profiles_dir, page_uuid), exist_ok=True)
+        os.makedirs(os.path.join(profiles_dir, page_uuid.upper()), exist_ok=True)
 
     manifest = {
         "Version": "3.0",
@@ -194,15 +263,21 @@ def write_profile(output_dir):
     with open(os.path.join(profile_dir, "manifest.json"), "w") as f:
         json.dump(manifest, f, indent=2)
 
+    # Build each page (set_current_page registers icons per page)
     pages = [
-        (MAIN_PAGE, build_main_page()),
-        (ADJUST_PAGE, build_adjust_page()),
-        (CAMERA_PAGE, build_camera_page()),
-        (RACE_PAGE, build_race_page()),
+        (MAIN_PAGE,   build_main_page),
+        (ADJUST_PAGE, build_adjust_page),
+        (CAMERA_PAGE, build_camera_page),
+        (RACE_PAGE,   build_race_page),
     ]
-    for page_uuid, page_data in pages:
-        with open(os.path.join(profiles_dir, page_uuid, "manifest.json"), "w") as f:
+    for page_uuid, builder in pages:
+        set_current_page(page_uuid)
+        page_data = builder()
+        with open(os.path.join(profiles_dir, page_uuid.upper(), "manifest.json"), "w") as f:
             json.dump(page_data, f, indent=2)
+
+    # Convert SVGs to 72x72 PNGs in each page's Images/ subdirectory
+    convert_all_page_icons(profiles_dir)
 
     print(f"Profile generated at: {profile_dir}")
     print(f"  Main page:   {MAIN_PAGE}")

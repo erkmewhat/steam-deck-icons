@@ -1,20 +1,44 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144 144" width="144" height="144">
-  <rect x="4" y="4" width="136" height="136" rx="12" fill="#212529" stroke="#e20613" stroke-width="2"/>
-  <rect x="8" y="8" width="128" height="128" rx="10" fill="none" stroke="#2d3238" stroke-width="1"/>
-  <!-- Circular recycling arrow -->
-  <path d="M72 20 A40 40 0 1 1 32 60" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" opacity="0.85"/>
-  <!-- Second arc segment for recycling feel -->
-  <path d="M72 100 A40 40 0 0 1 32 60" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" opacity="0.5"/>
-  <!-- Arrow head on circular arrow -->
-  <polygon points="32,48 24,66 42,62" fill="white" opacity="0.85"/>
-  <!-- Second arrow head -->
-  <polygon points="82,20 72,16 72,24" fill="white" opacity="0.5"/>
-  <!-- Lightning bolt shadow offset -->
-  <polygon points="80,30 60,58 74,58 64,96 86,58 72,58 80,30" fill="#ccb800" transform="translate(2,2)"/>
-  <!-- Lightning bolt main -->
-  <polygon points="80,30 60,58 74,58 64,96 86,58 72,58 80,30" fill="#fff300"/>
-  <!-- Lightning bolt highlight -->
-  <polygon points="78,34 66,54 74,54 72,60 82,54 74,54 78,34" fill="white" opacity="0.25"/>
-
-  <text x="72" y="126" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="bold" fill="white">KERS</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144 144">
+  <defs>
+    <linearGradient id="gke-bg1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2a1215"/>
+      <stop offset="50%" stop-color="#180a0c"/>
+      <stop offset="100%" stop-color="#0a0406"/>
+    </linearGradient>
+    <linearGradient id="gke-border" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#e20613"/>
+      <stop offset="50%" stop-color="#ff3333" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#e20613"/>
+    </linearGradient>
+    <linearGradient id="gke-shine" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.12"/>
+      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.02"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.06"/>
+    </linearGradient>
+    <linearGradient id="gke-warm" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fff300"/>
+      <stop offset="50%" stop-color="#ffaa00"/>
+      <stop offset="100%" stop-color="#ff6600"/>
+    </linearGradient>
+    <linearGradient id="gke-accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#e20613"/>
+      <stop offset="100%" stop-color="#fff300"/>
+    </linearGradient>
+  </defs>
+  <rect x="1" y="1" width="142" height="142" rx="14" fill="url(#gke-bg1)" stroke="url(#gke-border)" stroke-width="1.5"/>
+  <rect x="3" y="3" width="138" height="68" rx="12" fill="url(#gke-shine)"/>
+  <!-- Lightning bolt -->
+  <polygon points="78,28 58,62 70,62 64,100 90,58 76,58 84,28" fill="url(#gke-warm)" stroke="#ffaa00" stroke-width="0.5"/>
+  <!-- Glass reflection on bolt -->
+  <polygon points="78,30 66,52 72,52 70,62 76,46 72,46 80,30" fill="#ffffff" opacity="0.15"/>
+  <!-- Recycling arrow circle -->
+  <path d="M40,72 A22,22 0 0,1 72,50" fill="none" stroke="#44cc44" stroke-width="2.5" stroke-linecap="round" opacity="0.7"/>
+  <polygon points="72,44 72,56 80,50" fill="#44cc44" opacity="0.7"/>
+  <path d="M104,72 A22,22 0 0,1 72,94" fill="none" stroke="#44cc44" stroke-width="2.5" stroke-linecap="round" opacity="0.7"/>
+  <polygon points="72,100 72,88 64,94" fill="#44cc44" opacity="0.7"/>
+  <path d="M72,94 A22,22 0 0,1 40,72" fill="none" stroke="#44cc44" stroke-width="2.5" stroke-linecap="round" opacity="0.7"/>
+  <polygon points="34,72 46,72 40,64" fill="#44cc44" opacity="0.7"/>
+  <!-- Accent bar -->
+  <rect x="14" y="114" width="116" height="3" rx="1.5" fill="url(#gke-accent)"/>
+  <text x="72" y="127" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="bold" fill="#ffffff" letter-spacing="1.5">KERS</text>
 </svg>

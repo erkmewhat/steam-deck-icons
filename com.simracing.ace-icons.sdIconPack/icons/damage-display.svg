@@ -1,35 +1,44 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144 144" width="144" height="144">
-  <rect x="4" y="4" width="136" height="136" rx="12" fill="#212529" stroke="#e20613" stroke-width="2"/>
-  <rect x="8" y="8" width="128" height="128" rx="10" fill="none" stroke="#2d3238" stroke-width="1"/>
-  <!-- Top-down car outline -->
-  <g transform="translate(72, 62)">
-    <!-- Car body outline -->
-    <path d="M-16,-38 Q-18,-38 -20,-34 L-22,-18 L-22,22 Q-22,32 -16,36 L16,36 Q22,32 22,22 L22,-18 L20,-34 Q18,-38 16,-38 Z" fill="none" stroke="#ffffff" stroke-width="2" stroke-linejoin="round"/>
-    <!-- Windshield -->
-    <path d="M-14,-20 Q0,-24 14,-20 L12,-12 Q0,-14 -12,-12 Z" fill="none" stroke="#ffffff" stroke-width="1" opacity="0.5"/>
-    <!-- Rear window -->
-    <path d="M-12,16 Q0,14 12,16 L14,24 Q0,22 -14,24 Z" fill="none" stroke="#ffffff" stroke-width="1" opacity="0.5"/>
-    <!-- Front damage zone - RED -->
-    <rect x="-16" y="-38" width="32" height="14" rx="4" fill="#e20613" opacity="0.45"/>
-    <line x1="-12" y1="-34" x2="12" y2="-34" stroke="#e20613" stroke-width="2" opacity="0.8"/>
-    <line x1="-10" y1="-30" x2="10" y2="-30" stroke="#e20613" stroke-width="1.5" opacity="0.6"/>
-    <!-- Left side damage zone - YELLOW -->
-    <rect x="-24" y="-16" width="8" height="34" rx="2" fill="#fff300" opacity="0.35"/>
-    <line x1="-22" y1="-10" x2="-22" y2="12" stroke="#fff300" stroke-width="2" opacity="0.7"/>
-    <!-- Right side damage zone - YELLOW -->
-    <rect x="16" y="-16" width="8" height="34" rx="2" fill="#fff300" opacity="0.35"/>
-    <line x1="22" y1="-10" x2="22" y2="12" stroke="#fff300" stroke-width="2" opacity="0.7"/>
-    <!-- Rear damage zone - GREEN (ok) -->
-    <rect x="-14" y="26" width="28" height="12" rx="4" fill="#4ade80" opacity="0.3"/>
-    <line x1="-10" y1="32" x2="10" y2="32" stroke="#4ade80" stroke-width="1.5" opacity="0.6"/>
-    <!-- Wheels -->
-    <rect x="-26" y="-14" width="6" height="12" rx="2" fill="#555"/>
-    <rect x="20" y="-14" width="6" height="12" rx="2" fill="#555"/>
-    <rect x="-26" y="10" width="6" height="12" rx="2" fill="#555"/>
-    <rect x="20" y="10" width="6" height="12" rx="2" fill="#555"/>
-  </g>
-  <!-- Warning triangle icon top-right -->
-  <polygon points="116,18 122,28 110,28" fill="none" stroke="#fff300" stroke-width="1.5" opacity="0.6"/>
-
-  <text x="72" y="126" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="bold" fill="white">DAMAGE</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144 144">
+  <defs>
+    <linearGradient id="gdd-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2a1215"/>
+      <stop offset="50%" stop-color="#180a0c"/>
+      <stop offset="100%" stop-color="#0a0406"/>
+    </linearGradient>
+    <linearGradient id="gdd-border" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#e20613"/>
+      <stop offset="50%" stop-color="#ff3333" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#e20613"/>
+    </linearGradient>
+    <linearGradient id="gdd-shine" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.12"/>
+      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.02"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.06"/>
+    </linearGradient>
+    <linearGradient id="gdd-accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#e20613"/>
+      <stop offset="100%" stop-color="#fff300"/>
+    </linearGradient>
+  </defs>
+  <rect x="1" y="1" width="142" height="142" rx="14" fill="url(#gdd-bg)" stroke="url(#gdd-border)" stroke-width="1.5"/>
+  <rect x="3" y="3" width="138" height="68" rx="12" fill="url(#gdd-shine)"/>
+  <!-- Car top-down outline -->
+  <path d="M72,32 L82,38 L86,52 L86,78 L82,90 L72,94 L62,90 L58,78 L58,52 L62,38 Z" fill="none" stroke="#4ade80" stroke-width="1.5" opacity="0.7"/>
+  <path d="M72,32 L82,38 L86,52 L86,78 L82,90 L72,94 L62,90 L58,78 L58,52 L62,38 Z" fill="#4ade80" opacity="0.05"/>
+  <!-- Wheels -->
+  <rect x="50" y="44" width="6" height="12" rx="1.5" fill="#4ade80" opacity="0.5"/>
+  <rect x="88" y="44" width="6" height="12" rx="1.5" fill="#4ade80" opacity="0.5"/>
+  <rect x="50" y="72" width="6" height="12" rx="1.5" fill="#ff6644" opacity="0.7"/>
+  <rect x="88" y="72" width="6" height="12" rx="1.5" fill="#4ade80" opacity="0.5"/>
+  <!-- Damage indicators -->
+  <circle cx="72" cy="36" r="3" fill="#ff6644" opacity="0.8"/>
+  <line x1="38" y1="50" x2="46" y2="50" stroke="#ff6644" stroke-width="2" opacity="0.6"/>
+  <!-- Warning symbol -->
+  <path d="M30,72 L36,62 L42,72 Z" fill="none" stroke="#ffaa00" stroke-width="1.5" opacity="0.7"/>
+  <text x="36" y="71" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="7" font-weight="bold" fill="#ffaa00" opacity="0.8">!</text>
+  <!-- Glass reflection -->
+  <ellipse cx="72" cy="38" rx="10" ry="3" fill="#ffffff" opacity="0.06"/>
+  <!-- Accent bar -->
+  <rect x="14" y="114" width="116" height="3" rx="1.5" fill="url(#gdd-accent)"/>
+  <text x="72" y="127" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="bold" fill="#ffffff" letter-spacing="1.5">DAMAGE</text>
 </svg>

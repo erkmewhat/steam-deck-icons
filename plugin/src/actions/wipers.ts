@@ -6,4 +6,5 @@ export class Wipers extends HotkeyAction {
     readonly defaultHotkey = "P";
     readonly actionName = "Wipers";
     readonly iconFile = "wipers";
+    readonly isToggle = true;
 }

@@ -12,19 +12,23 @@ Grid: 5 columns x 3 rows, coordinates are (col, row) zero-indexed.
 """
 
 import base64
+import hashlib
 import json
 import os
 import shutil
+import subprocess
 import uuid
 
 # ── Profile / page UUIDs ──────────────────────────────────────────────
-PROFILE_UUID = "EBAAB49C-EFF9-4A7F-9C43-FFCE95C09427"
-MAIN_PAGE    = "C8B1A5B1-C375-469C-B4C1-7BA9B2426CB1"
-MFD_PAGE     = "C68F250F-93F5-41F9-B888-D9DD28D9DF3E"
-PERF_PAGE    = "3AA706B4-3603-4898-B84A-E320A619C8F7"
-CAMERA_PAGE  = "A1F2B3C4-D5E6-4789-ABCD-100000000001"
-HUD_PAGE     = "A1F2B3C4-D5E6-4789-ABCD-100000000002"
-LOOK_PAGE    = "A1F2B3C4-D5E6-4789-ABCD-100000000003"
+# NOTE: UUIDs MUST be lowercase — Stream Deck uses lowercase internally
+# and will strip folder actions whose ProfileUUID doesn't match.
+PROFILE_UUID = "ebaab49c-eff9-4a7f-9c43-ffce95c09427"
+MAIN_PAGE    = "c8b1a5b1-c375-469c-b4c1-7ba9b2426cb1"
+MFD_PAGE     = "c68f250f-93f5-41f9-b888-d9dd28d9df3e"
+PERF_PAGE    = "3aa706b4-3603-4898-b84a-e320a619c8f7"
+CAMERA_PAGE  = "a1f2b3c4-d5e6-4789-abcd-100000000001"
+HUD_PAGE     = "a1f2b3c4-d5e6-4789-abcd-100000000002"
+LOOK_PAGE    = "a1f2b3c4-d5e6-4789-abcd-100000000003"
 
 DEVICE_MODEL = "20GBA9901"
 DEVICE_UUID  = "@(1)[4057/128/A00SA3272JF6DK]"
@@ -125,135 +129,145 @@ def make_hotkey_settings(key, ctrl=False, shift=False, alt=False):
     }
 
 
-def icon_to_base64(action_id):
-    """Read an icon SVG from the icon pack and return a base64 data URI.
+# Collects (svg_path, png_filename) per page UUID for deferred PNG conversion.
+# Key = page UUID, Value = list of (svg_abs_path, png_filename) tuples.
+_page_icons = {}
+_current_page = None
 
-    Looks up the icon by action_id (e.g. 'pit-limiter') in the icon pack
-    directory. Embeds as SVG base64 — sync-icons.js will re-render to PNG
-    for the final profile. Returns empty string if not found.
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+ICON_PACK_DIR = os.path.join(SCRIPT_DIR, "..", "com.simracing.lmu-icons.sdIconPack", "icons")
+ICON_ALIAS = {
+    "brake-bias-forward": "brake-bias-fwd",
+    "brake-bias-backward": "brake-bias-bwd",
+}
+
+
+def _generate_image_key(action_id):
+    """Generate a short hash-based filename like Stream Deck uses."""
+    h = hashlib.sha256(action_id.encode()).hexdigest()[:26].upper()
+    return f"{h}.png"
+
+
+def set_current_page(page_uuid):
+    """Set which page is currently being built (icons register to this page)."""
+    global _current_page
+    _current_page = page_uuid
+    if page_uuid not in _page_icons:
+        _page_icons[page_uuid] = []
+
+
+def icon_to_image_ref(action_id):
+    """Find the SVG for action_id and return an Images/HASH.png reference.
+
+    Registers the icon for PNG conversion into the current page's Images/ dir.
+    Returns empty string if no SVG found.
     """
-    script_dir = os.path.dirname(os.path.abspath(__file__))
-    icon_pack = os.path.join(
-        script_dir, "..", "com.simracing.lmu-icons.sdIconPack", "icons"
-    )
-    # Handle brake-bias-forward -> brake-bias-fwd mapping
-    alias_map = {
-        "brake-bias-forward": "brake-bias-fwd",
-        "brake-bias-backward": "brake-bias-bwd",
-    }
-    resolved = alias_map.get(action_id, action_id)
+    resolved = ICON_ALIAS.get(action_id, action_id)
     candidates = [
-        os.path.join(icon_pack, f"{resolved}.svg"),
-        os.path.join(icon_pack, f"{action_id}.svg"),
+        os.path.join(ICON_PACK_DIR, f"{resolved}.svg"),
+        os.path.join(ICON_PACK_DIR, f"{action_id}.svg"),
     ]
 
     for p in candidates:
         if os.path.isfile(p):
-            with open(p, "rb") as f:
-                encoded = base64.b64encode(f.read()).decode("ascii")
-            return f"data:image/svg+xml;base64,{encoded}"
+            png_name = _generate_image_key(resolved)
+            if _current_page:
+                _page_icons[_current_page].append((os.path.abspath(p), png_name))
+            return f"Images/{png_name}"
     return ""
+
+
+def convert_all_page_icons(profiles_dir):
+    """Convert all registered SVGs to 72x72 PNGs in each page's Images/ dir."""
+    converter = os.path.join(SCRIPT_DIR, "svg-to-png.js")
+    total = 0
+
+    for page_uuid, icons in _page_icons.items():
+        if not icons:
+            continue
+        images_dir = os.path.join(profiles_dir, page_uuid.upper(), "Images")
+        os.makedirs(images_dir, exist_ok=True)
+        seen = set()
+        for svg_path, png_name in icons:
+            if png_name in seen:
+                continue
+            seen.add(png_name)
+            png_path = os.path.join(images_dir, png_name)
+            subprocess.run(
+                ["node", converter, svg_path, png_path, "72"],
+                check=True, capture_output=True
+            )
+        total += len(seen)
+    print(f"  Converted {total} icons to 72x72 PNG across {len(_page_icons)} pages")
+
+
+# Actions that toggle on/off — use plugin UUID so setState() works.
+# All others use built-in hotkey UUID.
+TOGGLE_ACTIONS = {
+    "headlights", "ignition", "pit-limiter", "wipers", "starter",
+    "headlight-flash", "request-pitstop", "ai-takeover", "launch-control",
+}
+
+PLUGIN_UUID = "com.simracing.lmu"
 
 
 def make_hotkey_action(title, key, ctrl=False, shift=False, alt=False,
                        font_size=10, title_color="#FFFFFF", icon_id=""):
-    """Create a built-in hotkey action button."""
-    image = icon_to_base64(icon_id) if icon_id else ""
-    show_title = not bool(image)
+    """Create a built-in hotkey action button with icon from icon pack."""
+    image = icon_to_image_ref(icon_id) if icon_id else ""
     return {
         "ActionID": str(uuid.uuid4()),
         "LinkedTitle": True,
         "Name": "Hotkey",
-        "Plugin": {
-            "Name": "Activate a Key Command",
-            "UUID": "com.elgato.streamdeck.system.hotkey",
-            "Version": "1.0"
-        },
         "Resources": None,
         "Settings": make_hotkey_settings(key, ctrl=ctrl, shift=shift, alt=alt),
         "State": 0,
-        "States": [{
-            "FontFamily": "",
-            "FontSize": font_size,
-            "FontStyle": "Bold",
-            "FontUnderline": False,
-            "Image": image,
-            "OutlineThickness": 2,
-            "ShowTitle": show_title,
-            "Title": title if show_title else "",
-            "TitleAlignment": "bottom",
-            "TitleColor": title_color
-        }],
+        "States": [{"Image": image}] if image else [{}],
         "UUID": "com.elgato.streamdeck.system.hotkey"
     }
 
 
-def make_plugin_action(title, action_uuid, hotkey="", font_size=10, title_color="#FFFFFF"):
-    """Create a custom plugin action button with embedded icon from the icon pack."""
-    # Extract action_id from UUID (e.g. 'com.simracing.lmu.pit-limiter' -> 'pit-limiter')
-    action_id = action_uuid.rsplit(".", 1)[-1] if "." in action_uuid else ""
-    image = icon_to_base64(action_id)
-    show_title = not bool(image)
+def make_plugin_toggle_action(title, action_id, hotkey="", icon_id=""):
+    """Create a plugin action with 2 states for on/off toggle.
+
+    Uses the custom plugin UUID so the plugin's setState() controls the icon.
+    The manifest defines the off/on images; the plugin toggles between them.
+    """
+    image = icon_to_image_ref(icon_id) if icon_id else ""
     return {
         "ActionID": str(uuid.uuid4()),
         "LinkedTitle": True,
         "Name": title,
-        "Plugin": {
-            "Name": "LMU Sim Racing",
-            "UUID": "com.simracing.lmu",
-            "Version": "1.0"
-        },
+        "Plugin": {"Name": "LMU Sim Racing", "UUID": PLUGIN_UUID, "Version": "1.0.0.0"},
         "Resources": None,
-        "Settings": {"hotkey": hotkey} if hotkey else {},
+        "Settings": {"hotkey": hotkey},
         "State": 0,
-        "States": [{
-            "FontFamily": "",
-            "FontSize": font_size,
-            "FontStyle": "Bold",
-            "FontUnderline": False,
-            "Image": image,
-            "OutlineThickness": 2,
-            "ShowTitle": show_title,
-            "Title": title if show_title else "",
-            "TitleAlignment": "bottom",
-            "TitleColor": title_color
-        }],
-        "UUID": action_uuid
+        "States": [{"Image": image}],
+        "UUID": f"{PLUGIN_UUID}.{action_id}"
     }
 
 
-def make_folder_button(title, target_page_uuid, title_color="#00BFFF", icon_id=""):
-    """Create a folder navigation button (opens child page).
+def make_action(action_id):
+    """Create the right action type based on whether it's a toggle or not."""
+    b = BINDINGS[action_id]
+    if action_id in TOGGLE_ACTIONS:
+        return make_plugin_toggle_action(b["title"], action_id, hotkey=b["key"], icon_id=action_id)
+    else:
+        return make_hotkey_action(b["title"], b["key"], icon_id=action_id)
 
-    If icon_id is provided, embeds the nav icon from the icon pack
-    and hides the text title (the icon has the label baked in).
-    """
-    image = icon_to_base64(icon_id) if icon_id else ""
-    show_title = not bool(image)
+
+def make_folder_button(title, target_page_uuid, title_color="#00BFFF", icon_id=""):
+    """Create a folder navigation button (opens child page)."""
+    image = icon_to_image_ref(icon_id) if icon_id else ""
     return {
         "ActionID": str(uuid.uuid4()),
         "LinkedTitle": True,
         "Name": "Create Folder",
-        "Plugin": {
-            "Name": "Create Folder",
-            "UUID": "com.elgato.streamdeck.profile.openchild",
-            "Version": "1.0"
-        },
+        "Plugin": {"Name": "Create Folder", "UUID": "com.elgato.streamdeck.profile.openchild", "Version": "1.0"},
         "Resources": None,
         "Settings": {"ProfileUUID": target_page_uuid},
         "State": 0,
-        "States": [{
-            "FontFamily": "",
-            "FontSize": 11,
-            "FontStyle": "Bold",
-            "FontUnderline": False,
-            "Image": image,
-            "OutlineThickness": 2,
-            "ShowTitle": show_title,
-            "Title": title if show_title else "",
-            "TitleAlignment": "middle",
-            "TitleColor": title_color
-        }],
+        "States": [{"Image": image}] if image else [{}],
         "UUID": "com.elgato.streamdeck.profile.openchild"
     }
 
@@ -264,26 +278,11 @@ def make_back_button():
         "ActionID": str(uuid.uuid4()),
         "LinkedTitle": True,
         "Name": "Parent Folder",
-        "Plugin": {
-            "Name": "Parent Folder",
-            "UUID": "com.elgato.streamdeck.profile.backtoparent",
-            "Version": "1.0"
-        },
+        "Plugin": {"Name": "Parent Folder", "UUID": "com.elgato.streamdeck.profile.backtoparent", "Version": "1.0"},
         "Resources": None,
         "Settings": {},
         "State": 0,
-        "States": [{
-            "FontFamily": "",
-            "FontSize": 12,
-            "FontStyle": "Bold",
-            "FontUnderline": False,
-            "Image": "",
-            "OutlineThickness": 2,
-            "ShowTitle": True,
-            "Title": "\u2190 Back",
-            "TitleAlignment": "middle",
-            "TitleColor": "#FF6B6B"
-        }],
+        "States": [{}],
         "UUID": "com.elgato.streamdeck.profile.backtoparent"
     }
 
@@ -402,8 +401,7 @@ def build_main_page():
     ]
     for coord, action_id in row0:
         b = BINDINGS[action_id]
-        actions[coord] = make_plugin_action(
-            b["title"], f"com.simracing.lmu.{action_id}", hotkey=b["key"])
+        actions[coord] = make_action(action_id)
 
     # Row 1: Engine & pit
     row1 = [
@@ -414,8 +412,7 @@ def build_main_page():
     ]
     for coord, action_id in row1:
         b = BINDINGS[action_id]
-        actions[coord] = make_plugin_action(
-            b["title"], f"com.simracing.lmu.{action_id}", hotkey=b["key"])
+        actions[coord] = make_action(action_id)
 
     # Row 2: Navigation bar — one folder per sub-page (with nav icons)
     actions["0,2"] = make_folder_button("MFD\n▶", MFD_PAGE, title_color="#00BFFF", icon_id="nav-mfd")
@@ -445,9 +442,7 @@ def build_mfd_page():
     ]
     for coord, action_id in mfd:
         b = BINDINGS[action_id]
-        actions[coord] = make_plugin_action(
-            b["title"], f"com.simracing.lmu.{action_id}",
-            hotkey=b["key"], font_size=14)
+        actions[coord] = make_action(action_id)
 
     actions["0,2"] = make_back_button()
 
@@ -472,8 +467,7 @@ def build_perf_page():
     ]
     for coord, action_id in inc:
         b = BINDINGS[action_id]
-        actions[coord] = make_plugin_action(
-            b["title"], f"com.simracing.lmu.{action_id}", hotkey=b["key"])
+        actions[coord] = make_action(action_id)
 
     # Row 1: decrease row
     dec = [
@@ -484,8 +478,7 @@ def build_perf_page():
     ]
     for coord, action_id in dec:
         b = BINDINGS[action_id]
-        actions[coord] = make_plugin_action(
-            b["title"], f"com.simracing.lmu.{action_id}", hotkey=b["key"])
+        actions[coord] = make_action(action_id)
 
     actions["0,2"] = make_back_button()
 
@@ -511,8 +504,7 @@ def build_camera_page():
     ]
     for coord, action_id in cameras:
         b = BINDINGS[action_id]
-        actions[coord] = make_plugin_action(
-            b["title"], f"com.simracing.lmu.{action_id}", hotkey=b["key"])
+        actions[coord] = make_action(action_id)
 
     # Row 1: Seat adjustments
     seats = [
@@ -523,8 +515,7 @@ def build_camera_page():
     ]
     for coord, action_id in seats:
         b = BINDINGS[action_id]
-        actions[coord] = make_plugin_action(
-            b["title"], f"com.simracing.lmu.{action_id}", hotkey=b["key"])
+        actions[coord] = make_action(action_id)
 
     # Row 2: Back + FOV/Zoom
     actions["0,2"] = make_back_button()
@@ -537,8 +528,7 @@ def build_camera_page():
     ]
     for coord, action_id in fov_zoom:
         b = BINDINGS[action_id]
-        actions[coord] = make_plugin_action(
-            b["title"], f"com.simracing.lmu.{action_id}", hotkey=b["key"])
+        actions[coord] = make_action(action_id)
 
     return make_page(actions, "Camera & Seat")
 
@@ -560,8 +550,7 @@ def build_look_page():
     ]
     for coord, action_id in look:
         b = BINDINGS[action_id]
-        actions[coord] = make_plugin_action(
-            b["title"], f"com.simracing.lmu.{action_id}", hotkey=b["key"])
+        actions[coord] = make_action(action_id)
 
     # Row 1: Session utilities
     session = [
@@ -571,8 +560,7 @@ def build_look_page():
     ]
     for coord, action_id in session:
         b = BINDINGS[action_id]
-        actions[coord] = make_plugin_action(
-            b["title"], f"com.simracing.lmu.{action_id}", hotkey=b["key"])
+        actions[coord] = make_action(action_id)
 
     actions["0,2"] = make_back_button()
 
@@ -598,8 +586,7 @@ def build_hud_page():
     ]
     for coord, action_id in hud:
         b = BINDINGS[action_id]
-        actions[coord] = make_plugin_action(
-            b["title"], f"com.simracing.lmu.{action_id}", hotkey=b["key"])
+        actions[coord] = make_action(action_id)
 
     # Row 2: Back
     actions["0,2"] = make_back_button()
@@ -609,7 +596,8 @@ def build_hud_page():
 
 def write_profile(output_dir):
     """Write the complete profile directory structure."""
-    profile_dir = os.path.join(output_dir, f"{PROFILE_UUID}.sdProfile")
+    # Directory names use UPPERCASE UUIDs, JSON content uses lowercase
+    profile_dir = os.path.join(output_dir, f"{PROFILE_UUID.upper()}.sdProfile")
 
     # Clean previous
     if os.path.exists(profile_dir):
@@ -617,9 +605,9 @@ def write_profile(output_dir):
 
     profiles_dir = os.path.join(profile_dir, "Profiles")
 
-    # Create page directories
+    # Create page directories (uppercase dir names)
     for page_uuid in [MAIN_PAGE, MFD_PAGE, PERF_PAGE, CAMERA_PAGE, LOOK_PAGE, HUD_PAGE]:
-        os.makedirs(os.path.join(profiles_dir, page_uuid), exist_ok=True)
+        os.makedirs(os.path.join(profiles_dir, page_uuid.upper()), exist_ok=True)
 
     # Top-level profile manifest
     profile_manifest = {
@@ -632,36 +620,30 @@ def write_profile(output_dir):
         "Pages": {
             "Default": MAIN_PAGE,
             "Current": MAIN_PAGE,
-            "Pages": [MAIN_PAGE, MFD_PAGE, PERF_PAGE, CAMERA_PAGE, LOOK_PAGE, HUD_PAGE]
+            "Pages": [MAIN_PAGE]
         }
     }
 
     with open(os.path.join(profile_dir, "manifest.json"), "w") as f:
         json.dump(profile_manifest, f, indent=2)
 
-    # Main page
-    with open(os.path.join(profiles_dir, MAIN_PAGE, "manifest.json"), "w") as f:
-        json.dump(build_main_page(), f, indent=2)
+    # Build each page (set_current_page registers icons per page)
+    pages = [
+        (MAIN_PAGE,   build_main_page),
+        (MFD_PAGE,    build_mfd_page),
+        (PERF_PAGE,   build_perf_page),
+        (CAMERA_PAGE, build_camera_page),
+        (LOOK_PAGE,   build_look_page),
+        (HUD_PAGE,    build_hud_page),
+    ]
+    for page_uuid, builder in pages:
+        set_current_page(page_uuid)
+        page_data = builder()
+        with open(os.path.join(profiles_dir, page_uuid.upper(), "manifest.json"), "w") as f:
+            json.dump(page_data, f, indent=2)
 
-    # MFD page (child of main via folder button)
-    with open(os.path.join(profiles_dir, MFD_PAGE, "manifest.json"), "w") as f:
-        json.dump(build_mfd_page(), f, indent=2)
-
-    # Performance page (child of main via folder button)
-    with open(os.path.join(profiles_dir, PERF_PAGE, "manifest.json"), "w") as f:
-        json.dump(build_perf_page(), f, indent=2)
-
-    # Camera & Seat page
-    with open(os.path.join(profiles_dir, CAMERA_PAGE, "manifest.json"), "w") as f:
-        json.dump(build_camera_page(), f, indent=2)
-
-    # Look & Session page
-    with open(os.path.join(profiles_dir, LOOK_PAGE, "manifest.json"), "w") as f:
-        json.dump(build_look_page(), f, indent=2)
-
-    # HUD & Display page
-    with open(os.path.join(profiles_dir, HUD_PAGE, "manifest.json"), "w") as f:
-        json.dump(build_hud_page(), f, indent=2)
+    # Convert SVGs to 72x72 PNGs in each page's Images/ subdirectory
+    convert_all_page_icons(profiles_dir)
 
     print(f"Profile generated at: {profile_dir}")
     print(f"  Main page:   {MAIN_PAGE}")

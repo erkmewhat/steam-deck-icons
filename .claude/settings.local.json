@@ -1,12 +1,15 @@
 {
   "permissions": {
     "allow": [
+      "Bash",
+      "Read",
+      "Edit",
+      "Write",
+      "Glob",
+      "Grep",
       "WebSearch",
-      "WebFetch(domain:www.magicgameworld.com)",
-      "WebFetch(domain:github.com)",
-      "WebFetch(domain:docs.elgato.com)",
-      "WebFetch(domain:marketplace.elgato.com)",
-      "Skill(keybindings-help)"
+      "WebFetch",
+      "Skill(update-config)"
     ]
   }
 }

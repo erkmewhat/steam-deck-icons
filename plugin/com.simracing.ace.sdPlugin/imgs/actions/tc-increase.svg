@@ -1,29 +1,42 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144 144" width="144" height="144">
-  <rect x="4" y="4" width="136" height="136" rx="12" fill="#212529" stroke="#e20613" stroke-width="2"/>
-  <rect x="8" y="8" width="128" height="128" rx="10" fill="none" stroke="#2d3238" stroke-width="1"/>
-  <!-- Up arrow -->
-  <polygon points="72,16 84,28 78,28 78,34 66,34 66,28 60,28" fill="white"/>
-  <!-- Warning triangle -->
-  <polygon points="72,40 104,92 40,92" fill="none" stroke="#fff300" stroke-width="3" stroke-linejoin="round"/>
-  <!-- Triangle shadow -->
-  <polygon points="72,44 100,90 44,90" fill="none" stroke="#bfb600" stroke-width="1" stroke-linejoin="round" opacity="0.3"/>
-  <!-- Car silhouette side view inside triangle -->
-  <g transform="translate(72,74)">
-    <!-- Car body -->
-    <path d="M-18,0 L-16,-4 -10,-4 -7,-10 7,-10 12,-4 18,-4 18,0 Z" fill="#999" stroke="#777" stroke-width="0.5"/>
-    <!-- Roof highlight -->
-    <path d="M-6,-10 L6,-10 11,-4 -9,-4 Z" fill="#aaa" opacity="0.5"/>
-    <!-- Front wheel -->
-    <circle cx="11" cy="2" r="3.5" fill="#555"/>
-    <circle cx="11" cy="2" r="1.5" fill="#777"/>
-    <!-- Rear wheel -->
-    <circle cx="-11" cy="2" r="3.5" fill="#555"/>
-    <circle cx="-11" cy="2" r="1.5" fill="#777"/>
-  </g>
-  <!-- Wavy skid marks behind rear wheels -->
-  <path d="M48,80 Q50,78 52,80 Q54,82 56,80" fill="none" stroke="#fff300" stroke-width="1.5" stroke-linecap="round"/>
-  <path d="M48,83 Q50,81 52,83 Q54,85 56,83" fill="none" stroke="#fff300" stroke-width="1.5" stroke-linecap="round"/>
-  <!-- Label -->
-
-  <text x="72" y="126" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="bold" fill="white">TC +</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144 144">
+  <defs>
+    <linearGradient id="gtci-bg1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2a1215"/>
+      <stop offset="50%" stop-color="#180a0c"/>
+      <stop offset="100%" stop-color="#0a0406"/>
+    </linearGradient>
+    <linearGradient id="gtci-border" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#e20613"/>
+      <stop offset="50%" stop-color="#ff3333" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#e20613"/>
+    </linearGradient>
+    <linearGradient id="gtci-shine" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.12"/>
+      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.02"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.06"/>
+    </linearGradient>
+    <linearGradient id="gtci-warm" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fff300"/>
+      <stop offset="100%" stop-color="#ffaa00"/>
+    </linearGradient>
+    <linearGradient id="gtci-accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#e20613"/>
+      <stop offset="100%" stop-color="#fff300"/>
+    </linearGradient>
+  </defs>
+  <rect x="1" y="1" width="142" height="142" rx="14" fill="url(#gtci-bg1)" stroke="url(#gtci-border)" stroke-width="1.5"/>
+  <rect x="3" y="3" width="138" height="68" rx="12" fill="url(#gtci-shine)"/>
+  <!-- Warm yellow glass triangle -->
+  <polygon points="60,32 24,92 96,92" fill="url(#gtci-warm)" opacity="0.2" stroke="url(#gtci-warm)" stroke-width="1.5"/>
+  <polygon points="60,42 32,86 88,86" fill="url(#gtci-warm)" opacity="0.1"/>
+  <!-- Glass highlight on triangle -->
+  <polygon points="60,38 42,68 78,68" fill="#ffffff" opacity="0.08"/>
+  <!-- TC text -->
+  <text x="60" y="78" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="24" font-weight="bold" fill="url(#gtci-warm)" letter-spacing="2">TC</text>
+  <!-- Green up arrow -->
+  <polygon points="118,50 108,66 113,66 113,90 123,90 123,66 128,66" fill="#22cc22" opacity="0.9"/>
+  <ellipse cx="118" cy="54" rx="4" ry="2" fill="#ffffff" opacity="0.2"/>
+  <!-- Accent bar -->
+  <rect x="14" y="114" width="116" height="3" rx="1.5" fill="url(#gtci-accent)"/>
+  <text x="72" y="127" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="bold" fill="#ffffff" letter-spacing="1.5">TC +</text>
 </svg>

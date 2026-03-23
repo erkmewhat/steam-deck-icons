@@ -1,36 +1,54 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144 144" width="144" height="144">
-  <rect x="4" y="4" width="136" height="136" rx="12" fill="#212529" stroke="#e20613" stroke-width="2"/>
-  <rect x="8" y="8" width="128" height="128" rx="10" fill="none" stroke="#2d3238" stroke-width="1"/>
-  <!-- Steering wheel outer ring -->
-  <circle cx="72" cy="62" r="34" fill="none" stroke="#999" stroke-width="4"/>
-  <!-- Steering wheel grip thickening at 9 and 3 o'clock -->
-  <path d="M38,62 A34,34 0 0,1 42,44" fill="none" stroke="#fff" stroke-width="6" stroke-linecap="round"/>
-  <path d="M106,62 A34,34 0 0,1 102,80" fill="none" stroke="#fff" stroke-width="6" stroke-linecap="round"/>
-  <path d="M42,80 A34,34 0 0,1 38,62" fill="none" stroke="#fff" stroke-width="6" stroke-linecap="round"/>
-  <path d="M102,44 A34,34 0 0,1 106,62" fill="none" stroke="#fff" stroke-width="6" stroke-linecap="round"/>
-  <!-- Steering wheel flat bottom -->
-  <line x1="50" y1="88" x2="94" y2="88" stroke="#999" stroke-width="4" stroke-linecap="round"/>
-  <!-- Wheel spokes -->
-  <line x1="72" y1="48" x2="72" y2="28" stroke="#999" stroke-width="3" stroke-linecap="round"/>
-  <line x1="56" y1="68" x2="40" y2="62" stroke="#999" stroke-width="3" stroke-linecap="round"/>
-  <line x1="88" y1="68" x2="104" y2="62" stroke="#999" stroke-width="3" stroke-linecap="round"/>
-  <!-- Inner hub -->
-  <circle cx="72" cy="64" r="14" fill="#2d3238" stroke="#555" stroke-width="1.5"/>
-  <!-- AI text bold yellow -->
-  <!-- Circuit board lines radiating from AI -->
-  <line x1="60" y1="56" x2="48" y2="44" stroke="#4a9eff" stroke-width="1.5" stroke-linecap="round"/>
-  <circle cx="48" cy="44" r="2" fill="#4a9eff"/>
-  <line x1="84" y1="56" x2="96" y2="44" stroke="#4a9eff" stroke-width="1.5" stroke-linecap="round"/>
-  <circle cx="96" cy="44" r="2" fill="#4a9eff"/>
-  <line x1="60" y1="72" x2="46" y2="80" stroke="#4a9eff" stroke-width="1.5" stroke-linecap="round"/>
-  <circle cx="46" cy="80" r="2" fill="#4a9eff"/>
-  <line x1="84" y1="72" x2="98" y2="80" stroke="#4a9eff" stroke-width="1.5" stroke-linecap="round"/>
-  <circle cx="98" cy="80" r="2" fill="#4a9eff"/>
-  <line x1="72" y1="78" x2="72" y2="90" stroke="#4a9eff" stroke-width="1.5" stroke-linecap="round"/>
-  <line x1="72" y1="90" x2="64" y2="96" stroke="#4a9eff" stroke-width="1.5" stroke-linecap="round"/>
-  <circle cx="64" cy="96" r="2" fill="#4a9eff"/>
-  <line x1="72" y1="90" x2="80" y2="96" stroke="#4a9eff" stroke-width="1.5" stroke-linecap="round"/>
-  <circle cx="80" cy="96" r="2" fill="#4a9eff"/>
-
-  <text x="72" y="126" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="bold" fill="white">AI DRIVE</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144 144">
+  <defs>
+    <linearGradient id="gai-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2a1215"/>
+      <stop offset="50%" stop-color="#180a0c"/>
+      <stop offset="100%" stop-color="#0a0406"/>
+    </linearGradient>
+    <linearGradient id="gai-border" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#e20613"/>
+      <stop offset="50%" stop-color="#ff3333" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#e20613"/>
+    </linearGradient>
+    <linearGradient id="gai-shine" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.12"/>
+      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.02"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.06"/>
+    </linearGradient>
+    <linearGradient id="gai-warm" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fff300"/>
+      <stop offset="100%" stop-color="#ff6600" stop-opacity="0.7"/>
+    </linearGradient>
+    <linearGradient id="gai-accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#e20613"/>
+      <stop offset="100%" stop-color="#fff300"/>
+    </linearGradient>
+  </defs>
+  <rect x="1" y="1" width="142" height="142" rx="14" fill="url(#gai-bg)" stroke="url(#gai-border)" stroke-width="1.5"/>
+  <rect x="3" y="3" width="138" height="68" rx="12" fill="url(#gai-shine)"/>
+  <!-- Robot/AI head -->
+  <rect x="48" y="34" width="48" height="36" rx="8" fill="none" stroke="url(#gai-warm)" stroke-width="2"/>
+  <rect x="48" y="34" width="48" height="36" rx="8" fill="#fff300" opacity="0.05"/>
+  <!-- Eyes -->
+  <circle cx="62" cy="50" r="5" fill="#fff300" opacity="0.8"/>
+  <circle cx="82" cy="50" r="5" fill="#fff300" opacity="0.8"/>
+  <circle cx="62" cy="50" r="2" fill="#0a0406"/>
+  <circle cx="82" cy="50" r="2" fill="#0a0406"/>
+  <!-- Antenna -->
+  <line x1="72" y1="34" x2="72" y2="26" stroke="#ffaa00" stroke-width="1.5" stroke-linecap="round"/>
+  <circle cx="72" cy="24" r="3" fill="#fff300" opacity="0.6"/>
+  <!-- Mouth - circuit pattern -->
+  <line x1="58" y1="60" x2="66" y2="60" stroke="#ffaa00" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="70" y1="60" x2="78" y2="60" stroke="#ffaa00" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="82" y1="60" x2="86" y2="60" stroke="#ffaa00" stroke-width="1.5" stroke-linecap="round"/>
+  <!-- Steering wheel below -->
+  <circle cx="72" cy="84" r="12" fill="none" stroke="#ffaa00" stroke-width="2" opacity="0.6"/>
+  <circle cx="72" cy="84" r="4" fill="#ffaa00" opacity="0.3"/>
+  <line x1="60" y1="84" x2="68" y2="84" stroke="#ffaa00" stroke-width="1.5" opacity="0.5"/>
+  <line x1="76" y1="84" x2="84" y2="84" stroke="#ffaa00" stroke-width="1.5" opacity="0.5"/>
+  <!-- Glass reflection -->
+  <rect x="52" y="36" width="24" height="3" rx="1.5" fill="#ffffff" opacity="0.1"/>
+  <!-- Accent bar -->
+  <rect x="14" y="114" width="116" height="3" rx="1.5" fill="url(#gai-accent)"/>
+  <text x="72" y="127" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="bold" fill="#ffffff" letter-spacing="1.5">AI DRIVE</text>
 </svg>

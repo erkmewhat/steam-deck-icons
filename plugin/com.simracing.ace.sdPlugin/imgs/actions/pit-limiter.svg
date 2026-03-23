@@ -1,21 +1,46 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144 144" width="144" height="144">
-  <rect x="4" y="4" width="136" height="136" rx="12" fill="#212529" stroke="#e20613" stroke-width="2"/>
-  <rect x="8" y="8" width="128" height="128" rx="10" fill="none" stroke="#2d3238" stroke-width="1"/>
-  <!-- Sign shadow -->
-  <circle cx="74" cy="58" r="36" fill="#1a1d21"/>
-  <!-- Outer red circle border (thick) -->
-  <circle cx="72" cy="56" r="36" fill="none" stroke="#e20613" stroke-width="4"/>
-  <!-- White inner fill -->
-  <circle cx="72" cy="56" r="31" fill="#e8e8e8"/>
-  <!-- Inner white highlight for 3D -->
-  <path d="M48 40 A28 28 0 0 1 96 40" fill="none" stroke="white" stroke-width="2" opacity="0.6"/>
-  <!-- Bottom shadow on white circle -->
-  <path d="M48 72 A28 28 0 0 0 96 72" fill="none" stroke="#bbb" stroke-width="1.5" opacity="0.5"/>
-  <!-- Bold PIT text -->
-  <!-- Diagonal strike-through in red -->
-  <line x1="46" y1="78" x2="98" y2="34" stroke="#e20613" stroke-width="3.5" stroke-linecap="round"/>
-  <!-- Strike shadow -->
-  <line x1="47" y1="79" x2="99" y2="35" stroke="#8b0000" stroke-width="2" stroke-linecap="round" opacity="0.3"/>
-
-  <text x="72" y="126" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="bold" fill="white">PIT LIM</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144 144">
+  <defs>
+    <linearGradient id="gpl-bg1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2a1215"/>
+      <stop offset="50%" stop-color="#180a0c"/>
+      <stop offset="100%" stop-color="#0a0406"/>
+    </linearGradient>
+    <linearGradient id="gpl-border" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#e20613"/>
+      <stop offset="50%" stop-color="#ff3333" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#e20613"/>
+    </linearGradient>
+    <linearGradient id="gpl-shine" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.12"/>
+      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.02"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.06"/>
+    </linearGradient>
+    <linearGradient id="gpl-accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#e20613"/>
+      <stop offset="100%" stop-color="#fff300"/>
+    </linearGradient>
+    <radialGradient id="gpl-inner" cx="0.5" cy="0.4" r="0.5">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect x="1" y="1" width="142" height="142" rx="14" fill="url(#gpl-bg1)" stroke="url(#gpl-border)" stroke-width="1.5"/>
+  <rect x="3" y="3" width="138" height="68" rx="12" fill="url(#gpl-shine)"/>
+  <!-- Speed limit circle -->
+  <circle cx="72" cy="62" r="34" fill="#ffffff" opacity="0.95"/>
+  <circle cx="72" cy="62" r="30" fill="#ee1111"/>
+  <circle cx="72" cy="62" r="24" fill="#ffffff"/>
+  <!-- Glossy inner -->
+  <circle cx="72" cy="62" r="24" fill="url(#gpl-inner)"/>
+  <!-- PIT text -->
+  <text x="72" y="58" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="bold" fill="#111111" letter-spacing="1">PIT</text>
+  <!-- 60 text -->
+  <text x="72" y="74" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="bold" fill="#111111">60</text>
+  <!-- Diagonal strike -->
+  <line x1="48" y1="88" x2="96" y2="36" stroke="#ee1111" stroke-width="3" stroke-linecap="round" opacity="0.8"/>
+  <!-- Glass reflection -->
+  <path d="M52,42 Q72,32 92,42" fill="none" stroke="#ffffff" stroke-width="0.8" opacity="0.3"/>
+  <!-- Accent bar -->
+  <rect x="14" y="114" width="116" height="3" rx="1.5" fill="url(#gpl-accent)"/>
+  <text x="72" y="127" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="bold" fill="#ffffff" letter-spacing="1.5">PIT LIMITER</text>
 </svg>

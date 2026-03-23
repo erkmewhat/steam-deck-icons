@@ -1,32 +1,43 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144 144" width="144" height="144">
-  <rect x="4" y="4" width="136" height="136" rx="12" fill="#212529" stroke="#e20613" stroke-width="2"/>
-  <rect x="8" y="8" width="128" height="128" rx="10" fill="none" stroke="#2d3238" stroke-width="1"/>
-  <!-- Red circular border around pause bars -->
-  <circle cx="72" cy="56" r="36" fill="none" stroke="#e20613" stroke-width="2.5"/>
-  <circle cx="72" cy="56" r="33" fill="none" stroke="#e20613" stroke-width="0.5" opacity="0.3"/>
-  <!-- Two bold pause bars -->
-  <rect x="54" y="34" width="14" height="44" rx="3" fill="white"/>
-  <rect x="76" y="34" width="14" height="44" rx="3" fill="white"/>
-  <!-- Subtle highlight on bars -->
-  <rect x="56" y="36" width="4" height="40" rx="2" fill="#fff" opacity="0.15"/>
-  <rect x="78" y="36" width="4" height="40" rx="2" fill="#fff" opacity="0.15"/>
-  <!-- Checkered flag pattern at bottom -->
-  <g opacity="0.6">
-    <rect x="42" y="96" width="8" height="8" fill="white"/>
-    <rect x="50" y="96" width="8" height="8" fill="#444"/>
-    <rect x="58" y="96" width="8" height="8" fill="white"/>
-    <rect x="66" y="96" width="8" height="8" fill="#444"/>
-    <rect x="74" y="96" width="8" height="8" fill="white"/>
-    <rect x="82" y="96" width="8" height="8" fill="#444"/>
-    <rect x="90" y="96" width="8" height="8" fill="white"/>
-    <rect x="42" y="104" width="8" height="8" fill="#444"/>
-    <rect x="50" y="104" width="8" height="8" fill="white"/>
-    <rect x="58" y="104" width="8" height="8" fill="#444"/>
-    <rect x="66" y="104" width="8" height="8" fill="white"/>
-    <rect x="74" y="104" width="8" height="8" fill="#444"/>
-    <rect x="82" y="104" width="8" height="8" fill="white"/>
-    <rect x="90" y="104" width="8" height="8" fill="#444"/>
-  </g>
-
-  <text x="72" y="126" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="bold" fill="white">PAUSE</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144 144">
+  <defs>
+    <linearGradient id="gpa-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2a1215"/>
+      <stop offset="50%" stop-color="#180a0c"/>
+      <stop offset="100%" stop-color="#0a0406"/>
+    </linearGradient>
+    <linearGradient id="gpa-border" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#e20613"/>
+      <stop offset="50%" stop-color="#ff3333" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#e20613"/>
+    </linearGradient>
+    <linearGradient id="gpa-shine" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.12"/>
+      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.02"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.06"/>
+    </linearGradient>
+    <linearGradient id="gpa-bar" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fff300"/>
+      <stop offset="100%" stop-color="#ff6600" stop-opacity="0.8"/>
+    </linearGradient>
+    <linearGradient id="gpa-accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#e20613"/>
+      <stop offset="100%" stop-color="#fff300"/>
+    </linearGradient>
+  </defs>
+  <rect x="1" y="1" width="142" height="142" rx="14" fill="url(#gpa-bg)" stroke="url(#gpa-border)" stroke-width="1.5"/>
+  <rect x="3" y="3" width="138" height="68" rx="12" fill="url(#gpa-shine)"/>
+  <!-- Pause bars -->
+  <rect x="48" y="36" width="16" height="52" rx="4" fill="url(#gpa-bar)" opacity="0.85"/>
+  <rect x="48" y="36" width="16" height="52" rx="4" fill="none" stroke="#ffffff" stroke-width="0.5" opacity="0.2"/>
+  <rect x="80" y="36" width="16" height="52" rx="4" fill="url(#gpa-bar)" opacity="0.85"/>
+  <rect x="80" y="36" width="16" height="52" rx="4" fill="none" stroke="#ffffff" stroke-width="0.5" opacity="0.2"/>
+  <!-- Glass reflections on bars -->
+  <rect x="50" y="38" width="8" height="6" rx="2" fill="#ffffff" opacity="0.15"/>
+  <rect x="82" y="38" width="8" height="6" rx="2" fill="#ffffff" opacity="0.15"/>
+  <!-- Subtle glow -->
+  <rect x="46" y="34" width="20" height="56" rx="6" fill="#fff300" opacity="0.04"/>
+  <rect x="78" y="34" width="20" height="56" rx="6" fill="#fff300" opacity="0.04"/>
+  <!-- Accent bar -->
+  <rect x="14" y="114" width="116" height="3" rx="1.5" fill="url(#gpa-accent)"/>
+  <text x="72" y="127" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="bold" fill="#ffffff" letter-spacing="1.5">PAUSE</text>
 </svg>

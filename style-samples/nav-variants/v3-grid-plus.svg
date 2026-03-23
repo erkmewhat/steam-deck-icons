@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144 144" width="144" height="144">
+  <defs>
+    <radialGradient id="v3bg" cx="50%" cy="40%" r="70%">
+      <stop offset="0%" stop-color="#32373C"/>
+      <stop offset="100%" stop-color="#0a0a0f"/>
+    </radialGradient>
+    <filter id="v3glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="2.5" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <linearGradient id="v3acc" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#00BFFF" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#00BFFF" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#00BFFF" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="144" height="144" fill="url(#v3bg)"/>
+  <!-- 3x2 grid of rounded squares (representing the 15 buttons inside) -->
+  <g filter="url(#v3glow)">
+    <rect x="24" y="28" width="26" height="26" rx="5" fill="#00BFFF" opacity="0.6"/>
+    <rect x="58" y="28" width="26" height="26" rx="5" fill="#00BFFF" opacity="0.45"/>
+    <rect x="92" y="28" width="26" height="26" rx="5" fill="#00BFFF" opacity="0.3"/>
+    <rect x="24" y="62" width="26" height="26" rx="5" fill="#00BFFF" opacity="0.4"/>
+    <rect x="58" y="62" width="26" height="26" rx="5" fill="#00BFFF" opacity="0.25"/>
+    <!-- Plus icon in last slot -->
+    <rect x="92" y="62" width="26" height="26" rx="5" fill="none" stroke="#00BFFF" stroke-width="2" opacity="0.5" stroke-dasharray="4 3"/>
+    <line x1="105" y1="69" x2="105" y2="83" stroke="#00BFFF" stroke-width="2.5" stroke-linecap="round" opacity="0.6"/>
+    <line x1="98" y1="76" x2="112" y2="76" stroke="#00BFFF" stroke-width="2.5" stroke-linecap="round" opacity="0.6"/>
+  </g>
+  <!-- Label -->
+  <text x="72" y="115" text-anchor="middle" font-family="'Segoe UI',Arial,sans-serif" font-size="16" font-weight="700" fill="#ffffff" opacity="0.9">MFD</text>
+  <!-- Subtitle hint -->
+  <text x="72" y="130" text-anchor="middle" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#00BFFF" opacity="0.6">5 actions</text>
+  <rect x="20" y="138" width="104" height="2" rx="1" fill="url(#v3acc)"/>
+</svg>

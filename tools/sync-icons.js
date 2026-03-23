@@ -13,7 +13,7 @@
 
 const fs = require("fs");
 const path = require("path");
-const { Resvg } = require("@resvg/resvg-js");
+const { Resvg } = require("../plugin/node_modules/@resvg/resvg-js");
 
 const ROOT = path.resolve(__dirname, "..");
 

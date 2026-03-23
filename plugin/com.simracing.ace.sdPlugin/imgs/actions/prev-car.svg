@@ -1,39 +1,45 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144 144" width="144" height="144">
-  <rect x="4" y="4" width="136" height="136" rx="12" fill="#212529" stroke="#e20613" stroke-width="2"/>
-  <rect x="8" y="8" width="128" height="128" rx="10" fill="none" stroke="#2d3238" stroke-width="1"/>
-  <!-- Front car (current, grey) - right side -->
-  <g transform="translate(82, 52)">
-    <!-- Car body -->
-    <path d="M8,30 L8,20 Q8,14 14,14 L22,8 L38,8 L44,14 Q48,14 48,20 L48,30 Z" fill="#777" stroke="#999" stroke-width="1"/>
-    <!-- Windshield -->
-    <path d="M22,10 L18,16 L36,16 L38,10 Z" fill="#555"/>
-    <!-- Wheels -->
-    <circle cx="16" cy="32" r="5" fill="#444" stroke="#666" stroke-width="1.5"/>
-    <circle cx="40" cy="32" r="5" fill="#444" stroke="#666" stroke-width="1.5"/>
-    <!-- Wheel detail -->
-    <circle cx="16" cy="32" r="2" fill="#555"/>
-    <circle cx="40" cy="32" r="2" fill="#555"/>
-  </g>
-  <!-- Arrow pointing left (white) -->
-  <g transform="translate(54, 50)">
-    <rect x="10" y="10" width="18" height="6" rx="2" fill="white"/>
-    <polygon points="12,6 0,13 12,20" fill="white"/>
-  </g>
-  <!-- Rear car (prev, cyan) - left side -->
-  <g transform="translate(14, 44)">
-    <!-- Car body -->
-    <path d="M8,30 L8,20 Q8,14 14,14 L22,8 L38,8 L44,14 Q48,14 48,20 L48,30 Z" fill="#4a9eff" stroke="#6ab4ff" stroke-width="1"/>
-    <!-- Windshield -->
-    <path d="M22,10 L18,16 L36,16 L38,10 Z" fill="#2d6db5"/>
-    <!-- Wheels -->
-    <circle cx="16" cy="32" r="5" fill="#333" stroke="#4a9eff" stroke-width="1.5"/>
-    <circle cx="40" cy="32" r="5" fill="#333" stroke="#4a9eff" stroke-width="1.5"/>
-    <!-- Wheel detail -->
-    <circle cx="16" cy="32" r="2" fill="#444"/>
-    <circle cx="40" cy="32" r="2" fill="#444"/>
-    <!-- Glow effect -->
-    <path d="M8,30 L8,20 Q8,14 14,14 L22,8 L38,8 L44,14 Q48,14 48,20 L48,30 Z" fill="#4a9eff" opacity="0.15"/>
-  </g>
-
-  <text x="72" y="126" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="bold" fill="white">PREV CAR</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144 144">
+  <defs>
+    <linearGradient id="gpc-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2a1215"/>
+      <stop offset="50%" stop-color="#180a0c"/>
+      <stop offset="100%" stop-color="#0a0406"/>
+    </linearGradient>
+    <linearGradient id="gpc-border" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#e20613"/>
+      <stop offset="50%" stop-color="#ff3333" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#e20613"/>
+    </linearGradient>
+    <linearGradient id="gpc-shine" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.12"/>
+      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.02"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.06"/>
+    </linearGradient>
+    <linearGradient id="gpc-warm" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#6bb8ff"/>
+      <stop offset="100%" stop-color="#4a9eff" stop-opacity="0.7"/>
+    </linearGradient>
+    <linearGradient id="gpc-accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#e20613"/>
+      <stop offset="100%" stop-color="#fff300"/>
+    </linearGradient>
+  </defs>
+  <rect x="1" y="1" width="142" height="142" rx="14" fill="url(#gpc-bg)" stroke="url(#gpc-border)" stroke-width="1.5"/>
+  <rect x="3" y="3" width="138" height="68" rx="12" fill="url(#gpc-shine)"/>
+  <!-- Car silhouette -->
+  <rect x="64" y="52" width="48" height="18" rx="6" fill="url(#gpc-warm)" opacity="0.7"/>
+  <rect x="70" y="44" width="36" height="12" rx="4" fill="url(#gpc-warm)" opacity="0.5"/>
+  <!-- Wheels -->
+  <circle cx="76" cy="72" r="5" fill="#4a9eff" opacity="0.6"/>
+  <circle cx="100" cy="72" r="5" fill="#4a9eff" opacity="0.6"/>
+  <!-- Backward arrow -->
+  <polyline points="48,50 32,64 48,78" fill="none" stroke="#4a9eff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <line x1="58" y1="64" x2="32" y2="64" stroke="#4a9eff" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- Road line -->
+  <line x1="20" y1="86" x2="124" y2="86" stroke="#4a9eff" stroke-width="1" opacity="0.3"/>
+  <!-- Glass reflection on car -->
+  <rect x="72" y="46" width="20" height="3" rx="1.5" fill="#ffffff" opacity="0.1"/>
+  <!-- Accent bar -->
+  <rect x="14" y="114" width="116" height="3" rx="1.5" fill="url(#gpc-accent)"/>
+  <text x="72" y="127" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="bold" fill="#ffffff" letter-spacing="1.5">PREV CAR</text>
 </svg>

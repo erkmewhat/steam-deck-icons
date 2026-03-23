@@ -17,7 +17,7 @@ set -e
 
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 SD_PLUGINS="$APPDATA/Elgato/StreamDeck/Plugins"
-SD_ICONS="$APPDATA/Elgato/StreamDeck/IconPacks"
+SD_ICONS="$APPDATA/Elgato/StreamDeck/Plugins/com.elgato.StreamDeck/Icons"
 SD_PROFILES="$APPDATA/Elgato/StreamDeck/ProfilesV3"
 
 GAMES_DIR="$ROOT/tools/games"
@@ -90,11 +90,15 @@ echo "  ✓ Build complete (entry: $ENTRY_SRC)"
 
 # 2. Bundle node_modules into .sdPlugin
 echo "[2/8] Bundling dependencies..."
-for dep in @elgato/streamdeck koffi; do
-    cp -r "node_modules/$dep" "$ROOT/plugin/$PLUGIN_ID/node_modules/" 2>/dev/null || true
+PLUGIN_NM="$ROOT/plugin/$PLUGIN_ID/node_modules"
+rm -rf "$PLUGIN_NM"
+mkdir -p "$PLUGIN_NM/@elgato"
+# SDK v2 requires: @elgato/streamdeck, @elgato/schemas, @elgato/utils, ws, koffi
+for dep in streamdeck schemas utils; do
+    [ -d "node_modules/@elgato/$dep" ] && cp -r "node_modules/@elgato/$dep" "$PLUGIN_NM/@elgato/"
 done
-for dep in node_modules/@elgato/streamdeck/node_modules/*; do
-    [ -d "$dep" ] && cp -r "$dep" "$ROOT/plugin/$PLUGIN_ID/node_modules/" 2>/dev/null || true
+for dep in koffi ws; do
+    [ -d "node_modules/$dep" ] && cp -r "node_modules/$dep" "$PLUGIN_NM/"
 done
 echo "  ✓ Dependencies bundled"
 
@@ -109,11 +113,14 @@ rm -rf "$SD_PLUGINS/$PLUGIN_ID"
 cp -r "$ROOT/plugin/$PLUGIN_ID" "$SD_PLUGINS/"
 echo "  ✓ Plugin installed"
 
-# 5. Install icon pack
+# 5. Generate icon pack preview + install
 echo "[5/8] Installing icon pack..."
+cd "$ROOT"
+node tools/generate-previews.js "$ICON_PACK_ID"
+mkdir -p "$SD_ICONS"
 rm -rf "$SD_ICONS/$ICON_PACK_ID"
 cp -r "$ROOT/$ICON_PACK_ID" "$SD_ICONS/"
-echo "  ✓ Icon pack installed"
+echo "  ✓ Icon pack installed (with preview)"
 
 # 6. Regenerate profile (use game-specific generator if it exists)
 echo "[6/8] Regenerating profile..."
@@ -137,8 +144,30 @@ else
     exit 1
 fi
 
-# 8. Summary
+# 8. Export .streamDeckProfile for portability
+echo "[8/8] Exporting .streamDeckProfile..."
+cd "$ROOT"
+GAME_NAME="$(python3 -c "import json; print(json.load(open(r'$GAME_CONFIG_WIN'))['name'])")"
+PROFILE_UUID="$(python3 -c "import json; print(json.load(open(r'$GAME_CONFIG_WIN'))['profile_uuid'])")"
+PROFILE_DIR="$ROOT/profile/${PROFILE_UUID}.sdProfile"
+EXPORT_DIR="$ROOT/exports"
+mkdir -p "$EXPORT_DIR"
+EXPORT_FILE="$EXPORT_DIR/${GAME_NAME} Sim Racing.streamDeckProfile"
+python3 -c "
+import zipfile, os, sys
+profile_dir = sys.argv[1]
+outpath = sys.argv[2]
+with zipfile.ZipFile(outpath, 'w', zipfile.ZIP_DEFLATED) as zf:
+    for root, dirs, files in os.walk(profile_dir):
+        for f in files:
+            fp = os.path.join(root, f)
+            zf.write(fp, os.path.relpath(fp, profile_dir))
+print(f'  Exported: {os.path.basename(outpath)} ({os.path.getsize(outpath):,} bytes)')
+" "$PROFILE_DIR" "$EXPORT_FILE"
+echo "  ✓ Profile exported"
+
+# 9. Summary
 echo ""
-echo "=== Deploy Complete (8/8) ==="
+echo "=== Deploy Complete (9/9) ==="
 echo "Restart Stream Deck to apply changes."
 echo ""

@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144 144" width="144" height="144">
+  <defs>
+    <!-- Warm green-tinted background -->
+    <radialGradient id="st-on-bg" cx="50%" cy="40%" r="70%">
+      <stop offset="0%" stop-color="#1A3A1A"/>
+      <stop offset="100%" stop-color="#0a180a"/>
+    </radialGradient>
+    <!-- Bright green glow -->
+    <radialGradient id="st-on-greenGlow" cx="50%" cy="45%" r="50%">
+      <stop offset="0%" stop-color="#66FF6A" stop-opacity="0.5"/>
+      <stop offset="40%" stop-color="#4CAF50" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#4CAF50" stop-opacity="0"/>
+    </radialGradient>
+    <!-- Brighter green gradient -->
+    <linearGradient id="st-on-greenGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#A5E8A7"/>
+      <stop offset="100%" stop-color="#66DD6A"/>
+    </linearGradient>
+    <!-- Bright bolt gradient -->
+    <linearGradient id="st-on-boltGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#C8FFC8"/>
+    </linearGradient>
+    <!-- Strong glow filter -->
+    <filter id="st-on-glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="4.5" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="st-on-shadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#4CAF50" flood-opacity="0.5"/>
+    </filter>
+    <filter id="st-on-outerGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="7"/>
+    </filter>
+    <!-- Brighter accent -->
+    <linearGradient id="st-on-borderAccent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#4CAF50" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#81C784" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#4CAF50" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="144" height="144" fill="url(#st-on-bg)"/>
+  <ellipse cx="72" cy="56" rx="55" ry="48" fill="url(#st-on-greenGlow)"/>
+
+  <!-- Extra inner glow -->
+  <ellipse cx="72" cy="52" rx="35" ry="30" fill="#4CAF50" opacity="0.1"/>
+
+  <!-- Circular arrow - brighter and glowing -->
+  <g filter="url(#st-on-glow)">
+    <path d="M99 50 A32 32 0 1 0 82 90" fill="none" stroke="url(#st-on-greenGrad)" stroke-width="6" stroke-linecap="round"/>
+    <!-- Arrow head -->
+    <polygon points="82,80 89,93 75,93" fill="url(#st-on-greenGrad)"/>
+  </g>
+
+  <!-- Lightning bolt in center - bright white/green -->
+  <g filter="url(#st-on-shadow)">
+    <polygon points="78,34 64,62 74,62 66,90 86,55 76,55" fill="url(#st-on-boltGrad)"/>
+  </g>
+
+  <!-- Energy rings - more visible -->
+  <circle cx="72" cy="62" r="38" fill="none" stroke="#66DD6A" stroke-width="1" opacity="0.35"/>
+  <circle cx="72" cy="62" r="44" fill="none" stroke="#66DD6A" stroke-width="0.8" opacity="0.2"/>
+  <circle cx="72" cy="62" r="50" fill="none" stroke="#66DD6A" stroke-width="0.5" opacity="0.1"/>
+
+  <!-- Bottom accent line - brighter -->
+  <rect x="16" y="137" width="112" height="3" rx="1.5" fill="url(#st-on-borderAccent)"/>
+
+  <!-- Label in accent color -->
+  <text x="72" y="132" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="15" font-weight="700" fill="#81C784" opacity="1" letter-spacing="1">STARTER</text>
+</svg>

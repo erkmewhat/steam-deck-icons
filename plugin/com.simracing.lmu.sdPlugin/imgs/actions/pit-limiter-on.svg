@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144 144" width="144" height="144">
+  <defs>
+    <!-- Warm background gradient -->
+    <radialGradient id="pl-on-bg" cx="50%" cy="40%" r="70%">
+      <stop offset="0%" stop-color="#4A2810"/>
+      <stop offset="100%" stop-color="#1a0e05"/>
+    </radialGradient>
+    <!-- Bright orange glow -->
+    <radialGradient id="pl-on-orangeGlow" cx="50%" cy="45%" r="50%">
+      <stop offset="0%" stop-color="#FF6B35" stop-opacity="0.55"/>
+      <stop offset="40%" stop-color="#FF6B35" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#FF6B35" stop-opacity="0"/>
+    </radialGradient>
+    <!-- Bright sign border gradient -->
+    <linearGradient id="pl-on-signBorder" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFBB99"/>
+      <stop offset="100%" stop-color="#FF6B35"/>
+    </linearGradient>
+    <!-- Strong glow filter -->
+    <filter id="pl-on-glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <!-- Outer glow -->
+    <filter id="pl-on-outerGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="8"/>
+    </filter>
+    <!-- Sign shadow with orange tint -->
+    <filter id="pl-on-signShadow" x="-20%" y="-20%" width="150%" height="150%">
+      <feDropShadow dx="0" dy="2" stdDeviation="5" flood-color="#FF6B35" flood-opacity="0.5"/>
+    </filter>
+    <!-- Bottom border accent - brighter -->
+    <linearGradient id="pl-on-borderAccent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#FF6B35" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#FF8A5C" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#FF6B35" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Warm background -->
+  <rect width="144" height="144" fill="url(#pl-on-bg)"/>
+
+  <!-- Bright ambient glow -->
+  <ellipse cx="72" cy="56" rx="55" ry="48" fill="url(#pl-on-orangeGlow)"/>
+
+  <!-- Extra inner glow -->
+  <ellipse cx="72" cy="58" rx="38" ry="35" fill="#FF6B35" opacity="0.1"/>
+
+  <!-- Speed limit sign with strong glow -->
+  <g filter="url(#pl-on-signShadow)">
+    <!-- Outer ring - brighter -->
+    <circle cx="72" cy="58" r="36" fill="none" stroke="url(#pl-on-signBorder)" stroke-width="6"/>
+    <!-- Inner fill - warm tinted -->
+    <circle cx="72" cy="58" r="31" fill="#2a1810" opacity="0.7"/>
+  </g>
+
+  <!-- Speed number / PIT text with glow -->
+  <g filter="url(#pl-on-glow)">
+    <text x="72" y="64" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="18" font-weight="800" fill="#FFFFFF" letter-spacing="1">PIT</text>
+    <!-- Speed indicator lines -->
+    <line x1="58" y1="71" x2="86" y2="71" stroke="#FFBB99" stroke-width="2" opacity="0.7"/>
+    <text x="72" y="82" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="14" font-weight="700" fill="#FFBB99" opacity="1">60</text>
+  </g>
+
+  <!-- Diagonal line through sign (limiter active) - brighter -->
+  <line x1="46" y1="32" x2="98" y2="84" stroke="url(#pl-on-signBorder)" stroke-width="4" stroke-linecap="round" opacity="0.9"/>
+
+  <!-- Small road/lane marks at bottom - more visible -->
+  <g opacity="0.3">
+    <rect x="68" y="96" width="8" height="4" rx="1" fill="#FFBB99"/>
+    <rect x="68" y="103" width="8" height="4" rx="1" fill="#FFBB99"/>
+  </g>
+
+  <!-- Bottom accent line - brighter and thicker -->
+  <rect x="16" y="137" width="112" height="3" rx="1.5" fill="url(#pl-on-borderAccent)"/>
+
+  <!-- Label in accent color -->
+  <text x="72" y="132" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="15" font-weight="700" fill="#FF8A5C" opacity="1" letter-spacing="1">PIT LIMITER</text>
+</svg>

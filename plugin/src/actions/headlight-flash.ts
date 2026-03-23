@@ -6,4 +6,5 @@ export class HeadlightFlash extends HotkeyAction {
     readonly defaultHotkey = "G";
     readonly actionName = "Headlight Flash";
     readonly iconFile = "headlight-flash";
+    readonly isToggle = true;
 }

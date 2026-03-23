@@ -35,13 +35,15 @@
             "States": [
                 {
                     "Image": "imgs/actions/pit-limiter",
-                    "Name": "Pit Limiter",
-                    "ShowTitle": true,
-                    "TitleAlignment": "bottom",
-                    "TitleColor": "#FFFFFF"
+                    "Name": "Off"
+                },
+                {
+                    "Image": "imgs/actions/pit-limiter-on",
+                    "Name": "On"
                 }
             ],
-            "PropertyInspectorPath": "ui/pi.html"
+            "PropertyInspectorPath": "ui/pi.html",
+            "DisableAutomaticStates": true
         },
         {
             "UUID": "com.simracing.lmu.headlights",
@@ -51,13 +53,15 @@
             "Controllers": [
                 "Keypad"
             ],
+            "DisableAutomaticStates": true,
             "States": [
                 {
                     "Image": "imgs/actions/headlights",
-                    "Name": "Headlights",
-                    "ShowTitle": true,
-                    "TitleAlignment": "bottom",
-                    "TitleColor": "#FFFFFF"
+                    "Name": "Off"
+                },
+                {
+                    "Image": "imgs/actions/headlights-on",
+                    "Name": "On"
                 }
             ],
             "PropertyInspectorPath": "ui/pi.html"
@@ -73,13 +77,15 @@
             "States": [
                 {
                     "Image": "imgs/actions/headlight-flash",
-                    "Name": "Headlight Flash",
-                    "ShowTitle": true,
-                    "TitleAlignment": "bottom",
-                    "TitleColor": "#FFFFFF"
+                    "Name": "Off"
+                },
+                {
+                    "Image": "imgs/actions/headlight-flash-on",
+                    "Name": "On"
                 }
             ],
-            "PropertyInspectorPath": "ui/pi.html"
+            "PropertyInspectorPath": "ui/pi.html",
+            "DisableAutomaticStates": true
         },
         {
             "UUID": "com.simracing.lmu.wipers",
@@ -92,13 +98,15 @@
             "States": [
                 {
                     "Image": "imgs/actions/wipers",
-                    "Name": "Wipers",
-                    "ShowTitle": true,
-                    "TitleAlignment": "bottom",
-                    "TitleColor": "#FFFFFF"
+                    "Name": "Off"
+                },
+                {
+                    "Image": "imgs/actions/wipers-on",
+                    "Name": "On"
                 }
             ],
-            "PropertyInspectorPath": "ui/pi.html"
+            "PropertyInspectorPath": "ui/pi.html",
+            "DisableAutomaticStates": true
         },
         {
             "UUID": "com.simracing.lmu.ignition",
@@ -111,13 +119,15 @@
             "States": [
                 {
                     "Image": "imgs/actions/ignition",
-                    "Name": "Ignition",
-                    "ShowTitle": true,
-                    "TitleAlignment": "bottom",
-                    "TitleColor": "#FFFFFF"
+                    "Name": "Off"
+                },
+                {
+                    "Image": "imgs/actions/ignition-on",
+                    "Name": "On"
                 }
             ],
-            "PropertyInspectorPath": "ui/pi.html"
+            "PropertyInspectorPath": "ui/pi.html",
+            "DisableAutomaticStates": true
         },
         {
             "UUID": "com.simracing.lmu.starter",
@@ -130,13 +140,15 @@
             "States": [
                 {
                     "Image": "imgs/actions/starter",
-                    "Name": "Starter",
-                    "ShowTitle": true,
-                    "TitleAlignment": "bottom",
-                    "TitleColor": "#FFFFFF"
+                    "Name": "Off"
+                },
+                {
+                    "Image": "imgs/actions/starter-on",
+                    "Name": "On"
                 }
             ],
-            "PropertyInspectorPath": "ui/pi.html"
+            "PropertyInspectorPath": "ui/pi.html",
+            "DisableAutomaticStates": true
         },
         {
             "UUID": "com.simracing.lmu.request-pitstop",
@@ -149,13 +161,15 @@
             "States": [
                 {
                     "Image": "imgs/actions/request-pitstop",
-                    "Name": "Request Pit Stop",
-                    "ShowTitle": true,
-                    "TitleAlignment": "bottom",
-                    "TitleColor": "#FFFFFF"
+                    "Name": "Off"
+                },
+                {
+                    "Image": "imgs/actions/request-pitstop-on",
+                    "Name": "On"
                 }
             ],
-            "PropertyInspectorPath": "ui/pi.html"
+            "PropertyInspectorPath": "ui/pi.html",
+            "DisableAutomaticStates": true
         },
         {
             "UUID": "com.simracing.lmu.ai-takeover",
@@ -168,13 +182,15 @@
             "States": [
                 {
                     "Image": "imgs/actions/ai-takeover",
-                    "Name": "AI Takeover",
-                    "ShowTitle": true,
-                    "TitleAlignment": "bottom",
-                    "TitleColor": "#FFFFFF"
+                    "Name": "Off"
+                },
+                {
+                    "Image": "imgs/actions/ai-takeover-on",
+                    "Name": "On"
                 }
             ],
-            "PropertyInspectorPath": "ui/pi.html"
+            "PropertyInspectorPath": "ui/pi.html",
+            "DisableAutomaticStates": true
         },
         {
             "UUID": "com.simracing.lmu.mfd-next",
@@ -485,14 +501,18 @@
             "Name": "Driving Cameras",
             "Icon": "imgs/actions/driving-cameras",
             "Tooltip": "Cycle driving cameras (Key: Insert)",
-            "Controllers": ["Keypad"],
-            "States": [{
-                "Image": "imgs/actions/driving-cameras",
-                "Name": "Driving Cameras",
-                "ShowTitle": true,
-                "TitleAlignment": "bottom",
-                "TitleColor": "#FFFFFF"
-            }],
+            "Controllers": [
+                "Keypad"
+            ],
+            "States": [
+                {
+                    "Image": "imgs/actions/driving-cameras",
+                    "Name": "Driving Cameras",
+                    "ShowTitle": true,
+                    "TitleAlignment": "bottom",
+                    "TitleColor": "#FFFFFF"
+                }
+            ],
             "PropertyInspectorPath": "ui/pi.html"
         },
         {
@@ -500,14 +520,18 @@
             "Name": "Onboard Cameras",
             "Icon": "imgs/actions/onboard-cameras",
             "Tooltip": "Cycle onboard cameras (Key: Home)",
-            "Controllers": ["Keypad"],
-            "States": [{
-                "Image": "imgs/actions/onboard-cameras",
-                "Name": "Onboard Cameras",
-                "ShowTitle": true,
-                "TitleAlignment": "bottom",
-                "TitleColor": "#FFFFFF"
-            }],
+            "Controllers": [
+                "Keypad"
+            ],
+            "States": [
+                {
+                    "Image": "imgs/actions/onboard-cameras",
+                    "Name": "Onboard Cameras",
+                    "ShowTitle": true,
+                    "TitleAlignment": "bottom",
+                    "TitleColor": "#FFFFFF"
+                }
+            ],
             "PropertyInspectorPath": "ui/pi.html"
         },
         {
@@ -515,14 +539,18 @@
             "Name": "Swingman Camera",
             "Icon": "imgs/actions/swingman-camera",
             "Tooltip": "Swingman/TV camera (Key: Page Up)",
-            "Controllers": ["Keypad"],
-            "States": [{
-                "Image": "imgs/actions/swingman-camera",
-                "Name": "Swingman Camera",
-                "ShowTitle": true,
-                "TitleAlignment": "bottom",
-                "TitleColor": "#FFFFFF"
-            }],
+            "Controllers": [
+                "Keypad"
+            ],
+            "States": [
+                {
+                    "Image": "imgs/actions/swingman-camera",
+                    "Name": "Swingman Camera",
+                    "ShowTitle": true,
+                    "TitleAlignment": "bottom",
+                    "TitleColor": "#FFFFFF"
+                }
+            ],
             "PropertyInspectorPath": "ui/pi.html"
         },
         {
@@ -530,14 +558,18 @@
             "Name": "Spectator Camera",
             "Icon": "imgs/actions/spectator-camera",
             "Tooltip": "Spectator camera (Key: Page Down)",
-            "Controllers": ["Keypad"],
-            "States": [{
-                "Image": "imgs/actions/spectator-camera",
-                "Name": "Spectator Camera",
-                "ShowTitle": true,
-                "TitleAlignment": "bottom",
-                "TitleColor": "#FFFFFF"
-            }],
+            "Controllers": [
+                "Keypad"
+            ],
+            "States": [
+                {
+                    "Image": "imgs/actions/spectator-camera",
+                    "Name": "Spectator Camera",
+                    "ShowTitle": true,
+                    "TitleAlignment": "bottom",
+                    "TitleColor": "#FFFFFF"
+                }
+            ],
             "PropertyInspectorPath": "ui/pi.html"
         },
         {
@@ -545,14 +577,18 @@
             "Name": "Tracking Camera",
             "Icon": "imgs/actions/tracking-camera",
             "Tooltip": "Tracking camera (Key: Delete)",
-            "Controllers": ["Keypad"],
-            "States": [{
-                "Image": "imgs/actions/tracking-camera",
-                "Name": "Tracking Camera",
-                "ShowTitle": true,
-                "TitleAlignment": "bottom",
-                "TitleColor": "#FFFFFF"
-            }],
+            "Controllers": [
+                "Keypad"
+            ],
+            "States": [
+                {
+                    "Image": "imgs/actions/tracking-camera",
+                    "Name": "Tracking Camera",
+                    "ShowTitle": true,
+                    "TitleAlignment": "bottom",
+                    "TitleColor": "#FFFFFF"
+                }
+            ],
             "PropertyInspectorPath": "ui/pi.html"
         },
         {
@@ -560,14 +596,18 @@
             "Name": "Seat Forward",
             "Icon": "imgs/actions/seat-forward",
             "Tooltip": "Adjust seat forward (Key: Numpad 8)",
-            "Controllers": ["Keypad"],
-            "States": [{
-                "Image": "imgs/actions/seat-forward",
-                "Name": "Seat Forward",
-                "ShowTitle": true,
-                "TitleAlignment": "bottom",
-                "TitleColor": "#FFFFFF"
-            }],
+            "Controllers": [
+                "Keypad"
+            ],
+            "States": [
+                {
+                    "Image": "imgs/actions/seat-forward",
+                    "Name": "Seat Forward",
+                    "ShowTitle": true,
+                    "TitleAlignment": "bottom",
+                    "TitleColor": "#FFFFFF"
+                }
+            ],
             "PropertyInspectorPath": "ui/pi.html"
         },
         {
@@ -575,14 +615,18 @@
             "Name": "Seat Back",
             "Icon": "imgs/actions/seat-back",
             "Tooltip": "Adjust seat backward (Key: Numpad 2)",
-            "Controllers": ["Keypad"],
-            "States": [{
-                "Image": "imgs/actions/seat-back",
-                "Name": "Seat Back",
-                "ShowTitle": true,
-                "TitleAlignment": "bottom",
-                "TitleColor": "#FFFFFF"
-            }],
+            "Controllers": [
+                "Keypad"
+            ],
+            "States": [
+                {
+                    "Image": "imgs/actions/seat-back",
+                    "Name": "Seat Back",
+                    "ShowTitle": true,
+                    "TitleAlignment": "bottom",
+                    "TitleColor": "#FFFFFF"
+                }
+            ],
             "PropertyInspectorPath": "ui/pi.html"
         },
         {
@@ -590,14 +634,18 @@
             "Name": "Seat Up",
             "Icon": "imgs/actions/seat-up",
             "Tooltip": "Adjust seat up (Key: Numpad 4)",
-            "Controllers": ["Keypad"],
-            "States": [{
-                "Image": "imgs/actions/seat-up",
-                "Name": "Seat Up",
-                "ShowTitle": true,
-                "TitleAlignment": "bottom",
-                "TitleColor": "#FFFFFF"
-            }],
+            "Controllers": [
+                "Keypad"
+            ],
+            "States": [
+                {
+                    "Image": "imgs/actions/seat-up",
+                    "Name": "Seat Up",
+                    "ShowTitle": true,
+                    "TitleAlignment": "bottom",
+                    "TitleColor": "#FFFFFF"
+                }
+            ],
             "PropertyInspectorPath": "ui/pi.html"
         },
         {
@@ -605,14 +653,18 @@
             "Name": "Seat Down",
             "Icon": "imgs/actions/seat-down",
             "Tooltip": "Adjust seat down (Key: Numpad 6)",
-            "Controllers": ["Keypad"],
-            "States": [{
-                "Image": "imgs/actions/seat-down",
-                "Name": "Seat Down",
-                "ShowTitle": true,
-                "TitleAlignment": "bottom",
-                "TitleColor": "#FFFFFF"
-            }],
+            "Controllers": [
+                "Keypad"
+            ],
+            "States": [
+                {
+                    "Image": "imgs/actions/seat-down",
+                    "Name": "Seat Down",
+                    "ShowTitle": true,
+                    "TitleAlignment": "bottom",
+                    "TitleColor": "#FFFFFF"
+                }
+            ],
             "PropertyInspectorPath": "ui/pi.html"
         },
         {
@@ -620,14 +672,18 @@
             "Name": "FOV Increase",
             "Icon": "imgs/actions/fov-increase",
             "Tooltip": "Increase field of view (Key: Numpad 9)",
-            "Controllers": ["Keypad"],
-            "States": [{
-                "Image": "imgs/actions/fov-increase",
-                "Name": "FOV Increase",
-                "ShowTitle": true,
-                "TitleAlignment": "bottom",
-                "TitleColor": "#FFFFFF"
-            }],
+            "Controllers": [
+                "Keypad"
+            ],
+            "States": [
+                {
+                    "Image": "imgs/actions/fov-increase",
+                    "Name": "FOV Increase",
+                    "ShowTitle": true,
+                    "TitleAlignment": "bottom",
+                    "TitleColor": "#FFFFFF"
+                }
+            ],
             "PropertyInspectorPath": "ui/pi.html"
         },
         {
@@ -635,14 +691,18 @@
             "Name": "FOV Decrease",
             "Icon": "imgs/actions/fov-decrease",
             "Tooltip": "Decrease field of view (Key: Numpad 7)",
-            "Controllers": ["Keypad"],
-            "States": [{
-                "Image": "imgs/actions/fov-decrease",
-                "Name": "FOV Decrease",
-                "ShowTitle": true,
-                "TitleAlignment": "bottom",
-                "TitleColor": "#FFFFFF"
-            }],
+            "Controllers": [
+                "Keypad"
+            ],
+            "States": [
+                {
+                    "Image": "imgs/actions/fov-decrease",
+                    "Name": "FOV Decrease",
+                    "ShowTitle": true,
+                    "TitleAlignment": "bottom",
+                    "TitleColor": "#FFFFFF"
+                }
+            ],
             "PropertyInspectorPath": "ui/pi.html"
         },
         {
@@ -650,14 +710,18 @@
             "Name": "Zoom In",
             "Icon": "imgs/actions/zoom-in",
             "Tooltip": "Camera zoom in (Key: Numpad 3)",
-            "Controllers": ["Keypad"],
-            "States": [{
-                "Image": "imgs/actions/zoom-in",
-                "Name": "Zoom In",
-                "ShowTitle": true,
-                "TitleAlignment": "bottom",
-                "TitleColor": "#FFFFFF"
-            }],
+            "Controllers": [
+                "Keypad"
+            ],
+            "States": [
+                {
+                    "Image": "imgs/actions/zoom-in",
+                    "Name": "Zoom In",
+                    "ShowTitle": true,
+                    "TitleAlignment": "bottom",
+                    "TitleColor": "#FFFFFF"
+                }
+            ],
             "PropertyInspectorPath": "ui/pi.html"
         },
         {
@@ -665,14 +729,18 @@
             "Name": "Zoom Out",
             "Icon": "imgs/actions/zoom-out",
             "Tooltip": "Camera zoom out (Key: Numpad 1)",
-            "Controllers": ["Keypad"],
-            "States": [{
-                "Image": "imgs/actions/zoom-out",
-                "Name": "Zoom Out",
-                "ShowTitle": true,
-                "TitleAlignment": "bottom",
-                "TitleColor": "#FFFFFF"
-            }],
+            "Controllers": [
+                "Keypad"
+            ],
+            "States": [
+                {
+                    "Image": "imgs/actions/zoom-out",
+                    "Name": "Zoom Out",
+                    "ShowTitle": true,
+                    "TitleAlignment": "bottom",
+                    "TitleColor": "#FFFFFF"
+                }
+            ],
             "PropertyInspectorPath": "ui/pi.html"
         },
         {
@@ -680,14 +748,18 @@
             "Name": "Toggle HUD",
             "Icon": "imgs/actions/toggle-hud",
             "Tooltip": "Toggle HUD display (Key: 6)",
-            "Controllers": ["Keypad"],
-            "States": [{
-                "Image": "imgs/actions/toggle-hud",
-                "Name": "Toggle HUD",
-                "ShowTitle": true,
-                "TitleAlignment": "bottom",
-                "TitleColor": "#FFFFFF"
-            }],
+            "Controllers": [
+                "Keypad"
+            ],
+            "States": [
+                {
+                    "Image": "imgs/actions/toggle-hud",
+                    "Name": "Toggle HUD",
+                    "ShowTitle": true,
+                    "TitleAlignment": "bottom",
+                    "TitleColor": "#FFFFFF"
+                }
+            ],
             "PropertyInspectorPath": "ui/pi.html"
         },
         {
@@ -695,14 +767,18 @@
             "Name": "Previous MFD",
             "Icon": "imgs/actions/prev-mfd",
             "Tooltip": "Previous MFD page (Key: Right Ctrl)",
-            "Controllers": ["Keypad"],
-            "States": [{
-                "Image": "imgs/actions/prev-mfd",
-                "Name": "Previous MFD",
-                "ShowTitle": true,
-                "TitleAlignment": "bottom",
-                "TitleColor": "#FFFFFF"
-            }],
+            "Controllers": [
+                "Keypad"
+            ],
+            "States": [
+                {
+                    "Image": "imgs/actions/prev-mfd",
+                    "Name": "Previous MFD",
+                    "ShowTitle": true,
+                    "TitleAlignment": "bottom",
+                    "TitleColor": "#FFFFFF"
+                }
+            ],
             "PropertyInspectorPath": "ui/pi.html"
         },
         {
@@ -710,14 +786,18 @@
             "Name": "Toggle Mirror",
             "Icon": "imgs/actions/toggle-mirror",
             "Tooltip": "Toggle virtual mirror (Key: 3)",
-            "Controllers": ["Keypad"],
-            "States": [{
-                "Image": "imgs/actions/toggle-mirror",
-                "Name": "Toggle Mirror",
-                "ShowTitle": true,
-                "TitleAlignment": "bottom",
-                "TitleColor": "#FFFFFF"
-            }],
+            "Controllers": [
+                "Keypad"
+            ],
+            "States": [
+                {
+                    "Image": "imgs/actions/toggle-mirror",
+                    "Name": "Toggle Mirror",
+                    "ShowTitle": true,
+                    "TitleAlignment": "bottom",
+                    "TitleColor": "#FFFFFF"
+                }
+            ],
             "PropertyInspectorPath": "ui/pi.html"
         },
         {
@@ -725,14 +805,18 @@
             "Name": "Track Map",
             "Icon": "imgs/actions/track-map",
             "Tooltip": "Cycle track map display (Key: 5)",
-            "Controllers": ["Keypad"],
-            "States": [{
-                "Image": "imgs/actions/track-map",
-                "Name": "Track Map",
-                "ShowTitle": true,
-                "TitleAlignment": "bottom",
-                "TitleColor": "#FFFFFF"
-            }],
+            "Controllers": [
+                "Keypad"
+            ],
+            "States": [
+                {
+                    "Image": "imgs/actions/track-map",
+                    "Name": "Track Map",
+                    "ShowTitle": true,
+                    "TitleAlignment": "bottom",
+                    "TitleColor": "#FFFFFF"
+                }
+            ],
             "PropertyInspectorPath": "ui/pi.html"
         },
         {
@@ -740,14 +824,18 @@
             "Name": "Instant Replay",
             "Icon": "imgs/actions/instant-replay",
             "Tooltip": "Enter instant replay (Key: R)",
-            "Controllers": ["Keypad"],
-            "States": [{
-                "Image": "imgs/actions/instant-replay",
-                "Name": "Instant Replay",
-                "ShowTitle": true,
-                "TitleAlignment": "bottom",
-                "TitleColor": "#FFFFFF"
-            }],
+            "Controllers": [
+                "Keypad"
+            ],
+            "States": [
+                {
+                    "Image": "imgs/actions/instant-replay",
+                    "Name": "Instant Replay",
+                    "ShowTitle": true,
+                    "TitleAlignment": "bottom",
+                    "TitleColor": "#FFFFFF"
+                }
+            ],
             "PropertyInspectorPath": "ui/pi.html"
         },
         {
@@ -755,14 +843,18 @@
             "Name": "Screenshot",
             "Icon": "imgs/actions/screenshot",
             "Tooltip": "Take screenshot (Key: F12)",
-            "Controllers": ["Keypad"],
-            "States": [{
-                "Image": "imgs/actions/screenshot",
-                "Name": "Screenshot",
-                "ShowTitle": true,
-                "TitleAlignment": "bottom",
-                "TitleColor": "#FFFFFF"
-            }],
+            "Controllers": [
+                "Keypad"
+            ],
+            "States": [
+                {
+                    "Image": "imgs/actions/screenshot",
+                    "Name": "Screenshot",
+                    "ShowTitle": true,
+                    "TitleAlignment": "bottom",
+                    "TitleColor": "#FFFFFF"
+                }
+            ],
             "PropertyInspectorPath": "ui/pi.html"
         },
         {
@@ -770,14 +862,18 @@
             "Name": "Restart Race",
             "Icon": "imgs/actions/restart-race",
             "Tooltip": "Restart race session (Key: Y)",
-            "Controllers": ["Keypad"],
-            "States": [{
-                "Image": "imgs/actions/restart-race",
-                "Name": "Restart Race",
-                "ShowTitle": true,
-                "TitleAlignment": "bottom",
-                "TitleColor": "#FFFFFF"
-            }],
+            "Controllers": [
+                "Keypad"
+            ],
+            "States": [
+                {
+                    "Image": "imgs/actions/restart-race",
+                    "Name": "Restart Race",
+                    "ShowTitle": true,
+                    "TitleAlignment": "bottom",
+                    "TitleColor": "#FFFFFF"
+                }
+            ],
             "PropertyInspectorPath": "ui/pi.html"
         },
         {
@@ -785,15 +881,21 @@
             "Name": "Launch Control",
             "Icon": "imgs/actions/launch-control",
             "Tooltip": "Engage launch control (Key: \\)",
-            "Controllers": ["Keypad"],
-            "States": [{
-                "Image": "imgs/actions/launch-control",
-                "Name": "Launch Control",
-                "ShowTitle": true,
-                "TitleAlignment": "bottom",
-                "TitleColor": "#FFFFFF"
-            }],
-            "PropertyInspectorPath": "ui/pi.html"
+            "Controllers": [
+                "Keypad"
+            ],
+            "States": [
+                {
+                    "Image": "imgs/actions/launch-control",
+                    "Name": "Off"
+                },
+                {
+                    "Image": "imgs/actions/launch-control-on",
+                    "Name": "On"
+                }
+            ],
+            "PropertyInspectorPath": "ui/pi.html",
+            "DisableAutomaticStates": true
         }
     ],
     "PropertyInspectorPath": "ui/pi.html"
