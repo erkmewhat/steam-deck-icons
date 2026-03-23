@@ -33,7 +33,7 @@ var __runInitializers = (this && this.__runInitializers) || function (thisArg, i
     return useValue ? value : void 0;
 };
 import { action } from "@elgato/streamdeck";
-import { HotkeyAction } from "./hotkey-action";
+import { HotkeyAction } from "./hotkey-action.js";
 let Starter = (() => {
     let _classDecorators = [action({ UUID: "com.simracing.lmu.starter" })];
     let _classDescriptor;
@@ -52,6 +52,7 @@ let Starter = (() => {
         defaultHotkey = "M";
         actionName = "Starter";
         iconFile = "starter";
+        isToggle = true;
     };
     return Starter = _classThis;
 })();

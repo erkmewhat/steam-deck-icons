@@ -33,7 +33,7 @@ var __runInitializers = (this && this.__runInitializers) || function (thisArg, i
     return useValue ? value : void 0;
 };
 import { action } from "@elgato/streamdeck";
-import { HotkeyAction } from "./hotkey-action";
+import { HotkeyAction } from "./hotkey-action.js";
 let MfdUp = (() => {
     let _classDecorators = [action({ UUID: "com.simracing.lmu.mfd-up" })];
     let _classDescriptor;

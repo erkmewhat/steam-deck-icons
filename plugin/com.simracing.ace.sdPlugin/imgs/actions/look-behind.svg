@@ -1,29 +1,45 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144 144" width="144" height="144">
-  <rect x="4" y="4" width="136" height="136" rx="12" fill="#212529" stroke="#e20613" stroke-width="2"/>
-  <rect x="8" y="8" width="128" height="128" rx="10" fill="none" stroke="#2d3238" stroke-width="1"/>
-  <!-- Rearview mirror frame (tilted slightly) -->
-  <g transform="rotate(-3, 72, 55)">
-    <rect x="28" y="34" width="88" height="42" rx="8" fill="#333" stroke="#999" stroke-width="2.5"/>
-    <rect x="32" y="38" width="80" height="34" rx="5" fill="#1a2030"/>
-    <!-- Mirror glass highlight -->
-    <line x1="34" y1="40" x2="48" y2="40" stroke="#555" stroke-width="1" opacity="0.6"/>
-    <!-- Car silhouette reflected in mirror -->
-    <g transform="translate(72, 55)">
-      <!-- Small car body -->
-      <rect x="-10" y="-4" width="20" height="8" rx="2" fill="#e20613" opacity="0.8"/>
-      <rect x="-7" y="-7" width="14" height="5" rx="2" fill="#e20613" opacity="0.6"/>
-      <!-- Headlights (reflected) -->
-      <circle cx="-8" cy="0" r="1.5" fill="#fff300" opacity="0.7"/>
-      <circle cx="8" cy="0" r="1.5" fill="#fff300" opacity="0.7"/>
-    </g>
-  </g>
-  <!-- Mirror mount stem -->
-  <rect x="69" y="76" width="6" height="10" rx="1" fill="#999"/>
-  <!-- Curved backward arrow -->
-  <path d="M50,100 Q40,88 50,80" fill="none" stroke="#4a9eff" stroke-width="2.5" stroke-linecap="round"/>
-  <polygon points="46,80 50,73 54,80" fill="#4a9eff"/>
-  <path d="M94,100 Q104,88 94,80" fill="none" stroke="#4a9eff" stroke-width="2.5" stroke-linecap="round"/>
-  <polygon points="90,80 94,73 98,80" fill="#4a9eff"/>
-
-  <text x="72" y="126" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="bold" fill="white">LOOK BACK</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144 144">
+  <defs>
+    <linearGradient id="glb-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2a1215"/>
+      <stop offset="50%" stop-color="#180a0c"/>
+      <stop offset="100%" stop-color="#0a0406"/>
+    </linearGradient>
+    <linearGradient id="glb-border" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#e20613"/>
+      <stop offset="50%" stop-color="#ff3333" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#e20613"/>
+    </linearGradient>
+    <linearGradient id="glb-shine" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.12"/>
+      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.02"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.06"/>
+    </linearGradient>
+    <linearGradient id="glb-warm" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#6bb8ff"/>
+      <stop offset="100%" stop-color="#4a9eff" stop-opacity="0.6"/>
+    </linearGradient>
+    <linearGradient id="glb-accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#e20613"/>
+      <stop offset="100%" stop-color="#fff300"/>
+    </linearGradient>
+  </defs>
+  <rect x="1" y="1" width="142" height="142" rx="14" fill="url(#glb-bg)" stroke="url(#glb-border)" stroke-width="1.5"/>
+  <rect x="3" y="3" width="138" height="68" rx="12" fill="url(#glb-shine)"/>
+  <!-- Eye shape -->
+  <ellipse cx="72" cy="58" rx="34" ry="18" fill="none" stroke="url(#glb-warm)" stroke-width="2.5"/>
+  <ellipse cx="72" cy="58" rx="34" ry="18" fill="#4a9eff" opacity="0.08"/>
+  <!-- Pupil centered -->
+  <circle cx="72" cy="58" r="8" fill="#4a9eff" opacity="0.9"/>
+  <circle cx="72" cy="58" r="3.5" fill="#0a0406"/>
+  <circle cx="70" cy="55" r="1.5" fill="#ffffff" opacity="0.5"/>
+  <!-- Curved arrow pointing down/back -->
+  <path d="M52,82 L72,92 L92,82" fill="none" stroke="#4a9eff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <polyline points="72,72 72,92" fill="none" stroke="#4a9eff" stroke-width="2.5" stroke-linecap="round"/>
+  <polyline points="64,86 72,92 80,86" fill="none" stroke="#4a9eff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Glass reflection -->
+  <ellipse cx="68" cy="50" rx="18" ry="5" fill="#ffffff" opacity="0.08"/>
+  <!-- Accent bar -->
+  <rect x="14" y="114" width="116" height="3" rx="1.5" fill="url(#glb-accent)"/>
+  <text x="72" y="127" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="bold" fill="#ffffff" letter-spacing="1.5">LOOK BACK</text>
 </svg>

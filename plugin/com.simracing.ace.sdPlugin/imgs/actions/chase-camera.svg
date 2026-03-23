@@ -1,33 +1,51 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144 144" width="144" height="144">
-  <rect x="4" y="4" width="136" height="136" rx="12" fill="#212529" stroke="#e20613" stroke-width="2"/>
-  <rect x="8" y="8" width="128" height="128" rx="10" fill="none" stroke="#2d3238" stroke-width="1"/>
-  <!-- Camera/eye above -->
-  <rect x="48" y="24" width="48" height="30" rx="6" fill="#4a9eff" opacity="0.85"/>
-  <rect x="48" y="24" width="48" height="30" rx="6" fill="none" stroke="#5ab0ff" stroke-width="1"/>
-  <!-- Camera lens -->
-  <circle cx="72" cy="39" r="9" fill="#212529" stroke="#7bbfff" stroke-width="1.5"/>
-  <circle cx="72" cy="39" r="4.5" fill="#2a5a8f"/>
-  <circle cx="70" cy="37" r="1.5" fill="#7bbfff" opacity="0.4"/>
-  <!-- Recording indicator -->
-  <circle cx="90" cy="30" r="3" fill="#e20613"/>
-  <!-- Dotted sight lines from camera to car -->
-  <line x1="58" y1="54" x2="50" y2="82" stroke="#4a9eff" stroke-width="1.5" stroke-dasharray="3,3" opacity="0.6"/>
-  <line x1="86" y1="54" x2="94" y2="82" stroke="#4a9eff" stroke-width="1.5" stroke-dasharray="3,3" opacity="0.6"/>
-  <!-- Car silhouette at bottom -->
-  <g transform="translate(72, 96)">
-    <!-- Car body -->
-    <rect x="-22" y="-6" width="44" height="12" rx="4" fill="#777"/>
-    <!-- Car roof/cabin -->
-    <rect x="-14" y="-12" width="28" height="8" rx="3" fill="#888"/>
-    <!-- Wheels -->
-    <circle cx="-16" cy="8" r="4" fill="#555" stroke="#777" stroke-width="1"/>
-    <circle cx="16" cy="8" r="4" fill="#555" stroke="#777" stroke-width="1"/>
-    <!-- Windshield -->
-    <rect x="-12" y="-11" width="24" height="5" rx="2" fill="#4a9eff" opacity="0.3"/>
-    <!-- Taillights -->
-    <rect x="-20" y="-3" width="4" height="3" rx="1" fill="#e20613" opacity="0.6"/>
-    <rect x="16" y="-3" width="4" height="3" rx="1" fill="#e20613" opacity="0.6"/>
-  </g>
-
-  <text x="72" y="126" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="bold" fill="white">CHASE CAM</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144 144">
+  <defs>
+    <linearGradient id="gcc-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2a1215"/>
+      <stop offset="50%" stop-color="#180a0c"/>
+      <stop offset="100%" stop-color="#0a0406"/>
+    </linearGradient>
+    <linearGradient id="gcc-border" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#e20613"/>
+      <stop offset="50%" stop-color="#ff3333" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#e20613"/>
+    </linearGradient>
+    <linearGradient id="gcc-shine" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.12"/>
+      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.02"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.06"/>
+    </linearGradient>
+    <linearGradient id="gcc-car" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#6bb8ff"/>
+      <stop offset="100%" stop-color="#4a9eff"/>
+    </linearGradient>
+    <linearGradient id="gcc-accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#e20613"/>
+      <stop offset="100%" stop-color="#fff300"/>
+    </linearGradient>
+  </defs>
+  <rect x="1" y="1" width="142" height="142" rx="14" fill="url(#gcc-bg)" stroke="url(#gcc-border)" stroke-width="1.5"/>
+  <rect x="3" y="3" width="138" height="68" rx="12" fill="url(#gcc-shine)"/>
+  <!-- Car silhouette (small, ahead) -->
+  <rect x="52" y="44" width="40" height="16" rx="6" fill="url(#gcc-car)" opacity="0.8"/>
+  <rect x="56" y="38" width="32" height="10" rx="4" fill="url(#gcc-car)" opacity="0.6"/>
+  <!-- Wheels -->
+  <circle cx="60" cy="62" r="4" fill="#4a9eff" opacity="0.7"/>
+  <circle cx="84" cy="62" r="4" fill="#4a9eff" opacity="0.7"/>
+  <!-- Camera behind (eye icon) -->
+  <circle cx="72" cy="86" r="8" fill="none" stroke="#4a9eff" stroke-width="2"/>
+  <circle cx="72" cy="86" r="3" fill="#4a9eff"/>
+  <circle cx="71" cy="85" r="1" fill="#ffffff" opacity="0.4"/>
+  <!-- Dotted line connecting camera to car -->
+  <line x1="72" y1="66" x2="72" y2="78" stroke="#4a9eff" stroke-width="1.5" stroke-dasharray="3,2" opacity="0.5"/>
+  <!-- Speed lines -->
+  <line x1="30" y1="52" x2="18" y2="52" stroke="#4a9eff" stroke-width="1" opacity="0.4"/>
+  <line x1="28" y1="58" x2="14" y2="58" stroke="#4a9eff" stroke-width="1" opacity="0.3"/>
+  <line x1="126" y1="52" x2="114" y2="52" stroke="#4a9eff" stroke-width="1" opacity="0.4"/>
+  <line x1="128" y1="58" x2="116" y2="58" stroke="#4a9eff" stroke-width="1" opacity="0.3"/>
+  <!-- Glass reflection -->
+  <ellipse cx="72" cy="42" rx="16" ry="3" fill="#ffffff" opacity="0.08"/>
+  <!-- Accent bar -->
+  <rect x="14" y="114" width="116" height="3" rx="1.5" fill="url(#gcc-accent)"/>
+  <text x="72" y="127" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="bold" fill="#ffffff" letter-spacing="1.5">CHASE CAM</text>
 </svg>

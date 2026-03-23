@@ -33,7 +33,7 @@ var __runInitializers = (this && this.__runInitializers) || function (thisArg, i
     return useValue ? value : void 0;
 };
 import { action } from "@elgato/streamdeck";
-import { HotkeyAction } from "./hotkey-action";
+import { HotkeyAction } from "./hotkey-action.js";
 let HeadlightFlash = (() => {
     let _classDecorators = [action({ UUID: "com.simracing.lmu.headlight-flash" })];
     let _classDescriptor;
@@ -52,6 +52,7 @@ let HeadlightFlash = (() => {
         defaultHotkey = "G";
         actionName = "Headlight Flash";
         iconFile = "headlight-flash";
+        isToggle = true;
     };
     return HeadlightFlash = _classThis;
 })();
