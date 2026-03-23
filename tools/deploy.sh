@@ -144,8 +144,30 @@ else
     exit 1
 fi
 
-# 8. Summary
+# 8. Export .streamDeckProfile for portability
+echo "[8/8] Exporting .streamDeckProfile..."
+cd "$ROOT"
+GAME_NAME="$(python3 -c "import json; print(json.load(open(r'$GAME_CONFIG_WIN'))['name'])")"
+PROFILE_UUID="$(python3 -c "import json; print(json.load(open(r'$GAME_CONFIG_WIN'))['profile_uuid'])")"
+PROFILE_DIR="$ROOT/profile/${PROFILE_UUID}.sdProfile"
+EXPORT_DIR="$ROOT/exports"
+mkdir -p "$EXPORT_DIR"
+EXPORT_FILE="$EXPORT_DIR/${GAME_NAME} Sim Racing.streamDeckProfile"
+python3 -c "
+import zipfile, os, sys
+profile_dir = sys.argv[1]
+outpath = sys.argv[2]
+with zipfile.ZipFile(outpath, 'w', zipfile.ZIP_DEFLATED) as zf:
+    for root, dirs, files in os.walk(profile_dir):
+        for f in files:
+            fp = os.path.join(root, f)
+            zf.write(fp, os.path.relpath(fp, profile_dir))
+print(f'  Exported: {os.path.basename(outpath)} ({os.path.getsize(outpath):,} bytes)')
+" "$PROFILE_DIR" "$EXPORT_FILE"
+echo "  ✓ Profile exported"
+
+# 9. Summary
 echo ""
-echo "=== Deploy Complete (8/8) ==="
+echo "=== Deploy Complete (9/9) ==="
 echo "Restart Stream Deck to apply changes."
 echo ""

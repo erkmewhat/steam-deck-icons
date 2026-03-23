@@ -64,6 +64,7 @@ silent failures — SD gives zero error feedback, buttons just disappear or go b
 - [ ] Profile dir: `UPPERCASE-UUID.sdProfile/`
 - [ ] Page dirs: `Profiles/UPPERCASE-UUID/manifest.json`
 - [ ] After changes, restart SD: `bash tools/restart-streamdeck.sh`
+- [ ] Export `.streamDeckProfile` to `exports/` after every deploy (deploy.sh does this automatically)
 - [ ] ALWAYS verify by comparing against a working profile on the same device
 
 ## Before Every Commit
