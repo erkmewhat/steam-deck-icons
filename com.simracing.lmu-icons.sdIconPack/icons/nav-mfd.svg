@@ -19,17 +19,23 @@
     </linearGradient>
   </defs>
   <rect width="144" height="144" fill="url(#nm-bg)"/>
+  <!-- Large pill/capsule button shape -->
   <g filter="url(#nm-glow)">
     <rect x="16" y="30" width="112" height="54" rx="27" fill="url(#nm-pill)" stroke="#00BFFF" stroke-width="2"/>
   </g>
+  <!-- Category label on left side of pill -->
   <text x="52" y="64" text-anchor="middle" font-family="'Segoe UI',Arial,sans-serif" font-size="20" font-weight="700" fill="#ffffff" opacity="0.95">MFD</text>
+  <!-- Large arrow on right side of pill -->
   <g filter="url(#nm-glow)">
     <path d="M90 45 L108 57 L90 69" fill="none" stroke="#00BFFF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
   </g>
+  <!-- Divider line in pill -->
   <line x1="80" y1="38" x2="80" y2="76" stroke="#00BFFF" stroke-width="1" opacity="0.3"/>
+  <!-- Three small dots below indicating sub-items -->
   <circle cx="56" cy="100" r="3" fill="#00BFFF" opacity="0.5"/>
   <circle cx="72" cy="100" r="3" fill="#00BFFF" opacity="0.35"/>
   <circle cx="88" cy="100" r="3" fill="#00BFFF" opacity="0.2"/>
+  <!-- Subtitle -->
   <text x="72" y="128" text-anchor="middle" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#ffffff" opacity="0.45">5 controls</text>
   <rect x="20" y="138" width="104" height="2" rx="1" fill="url(#nm-acc)"/>
 </svg>

@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144 144" width="144" height="144">
+  <defs>
+    <radialGradient id="n1h-bg" cx="50%" cy="40%" r="70%">
+      <stop offset="0%" stop-color="#32373C"/>
+      <stop offset="100%" stop-color="#0a0a0f"/>
+    </radialGradient>
+    <linearGradient id="n1h-arrow" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#E040FB" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#E040FB"/>
+    </linearGradient>
+    <filter id="n1h-glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <linearGradient id="n1h-acc" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#E040FB" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#E040FB" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#E040FB" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="144" height="144" fill="url(#n1h-bg)"/>
+  <!-- Category label -->
+  <text x="72" y="38" text-anchor="middle" font-family="'Segoe UI',Arial,sans-serif" font-size="28" font-weight="700" fill="#ffffff" opacity="0.95">HUD</text>
+  <!-- Big double chevron -->
+  <g filter="url(#n1h-glow)">
+    <path d="M40 55 L80 80 L40 105" fill="none" stroke="url(#n1h-arrow)" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M65 55 L105 80 L65 105" fill="none" stroke="#E040FB" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <rect x="20" y="138" width="104" height="2" rx="1" fill="url(#n1h-acc)"/>
+</svg>
