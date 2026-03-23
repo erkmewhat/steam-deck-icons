@@ -28,7 +28,7 @@ Last updated: 2026-03-23
 
 - [ ] Profile icons are 72x72 PNGs in `Images/` dir, referenced as `Images/HASH.png`
 - [ ] Icon packs have `previews/` dir with 1920x960 PNG mosaic
-- [ ] Icon packs are copied to `$APPDATA/Elgato/StreamDeck/IconPacks/`
+- [ ] Icon packs are copied to `$APPDATA/Elgato/StreamDeck/Plugins/com.elgato.StreamDeck/Icons/` (NOT IconPacks/)
 - [ ] Profiles are copied to `$APPDATA/Elgato/StreamDeck/ProfilesV3/`
 - [ ] Verified against a known-working installed pack/profile structure
 
@@ -87,6 +87,9 @@ which prevented them from appearing in the Stream Deck icon library.
 - Referenced as `"Image": "Images/HASH.png"` (relative to the page dir, not data URI)
 - Icon packs MUST have a `previews/` directory with at least one 1920x960 PNG
 - Always compare against a working installed profile/pack before assuming format
+- Icon packs for local dev go in `Plugins/com.elgato.StreamDeck/Icons/`, NOT `IconPacks/`
+  (IconPacks/ is for marketplace-installed packs only)
+- Preview images should be named `1-preview.png`, `2-preview.png`, etc.
 
 ---
 

@@ -17,7 +17,7 @@ set -e
 
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 SD_PLUGINS="$APPDATA/Elgato/StreamDeck/Plugins"
-SD_ICONS="$APPDATA/Elgato/StreamDeck/IconPacks"
+SD_ICONS="$APPDATA/Elgato/StreamDeck/Plugins/com.elgato.StreamDeck/Icons"
 SD_PROFILES="$APPDATA/Elgato/StreamDeck/ProfilesV3"
 
 GAMES_DIR="$ROOT/tools/games"
@@ -113,6 +113,7 @@ echo "  ✓ Plugin installed"
 echo "[5/8] Installing icon pack..."
 cd "$ROOT"
 node tools/generate-previews.js "$ICON_PACK_ID"
+mkdir -p "$SD_ICONS"
 rm -rf "$SD_ICONS/$ICON_PACK_ID"
 cp -r "$ROOT/$ICON_PACK_ID" "$SD_ICONS/"
 echo "  ✓ Icon pack installed (with preview)"
