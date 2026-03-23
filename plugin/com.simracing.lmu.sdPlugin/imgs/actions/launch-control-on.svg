@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144 144" width="144" height="144">
+  <defs>
+    <!-- Warm green-tinted background -->
+    <radialGradient id="lc-on-bg" cx="50%" cy="40%" r="70%">
+      <stop offset="0%" stop-color="#1A3A1A"/>
+      <stop offset="100%" stop-color="#0a180a"/>
+    </radialGradient>
+    <!-- Bright green glow -->
+    <radialGradient id="lc-on-greenGlow" cx="50%" cy="45%" r="50%">
+      <stop offset="0%" stop-color="#66FF6A" stop-opacity="0.5"/>
+      <stop offset="40%" stop-color="#4CAF50" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#4CAF50" stop-opacity="0"/>
+    </radialGradient>
+    <!-- Brighter rocket gradient -->
+    <linearGradient id="lc-on-rocketGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#A5E8A7"/>
+      <stop offset="100%" stop-color="#66DD6A"/>
+    </linearGradient>
+    <!-- Brighter flame gradient -->
+    <linearGradient id="lc-on-flameGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFC040"/>
+      <stop offset="50%" stop-color="#FF6500"/>
+      <stop offset="100%" stop-color="#FF2D53"/>
+    </linearGradient>
+    <!-- Strong glow filter -->
+    <filter id="lc-on-glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="4.5" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="lc-on-shadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#4CAF50" flood-opacity="0.5"/>
+    </filter>
+    <filter id="lc-on-flameGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="5" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <!-- Brighter accent -->
+    <linearGradient id="lc-on-borderAccent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#4CAF50" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#81C784" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#4CAF50" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="144" height="144" fill="url(#lc-on-bg)"/>
+  <ellipse cx="72" cy="50" rx="55" ry="48" fill="url(#lc-on-greenGlow)"/>
+
+  <!-- Extra inner glow -->
+  <ellipse cx="72" cy="48" rx="30" ry="25" fill="#4CAF50" opacity="0.12"/>
+
+  <!-- Rocket body - brighter, glowing -->
+  <g filter="url(#lc-on-shadow)">
+    <!-- Nose cone -->
+    <path d="M72 18 Q68 18 64 30 L60 58 Q60 64 66 66 L78 66 Q84 64 84 58 L80 30 Q76 18 72 18 Z" fill="none" stroke="url(#lc-on-rocketGrad)" stroke-width="3" stroke-linejoin="round"/>
+    <!-- Window -->
+    <circle cx="72" cy="40" r="6" fill="none" stroke="url(#lc-on-rocketGrad)" stroke-width="2.5"/>
+    <circle cx="72" cy="40" r="3" fill="url(#lc-on-rocketGrad)" opacity="0.5"/>
+    <!-- Left fin -->
+    <path d="M60 54 L46 68 L52 70 L60 62" fill="none" stroke="url(#lc-on-rocketGrad)" stroke-width="2.5" stroke-linejoin="round"/>
+    <!-- Right fin -->
+    <path d="M84 54 L98 68 L92 70 L84 62" fill="none" stroke="url(#lc-on-rocketGrad)" stroke-width="2.5" stroke-linejoin="round"/>
+    <!-- Nozzle -->
+    <path d="M66 66 L64 72 L80 72 L78 66" fill="none" stroke="url(#lc-on-rocketGrad)" stroke-width="2.5" stroke-linejoin="round"/>
+  </g>
+
+  <!-- Flame exhaust - bigger and brighter -->
+  <g filter="url(#lc-on-flameGlow)">
+    <path d="M64 72 Q60 85 66 92 Q69 98 72 104 Q75 98 78 92 Q84 85 80 72" fill="none" stroke="url(#lc-on-flameGrad)" stroke-width="3" stroke-linejoin="round"/>
+    <path d="M67 72 Q69 84 72 92 Q75 84 77 72" fill="none" stroke="#FFD700" stroke-width="2" opacity="0.8"/>
+    <!-- Inner bright core -->
+    <path d="M69 74 Q71 82 72 86 Q73 82 75 74" fill="none" stroke="#FFFFFF" stroke-width="1.5" opacity="0.6"/>
+  </g>
+
+  <!-- Speed lines - more visible -->
+  <g opacity="0.6">
+    <line x1="42" y1="48" x2="42" y2="58" stroke="#A5E8A7" stroke-width="2" stroke-linecap="round"/>
+    <line x1="36" y1="52" x2="36" y2="60" stroke="#A5E8A7" stroke-width="1.5" stroke-linecap="round"/>
+    <line x1="30" y1="54" x2="30" y2="60" stroke="#A5E8A7" stroke-width="1" stroke-linecap="round"/>
+    <line x1="102" y1="48" x2="102" y2="58" stroke="#A5E8A7" stroke-width="2" stroke-linecap="round"/>
+    <line x1="108" y1="52" x2="108" y2="60" stroke="#A5E8A7" stroke-width="1.5" stroke-linecap="round"/>
+    <line x1="114" y1="54" x2="114" y2="60" stroke="#A5E8A7" stroke-width="1" stroke-linecap="round"/>
+  </g>
+
+  <!-- Bottom accent line - brighter -->
+  <rect x="16" y="137" width="112" height="3" rx="1.5" fill="url(#lc-on-borderAccent)"/>
+
+  <!-- Label in accent color -->
+  <text x="72" y="132" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="15" font-weight="700" fill="#81C784" opacity="1" letter-spacing="1">LAUNCH</text>
+</svg>

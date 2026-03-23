@@ -6,4 +6,5 @@ export class PitLimiter extends HotkeyAction {
     readonly defaultHotkey = "L";
     readonly actionName = "Pit Limiter";
     readonly iconFile = "pit-limiter";
+    readonly isToggle = true;
 }

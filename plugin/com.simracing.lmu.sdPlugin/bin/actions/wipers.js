@@ -52,6 +52,7 @@ let Wipers = (() => {
         defaultHotkey = "P";
         actionName = "Wipers";
         iconFile = "wipers";
+        isToggle = true;
     };
     return Wipers = _classThis;
 })();

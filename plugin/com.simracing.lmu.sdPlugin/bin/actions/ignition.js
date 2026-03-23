@@ -52,6 +52,7 @@ let Ignition = (() => {
         defaultHotkey = "N";
         actionName = "Ignition";
         iconFile = "ignition";
+        isToggle = true;
     };
     return Ignition = _classThis;
 })();

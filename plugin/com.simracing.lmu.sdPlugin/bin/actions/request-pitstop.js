@@ -52,6 +52,7 @@ let RequestPitstop = (() => {
         defaultHotkey = "E";
         actionName = "Request Pit Stop";
         iconFile = "request-pitstop";
+        isToggle = true;
     };
     return RequestPitstop = _classThis;
 })();

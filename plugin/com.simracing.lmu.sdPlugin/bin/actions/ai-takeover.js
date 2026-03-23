@@ -52,6 +52,7 @@ let AiTakeover = (() => {
         defaultHotkey = "I";
         actionName = "AI Takeover";
         iconFile = "ai-takeover";
+        isToggle = true;
     };
     return AiTakeover = _classThis;
 })();

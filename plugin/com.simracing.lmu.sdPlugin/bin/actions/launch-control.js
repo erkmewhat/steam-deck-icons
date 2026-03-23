@@ -52,6 +52,7 @@ let LaunchControl = (() => {
         defaultHotkey = "\\";
         actionName = "Launch Control";
         iconFile = "launch-control";
+        isToggle = true;
     };
     return LaunchControl = _classThis;
 })();

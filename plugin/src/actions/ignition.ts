@@ -6,4 +6,5 @@ export class Ignition extends HotkeyAction {
     readonly defaultHotkey = "N";
     readonly actionName = "Ignition";
     readonly iconFile = "ignition";
+    readonly isToggle = true;
 }

@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144 144" width="144" height="144">
+  <defs>
+    <!-- Warm-tinted background -->
+    <radialGradient id="wp-on-bg" cx="50%" cy="40%" r="70%">
+      <stop offset="0%" stop-color="#1A3A42"/>
+      <stop offset="100%" stop-color="#0a1518"/>
+    </radialGradient>
+    <!-- Bright cyan glow -->
+    <radialGradient id="wp-on-cyanGlow" cx="50%" cy="55%" r="50%">
+      <stop offset="0%" stop-color="#00D4F8" stop-opacity="0.5"/>
+      <stop offset="40%" stop-color="#00B4D8" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#00B4D8" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="wp-on-wiperGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#cccccc"/>
+    </linearGradient>
+    <linearGradient id="wp-on-bladeGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#80E8FF"/>
+      <stop offset="100%" stop-color="#00D4F8"/>
+    </linearGradient>
+    <!-- Strong glow filter -->
+    <filter id="wp-on-glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="4" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="wp-on-shadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="1" stdDeviation="3" flood-color="#00D4F8" flood-opacity="0.4"/>
+    </filter>
+    <filter id="wp-on-outerGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="6"/>
+    </filter>
+    <!-- Brighter accent -->
+    <linearGradient id="wp-on-borderAccent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#00D4F8" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#48E8FF" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#00D4F8" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="144" height="144" fill="url(#wp-on-bg)"/>
+  <ellipse cx="72" cy="65" rx="55" ry="45" fill="url(#wp-on-cyanGlow)"/>
+
+  <!-- Extra inner glow -->
+  <ellipse cx="72" cy="60" rx="35" ry="28" fill="#00D4F8" opacity="0.08"/>
+
+  <!-- Windshield outline - brighter -->
+  <path d="M22 95 L44 26 Q72 14 100 26 L122 95" fill="none" stroke="#48E8FF" stroke-width="2.5" opacity="0.3" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Rain drops - brighter and more visible -->
+  <g opacity="0.5" filter="url(#wp-on-outerGlow)">
+    <circle cx="50" cy="42" r="2" fill="#80E8FF"/>
+    <circle cx="85" cy="35" r="2" fill="#80E8FF"/>
+    <circle cx="62" cy="55" r="1.5" fill="#80E8FF"/>
+    <circle cx="95" cy="52" r="1.5" fill="#80E8FF"/>
+    <circle cx="40" cy="68" r="1.8" fill="#80E8FF"/>
+    <circle cx="105" cy="65" r="1.8" fill="#80E8FF"/>
+  </g>
+
+  <!-- Wiper pivot - glowing -->
+  <g filter="url(#wp-on-glow)">
+    <circle cx="72" cy="95" r="5" fill="url(#wp-on-bladeGrad)"/>
+  </g>
+
+  <!-- Wiper arm 1 (current position) - brighter -->
+  <g filter="url(#wp-on-shadow)">
+    <line x1="72" y1="95" x2="42" y2="34" stroke="url(#wp-on-wiperGrad)" stroke-width="3.5" stroke-linecap="round"/>
+    <line x1="42" y1="34" x2="34" y2="38" stroke="url(#wp-on-bladeGrad)" stroke-width="5" stroke-linecap="round"/>
+  </g>
+
+  <!-- Wiper arm 2 (swept/ghost) - more visible -->
+  <g opacity="0.5">
+    <line x1="72" y1="95" x2="102" y2="34" stroke="url(#wp-on-wiperGrad)" stroke-width="3" stroke-linecap="round"/>
+    <line x1="102" y1="34" x2="110" y2="38" stroke="url(#wp-on-bladeGrad)" stroke-width="4.5" stroke-linecap="round"/>
+  </g>
+
+  <!-- Sweep arc - brighter -->
+  <path d="M46 38 Q72 18 98 38" fill="none" stroke="url(#wp-on-bladeGrad)" stroke-width="2" stroke-dasharray="4 3" opacity="0.7"/>
+
+  <!-- Bottom accent line - brighter -->
+  <rect x="16" y="137" width="112" height="3" rx="1.5" fill="url(#wp-on-borderAccent)"/>
+
+  <!-- Label in accent color -->
+  <text x="72" y="132" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="15" font-weight="700" fill="#48E8FF" opacity="1" letter-spacing="1">WIPERS</text>
+</svg>

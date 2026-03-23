@@ -6,4 +6,5 @@ export class Starter extends HotkeyAction {
     readonly defaultHotkey = "M";
     readonly actionName = "Starter";
     readonly iconFile = "starter";
+    readonly isToggle = true;
 }

@@ -52,6 +52,7 @@ let HeadlightFlash = (() => {
         defaultHotkey = "G";
         actionName = "Headlight Flash";
         iconFile = "headlight-flash";
+        isToggle = true;
     };
     return HeadlightFlash = _classThis;
 })();

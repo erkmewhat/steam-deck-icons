@@ -6,4 +6,5 @@ export class LaunchControl extends HotkeyAction {
     readonly defaultHotkey = "\\";
     readonly actionName = "Launch Control";
     readonly iconFile = "launch-control";
+    readonly isToggle = true;
 }

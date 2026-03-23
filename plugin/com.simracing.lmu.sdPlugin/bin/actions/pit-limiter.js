@@ -52,6 +52,7 @@ let PitLimiter = (() => {
         defaultHotkey = "L";
         actionName = "Pit Limiter";
         iconFile = "pit-limiter";
+        isToggle = true;
     };
     return PitLimiter = _classThis;
 })();

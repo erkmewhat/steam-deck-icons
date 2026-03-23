@@ -52,6 +52,7 @@ let Starter = (() => {
         defaultHotkey = "M";
         actionName = "Starter";
         iconFile = "starter";
+        isToggle = true;
     };
     return Starter = _classThis;
 })();
