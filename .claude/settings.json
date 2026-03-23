@@ -1,6 +1,11 @@
 {
   "permissions": {
-    "defaultMode": "dontAsk"
+    "allow": [
+      "Bash(*)",
+      "Edit(*)",
+      "Write(*)"
+    ],
+    "defaultMode": "allowEdits"
   },
   "hooks": {
     "SessionStart": [
