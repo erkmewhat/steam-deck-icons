@@ -1,13 +1,19 @@
 {
   "permissions": {
-    "allow": [
-      "Bash",
-      "Read",
-      "Edit",
-      "Write",
-      "WebFetch",
-      "Grep",
-      "Glob"
+    "defaultMode": "dontAsk"
+  },
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash tools/session-preflight.sh",
+            "timeout": 15,
+            "statusMessage": "Running project preflight..."
+          }
+        ]
+      }
     ]
   }
 }
