@@ -1,4 +1,4 @@
-import streamDeck, { LogLevel } from "@elgato/streamdeck";
+import streamDeck from "@elgato/streamdeck";
 import { Headlights } from "./actions/headlights";
 import { FlashLights } from "./actions/flash-lights";
 import { RainLights } from "./actions/rain-lights";
@@ -41,7 +41,7 @@ import { NextCar } from "./actions/next-car";
 import { PrevCar } from "./actions/prev-car";
 import { Pause } from "./actions/pause";
 
-streamDeck.logger.setLevel(LogLevel.DEBUG);
+// streamDeck.logger.setLevel("DEBUG");
 
 streamDeck.actions.registerAction(new Headlights());
 streamDeck.actions.registerAction(new FlashLights());
