@@ -20,13 +20,15 @@ import subprocess
 import uuid
 
 # ── Profile / page UUIDs ──────────────────────────────────────────────
-PROFILE_UUID = "EBAAB49C-EFF9-4A7F-9C43-FFCE95C09427"
-MAIN_PAGE    = "C8B1A5B1-C375-469C-B4C1-7BA9B2426CB1"
-MFD_PAGE     = "C68F250F-93F5-41F9-B888-D9DD28D9DF3E"
-PERF_PAGE    = "3AA706B4-3603-4898-B84A-E320A619C8F7"
-CAMERA_PAGE  = "A1F2B3C4-D5E6-4789-ABCD-100000000001"
-HUD_PAGE     = "A1F2B3C4-D5E6-4789-ABCD-100000000002"
-LOOK_PAGE    = "A1F2B3C4-D5E6-4789-ABCD-100000000003"
+# NOTE: UUIDs MUST be lowercase — Stream Deck uses lowercase internally
+# and will strip folder actions whose ProfileUUID doesn't match.
+PROFILE_UUID = "ebaab49c-eff9-4a7f-9c43-ffce95c09427"
+MAIN_PAGE    = "c8b1a5b1-c375-469c-b4c1-7ba9b2426cb1"
+MFD_PAGE     = "c68f250f-93f5-41f9-b888-d9dd28d9df3e"
+PERF_PAGE    = "3aa706b4-3603-4898-b84a-e320a619c8f7"
+CAMERA_PAGE  = "a1f2b3c4-d5e6-4789-abcd-100000000001"
+HUD_PAGE     = "a1f2b3c4-d5e6-4789-abcd-100000000002"
+LOOK_PAGE    = "a1f2b3c4-d5e6-4789-abcd-100000000003"
 
 DEVICE_MODEL = "20GBA9901"
 DEVICE_UUID  = "@(1)[4057/128/A00SA3272JF6DK]"
@@ -222,6 +224,7 @@ def make_folder_button(title, target_page_uuid, title_color="#00BFFF", icon_id="
         "ActionID": str(uuid.uuid4()),
         "LinkedTitle": True,
         "Name": "Create Folder",
+        "Plugin": {"Name": "Create Folder", "UUID": "com.elgato.streamdeck.profile.openchild", "Version": "1.0"},
         "Resources": None,
         "Settings": {"ProfileUUID": target_page_uuid},
         "State": 0,
@@ -236,6 +239,7 @@ def make_back_button():
         "ActionID": str(uuid.uuid4()),
         "LinkedTitle": True,
         "Name": "Parent Folder",
+        "Plugin": {"Name": "Parent Folder", "UUID": "com.elgato.streamdeck.profile.backtoparent", "Version": "1.0"},
         "Resources": None,
         "Settings": {},
         "State": 0,

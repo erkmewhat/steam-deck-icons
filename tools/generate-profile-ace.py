@@ -12,15 +12,15 @@ import shutil
 import subprocess
 import uuid
 
-PROFILE_UUID = "D7E4F2A8-91B3-4C6D-A5E7-8F2B1C3D4E5A"
+# NOTE: UUIDs MUST be lowercase — Stream Deck uses lowercase internally
+PROFILE_UUID = "d7e4f2a8-91b3-4c6d-a5e7-8f2b1c3d4e5a"
 DEVICE_MODEL = "20GBA9901"
 DEVICE_UUID = "@(1)[4057/128/A00SA3272JF6DK]"
-PLUGIN_UUID = "com.simracing.ace"
 
-MAIN_PAGE    = "B9C8D7E6-F5A4-4321-8765-1A2B3C4D5E6F"
-ADJUST_PAGE  = "E3F4A5B6-C7D8-4E9F-0A1B-2C3D4E5F6A7B"
-CAMERA_PAGE  = "A1B2C3D4-E5F6-4789-ABCD-EF0123456789"
-RACE_PAGE    = "F1E2D3C4-B5A6-4978-8765-432109876543"
+MAIN_PAGE    = "b9c8d7e6-f5a4-4321-8765-1a2b3c4d5e6f"
+ADJUST_PAGE  = "e3f4a5b6-c7d8-4e9f-0a1b-2c3d4e5f6a7b"
+CAMERA_PAGE  = "a1b2c3d4-e5f6-4789-abcd-ef0123456789"
+RACE_PAGE    = "f1e2d3c4-b5a6-4978-8765-432109876543"
 
 # Load bindings from game config
 _config_path = os.path.join(os.path.dirname(__file__), "games", "ace.json")
@@ -146,6 +146,7 @@ def make_folder_button(title, target_page_uuid, title_color="#00BFFF"):
         "ActionID": str(uuid.uuid4()),
         "LinkedTitle": True,
         "Name": "Create Folder",
+        "Plugin": {"Name": "Create Folder", "UUID": "com.elgato.streamdeck.profile.openchild", "Version": "1.0"},
         "Resources": None,
         "Settings": {"ProfileUUID": target_page_uuid},
         "State": 0,
@@ -159,6 +160,7 @@ def make_back_button():
         "ActionID": str(uuid.uuid4()),
         "LinkedTitle": True,
         "Name": "Parent Folder",
+        "Plugin": {"Name": "Parent Folder", "UUID": "com.elgato.streamdeck.profile.backtoparent", "Version": "1.0"},
         "Resources": None,
         "Settings": {},
         "State": 0,
