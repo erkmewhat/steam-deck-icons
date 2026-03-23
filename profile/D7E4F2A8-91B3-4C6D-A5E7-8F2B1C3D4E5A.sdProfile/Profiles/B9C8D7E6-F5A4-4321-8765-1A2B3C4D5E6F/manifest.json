@@ -3,7 +3,7 @@
     {
       "Actions": {
         "0,0": {
-          "ActionID": "03cee3ba-4537-4b82-82ae-539af125474c",
+          "ActionID": "9a5ed62b-8457-4932-ab0e-f5f29130763d",
           "LinkedTitle": true,
           "Name": "Headlights",
           "Plugin": {
@@ -33,7 +33,7 @@
           "UUID": "com.simracing.ace.headlights"
         },
         "1,0": {
-          "ActionID": "e3064ea1-5678-4795-9182-97ad1fc2ce4a",
+          "ActionID": "d2b034cc-614e-4612-bdf1-7437c151e58d",
           "LinkedTitle": true,
           "Name": "Flashing Lights",
           "Plugin": {
@@ -63,7 +63,7 @@
           "UUID": "com.simracing.ace.flash-lights"
         },
         "2,0": {
-          "ActionID": "84275521-424d-49f9-91eb-7968db9c995b",
+          "ActionID": "3672f458-89cf-4ca2-88b4-c6faba71ab48",
           "LinkedTitle": true,
           "Name": "Rain Lights",
           "Plugin": {
@@ -93,7 +93,7 @@
           "UUID": "com.simracing.ace.rain-lights"
         },
         "3,0": {
-          "ActionID": "15962a39-f88c-4dae-a0d2-d7784a487515",
+          "ActionID": "2ae64550-b556-4591-9249-d7f51065a282",
           "LinkedTitle": true,
           "Name": "Wiper Cycle Up",
           "Plugin": {
@@ -123,7 +123,7 @@
           "UUID": "com.simracing.ace.wipers-up"
         },
         "4,0": {
-          "ActionID": "15bc617a-8386-4f19-a345-c1ea1101733f",
+          "ActionID": "50045d1d-ba12-4179-b771-c74544549f55",
           "LinkedTitle": true,
           "Name": "Create Folder",
           "Plugin": {
@@ -153,7 +153,7 @@
           "UUID": "com.elgato.streamdeck.profile.openchild"
         },
         "0,1": {
-          "ActionID": "e971faba-8d91-497f-a8a9-2545904ec37b",
+          "ActionID": "c922a6fd-4c40-4b7c-aa9c-76a91b557d09",
           "LinkedTitle": true,
           "Name": "Toggle Ignition",
           "Plugin": {
@@ -183,7 +183,7 @@
           "UUID": "com.simracing.ace.ignition"
         },
         "1,1": {
-          "ActionID": "536406a9-ed00-4ab8-85ba-553bf4bfe72f",
+          "ActionID": "452c50ff-9b35-4505-ab1e-2f8014878311",
           "LinkedTitle": true,
           "Name": "Toggle Starter",
           "Plugin": {
@@ -213,7 +213,7 @@
           "UUID": "com.simracing.ace.starter"
         },
         "2,1": {
-          "ActionID": "2b4cbcf4-8154-4e9c-ba45-3a69da5af2f3",
+          "ActionID": "00436732-bed3-40a4-a9b9-28f01f54f774",
           "LinkedTitle": true,
           "Name": "Pit Limiter",
           "Plugin": {
@@ -243,7 +243,7 @@
           "UUID": "com.simracing.ace.pit-limiter"
         },
         "3,1": {
-          "ActionID": "ef3a9134-2a2f-44cf-a3fd-3021e4c5e148",
+          "ActionID": "dd5d5a05-eea2-46c7-86cd-fdb3d44f7cd0",
           "LinkedTitle": true,
           "Name": "Wiper Cycle Down",
           "Plugin": {
@@ -273,7 +273,7 @@
           "UUID": "com.simracing.ace.wipers-down"
         },
         "4,1": {
-          "ActionID": "adfc1040-c336-4b2b-80ef-812a8e738cf7",
+          "ActionID": "de8c3730-08ba-4bb8-8c87-55a27ab5b605",
           "LinkedTitle": true,
           "Name": "Create Folder",
           "Plugin": {
@@ -303,7 +303,7 @@
           "UUID": "com.elgato.streamdeck.profile.openchild"
         },
         "0,2": {
-          "ActionID": "75aa5a3c-ccc1-40ae-b1d1-1da413e15b4f",
+          "ActionID": "dc92458d-03a0-49ef-8bb0-9daebf4cb214",
           "LinkedTitle": true,
           "Name": "Horn",
           "Plugin": {
@@ -333,7 +333,7 @@
           "UUID": "com.simracing.ace.horn"
         },
         "1,2": {
-          "ActionID": "5af3d82f-5811-4a20-b115-e897a6d05064",
+          "ActionID": "b5e76a0b-e3b2-4725-a815-ac286468e3da",
           "LinkedTitle": true,
           "Name": "DRS",
           "Plugin": {
@@ -363,7 +363,7 @@
           "UUID": "com.simracing.ace.drs"
         },
         "2,2": {
-          "ActionID": "73217214-e399-4ed9-9c07-3cbb499600fe",
+          "ActionID": "c7a2c536-dcf2-4efe-b6d4-a7990f797004",
           "LinkedTitle": true,
           "Name": "KERS",
           "Plugin": {
@@ -393,7 +393,7 @@
           "UUID": "com.simracing.ace.kers"
         },
         "4,2": {
-          "ActionID": "0bb35418-4593-43ee-ba7c-b5ec523cccb4",
+          "ActionID": "b9b440d5-535a-45e8-b0c2-505d40dc40c3",
           "LinkedTitle": true,
           "Name": "Create Folder",
           "Plugin": {

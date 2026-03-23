@@ -3,7 +3,7 @@
     {
       "Actions": {
         "0,0": {
-          "ActionID": "d49451aa-f8e3-49c3-9559-e9559d158c5e",
+          "ActionID": "47d63878-6a05-4569-9298-1c76af9c327f",
           "LinkedTitle": true,
           "Name": "Glance Left",
           "Plugin": {
@@ -33,7 +33,7 @@
           "UUID": "com.simracing.ace.glance-left"
         },
         "1,0": {
-          "ActionID": "9552dbe7-4446-4eba-8246-ab5dfba972a8",
+          "ActionID": "72b067e4-e4db-417a-9957-6031ab9ce4d8",
           "LinkedTitle": true,
           "Name": "Look Behind",
           "Plugin": {
@@ -63,7 +63,7 @@
           "UUID": "com.simracing.ace.look-behind"
         },
         "2,0": {
-          "ActionID": "3526277d-9ea6-40c9-a7c2-7edd4adf0c23",
+          "ActionID": "93696422-f028-4f41-a2fd-7b30f5b8189c",
           "LinkedTitle": true,
           "Name": "Glance Right",
           "Plugin": {
@@ -93,7 +93,7 @@
           "UUID": "com.simracing.ace.glance-right"
         },
         "3,0": {
-          "ActionID": "67a7d5eb-a638-4f1b-83be-9e3fadb7b857",
+          "ActionID": "9a5a6b3d-ee4b-4972-886a-d8504171fd66",
           "LinkedTitle": true,
           "Name": "Free Camera",
           "Plugin": {
@@ -123,7 +123,7 @@
           "UUID": "com.simracing.ace.free-camera"
         },
         "4,0": {
-          "ActionID": "c2b1e5da-1c32-45d6-8ba2-62737a2aef50",
+          "ActionID": "cee8bfeb-6917-4179-90cc-51659c0627b5",
           "LinkedTitle": true,
           "Name": "Track Camera",
           "Plugin": {
@@ -153,7 +153,7 @@
           "UUID": "com.simracing.ace.track-camera"
         },
         "0,1": {
-          "ActionID": "358a13be-78b2-4e67-b53f-6dd27d9656b5",
+          "ActionID": "19131c03-0d05-4014-b396-eaf74a223502",
           "LinkedTitle": true,
           "Name": "Chase Camera",
           "Plugin": {
@@ -183,7 +183,7 @@
           "UUID": "com.simracing.ace.chase-camera"
         },
         "1,1": {
-          "ActionID": "7e8d5300-a32b-4163-8257-4d2c0bb28ed4",
+          "ActionID": "94b501c7-e306-44f4-9a6a-0f41fff769f3",
           "LinkedTitle": true,
           "Name": "Virtual Mirror",
           "Plugin": {
@@ -213,7 +213,7 @@
           "UUID": "com.simracing.ace.virtual-mirror"
         },
         "2,1": {
-          "ActionID": "a9348615-e335-48df-a41f-ffc4e3ead200",
+          "ActionID": "5444234b-dc65-4663-ad2b-e51e7aeb6e98",
           "LinkedTitle": true,
           "Name": "Toggle HUD",
           "Plugin": {
@@ -243,7 +243,7 @@
           "UUID": "com.simracing.ace.hud-toggle"
         },
         "3,1": {
-          "ActionID": "45ffb3cc-5df5-42c6-96c0-1d5b970c805d",
+          "ActionID": "2a9d35bc-35fc-4997-a8f9-cb3bb716f929",
           "LinkedTitle": true,
           "Name": "Leaderboard",
           "Plugin": {
@@ -273,7 +273,7 @@
           "UUID": "com.simracing.ace.leaderboard"
         },
         "4,1": {
-          "ActionID": "973169dd-d5e0-4bfd-b788-41afbc803644",
+          "ActionID": "1e5671f2-8272-48ca-8dd4-1a2da62d2465",
           "LinkedTitle": true,
           "Name": "Damage Display",
           "Plugin": {
@@ -303,7 +303,7 @@
           "UUID": "com.simracing.ace.damage-display"
         },
         "0,2": {
-          "ActionID": "5bdc7a72-eb8b-4967-9c90-9c138450937f",
+          "ActionID": "db0558bf-5bb9-43ed-b2a2-c43dfdf0f16d",
           "LinkedTitle": true,
           "Name": "Parent Folder",
           "Plugin": {
@@ -331,7 +331,7 @@
           "UUID": "com.elgato.streamdeck.profile.backtoparent"
         },
         "1,2": {
-          "ActionID": "268a26ab-fd7e-4a99-801a-a15d85caa152",
+          "ActionID": "3101be45-bc97-4b4c-9178-58b06825167d",
           "LinkedTitle": true,
           "Name": "Ideal Racing Line",
           "Plugin": {

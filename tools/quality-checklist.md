@@ -83,8 +83,8 @@ referenced as `Images/HASH.png`. Icons were also rendered at 144x144 but SD prof
 Additionally, icon packs were missing the required `previews/` directory (1920x960 PNG mosaic)
 which prevented them from appearing in the Stream Deck icon library.
 **Rule:** Stream Deck profile icons must be:
-- 72x72 PNG files stored in `<profile>.sdProfile/Images/`
-- Referenced as `"Image": "Images/HASH.png"` (relative path, not data URI)
+- 72x72 PNG files stored in `Profiles/<PAGE_UUID>/Images/` (per-page, NOT profile root)
+- Referenced as `"Image": "Images/HASH.png"` (relative to the page dir, not data URI)
 - Icon packs MUST have a `previews/` directory with at least one 1920x960 PNG
 - Always compare against a working installed profile/pack before assuming format
 

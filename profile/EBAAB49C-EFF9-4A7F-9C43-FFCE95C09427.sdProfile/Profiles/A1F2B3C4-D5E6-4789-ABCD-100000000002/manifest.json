@@ -3,7 +3,7 @@
     {
       "Actions": {
         "0,0": {
-          "ActionID": "c11a582b-701f-47cf-bb67-7ab287c5ca09",
+          "ActionID": "ef183cfa-a51e-44c9-a997-79cdd812990e",
           "LinkedTitle": true,
           "Name": "HUD",
           "Plugin": {
@@ -33,7 +33,7 @@
           "UUID": "com.simracing.lmu.toggle-hud"
         },
         "1,0": {
-          "ActionID": "5867fd3b-873c-4d97-99d8-4dd190d37fa0",
+          "ActionID": "0edf595c-6c67-41e3-92d8-e4c323e0b18e",
           "LinkedTitle": true,
           "Name": "MFD\nPrev",
           "Plugin": {
@@ -63,7 +63,7 @@
           "UUID": "com.simracing.lmu.prev-mfd"
         },
         "2,0": {
-          "ActionID": "8aab83d2-dda5-4368-bcdc-9a443995cd0c",
+          "ActionID": "0c38ae92-e8f7-42e8-b0a8-bba4c60c1567",
           "LinkedTitle": true,
           "Name": "MFD\nNext",
           "Plugin": {
@@ -93,7 +93,7 @@
           "UUID": "com.simracing.lmu.mfd-next"
         },
         "3,0": {
-          "ActionID": "6ef97afd-b6ce-458a-bae5-076ec4e26baa",
+          "ActionID": "ec6072e4-2db7-4a9d-8be2-cf5fb59a594b",
           "LinkedTitle": true,
           "Name": "Mirror",
           "Plugin": {
@@ -123,7 +123,7 @@
           "UUID": "com.simracing.lmu.toggle-mirror"
         },
         "4,0": {
-          "ActionID": "deb108ae-bd67-4118-b645-a316304f59dd",
+          "ActionID": "ca25db98-56ad-47f8-8fb1-0071258878b7",
           "LinkedTitle": true,
           "Name": "Track\nMap",
           "Plugin": {
@@ -153,7 +153,7 @@
           "UUID": "com.simracing.lmu.track-map"
         },
         "0,2": {
-          "ActionID": "aa467c85-8f80-4e88-b442-d73acc7b99a4",
+          "ActionID": "b6585348-9fe3-427f-8158-c17fc1430032",
           "LinkedTitle": true,
           "Name": "Parent Folder",
           "Plugin": {

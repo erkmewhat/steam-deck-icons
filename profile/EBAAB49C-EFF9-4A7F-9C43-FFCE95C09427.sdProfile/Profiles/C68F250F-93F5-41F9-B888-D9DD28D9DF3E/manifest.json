@@ -3,7 +3,7 @@
     {
       "Actions": {
         "2,0": {
-          "ActionID": "be0676dd-12a4-4510-be9c-d13c4c107818",
+          "ActionID": "cd990fc0-8917-4ccf-af29-4219908e7fee",
           "LinkedTitle": true,
           "Name": "\u25b2",
           "Plugin": {
@@ -33,7 +33,7 @@
           "UUID": "com.simracing.lmu.mfd-up"
         },
         "1,1": {
-          "ActionID": "268c8279-070b-49ef-9a93-9daf16f4b7f9",
+          "ActionID": "836d9582-21e6-4c7f-a8ff-5e2710b39f8e",
           "LinkedTitle": true,
           "Name": "\u25c0",
           "Plugin": {
@@ -63,7 +63,7 @@
           "UUID": "com.simracing.lmu.mfd-decrease"
         },
         "2,1": {
-          "ActionID": "b63a961a-ab0a-4417-bf65-0579ec5eba48",
+          "ActionID": "84160a50-887e-46da-b557-ec2e5779bc1e",
           "LinkedTitle": true,
           "Name": "MFD\nNext",
           "Plugin": {
@@ -93,7 +93,7 @@
           "UUID": "com.simracing.lmu.mfd-next"
         },
         "3,1": {
-          "ActionID": "9a208e06-a3e8-47cd-ada1-54e9a9e02a25",
+          "ActionID": "39b9404e-9fc6-4ef2-9439-28f31f8aa4a0",
           "LinkedTitle": true,
           "Name": "\u25b6",
           "Plugin": {
@@ -123,7 +123,7 @@
           "UUID": "com.simracing.lmu.mfd-increase"
         },
         "2,2": {
-          "ActionID": "28989f08-3499-49fb-aa21-6b0a63fc3d36",
+          "ActionID": "474f2cf5-a455-4514-925d-90d199edf50e",
           "LinkedTitle": true,
           "Name": "\u25bc",
           "Plugin": {
@@ -153,7 +153,7 @@
           "UUID": "com.simracing.lmu.mfd-down"
         },
         "0,2": {
-          "ActionID": "70882002-4557-4283-9f34-e3ca5ee4ba18",
+          "ActionID": "a167de2f-31b7-4f36-ba0a-645f962e9d6c",
           "LinkedTitle": true,
           "Name": "Parent Folder",
           "Plugin": {

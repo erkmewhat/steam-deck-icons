@@ -3,7 +3,7 @@
     {
       "Actions": {
         "0,0": {
-          "ActionID": "f20715f8-7013-47de-b119-cad0921a9851",
+          "ActionID": "5136524f-714d-427f-8355-c956edc0609c",
           "LinkedTitle": true,
           "Name": "BB\nFwd",
           "Plugin": {
@@ -33,7 +33,7 @@
           "UUID": "com.simracing.lmu.brake-bias-forward"
         },
         "1,0": {
-          "ActionID": "ffd92de9-f5d7-43b1-8703-113560fdd847",
+          "ActionID": "975b6d5e-ac24-451e-8368-50efb73b5423",
           "LinkedTitle": true,
           "Name": "TC\n+",
           "Plugin": {
@@ -63,7 +63,7 @@
           "UUID": "com.simracing.lmu.tc-increase"
         },
         "2,0": {
-          "ActionID": "8c17aaf3-6c71-4ee7-b9eb-84809a028d2d",
+          "ActionID": "d6ef8bab-2420-4b47-9969-44bbc9843f49",
           "LinkedTitle": true,
           "Name": "ABS\n+",
           "Plugin": {
@@ -93,7 +93,7 @@
           "UUID": "com.simracing.lmu.abs-increase"
         },
         "3,0": {
-          "ActionID": "16beab28-494e-469c-b394-4f48eb90340d",
+          "ActionID": "052fa998-efde-47a9-bdad-a2c82e151b45",
           "LinkedTitle": true,
           "Name": "Motor\n+",
           "Plugin": {
@@ -123,7 +123,7 @@
           "UUID": "com.simracing.lmu.motor-map-up"
         },
         "0,1": {
-          "ActionID": "049fbe36-319a-4239-bb11-020026181df6",
+          "ActionID": "49ac3ddc-d1c7-4d9d-9c18-eea9cdc8af10",
           "LinkedTitle": true,
           "Name": "BB\nBwd",
           "Plugin": {
@@ -153,7 +153,7 @@
           "UUID": "com.simracing.lmu.brake-bias-backward"
         },
         "1,1": {
-          "ActionID": "e1ee9dbe-bbd9-4d64-97ab-d622334dfe64",
+          "ActionID": "225d38a7-9a8e-47ed-b661-e4393f7e752e",
           "LinkedTitle": true,
           "Name": "TC\n\u2212",
           "Plugin": {
@@ -183,7 +183,7 @@
           "UUID": "com.simracing.lmu.tc-decrease"
         },
         "2,1": {
-          "ActionID": "05060dfe-9fe1-4203-a609-49ec64664ca6",
+          "ActionID": "80134f62-6946-402a-9fd8-7721a52980ed",
           "LinkedTitle": true,
           "Name": "ABS\n\u2212",
           "Plugin": {
@@ -213,7 +213,7 @@
           "UUID": "com.simracing.lmu.abs-decrease"
         },
         "3,1": {
-          "ActionID": "5c90260a-0554-4109-87ee-6ffddc8a0069",
+          "ActionID": "7e296bec-fe29-4caf-9049-a9313fccc5e3",
           "LinkedTitle": true,
           "Name": "Motor\n\u2212",
           "Plugin": {
@@ -243,7 +243,7 @@
           "UUID": "com.simracing.lmu.motor-map-down"
         },
         "0,2": {
-          "ActionID": "9c6ca931-e547-486e-9bf9-dfe0d38d5dac",
+          "ActionID": "d3558ffe-a284-4f26-b37e-bb90ae64ec64",
           "LinkedTitle": true,
           "Name": "Parent Folder",
           "Plugin": {

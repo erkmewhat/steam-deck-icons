@@ -3,7 +3,7 @@
     {
       "Actions": {
         "0,0": {
-          "ActionID": "6d8f69d0-1676-433b-8f73-e4cd8d5c32ee",
+          "ActionID": "7cceff0a-68ee-4af2-af4f-814693c05637",
           "LinkedTitle": true,
           "Name": "AI Takeover",
           "Plugin": {
@@ -33,7 +33,7 @@
           "UUID": "com.simracing.ace.ai-takeover"
         },
         "1,0": {
-          "ActionID": "c460e8b9-2453-4b75-a509-d17dad358c88",
+          "ActionID": "d41c011f-02a4-4c58-a97f-17b07e971538",
           "LinkedTitle": true,
           "Name": "Pit Request",
           "Plugin": {
@@ -63,7 +63,7 @@
           "UUID": "com.simracing.ace.pit-request"
         },
         "2,0": {
-          "ActionID": "5ca2703b-150b-4608-9661-5444e3460f39",
+          "ActionID": "d6407084-6ced-4844-b02b-076786cfe5ff",
           "LinkedTitle": true,
           "Name": "Restart Session",
           "Plugin": {
@@ -93,7 +93,7 @@
           "UUID": "com.simracing.ace.restart-session"
         },
         "3,0": {
-          "ActionID": "5ffaf685-fcdb-45de-b02c-2ede43cc5245",
+          "ActionID": "e496047a-9a12-47ef-a814-04555b4bcf53",
           "LinkedTitle": true,
           "Name": "Pause",
           "Plugin": {
@@ -123,7 +123,7 @@
           "UUID": "com.simracing.ace.pause"
         },
         "4,0": {
-          "ActionID": "09d6e1b2-5db5-4196-8217-1e0b7d79259d",
+          "ActionID": "03b6a9e0-9ba9-4350-aca0-c2aed7e39b15",
           "LinkedTitle": true,
           "Name": "Screenshot",
           "Plugin": {
@@ -153,7 +153,7 @@
           "UUID": "com.simracing.ace.screenshot"
         },
         "0,1": {
-          "ActionID": "cf68b94e-5dae-4dba-8af9-6c250b23511e",
+          "ActionID": "969f9a4c-fa30-4797-83b7-c41677556783",
           "LinkedTitle": true,
           "Name": "Start Replay",
           "Plugin": {
@@ -183,7 +183,7 @@
           "UUID": "com.simracing.ace.replay"
         },
         "1,1": {
-          "ActionID": "04d71d0c-f9d3-49d7-ba75-e49e3ed1233c",
+          "ActionID": "651ae291-9a02-4517-9512-d20339ac16e4",
           "LinkedTitle": true,
           "Name": "Slow Motion",
           "Plugin": {
@@ -213,7 +213,7 @@
           "UUID": "com.simracing.ace.slow-motion"
         },
         "2,1": {
-          "ActionID": "996353e5-c69a-4a6d-bf94-0a26a18f0ed4",
+          "ActionID": "82dba478-0e8c-4133-a132-d7593503f2af",
           "LinkedTitle": true,
           "Name": "Fast Forward",
           "Plugin": {
@@ -243,7 +243,7 @@
           "UUID": "com.simracing.ace.fast-forward"
         },
         "3,1": {
-          "ActionID": "38db8c06-8d30-4538-b60d-c569837d6f28",
+          "ActionID": "b825096b-1074-4c66-a0a4-1845b3372b79",
           "LinkedTitle": true,
           "Name": "Rewind",
           "Plugin": {
@@ -273,7 +273,7 @@
           "UUID": "com.simracing.ace.rewind"
         },
         "0,2": {
-          "ActionID": "0c8ff868-b632-411e-9cf0-7a14ec14794c",
+          "ActionID": "8ddb41f3-e486-4c69-861a-a89a2aebca33",
           "LinkedTitle": true,
           "Name": "Parent Folder",
           "Plugin": {
@@ -301,7 +301,7 @@
           "UUID": "com.elgato.streamdeck.profile.backtoparent"
         },
         "1,2": {
-          "ActionID": "8a034ff5-fe39-4be1-bf6b-90dd7ec1a7ec",
+          "ActionID": "7d269181-dfcc-4cf6-9d9f-3192651382c4",
           "LinkedTitle": true,
           "Name": "Next Car",
           "Plugin": {
@@ -331,7 +331,7 @@
           "UUID": "com.simracing.ace.next-car"
         },
         "2,2": {
-          "ActionID": "f91f26a9-fba3-46b8-afaa-449edc405974",
+          "ActionID": "d4a27033-f17c-4e36-86b5-f8ad7edfa5af",
           "LinkedTitle": true,
           "Name": "Previous Car",
           "Plugin": {

@@ -3,7 +3,7 @@
     {
       "Actions": {
         "0,0": {
-          "ActionID": "e530c358-e723-4232-9130-f89b4c61d726",
+          "ActionID": "f0e7f3c0-409e-4ef6-8aa8-aa2e97db930e",
           "LinkedTitle": true,
           "Name": "Look\nLeft",
           "Plugin": {
@@ -33,7 +33,7 @@
           "UUID": "com.simracing.lmu.look-left"
         },
         "1,0": {
-          "ActionID": "79aa8a56-066d-4f88-98fd-9baa2d99d05f",
+          "ActionID": "ebec3911-b4fe-4989-bed4-7a8dc1d1842d",
           "LinkedTitle": true,
           "Name": "Look\nBehind",
           "Plugin": {
@@ -63,7 +63,7 @@
           "UUID": "com.simracing.lmu.look-behind"
         },
         "2,0": {
-          "ActionID": "4af6b2f4-e2c5-4315-99f4-9189bd175199",
+          "ActionID": "fa1323bc-cf72-47a5-9b8c-5d46fffc31d9",
           "LinkedTitle": true,
           "Name": "Look\nRight",
           "Plugin": {
@@ -93,7 +93,7 @@
           "UUID": "com.simracing.lmu.look-right"
         },
         "0,1": {
-          "ActionID": "5483cb62-c993-4887-80a7-6283924b9b4d",
+          "ActionID": "1529e826-2f02-4469-b650-e0b5b249cb0e",
           "LinkedTitle": true,
           "Name": "Replay",
           "Plugin": {
@@ -123,7 +123,7 @@
           "UUID": "com.simracing.lmu.instant-replay"
         },
         "1,1": {
-          "ActionID": "7be308af-5597-4f2c-b833-cece5d458a70",
+          "ActionID": "359e9283-de1b-4214-b041-834cd47b8c1e",
           "LinkedTitle": true,
           "Name": "Screenshot",
           "Plugin": {
@@ -153,7 +153,7 @@
           "UUID": "com.simracing.lmu.screenshot"
         },
         "2,1": {
-          "ActionID": "5742df18-d75e-42a1-a1c1-38ddb4ee8d8f",
+          "ActionID": "5ffa55ca-7e20-473a-8cec-f778d60a3eaa",
           "LinkedTitle": true,
           "Name": "Restart",
           "Plugin": {
@@ -183,7 +183,7 @@
           "UUID": "com.simracing.lmu.restart-race"
         },
         "0,2": {
-          "ActionID": "446dcbc3-a0cf-4a25-a470-7a0de14ca4d6",
+          "ActionID": "d2cb009a-86df-4753-b10d-adedb8037368",
           "LinkedTitle": true,
           "Name": "Parent Folder",
           "Plugin": {

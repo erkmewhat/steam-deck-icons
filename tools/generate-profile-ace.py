@@ -31,7 +31,12 @@ for slug, b in _config["bindings"].items():
     BINDINGS[slug] = {"key": b["key"], "title": b["game_action"], "game_action": b["game_action"]}
 
 
-_pending_icons = []
+# Collects (svg_path, png_filename) per page UUID for deferred PNG conversion.
+_page_icons = {}
+_current_page = None
+
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+ICON_PACK_DIR = os.path.join(SCRIPT_DIR, "..", "com.simracing.ace-icons.sdIconPack", "icons")
 
 
 def _generate_image_key(action_id):
@@ -40,41 +45,50 @@ def _generate_image_key(action_id):
     return f"{h}.png"
 
 
+def set_current_page(page_uuid):
+    """Set which page is currently being built (icons register to this page)."""
+    global _current_page
+    _current_page = page_uuid
+    if page_uuid not in _page_icons:
+        _page_icons[page_uuid] = []
+
+
 def icon_to_image_ref(action_id):
     """Find the SVG for action_id and return an Images/HASH.png reference.
 
-    Registers the icon for PNG conversion (done later by convert_pending_icons).
+    Registers the icon for PNG conversion into the current page's Images/ dir.
     """
-    script_dir = os.path.dirname(os.path.abspath(__file__))
-    icon_pack = os.path.join(script_dir, "..", "com.simracing.ace-icons.sdIconPack", "icons")
-    path = os.path.join(icon_pack, f"{action_id}.svg")
+    path = os.path.join(ICON_PACK_DIR, f"{action_id}.svg")
     if os.path.isfile(path):
         png_name = _generate_image_key(action_id)
-        _pending_icons.append((os.path.abspath(path), png_name))
+        if _current_page:
+            _page_icons[_current_page].append((os.path.abspath(path), png_name))
         return f"Images/{png_name}"
     return ""
 
 
-def convert_pending_icons(profile_dir):
-    """Convert all registered SVGs to PNGs in the profile's Images/ directory."""
-    if not _pending_icons:
-        return
-    images_dir = os.path.join(profile_dir, "Images")
-    os.makedirs(images_dir, exist_ok=True)
-    script_dir = os.path.dirname(os.path.abspath(__file__))
-    converter = os.path.join(script_dir, "svg-to-png.js")
+def convert_all_page_icons(profiles_dir):
+    """Convert all registered SVGs to 72x72 PNGs in each page's Images/ dir."""
+    converter = os.path.join(SCRIPT_DIR, "svg-to-png.js")
+    total = 0
 
-    seen = set()
-    for svg_path, png_name in _pending_icons:
-        if png_name in seen:
+    for page_uuid, icons in _page_icons.items():
+        if not icons:
             continue
-        seen.add(png_name)
-        png_path = os.path.join(images_dir, png_name)
-        subprocess.run(
-            ["node", converter, svg_path, png_path, "72"],
-            check=True, capture_output=True
-        )
-    print(f"  Converted {len(seen)} icons to 72x72 PNG")
+        images_dir = os.path.join(profiles_dir, page_uuid, "Images")
+        os.makedirs(images_dir, exist_ok=True)
+        seen = set()
+        for svg_path, png_name in icons:
+            if png_name in seen:
+                continue
+            seen.add(png_name)
+            png_path = os.path.join(images_dir, png_name)
+            subprocess.run(
+                ["node", converter, svg_path, png_path, "72"],
+                check=True, capture_output=True
+            )
+        total += len(seen)
+    print(f"  Converted {total} icons to 72x72 PNG across {len(_page_icons)} pages")
 
 
 def make_plugin_action(title, action_uuid, hotkey="", font_size=10):
@@ -229,18 +243,21 @@ def write_profile(output_dir):
     with open(os.path.join(profile_dir, "manifest.json"), "w") as f:
         json.dump(manifest, f, indent=2)
 
+    # Build each page (set_current_page registers icons per page)
     pages = [
-        (MAIN_PAGE, build_main_page()),
-        (ADJUST_PAGE, build_adjust_page()),
-        (CAMERA_PAGE, build_camera_page()),
-        (RACE_PAGE, build_race_page()),
+        (MAIN_PAGE,   build_main_page),
+        (ADJUST_PAGE, build_adjust_page),
+        (CAMERA_PAGE, build_camera_page),
+        (RACE_PAGE,   build_race_page),
     ]
-    for page_uuid, page_data in pages:
+    for page_uuid, builder in pages:
+        set_current_page(page_uuid)
+        page_data = builder()
         with open(os.path.join(profiles_dir, page_uuid, "manifest.json"), "w") as f:
             json.dump(page_data, f, indent=2)
 
-    # Convert all SVG icons to PNG in the Images/ directory
-    convert_pending_icons(profile_dir)
+    # Convert SVGs to 72x72 PNGs in each page's Images/ subdirectory
+    convert_all_page_icons(profiles_dir)
 
     print(f"Profile generated at: {profile_dir}")
     print(f"  Main page:   {MAIN_PAGE}")

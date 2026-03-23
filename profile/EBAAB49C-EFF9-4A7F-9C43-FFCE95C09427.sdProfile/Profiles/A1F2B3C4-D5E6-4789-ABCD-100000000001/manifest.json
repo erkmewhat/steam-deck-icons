@@ -3,7 +3,7 @@
     {
       "Actions": {
         "0,0": {
-          "ActionID": "4b569fa6-6a72-4573-ac87-f244ab183134",
+          "ActionID": "12a8679b-0ad2-4e0c-bc1f-f78892272beb",
           "LinkedTitle": true,
           "Name": "Cockpit",
           "Plugin": {
@@ -33,7 +33,7 @@
           "UUID": "com.simracing.lmu.driving-cameras"
         },
         "1,0": {
-          "ActionID": "16abd566-69f8-4c54-800b-832b4fe68039",
+          "ActionID": "94b7d94e-209d-4c1d-bfce-1ce6e90015cc",
           "LinkedTitle": true,
           "Name": "Onboard",
           "Plugin": {
@@ -63,7 +63,7 @@
           "UUID": "com.simracing.lmu.onboard-cameras"
         },
         "2,0": {
-          "ActionID": "7dd7655d-706f-4475-ab21-8a91c0894036",
+          "ActionID": "83a3c4f9-38e8-4ce4-9800-9b32480d83a5",
           "LinkedTitle": true,
           "Name": "TV Cam",
           "Plugin": {
@@ -93,7 +93,7 @@
           "UUID": "com.simracing.lmu.swingman-camera"
         },
         "3,0": {
-          "ActionID": "cc15bc43-984b-4250-a541-33c8a2d115a9",
+          "ActionID": "0144057d-75a2-4792-a785-92ca97406307",
           "LinkedTitle": true,
           "Name": "Spectate",
           "Plugin": {
@@ -123,7 +123,7 @@
           "UUID": "com.simracing.lmu.spectator-camera"
         },
         "4,0": {
-          "ActionID": "16e46a18-e976-4328-8cbc-ce4ea3b65462",
+          "ActionID": "66b40fcc-2019-4fab-ad6b-9388994a4c23",
           "LinkedTitle": true,
           "Name": "Tracking",
           "Plugin": {
@@ -153,7 +153,7 @@
           "UUID": "com.simracing.lmu.tracking-camera"
         },
         "0,1": {
-          "ActionID": "6b42b49e-59d7-47d0-b9de-88bec0349157",
+          "ActionID": "7ae563f7-804c-4674-bdf3-b0b969037cb5",
           "LinkedTitle": true,
           "Name": "Seat\nFwd",
           "Plugin": {
@@ -183,7 +183,7 @@
           "UUID": "com.simracing.lmu.seat-forward"
         },
         "1,1": {
-          "ActionID": "d3a106a6-8a3d-45e6-85e9-8b900ce19a2d",
+          "ActionID": "0c56ba7c-b79f-4327-bb9b-b692073fe0f0",
           "LinkedTitle": true,
           "Name": "Seat\nBack",
           "Plugin": {
@@ -213,7 +213,7 @@
           "UUID": "com.simracing.lmu.seat-back"
         },
         "2,1": {
-          "ActionID": "c5be16b6-d3a6-453e-9b62-68bb3dedd8dc",
+          "ActionID": "4daf33c0-919e-47e9-9a19-b21f379d14fc",
           "LinkedTitle": true,
           "Name": "Seat\nUp",
           "Plugin": {
@@ -243,7 +243,7 @@
           "UUID": "com.simracing.lmu.seat-up"
         },
         "3,1": {
-          "ActionID": "5d88e500-9819-4940-a6a5-51ab3f504d12",
+          "ActionID": "76644da3-9666-4793-8880-d5c845ea2bb1",
           "LinkedTitle": true,
           "Name": "Seat\nDown",
           "Plugin": {
@@ -273,7 +273,7 @@
           "UUID": "com.simracing.lmu.seat-down"
         },
         "0,2": {
-          "ActionID": "1c1cd348-d1ac-4a11-b3c3-d0e261cd5e1c",
+          "ActionID": "a747d238-34c2-44df-8463-10b083add2a0",
           "LinkedTitle": true,
           "Name": "Parent Folder",
           "Plugin": {
@@ -301,7 +301,7 @@
           "UUID": "com.elgato.streamdeck.profile.backtoparent"
         },
         "1,2": {
-          "ActionID": "cf846d01-ddaf-4111-85d6-99f127bdb608",
+          "ActionID": "27c2b2ef-7974-4c6f-a365-e3b0b0c1c789",
           "LinkedTitle": true,
           "Name": "FOV +",
           "Plugin": {
@@ -331,7 +331,7 @@
           "UUID": "com.simracing.lmu.fov-increase"
         },
         "2,2": {
-          "ActionID": "db00c9da-119b-49d5-9f31-cdec6583a9fd",
+          "ActionID": "17e15ff4-4767-4b66-9edc-622ee9d3e735",
           "LinkedTitle": true,
           "Name": "FOV -",
           "Plugin": {
@@ -361,7 +361,7 @@
           "UUID": "com.simracing.lmu.fov-decrease"
         },
         "3,2": {
-          "ActionID": "882b143d-08f7-4e9e-8387-b4f050caa0e8",
+          "ActionID": "90d76881-d3de-4e38-885b-97a0f9d6df78",
           "LinkedTitle": true,
           "Name": "Zoom\nIn",
           "Plugin": {
@@ -391,7 +391,7 @@
           "UUID": "com.simracing.lmu.zoom-in"
         },
         "4,2": {
-          "ActionID": "4d0c03bc-eb6e-4e42-9228-68c2ed6c106f",
+          "ActionID": "8a44511f-ac19-40a7-b785-bd9ca53ae458",
           "LinkedTitle": true,
           "Name": "Zoom\nOut",
           "Plugin": {
