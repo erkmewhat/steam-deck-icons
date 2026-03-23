@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144 144" width="144" height="144">
+  <defs>
+    <radialGradient id="nemd-bg" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#1a1520"/>
+      <stop offset="100%" stop-color="#08060a"/>
+    </radialGradient>
+    <radialGradient id="nemd-ambglow" cx="50%" cy="50%" r="60%">
+      <stop offset="0%" stop-color="#e20613" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#e20613" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="nemd-softglow">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feComponentTransfer in="blur"><feFuncA type="linear" slope="0.4"/></feComponentTransfer>
+    </filter>
+    <filter id="nemd-neon">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <linearGradient id="nemd-arrow" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FF5252"/>
+      <stop offset="100%" stop-color="#D32F2F"/>
+    </linearGradient>
+    <linearGradient id="nemd-topbar" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#e20613" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#e20613" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#e20613" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="nemd-botbar" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#e20613" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#e20613" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#e20613" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="144" height="144" fill="url(#nemd-bg)"/>
+  <rect width="144" height="144" fill="url(#nemd-ambglow)"/>
+  <rect x="0" y="0" width="144" height="3" fill="url(#nemd-topbar)"/>
+  <!-- Engine silhouette in red neon -->
+  <g filter="url(#nemd-softglow)">
+    <path d="M22,78 L22,42 L30,42 L30,35 L40,35 L40,42 L50,42 L50,35 L60,35 L60,42 L70,42 L70,50 L80,50 L80,42 L88,42 L88,55 L82,55 L82,78 Z" fill="none" stroke="#e20613" stroke-width="4"/>
+  </g>
+  <g filter="url(#nemd-neon)">
+    <path d="M22,78 L22,42 L30,42 L30,35 L40,35 L40,42 L50,42 L50,35 L60,35 L60,42 L70,42 L70,50 L80,50 L80,42 L88,42 L88,55 L82,55 L82,78 Z" fill="none" stroke="#e20613" stroke-width="2" stroke-linejoin="round"/>
+  </g>
+  <!-- Exhaust pipe hint -->
+  <g filter="url(#nemd-neon)">
+    <path d="M82,62 L95,62 L95,72 L82,72" fill="none" stroke="#e20613" stroke-width="1.5" opacity="0.6"/>
+  </g>
+  <!-- Red down arrow -->
+  <g filter="url(#nemd-softglow)">
+    <polygon points="120,85 134,65 129,65 129,30 111,30 111,65 106,65" fill="url(#nemd-arrow)"/>
+  </g>
+  <g filter="url(#nemd-neon)">
+    <polygon points="120,85 134,65 129,65 129,30 111,30 111,65 106,65" fill="none" stroke="#FF5252" stroke-width="2"/>
+  </g>
+  <rect x="0" y="134" width="144" height="10" fill="url(#nemd-botbar)"/>
+  <text x="72" y="128" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="bold" fill="white" text-anchor="middle" letter-spacing="1.5">ENG MAP -</text>
+</svg>

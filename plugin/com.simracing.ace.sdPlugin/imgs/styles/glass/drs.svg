@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144 144">
+  <defs>
+    <linearGradient id="gdr-bg1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2a1215"/>
+      <stop offset="50%" stop-color="#180a0c"/>
+      <stop offset="100%" stop-color="#0a0406"/>
+    </linearGradient>
+    <linearGradient id="gdr-border" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#e20613"/>
+      <stop offset="50%" stop-color="#ff3333" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#e20613"/>
+    </linearGradient>
+    <linearGradient id="gdr-shine" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.12"/>
+      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.02"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.06"/>
+    </linearGradient>
+    <linearGradient id="gdr-warm" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#fff300"/>
+      <stop offset="50%" stop-color="#ffaa00"/>
+      <stop offset="100%" stop-color="#ff6600"/>
+    </linearGradient>
+    <linearGradient id="gdr-wing" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#cccccc"/>
+      <stop offset="50%" stop-color="#888888"/>
+      <stop offset="100%" stop-color="#555555"/>
+    </linearGradient>
+    <linearGradient id="gdr-accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#e20613"/>
+      <stop offset="100%" stop-color="#fff300"/>
+    </linearGradient>
+  </defs>
+  <rect x="1" y="1" width="142" height="142" rx="14" fill="url(#gdr-bg1)" stroke="url(#gdr-border)" stroke-width="1.5"/>
+  <rect x="3" y="3" width="138" height="68" rx="12" fill="url(#gdr-shine)"/>
+  <!-- Rear wing matching carbon design -->
+  <!-- Wing endplates -->
+  <rect x="22" y="28" width="4" height="45" rx="1" fill="url(#gdr-wing)" stroke="#777" stroke-width="0.5"/>
+  <rect x="118" y="28" width="4" height="45" rx="1" fill="url(#gdr-wing)" stroke="#777" stroke-width="0.5"/>
+  <!-- Top flat wing element -->
+  <path d="M24 32 L120 32 L122 28 L22 28 Z" fill="url(#gdr-wing)" stroke="#aaa" stroke-width="0.5"/>
+  <!-- Curved main wing element -->
+  <path d="M24 32 Q72 42 120 32 L120 38 Q72 48 24 38 Z" fill="url(#gdr-wing)" stroke="#aaa" stroke-width="0.5"/>
+  <!-- Second curved element -->
+  <path d="M26 44 Q72 52 118 44 L118 48 Q72 56 26 48 Z" fill="url(#gdr-wing)" stroke="#aaa" stroke-width="0.5" opacity="0.85"/>
+  <!-- Support pylons -->
+  <rect x="55" y="55" width="4" height="20" fill="url(#gdr-wing)"/>
+  <rect x="85" y="55" width="4" height="20" fill="url(#gdr-wing)"/>
+  <!-- Glass reflections on wing -->
+  <ellipse cx="72" cy="35" rx="35" ry="4" fill="#ffffff" opacity="0.15"/>
+  <ellipse cx="72" cy="47" rx="30" ry="3" fill="#ffffff" opacity="0.1"/>
+  <!-- DRS text warm gradient -->
+  <text x="72" y="95" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="24" font-weight="bold" fill="url(#gdr-warm)" letter-spacing="4">DRS</text>
+  <!-- Accent bar -->
+  <rect x="14" y="114" width="116" height="3" rx="1.5" fill="url(#gdr-accent)"/>
+  <text x="72" y="127" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="bold" fill="#ffffff" letter-spacing="1.5">DRS</text>
+</svg>

@@ -1,9 +1,48 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144 144" width="144" height="144">
-  <rect width="144" height="144" rx="12" fill="#1a1a2e"/>
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="40%" r="70%">
+      <stop offset="0%" stop-color="#32373C"/>
+      <stop offset="100%" stop-color="#0a0a0f"/>
+    </radialGradient>
+    <radialGradient id="greenGlow" cx="50%" cy="45%" r="40%">
+      <stop offset="0%" stop-color="#4CAF50" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#4CAF50" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="boltGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#81C784"/>
+      <stop offset="100%" stop-color="#4CAF50"/>
+    </linearGradient>
+    <linearGradient id="arrowDown" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FF5252"/>
+      <stop offset="100%" stop-color="#D32F2F"/>
+    </linearGradient>
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="2.5" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="shadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="2" stdDeviation="2" flood-color="#4CAF50" flood-opacity="0.2"/>
+    </filter>
+    <linearGradient id="borderAccent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#4CAF50" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#4CAF50" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#4CAF50" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="144" height="144" fill="url(#bg)"/>
+  <ellipse cx="72" cy="56" rx="46" ry="42" fill="url(#greenGlow)"/>
   <!-- Lightning bolt -->
-  <path d="M68 28 L52 72 L66 72 L58 108 L92 60 L76 60 L88 28 Z" fill="#44ff44" opacity="0.9"/>
-  <!-- Down arrow on right side -->
-  <path d="M114 74 L126 58 L118 58 L118 38 L110 38 L110 58 L102 58 Z" fill="white"/>
-  <!-- Label -->
-  <text x="72" y="128" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="11" font-weight="bold" fill="white" opacity="0.8">MOTOR DN</text>
+  <g filter="url(#shadow)">
+    <polygon points="76,28 58,66 70,66 62,100 94,56 80,56 92,28" fill="url(#boltGrad)"/>
+  </g>
+  <!-- Down arrow on right -->
+  <g filter="url(#glow)">
+    <path d="M116 62 L126 48 L120 48 L120 36 L112 36 L112 48 L106 48 Z" fill="url(#arrowDown)"/>
+  </g>
+  <!-- - indicator -->
+  <g opacity="0.5">
+    <line x1="111" y1="70" x2="121" y2="70" stroke="#FF5252" stroke-width="2" stroke-linecap="round"/>
+  </g>
+  <rect x="20" y="138" width="104" height="2" rx="1" fill="url(#borderAccent)"/>
+  <text x="72" y="132" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="15" font-weight="700" fill="#ffffff" opacity="0.85" letter-spacing="1">MOTOR DN</text>
 </svg>

@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144 144">
+  <defs>
+    <linearGradient id="gwd-bg1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2a1215"/>
+      <stop offset="50%" stop-color="#180a0c"/>
+      <stop offset="100%" stop-color="#0a0406"/>
+    </linearGradient>
+    <linearGradient id="gwd-border" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#e20613"/>
+      <stop offset="50%" stop-color="#ff3333" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#e20613"/>
+    </linearGradient>
+    <linearGradient id="gwd-shine" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.12"/>
+      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.02"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.06"/>
+    </linearGradient>
+    <linearGradient id="gwd-glass" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#4488aa" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#224466" stop-opacity="0.5"/>
+    </linearGradient>
+    <linearGradient id="gwd-accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#e20613"/>
+      <stop offset="100%" stop-color="#fff300"/>
+    </linearGradient>
+  </defs>
+  <rect x="1" y="1" width="142" height="142" rx="14" fill="url(#gwd-bg1)" stroke="url(#gwd-border)" stroke-width="1.5"/>
+  <rect x="3" y="3" width="138" height="68" rx="12" fill="url(#gwd-shine)"/>
+  <!-- Windshield -->
+  <path d="M24,92 L42,36 L102,36 L120,92 Z" fill="url(#gwd-glass)" stroke="#8899aa" stroke-width="1.2"/>
+  <path d="M30,88 L46,40 L98,40 L114,88 Z" fill="none" stroke="#667788" stroke-width="0.5" opacity="0.5"/>
+  <!-- Wiper arm -->
+  <line x1="72" y1="92" x2="52" y2="40" stroke="#cccccc" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="72" y1="92" x2="50" y2="38" stroke="#999999" stroke-width="4" stroke-linecap="round" opacity="0.3"/>
+  <!-- Wiper blade -->
+  <line x1="52" y1="40" x2="88" y2="36" stroke="#333333" stroke-width="3" stroke-linecap="round"/>
+  <!-- Pivot point -->
+  <circle cx="72" cy="92" r="3" fill="#888888" stroke="#666666" stroke-width="0.5"/>
+  <!-- Red down arrow -->
+  <polygon points="112,98 102,84 107,84 107,70 117,70 117,84 122,84" fill="#e20613" opacity="0.9"/>
+  <ellipse cx="112" cy="72" rx="4" ry="2" fill="#ffffff" opacity="0.2"/>
+  <!-- Accent bar -->
+  <rect x="14" y="114" width="116" height="3" rx="1.5" fill="url(#gwd-accent)"/>
+  <text x="72" y="127" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="bold" fill="#ffffff" letter-spacing="1.5">WIPER -</text>
+</svg>

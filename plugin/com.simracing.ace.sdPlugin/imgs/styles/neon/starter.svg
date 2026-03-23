@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144 144" width="144" height="144">
+  <defs>
+    <radialGradient id="nst-bg" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#1a1520"/>
+      <stop offset="100%" stop-color="#08060a"/>
+    </radialGradient>
+    <radialGradient id="nst-ambglow" cx="50%" cy="50%" r="60%">
+      <stop offset="0%" stop-color="#e20613" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#e20613" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="nst-softglow">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feComponentTransfer in="blur"><feFuncA type="linear" slope="0.4"/></feComponentTransfer>
+    </filter>
+    <filter id="nst-neon">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <linearGradient id="nst-topbar" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#e20613" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#e20613" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#e20613" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="nst-botbar" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#e20613" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#e20613" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#e20613" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="144" height="144" fill="url(#nst-bg)"/>
+  <rect width="144" height="144" fill="url(#nst-ambglow)"/>
+  <rect x="0" y="0" width="144" height="3" fill="url(#nst-topbar)"/>
+  <!-- Button circle soft glow -->
+  <g filter="url(#nst-softglow)">
+    <circle cx="72" cy="58" r="32" fill="none" stroke="#e20613" stroke-width="5"/>
+  </g>
+  <!-- Button ring crisp -->
+  <g filter="url(#nst-neon)">
+    <circle cx="72" cy="58" r="32" fill="none" stroke="#e20613" stroke-width="3"/>
+    <circle cx="72" cy="58" r="28" fill="none" stroke="#e20613" stroke-width="1" opacity="0.4"/>
+  </g>
+  <!-- Rotating arrow around button -->
+  <g filter="url(#nst-neon)">
+    <path d="M72,22 A36,36 0 1,1 40,40" fill="none" stroke="white" stroke-width="1.5" opacity="0.6"/>
+    <polygon points="38,33 40,43 47,36" fill="white" opacity="0.6"/>
+  </g>
+  <!-- START text -->
+  <text x="72" y="63" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="bold" fill="white" text-anchor="middle" letter-spacing="1">START</text>
+  <rect x="0" y="134" width="144" height="10" fill="url(#nst-botbar)"/>
+  <text x="72" y="128" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="bold" fill="white" text-anchor="middle" letter-spacing="1.5">STARTER</text>
+</svg>

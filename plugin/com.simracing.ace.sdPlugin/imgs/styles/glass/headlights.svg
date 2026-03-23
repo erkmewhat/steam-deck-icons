@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144 144">
+  <defs>
+    <linearGradient id="ghl-bg1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2a1215"/>
+      <stop offset="50%" stop-color="#180a0c"/>
+      <stop offset="100%" stop-color="#0a0406"/>
+    </linearGradient>
+    <linearGradient id="ghl-border" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#e20613"/>
+      <stop offset="50%" stop-color="#ff3333" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#e20613"/>
+    </linearGradient>
+    <linearGradient id="ghl-shine" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.12"/>
+      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.02"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.06"/>
+    </linearGradient>
+    <linearGradient id="ghl-beam" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#fff300"/>
+      <stop offset="40%" stop-color="#ffaa00"/>
+      <stop offset="70%" stop-color="#ff6600" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#ff6600" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="ghl-housing" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#cccccc"/>
+      <stop offset="50%" stop-color="#888888"/>
+      <stop offset="100%" stop-color="#555555"/>
+    </linearGradient>
+    <linearGradient id="ghl-accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#e20613"/>
+      <stop offset="100%" stop-color="#fff300"/>
+    </linearGradient>
+  </defs>
+  <rect x="1" y="1" width="142" height="142" rx="14" fill="url(#ghl-bg1)" stroke="url(#ghl-border)" stroke-width="1.5"/>
+  <rect x="3" y="3" width="138" height="68" rx="12" fill="url(#ghl-shine)"/>
+  <!-- Lamp housing -->
+  <path d="M28,62 Q28,48 38,48 L48,48 Q54,48 54,58 L54,82 Q54,88 48,88 L38,88 Q28,88 28,78 Z" fill="url(#ghl-housing)" stroke="#aaa" stroke-width="0.8"/>
+  <ellipse cx="41" cy="68" rx="8" ry="14" fill="#fff300" opacity="0.6"/>
+  <ellipse cx="38" cy="62" rx="4" ry="6" fill="#ffffff" opacity="0.2"/>
+  <!-- 5 warm beams -->
+  <polygon points="54,60 130,40 130,48 54,64" fill="url(#ghl-beam)" opacity="0.7"/>
+  <polygon points="54,65 130,55 130,63 54,69" fill="url(#ghl-beam)" opacity="0.8"/>
+  <polygon points="54,70 130,68 130,76 54,74" fill="url(#ghl-beam)" opacity="0.9"/>
+  <polygon points="54,75 130,82 130,90 54,79" fill="url(#ghl-beam)" opacity="0.8"/>
+  <polygon points="54,80 130,96 130,104 54,84" fill="url(#ghl-beam)" opacity="0.7"/>
+  <!-- Chrome highlight -->
+  <ellipse cx="41" cy="58" rx="6" ry="4" fill="#ffffff" opacity="0.2"/>
+  <!-- Accent bar -->
+  <rect x="14" y="114" width="116" height="3" rx="1.5" fill="url(#ghl-accent)"/>
+  <text x="72" y="127" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="bold" fill="#ffffff" letter-spacing="1.5">HEADLIGHTS</text>
+</svg>

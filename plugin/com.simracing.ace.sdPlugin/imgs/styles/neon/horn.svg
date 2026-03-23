@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144 144" width="144" height="144">
+  <defs>
+    <radialGradient id="nhn-bg" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#1a1520"/>
+      <stop offset="100%" stop-color="#08060a"/>
+    </radialGradient>
+    <radialGradient id="nhn-ambglow" cx="50%" cy="50%" r="60%">
+      <stop offset="0%" stop-color="#e20613" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#e20613" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="nhn-softglow">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feComponentTransfer in="blur"><feFuncA type="linear" slope="0.4"/></feComponentTransfer>
+    </filter>
+    <filter id="nhn-neon">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <linearGradient id="nhn-chrome" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="50%" stop-color="#b0b0b0"/>
+      <stop offset="100%" stop-color="#666666"/>
+    </linearGradient>
+    <linearGradient id="nhn-topbar" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#e20613" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#e20613" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#e20613" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="nhn-botbar" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#e20613" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#e20613" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#e20613" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="144" height="144" fill="url(#nhn-bg)"/>
+  <rect width="144" height="144" fill="url(#nhn-ambglow)"/>
+  <rect x="0" y="0" width="144" height="3" fill="url(#nhn-topbar)"/>
+  <!-- Megaphone chrome shape -->
+  <path d="M25,50 L25,72 L40,72 L75,90 L75,32 L40,50 Z" fill="url(#nhn-chrome)" stroke="#888" stroke-width="1"/>
+  <ellipse cx="25" cy="61" rx="4" ry="11" fill="#999"/>
+  <!-- Sound wave arcs soft glow -->
+  <g filter="url(#nhn-softglow)">
+    <path d="M85,40 Q100,61 85,82" fill="none" stroke="#fff300" stroke-width="4" stroke-linecap="round"/>
+    <path d="M95,32 Q115,61 95,90" fill="none" stroke="#fff300" stroke-width="4" stroke-linecap="round"/>
+    <path d="M105,25 Q130,61 105,97" fill="none" stroke="#fff300" stroke-width="4" stroke-linecap="round"/>
+  </g>
+  <!-- Sound wave arcs crisp -->
+  <g filter="url(#nhn-neon)">
+    <path d="M85,40 Q100,61 85,82" fill="none" stroke="#fff300" stroke-width="2" stroke-linecap="round"/>
+    <path d="M95,32 Q115,61 95,90" fill="none" stroke="#fff300" stroke-width="2" stroke-linecap="round"/>
+    <path d="M105,25 Q130,61 105,97" fill="none" stroke="#fff300" stroke-width="2" stroke-linecap="round"/>
+  </g>
+  <rect x="0" y="134" width="144" height="10" fill="url(#nhn-botbar)"/>
+  <text x="72" y="128" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="bold" fill="white" text-anchor="middle" letter-spacing="1.5">HORN</text>
+</svg>

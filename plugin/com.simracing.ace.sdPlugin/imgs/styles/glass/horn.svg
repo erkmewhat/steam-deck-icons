@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144 144">
+  <defs>
+    <linearGradient id="ghn-bg1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2a1215"/>
+      <stop offset="50%" stop-color="#180a0c"/>
+      <stop offset="100%" stop-color="#0a0406"/>
+    </linearGradient>
+    <linearGradient id="ghn-border" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#e20613"/>
+      <stop offset="50%" stop-color="#ff3333" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#e20613"/>
+    </linearGradient>
+    <linearGradient id="ghn-shine" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.12"/>
+      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.02"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.06"/>
+    </linearGradient>
+    <linearGradient id="ghn-mega" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#cccccc"/>
+      <stop offset="40%" stop-color="#aaaaaa"/>
+      <stop offset="100%" stop-color="#777777"/>
+    </linearGradient>
+    <linearGradient id="ghn-wave" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#fff300"/>
+      <stop offset="50%" stop-color="#ffaa00"/>
+      <stop offset="100%" stop-color="#ff6600" stop-opacity="0.3"/>
+    </linearGradient>
+    <linearGradient id="ghn-accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#e20613"/>
+      <stop offset="100%" stop-color="#fff300"/>
+    </linearGradient>
+  </defs>
+  <rect x="1" y="1" width="142" height="142" rx="14" fill="url(#ghn-bg1)" stroke="url(#ghn-border)" stroke-width="1.5"/>
+  <rect x="3" y="3" width="138" height="68" rx="12" fill="url(#ghn-shine)"/>
+  <!-- Megaphone body -->
+  <path d="M30,58 L30,78 L48,78 L80,96 L80,40 L48,58 Z" fill="url(#ghn-mega)" stroke="#999999" stroke-width="0.8"/>
+  <!-- Megaphone bell -->
+  <path d="M80,40 Q86,38 88,42 L88,94 Q86,98 80,96" fill="#999999" stroke="#888888" stroke-width="0.5"/>
+  <!-- Handle -->
+  <rect x="24" y="60" width="8" height="16" rx="2" fill="#888888"/>
+  <!-- Glossy highlight -->
+  <ellipse cx="55" cy="56" rx="14" ry="4" fill="#ffffff" opacity="0.2"/>
+  <!-- Sound waves -->
+  <path d="M94,54 Q104,68 94,82" fill="none" stroke="url(#ghn-wave)" stroke-width="2.5" stroke-linecap="round" opacity="0.9"/>
+  <path d="M102,46 Q116,68 102,90" fill="none" stroke="url(#ghn-wave)" stroke-width="2" stroke-linecap="round" opacity="0.7"/>
+  <path d="M110,40 Q128,68 110,96" fill="none" stroke="url(#ghn-wave)" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/>
+  <!-- Accent bar -->
+  <rect x="14" y="114" width="116" height="3" rx="1.5" fill="url(#ghn-accent)"/>
+  <text x="72" y="127" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="bold" fill="#ffffff" letter-spacing="1.5">HORN</text>
+</svg>

@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144 144">
+  <defs>
+    <radialGradient id="ckr-bg"><stop offset="0%" stop-color="#252525"/><stop offset="100%" stop-color="#0c0c0c"/></radialGradient>
+    <pattern id="ckr-cf" width="8" height="8" patternUnits="userSpaceOnUse"><rect width="4" height="4" fill="#1a1a1a"/><rect x="4" width="4" height="4" fill="#1f1f1f"/><rect y="4" width="4" height="4" fill="#1f1f1f"/><rect x="4" y="4" width="4" height="4" fill="#1a1a1a"/></pattern>
+    <linearGradient id="ckr-stripe" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#e20613" stop-opacity="0"/><stop offset="20%" stop-color="#e20613"/><stop offset="80%" stop-color="#e20613"/><stop offset="100%" stop-color="#e20613" stop-opacity="0"/></linearGradient>
+    <linearGradient id="ckr-chrome" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#e0e0e0"/><stop offset="30%" stop-color="#ffffff"/><stop offset="50%" stop-color="#a0a0a0"/><stop offset="75%" stop-color="#d0d0d0"/><stop offset="100%" stop-color="#707070"/></linearGradient>
+    <linearGradient id="ckr-label" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#ffffff"/><stop offset="100%" stop-color="#cccccc"/></linearGradient>
+    <linearGradient id="ckr-bolt" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#ffffff"/><stop offset="40%" stop-color="#fff300"/><stop offset="100%" stop-color="#fff300"/></linearGradient>
+    <filter id="ckr-shadow"><feDropShadow dx="0" dy="1" stdDeviation="1.5" flood-color="#000000" flood-opacity="0.6"/></filter>
+    <filter id="ckr-glow"><feGaussianBlur stdDeviation="3.5" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="144" height="144" fill="url(#ckr-bg)"/>
+  <rect width="144" height="144" fill="url(#ckr-cf)" opacity="0.3"/>
+  <rect x="0" y="0" width="144" height="3" fill="url(#ckr-stripe)"/>
+  <rect x="0" y="141" width="144" height="3" fill="url(#ckr-stripe)"/>
+  <!-- Chrome circular arrow -->
+  <g filter="url(#ckr-shadow)">
+    <path d="M72 22 A38 38 0 1 1 38 45" fill="none" stroke="url(#ckr-chrome)" stroke-width="5" stroke-linecap="round"/>
+    <!-- Arrow head -->
+    <polygon points="38,32 28,48 48,48" fill="url(#ckr-chrome)"/>
+  </g>
+  <!-- Yellow lightning bolt with glow -->
+  <g filter="url(#ckr-glow)">
+    <polygon points="78,30 62,58 74,58 64,90 88,52 76,52 86,30" fill="url(#ckr-bolt)"/>
+  </g>
+  <text x="72" y="120" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" font-weight="bold" letter-spacing="2" fill="url(#ckr-label)">KERS</text>
+</svg>

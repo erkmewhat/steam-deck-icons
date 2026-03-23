@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144 144" width="144" height="144">
+  <rect x="4" y="4" width="136" height="136" rx="12" fill="#212529" stroke="#e20613" stroke-width="2"/>
+  <rect x="8" y="8" width="128" height="128" rx="10" fill="none" stroke="#2d3238" stroke-width="1"/>
+  <!-- Headlight housing shadow -->
+  <path d="M40 62 C40 48 52 37 66 37 L66 87 C52 87 40 76 40 62Z" fill="#999"/>
+  <!-- Headlight housing body -->
+  <path d="M38 60 C38 46 50 35 64 35 L64 85 C50 85 38 74 38 60Z" fill="#ddd"/>
+  <!-- Lens detail -->
+  <ellipse cx="64" cy="60" rx="4" ry="25" fill="#bbb"/>
+  <!-- Glow beams (thicker, semi-transparent behind) -->
+  <line x1="72" y1="46" x2="116" y2="38" stroke="#fff300" stroke-width="8" stroke-linecap="round" opacity="0.15"/>
+  <line x1="72" y1="60" x2="118" y2="60" stroke="#fff300" stroke-width="8" stroke-linecap="round" opacity="0.15"/>
+  <line x1="72" y1="74" x2="116" y2="82" stroke="#fff300" stroke-width="8" stroke-linecap="round" opacity="0.15"/>
+  <!-- Sharp beam lines -->
+  <line x1="72" y1="46" x2="116" y2="38" stroke="#fff300" stroke-width="3" stroke-linecap="round"/>
+  <line x1="72" y1="60" x2="118" y2="60" stroke="#fff300" stroke-width="3" stroke-linecap="round"/>
+  <line x1="72" y1="74" x2="116" y2="82" stroke="#fff300" stroke-width="3" stroke-linecap="round"/>
+  <!-- Fourth beam -->
+  <line x1="72" y1="53" x2="114" y2="49" stroke="#fff300" stroke-width="6" stroke-linecap="round" opacity="0.12"/>
+  <line x1="72" y1="53" x2="114" y2="49" stroke="#fff300" stroke-width="2" stroke-linecap="round" opacity="0.7"/>
+  <!-- Housing highlight -->
+  <path d="M42 48 C44 42 52 38 60 38" fill="none" stroke="white" stroke-width="1.5" opacity="0.4"/>
+
+  <text x="72" y="126" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="bold" fill="white">HEADLIGHTS</text>
+</svg>

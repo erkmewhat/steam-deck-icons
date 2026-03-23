@@ -28,8 +28,10 @@
             "UUID": "com.simracing.lmu.pit-limiter",
             "Name": "Pit Limiter",
             "Icon": "imgs/actions/pit-limiter",
-            "Tooltip": "Toggle pit lane speed limiter (Default: L)",
-            "Controllers": ["Keypad"],
+            "Tooltip": "Toggle pit lane speed limiter (Key: L)",
+            "Controllers": [
+                "Keypad"
+            ],
             "States": [
                 {
                     "Image": "imgs/actions/pit-limiter",
@@ -38,14 +40,17 @@
                     "TitleAlignment": "bottom",
                     "TitleColor": "#FFFFFF"
                 }
-            ]
+            ],
+            "PropertyInspectorPath": "ui/pi.html"
         },
         {
             "UUID": "com.simracing.lmu.headlights",
             "Name": "Headlights",
             "Icon": "imgs/actions/headlights",
-            "Tooltip": "Toggle headlights (Default: H)",
-            "Controllers": ["Keypad"],
+            "Tooltip": "Toggle headlights (Key: H)",
+            "Controllers": [
+                "Keypad"
+            ],
             "States": [
                 {
                     "Image": "imgs/actions/headlights",
@@ -54,14 +59,17 @@
                     "TitleAlignment": "bottom",
                     "TitleColor": "#FFFFFF"
                 }
-            ]
+            ],
+            "PropertyInspectorPath": "ui/pi.html"
         },
         {
             "UUID": "com.simracing.lmu.headlight-flash",
             "Name": "Headlight Flash",
             "Icon": "imgs/actions/headlight-flash",
-            "Tooltip": "Flash headlights",
-            "Controllers": ["Keypad"],
+            "Tooltip": "Flash headlights (Key: G)",
+            "Controllers": [
+                "Keypad"
+            ],
             "States": [
                 {
                     "Image": "imgs/actions/headlight-flash",
@@ -70,14 +78,17 @@
                     "TitleAlignment": "bottom",
                     "TitleColor": "#FFFFFF"
                 }
-            ]
+            ],
+            "PropertyInspectorPath": "ui/pi.html"
         },
         {
             "UUID": "com.simracing.lmu.wipers",
             "Name": "Wipers",
             "Icon": "imgs/actions/wipers",
-            "Tooltip": "Toggle windshield wipers (Default: ')",
-            "Controllers": ["Keypad"],
+            "Tooltip": "Toggle windshield wipers (Key: P)",
+            "Controllers": [
+                "Keypad"
+            ],
             "States": [
                 {
                     "Image": "imgs/actions/wipers",
@@ -86,14 +97,17 @@
                     "TitleAlignment": "bottom",
                     "TitleColor": "#FFFFFF"
                 }
-            ]
+            ],
+            "PropertyInspectorPath": "ui/pi.html"
         },
         {
             "UUID": "com.simracing.lmu.ignition",
             "Name": "Ignition",
             "Icon": "imgs/actions/ignition",
-            "Tooltip": "Toggle ignition (Default: ;)",
-            "Controllers": ["Keypad"],
+            "Tooltip": "Toggle ignition (Key: N)",
+            "Controllers": [
+                "Keypad"
+            ],
             "States": [
                 {
                     "Image": "imgs/actions/ignition",
@@ -102,14 +116,17 @@
                     "TitleAlignment": "bottom",
                     "TitleColor": "#FFFFFF"
                 }
-            ]
+            ],
+            "PropertyInspectorPath": "ui/pi.html"
         },
         {
             "UUID": "com.simracing.lmu.starter",
             "Name": "Starter",
             "Icon": "imgs/actions/starter",
-            "Tooltip": "Engage starter motor",
-            "Controllers": ["Keypad"],
+            "Tooltip": "Engage starter motor (Key: M)",
+            "Controllers": [
+                "Keypad"
+            ],
             "States": [
                 {
                     "Image": "imgs/actions/starter",
@@ -118,14 +135,17 @@
                     "TitleAlignment": "bottom",
                     "TitleColor": "#FFFFFF"
                 }
-            ]
+            ],
+            "PropertyInspectorPath": "ui/pi.html"
         },
         {
             "UUID": "com.simracing.lmu.request-pitstop",
             "Name": "Request Pit Stop",
             "Icon": "imgs/actions/request-pitstop",
-            "Tooltip": "Request a pit stop (Default: E)",
-            "Controllers": ["Keypad"],
+            "Tooltip": "Request a pit stop (Key: E)",
+            "Controllers": [
+                "Keypad"
+            ],
             "States": [
                 {
                     "Image": "imgs/actions/request-pitstop",
@@ -134,14 +154,17 @@
                     "TitleAlignment": "bottom",
                     "TitleColor": "#FFFFFF"
                 }
-            ]
+            ],
+            "PropertyInspectorPath": "ui/pi.html"
         },
         {
             "UUID": "com.simracing.lmu.ai-takeover",
             "Name": "AI Takeover",
             "Icon": "imgs/actions/ai-takeover",
-            "Tooltip": "Toggle AI driver takeover (Default: I)",
-            "Controllers": ["Keypad"],
+            "Tooltip": "Toggle AI driver takeover (Key: I)",
+            "Controllers": [
+                "Keypad"
+            ],
             "States": [
                 {
                     "Image": "imgs/actions/ai-takeover",
@@ -150,14 +173,17 @@
                     "TitleAlignment": "bottom",
                     "TitleColor": "#FFFFFF"
                 }
-            ]
+            ],
+            "PropertyInspectorPath": "ui/pi.html"
         },
         {
             "UUID": "com.simracing.lmu.mfd-next",
             "Name": "MFD Next Page",
             "Icon": "imgs/actions/mfd-next",
-            "Tooltip": "Next MFD page (Default: Enter)",
-            "Controllers": ["Keypad"],
+            "Tooltip": "Next MFD page (Key: Right Shift)",
+            "Controllers": [
+                "Keypad"
+            ],
             "States": [
                 {
                     "Image": "imgs/actions/mfd-next",
@@ -166,14 +192,17 @@
                     "TitleAlignment": "bottom",
                     "TitleColor": "#FFFFFF"
                 }
-            ]
+            ],
+            "PropertyInspectorPath": "ui/pi.html"
         },
         {
             "UUID": "com.simracing.lmu.mfd-up",
             "Name": "MFD Up",
             "Icon": "imgs/actions/mfd-up",
-            "Tooltip": "MFD navigate up (Default: Up Arrow)",
-            "Controllers": ["Keypad"],
+            "Tooltip": "MFD navigate up (Key: Up Arrow)",
+            "Controllers": [
+                "Keypad"
+            ],
             "States": [
                 {
                     "Image": "imgs/actions/mfd-up",
@@ -182,14 +211,17 @@
                     "TitleAlignment": "bottom",
                     "TitleColor": "#FFFFFF"
                 }
-            ]
+            ],
+            "PropertyInspectorPath": "ui/pi.html"
         },
         {
             "UUID": "com.simracing.lmu.mfd-down",
             "Name": "MFD Down",
             "Icon": "imgs/actions/mfd-down",
-            "Tooltip": "MFD navigate down (Default: Down Arrow)",
-            "Controllers": ["Keypad"],
+            "Tooltip": "MFD navigate down (Key: Down Arrow)",
+            "Controllers": [
+                "Keypad"
+            ],
             "States": [
                 {
                     "Image": "imgs/actions/mfd-down",
@@ -198,14 +230,17 @@
                     "TitleAlignment": "bottom",
                     "TitleColor": "#FFFFFF"
                 }
-            ]
+            ],
+            "PropertyInspectorPath": "ui/pi.html"
         },
         {
             "UUID": "com.simracing.lmu.mfd-increase",
             "Name": "MFD Increase",
             "Icon": "imgs/actions/mfd-increase",
-            "Tooltip": "MFD increase setting (Default: Right Arrow)",
-            "Controllers": ["Keypad"],
+            "Tooltip": "MFD increase setting (Key: Right Arrow)",
+            "Controllers": [
+                "Keypad"
+            ],
             "States": [
                 {
                     "Image": "imgs/actions/mfd-increase",
@@ -214,14 +249,17 @@
                     "TitleAlignment": "bottom",
                     "TitleColor": "#FFFFFF"
                 }
-            ]
+            ],
+            "PropertyInspectorPath": "ui/pi.html"
         },
         {
             "UUID": "com.simracing.lmu.mfd-decrease",
             "Name": "MFD Decrease",
             "Icon": "imgs/actions/mfd-decrease",
-            "Tooltip": "MFD decrease setting (Default: Left Arrow)",
-            "Controllers": ["Keypad"],
+            "Tooltip": "MFD decrease setting (Key: Left Arrow)",
+            "Controllers": [
+                "Keypad"
+            ],
             "States": [
                 {
                     "Image": "imgs/actions/mfd-decrease",
@@ -230,14 +268,17 @@
                     "TitleAlignment": "bottom",
                     "TitleColor": "#FFFFFF"
                 }
-            ]
+            ],
+            "PropertyInspectorPath": "ui/pi.html"
         },
         {
             "UUID": "com.simracing.lmu.brake-bias-forward",
             "Name": "Brake Bias Forward",
             "Icon": "imgs/actions/brake-bias-fwd",
-            "Tooltip": "Shift brake bias forward",
-            "Controllers": ["Keypad"],
+            "Tooltip": "Shift brake bias forward (Key: X)",
+            "Controllers": [
+                "Keypad"
+            ],
             "States": [
                 {
                     "Image": "imgs/actions/brake-bias-fwd",
@@ -246,14 +287,17 @@
                     "TitleAlignment": "bottom",
                     "TitleColor": "#FFFFFF"
                 }
-            ]
+            ],
+            "PropertyInspectorPath": "ui/pi.html"
         },
         {
             "UUID": "com.simracing.lmu.brake-bias-backward",
             "Name": "Brake Bias Backward",
             "Icon": "imgs/actions/brake-bias-bwd",
-            "Tooltip": "Shift brake bias backward",
-            "Controllers": ["Keypad"],
+            "Tooltip": "Shift brake bias backward (Key: V)",
+            "Controllers": [
+                "Keypad"
+            ],
             "States": [
                 {
                     "Image": "imgs/actions/brake-bias-bwd",
@@ -262,14 +306,17 @@
                     "TitleAlignment": "bottom",
                     "TitleColor": "#FFFFFF"
                 }
-            ]
+            ],
+            "PropertyInspectorPath": "ui/pi.html"
         },
         {
             "UUID": "com.simracing.lmu.tc-increase",
             "Name": "TC Increase",
             "Icon": "imgs/actions/tc-increase",
-            "Tooltip": "Increase traction control",
-            "Controllers": ["Keypad"],
+            "Tooltip": "Increase traction control (Key: T)",
+            "Controllers": [
+                "Keypad"
+            ],
             "States": [
                 {
                     "Image": "imgs/actions/tc-increase",
@@ -278,14 +325,17 @@
                     "TitleAlignment": "bottom",
                     "TitleColor": "#FFFFFF"
                 }
-            ]
+            ],
+            "PropertyInspectorPath": "ui/pi.html"
         },
         {
             "UUID": "com.simracing.lmu.tc-decrease",
             "Name": "TC Decrease",
             "Icon": "imgs/actions/tc-decrease",
-            "Tooltip": "Decrease traction control",
-            "Controllers": ["Keypad"],
+            "Tooltip": "Decrease traction control (Key: B)",
+            "Controllers": [
+                "Keypad"
+            ],
             "States": [
                 {
                     "Image": "imgs/actions/tc-decrease",
@@ -294,14 +344,17 @@
                     "TitleAlignment": "bottom",
                     "TitleColor": "#FFFFFF"
                 }
-            ]
+            ],
+            "PropertyInspectorPath": "ui/pi.html"
         },
         {
             "UUID": "com.simracing.lmu.abs-increase",
             "Name": "ABS Increase",
             "Icon": "imgs/actions/abs-increase",
-            "Tooltip": "Increase ABS level",
-            "Controllers": ["Keypad"],
+            "Tooltip": "Increase ABS level (Key: O)",
+            "Controllers": [
+                "Keypad"
+            ],
             "States": [
                 {
                     "Image": "imgs/actions/abs-increase",
@@ -310,14 +363,17 @@
                     "TitleAlignment": "bottom",
                     "TitleColor": "#FFFFFF"
                 }
-            ]
+            ],
+            "PropertyInspectorPath": "ui/pi.html"
         },
         {
             "UUID": "com.simracing.lmu.abs-decrease",
             "Name": "ABS Decrease",
             "Icon": "imgs/actions/abs-decrease",
-            "Tooltip": "Decrease ABS level",
-            "Controllers": ["Keypad"],
+            "Tooltip": "Decrease ABS level (Key: K)",
+            "Controllers": [
+                "Keypad"
+            ],
             "States": [
                 {
                     "Image": "imgs/actions/abs-decrease",
@@ -326,14 +382,17 @@
                     "TitleAlignment": "bottom",
                     "TitleColor": "#FFFFFF"
                 }
-            ]
+            ],
+            "PropertyInspectorPath": "ui/pi.html"
         },
         {
             "UUID": "com.simracing.lmu.motor-map-up",
             "Name": "Motor Map Up",
             "Icon": "imgs/actions/motor-map-up",
-            "Tooltip": "Increase hybrid motor map (Hypercar)",
-            "Controllers": ["Keypad"],
+            "Tooltip": "Increase hybrid motor map (Key: U)",
+            "Controllers": [
+                "Keypad"
+            ],
             "States": [
                 {
                     "Image": "imgs/actions/motor-map-up",
@@ -342,14 +401,17 @@
                     "TitleAlignment": "bottom",
                     "TitleColor": "#FFFFFF"
                 }
-            ]
+            ],
+            "PropertyInspectorPath": "ui/pi.html"
         },
         {
             "UUID": "com.simracing.lmu.motor-map-down",
             "Name": "Motor Map Down",
             "Icon": "imgs/actions/motor-map-down",
-            "Tooltip": "Decrease hybrid motor map (Hypercar)",
-            "Controllers": ["Keypad"],
+            "Tooltip": "Decrease hybrid motor map (Key: J)",
+            "Controllers": [
+                "Keypad"
+            ],
             "States": [
                 {
                     "Image": "imgs/actions/motor-map-down",
@@ -358,14 +420,17 @@
                     "TitleAlignment": "bottom",
                     "TitleColor": "#FFFFFF"
                 }
-            ]
+            ],
+            "PropertyInspectorPath": "ui/pi.html"
         },
         {
             "UUID": "com.simracing.lmu.look-left",
             "Name": "Look Left",
             "Icon": "imgs/actions/look-left",
-            "Tooltip": "Look left (Default: S)",
-            "Controllers": ["Keypad"],
+            "Tooltip": "Look left (Key: D)",
+            "Controllers": [
+                "Keypad"
+            ],
             "States": [
                 {
                     "Image": "imgs/actions/look-left",
@@ -374,14 +439,17 @@
                     "TitleAlignment": "bottom",
                     "TitleColor": "#FFFFFF"
                 }
-            ]
+            ],
+            "PropertyInspectorPath": "ui/pi.html"
         },
         {
             "UUID": "com.simracing.lmu.look-right",
             "Name": "Look Right",
             "Icon": "imgs/actions/look-right",
-            "Tooltip": "Look right (Default: D)",
-            "Controllers": ["Keypad"],
+            "Tooltip": "Look right (Key: Q)",
+            "Controllers": [
+                "Keypad"
+            ],
             "States": [
                 {
                     "Image": "imgs/actions/look-right",
@@ -390,14 +458,17 @@
                     "TitleAlignment": "bottom",
                     "TitleColor": "#FFFFFF"
                 }
-            ]
+            ],
+            "PropertyInspectorPath": "ui/pi.html"
         },
         {
             "UUID": "com.simracing.lmu.look-behind",
             "Name": "Look Behind",
             "Icon": "imgs/actions/look-behind",
-            "Tooltip": "Look behind (Default: B)",
-            "Controllers": ["Keypad"],
+            "Tooltip": "Look behind (Key: W)",
+            "Controllers": [
+                "Keypad"
+            ],
             "States": [
                 {
                     "Image": "imgs/actions/look-behind",
@@ -406,7 +477,324 @@
                     "TitleAlignment": "bottom",
                     "TitleColor": "#FFFFFF"
                 }
-            ]
+            ],
+            "PropertyInspectorPath": "ui/pi.html"
+        },
+        {
+            "UUID": "com.simracing.lmu.driving-cameras",
+            "Name": "Driving Cameras",
+            "Icon": "imgs/actions/driving-cameras",
+            "Tooltip": "Cycle driving cameras (Key: Insert)",
+            "Controllers": ["Keypad"],
+            "States": [{
+                "Image": "imgs/actions/driving-cameras",
+                "Name": "Driving Cameras",
+                "ShowTitle": true,
+                "TitleAlignment": "bottom",
+                "TitleColor": "#FFFFFF"
+            }],
+            "PropertyInspectorPath": "ui/pi.html"
+        },
+        {
+            "UUID": "com.simracing.lmu.onboard-cameras",
+            "Name": "Onboard Cameras",
+            "Icon": "imgs/actions/onboard-cameras",
+            "Tooltip": "Cycle onboard cameras (Key: Home)",
+            "Controllers": ["Keypad"],
+            "States": [{
+                "Image": "imgs/actions/onboard-cameras",
+                "Name": "Onboard Cameras",
+                "ShowTitle": true,
+                "TitleAlignment": "bottom",
+                "TitleColor": "#FFFFFF"
+            }],
+            "PropertyInspectorPath": "ui/pi.html"
+        },
+        {
+            "UUID": "com.simracing.lmu.swingman-camera",
+            "Name": "Swingman Camera",
+            "Icon": "imgs/actions/swingman-camera",
+            "Tooltip": "Swingman/TV camera (Key: Page Up)",
+            "Controllers": ["Keypad"],
+            "States": [{
+                "Image": "imgs/actions/swingman-camera",
+                "Name": "Swingman Camera",
+                "ShowTitle": true,
+                "TitleAlignment": "bottom",
+                "TitleColor": "#FFFFFF"
+            }],
+            "PropertyInspectorPath": "ui/pi.html"
+        },
+        {
+            "UUID": "com.simracing.lmu.spectator-camera",
+            "Name": "Spectator Camera",
+            "Icon": "imgs/actions/spectator-camera",
+            "Tooltip": "Spectator camera (Key: Page Down)",
+            "Controllers": ["Keypad"],
+            "States": [{
+                "Image": "imgs/actions/spectator-camera",
+                "Name": "Spectator Camera",
+                "ShowTitle": true,
+                "TitleAlignment": "bottom",
+                "TitleColor": "#FFFFFF"
+            }],
+            "PropertyInspectorPath": "ui/pi.html"
+        },
+        {
+            "UUID": "com.simracing.lmu.tracking-camera",
+            "Name": "Tracking Camera",
+            "Icon": "imgs/actions/tracking-camera",
+            "Tooltip": "Tracking camera (Key: Delete)",
+            "Controllers": ["Keypad"],
+            "States": [{
+                "Image": "imgs/actions/tracking-camera",
+                "Name": "Tracking Camera",
+                "ShowTitle": true,
+                "TitleAlignment": "bottom",
+                "TitleColor": "#FFFFFF"
+            }],
+            "PropertyInspectorPath": "ui/pi.html"
+        },
+        {
+            "UUID": "com.simracing.lmu.seat-forward",
+            "Name": "Seat Forward",
+            "Icon": "imgs/actions/seat-forward",
+            "Tooltip": "Adjust seat forward (Key: Numpad 8)",
+            "Controllers": ["Keypad"],
+            "States": [{
+                "Image": "imgs/actions/seat-forward",
+                "Name": "Seat Forward",
+                "ShowTitle": true,
+                "TitleAlignment": "bottom",
+                "TitleColor": "#FFFFFF"
+            }],
+            "PropertyInspectorPath": "ui/pi.html"
+        },
+        {
+            "UUID": "com.simracing.lmu.seat-back",
+            "Name": "Seat Back",
+            "Icon": "imgs/actions/seat-back",
+            "Tooltip": "Adjust seat backward (Key: Numpad 2)",
+            "Controllers": ["Keypad"],
+            "States": [{
+                "Image": "imgs/actions/seat-back",
+                "Name": "Seat Back",
+                "ShowTitle": true,
+                "TitleAlignment": "bottom",
+                "TitleColor": "#FFFFFF"
+            }],
+            "PropertyInspectorPath": "ui/pi.html"
+        },
+        {
+            "UUID": "com.simracing.lmu.seat-up",
+            "Name": "Seat Up",
+            "Icon": "imgs/actions/seat-up",
+            "Tooltip": "Adjust seat up (Key: Numpad 4)",
+            "Controllers": ["Keypad"],
+            "States": [{
+                "Image": "imgs/actions/seat-up",
+                "Name": "Seat Up",
+                "ShowTitle": true,
+                "TitleAlignment": "bottom",
+                "TitleColor": "#FFFFFF"
+            }],
+            "PropertyInspectorPath": "ui/pi.html"
+        },
+        {
+            "UUID": "com.simracing.lmu.seat-down",
+            "Name": "Seat Down",
+            "Icon": "imgs/actions/seat-down",
+            "Tooltip": "Adjust seat down (Key: Numpad 6)",
+            "Controllers": ["Keypad"],
+            "States": [{
+                "Image": "imgs/actions/seat-down",
+                "Name": "Seat Down",
+                "ShowTitle": true,
+                "TitleAlignment": "bottom",
+                "TitleColor": "#FFFFFF"
+            }],
+            "PropertyInspectorPath": "ui/pi.html"
+        },
+        {
+            "UUID": "com.simracing.lmu.fov-increase",
+            "Name": "FOV Increase",
+            "Icon": "imgs/actions/fov-increase",
+            "Tooltip": "Increase field of view (Key: Numpad 9)",
+            "Controllers": ["Keypad"],
+            "States": [{
+                "Image": "imgs/actions/fov-increase",
+                "Name": "FOV Increase",
+                "ShowTitle": true,
+                "TitleAlignment": "bottom",
+                "TitleColor": "#FFFFFF"
+            }],
+            "PropertyInspectorPath": "ui/pi.html"
+        },
+        {
+            "UUID": "com.simracing.lmu.fov-decrease",
+            "Name": "FOV Decrease",
+            "Icon": "imgs/actions/fov-decrease",
+            "Tooltip": "Decrease field of view (Key: Numpad 7)",
+            "Controllers": ["Keypad"],
+            "States": [{
+                "Image": "imgs/actions/fov-decrease",
+                "Name": "FOV Decrease",
+                "ShowTitle": true,
+                "TitleAlignment": "bottom",
+                "TitleColor": "#FFFFFF"
+            }],
+            "PropertyInspectorPath": "ui/pi.html"
+        },
+        {
+            "UUID": "com.simracing.lmu.zoom-in",
+            "Name": "Zoom In",
+            "Icon": "imgs/actions/zoom-in",
+            "Tooltip": "Camera zoom in (Key: Numpad 3)",
+            "Controllers": ["Keypad"],
+            "States": [{
+                "Image": "imgs/actions/zoom-in",
+                "Name": "Zoom In",
+                "ShowTitle": true,
+                "TitleAlignment": "bottom",
+                "TitleColor": "#FFFFFF"
+            }],
+            "PropertyInspectorPath": "ui/pi.html"
+        },
+        {
+            "UUID": "com.simracing.lmu.zoom-out",
+            "Name": "Zoom Out",
+            "Icon": "imgs/actions/zoom-out",
+            "Tooltip": "Camera zoom out (Key: Numpad 1)",
+            "Controllers": ["Keypad"],
+            "States": [{
+                "Image": "imgs/actions/zoom-out",
+                "Name": "Zoom Out",
+                "ShowTitle": true,
+                "TitleAlignment": "bottom",
+                "TitleColor": "#FFFFFF"
+            }],
+            "PropertyInspectorPath": "ui/pi.html"
+        },
+        {
+            "UUID": "com.simracing.lmu.toggle-hud",
+            "Name": "Toggle HUD",
+            "Icon": "imgs/actions/toggle-hud",
+            "Tooltip": "Toggle HUD display (Key: 6)",
+            "Controllers": ["Keypad"],
+            "States": [{
+                "Image": "imgs/actions/toggle-hud",
+                "Name": "Toggle HUD",
+                "ShowTitle": true,
+                "TitleAlignment": "bottom",
+                "TitleColor": "#FFFFFF"
+            }],
+            "PropertyInspectorPath": "ui/pi.html"
+        },
+        {
+            "UUID": "com.simracing.lmu.prev-mfd",
+            "Name": "Previous MFD",
+            "Icon": "imgs/actions/prev-mfd",
+            "Tooltip": "Previous MFD page (Key: Right Ctrl)",
+            "Controllers": ["Keypad"],
+            "States": [{
+                "Image": "imgs/actions/prev-mfd",
+                "Name": "Previous MFD",
+                "ShowTitle": true,
+                "TitleAlignment": "bottom",
+                "TitleColor": "#FFFFFF"
+            }],
+            "PropertyInspectorPath": "ui/pi.html"
+        },
+        {
+            "UUID": "com.simracing.lmu.toggle-mirror",
+            "Name": "Toggle Mirror",
+            "Icon": "imgs/actions/toggle-mirror",
+            "Tooltip": "Toggle virtual mirror (Key: 3)",
+            "Controllers": ["Keypad"],
+            "States": [{
+                "Image": "imgs/actions/toggle-mirror",
+                "Name": "Toggle Mirror",
+                "ShowTitle": true,
+                "TitleAlignment": "bottom",
+                "TitleColor": "#FFFFFF"
+            }],
+            "PropertyInspectorPath": "ui/pi.html"
+        },
+        {
+            "UUID": "com.simracing.lmu.track-map",
+            "Name": "Track Map",
+            "Icon": "imgs/actions/track-map",
+            "Tooltip": "Cycle track map display (Key: 5)",
+            "Controllers": ["Keypad"],
+            "States": [{
+                "Image": "imgs/actions/track-map",
+                "Name": "Track Map",
+                "ShowTitle": true,
+                "TitleAlignment": "bottom",
+                "TitleColor": "#FFFFFF"
+            }],
+            "PropertyInspectorPath": "ui/pi.html"
+        },
+        {
+            "UUID": "com.simracing.lmu.instant-replay",
+            "Name": "Instant Replay",
+            "Icon": "imgs/actions/instant-replay",
+            "Tooltip": "Enter instant replay (Key: R)",
+            "Controllers": ["Keypad"],
+            "States": [{
+                "Image": "imgs/actions/instant-replay",
+                "Name": "Instant Replay",
+                "ShowTitle": true,
+                "TitleAlignment": "bottom",
+                "TitleColor": "#FFFFFF"
+            }],
+            "PropertyInspectorPath": "ui/pi.html"
+        },
+        {
+            "UUID": "com.simracing.lmu.screenshot",
+            "Name": "Screenshot",
+            "Icon": "imgs/actions/screenshot",
+            "Tooltip": "Take screenshot (Key: F12)",
+            "Controllers": ["Keypad"],
+            "States": [{
+                "Image": "imgs/actions/screenshot",
+                "Name": "Screenshot",
+                "ShowTitle": true,
+                "TitleAlignment": "bottom",
+                "TitleColor": "#FFFFFF"
+            }],
+            "PropertyInspectorPath": "ui/pi.html"
+        },
+        {
+            "UUID": "com.simracing.lmu.restart-race",
+            "Name": "Restart Race",
+            "Icon": "imgs/actions/restart-race",
+            "Tooltip": "Restart race session (Key: Y)",
+            "Controllers": ["Keypad"],
+            "States": [{
+                "Image": "imgs/actions/restart-race",
+                "Name": "Restart Race",
+                "ShowTitle": true,
+                "TitleAlignment": "bottom",
+                "TitleColor": "#FFFFFF"
+            }],
+            "PropertyInspectorPath": "ui/pi.html"
+        },
+        {
+            "UUID": "com.simracing.lmu.launch-control",
+            "Name": "Launch Control",
+            "Icon": "imgs/actions/launch-control",
+            "Tooltip": "Engage launch control (Key: \\)",
+            "Controllers": ["Keypad"],
+            "States": [{
+                "Image": "imgs/actions/launch-control",
+                "Name": "Launch Control",
+                "ShowTitle": true,
+                "TitleAlignment": "bottom",
+                "TitleColor": "#FFFFFF"
+            }],
+            "PropertyInspectorPath": "ui/pi.html"
         }
-    ]
+    ],
+    "PropertyInspectorPath": "ui/pi.html"
 }

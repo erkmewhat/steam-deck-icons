@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>LMU Icon Pack Preview</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: #121212;
+    color: #fff;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    padding: 40px;
+  }
+  h1 {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 300;
+    letter-spacing: 3px;
+    margin-bottom: 8px;
+    color: #FF1D43;
+  }
+  h2 {
+    text-align: center;
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    color: #888;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+  }
+  .section-title {
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #666;
+    margin: 30px 0 16px 0;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #222;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 100px);
+    gap: 16px;
+    justify-content: center;
+  }
+  .icon-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+  }
+  .icon-card img {
+    width: 88px;
+    height: 88px;
+    border-radius: 8px;
+    border: 1px solid #2a2a2a;
+    transition: transform 0.15s, border-color 0.15s;
+  }
+  .icon-card img:hover {
+    transform: scale(1.15);
+    border-color: #FF1D43;
+  }
+  .icon-card .label {
+    font-size: 9px;
+    color: #666;
+    text-align: center;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+  }
+  .icon-card.redesigned img {
+    border-color: #FF1D43;
+    box-shadow: 0 0 12px rgba(255, 29, 67, 0.25);
+  }
+  .icon-card.redesigned .label {
+    color: #FF1D43;
+  }
+  .legend {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 11px;
+    color: #666;
+  }
+  .legend span {
+    display: inline-block;
+    margin: 0 16px;
+  }
+  .legend .dot {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    margin-right: 6px;
+    vertical-align: middle;
+  }
+  .dot-new { background: #FF1D43; }
+  .dot-old { background: #444; }
+</style>
+</head>
+<body>
+
+<h1>LE MANS ULTIMATE</h1>
+<h2>Stream Deck Icon Pack</h2>
+
+<div class="section-title">Engine & Power</div>
+<div class="grid">
+  <div class="icon-card">
+    <img src="com.simracing.lmu-icons.sdIconPack/icons/ignition.svg" alt="Ignition">
+    <div class="label">Ignition</div>
+  </div>
+  <div class="icon-card">
+    <img src="com.simracing.lmu-icons.sdIconPack/icons/starter.svg" alt="Starter">
+    <div class="label">Starter</div>
+  </div>
+  <div class="icon-card">
+    <img src="com.simracing.lmu-icons.sdIconPack/icons/motor-map-up.svg" alt="Motor Map Up">
+    <div class="label">Motor Map Up</div>
+  </div>
+  <div class="icon-card">
+    <img src="com.simracing.lmu-icons.sdIconPack/icons/motor-map-down.svg" alt="Motor Map Down">
+    <div class="label">Motor Map Down</div>
+  </div>
+</div>
+
+<div class="section-title">Traction & Handling</div>
+<div class="grid">
+  <div class="icon-card">
+    <img src="com.simracing.lmu-icons.sdIconPack/icons/tc-increase.svg" alt="TC Increase">
+    <div class="label">TC Increase</div>
+  </div>
+  <div class="icon-card">
+    <img src="com.simracing.lmu-icons.sdIconPack/icons/tc-decrease.svg" alt="TC Decrease">
+    <div class="label">TC Decrease</div>
+  </div>
+  <div class="icon-card">
+    <img src="com.simracing.lmu-icons.sdIconPack/icons/abs-increase.svg" alt="ABS Increase">
+    <div class="label">ABS Increase</div>
+  </div>
+  <div class="icon-card">
+    <img src="com.simracing.lmu-icons.sdIconPack/icons/abs-decrease.svg" alt="ABS Decrease">
+    <div class="label">ABS Decrease</div>
+  </div>
+</div>
+
+<div class="section-title">Braking</div>
+<div class="grid">
+  <div class="icon-card">
+    <img src="com.simracing.lmu-icons.sdIconPack/icons/brake-bias-fwd.svg" alt="Brake Bias Fwd">
+    <div class="label">Brake Bias Fwd</div>
+  </div>
+  <div class="icon-card">
+    <img src="com.simracing.lmu-icons.sdIconPack/icons/brake-bias-bwd.svg" alt="Brake Bias Bwd">
+    <div class="label">Brake Bias Bwd</div>
+  </div>
+</div>
+
+<div class="section-title">Pit & Strategy</div>
+<div class="grid">
+  <div class="icon-card">
+    <img src="com.simracing.lmu-icons.sdIconPack/icons/pit-limiter.svg" alt="Pit Limiter">
+    <div class="label">Pit Limiter</div>
+  </div>
+  <div class="icon-card">
+    <img src="com.simracing.lmu-icons.sdIconPack/icons/request-pitstop.svg" alt="Request Pitstop">
+    <div class="label">Request Pitstop</div>
+  </div>
+</div>
+
+<div class="section-title">Visibility</div>
+<div class="grid">
+  <div class="icon-card">
+    <img src="com.simracing.lmu-icons.sdIconPack/icons/headlights.svg" alt="Headlights">
+    <div class="label">Headlights</div>
+  </div>
+  <div class="icon-card">
+    <img src="com.simracing.lmu-icons.sdIconPack/icons/headlight-flash.svg" alt="Headlight Flash">
+    <div class="label">Headlight Flash</div>
+  </div>
+  <div class="icon-card">
+    <img src="com.simracing.lmu-icons.sdIconPack/icons/wipers.svg" alt="Wipers">
+    <div class="label">Wipers</div>
+  </div>
+</div>
+
+<div class="section-title">Camera & View</div>
+<div class="grid">
+  <div class="icon-card">
+    <img src="com.simracing.lmu-icons.sdIconPack/icons/look-left.svg" alt="Look Left">
+    <div class="label">Look Left</div>
+  </div>
+  <div class="icon-card">
+    <img src="com.simracing.lmu-icons.sdIconPack/icons/look-right.svg" alt="Look Right">
+    <div class="label">Look Right</div>
+  </div>
+  <div class="icon-card">
+    <img src="com.simracing.lmu-icons.sdIconPack/icons/look-behind.svg" alt="Look Behind">
+    <div class="label">Look Behind</div>
+  </div>
+  <div class="icon-card">
+    <img src="com.simracing.lmu-icons.sdIconPack/icons/driving-cameras.svg" alt="Driving Cameras">
+    <div class="label">Cockpit</div>
+  </div>
+  <div class="icon-card">
+    <img src="com.simracing.lmu-icons.sdIconPack/icons/onboard-cameras.svg" alt="Onboard Cameras">
+    <div class="label">Onboard</div>
+  </div>
+  <div class="icon-card">
+    <img src="com.simracing.lmu-icons.sdIconPack/icons/swingman-camera.svg" alt="Swingman Camera">
+    <div class="label">TV Cam</div>
+  </div>
+  <div class="icon-card">
+    <img src="com.simracing.lmu-icons.sdIconPack/icons/spectator-camera.svg" alt="Spectator Camera">
+    <div class="label">Spectate</div>
+  </div>
+  <div class="icon-card">
+    <img src="com.simracing.lmu-icons.sdIconPack/icons/tracking-camera.svg" alt="Tracking Camera">
+    <div class="label">Tracking</div>
+  </div>
+</div>
+
+<div class="section-title">Seat & FOV</div>
+<div class="grid">
+  <div class="icon-card">
+    <img src="com.simracing.lmu-icons.sdIconPack/icons/seat-forward.svg" alt="Seat Forward">
+    <div class="label">Seat Fwd</div>
+  </div>
+  <div class="icon-card">
+    <img src="com.simracing.lmu-icons.sdIconPack/icons/seat-back.svg" alt="Seat Back">
+    <div class="label">Seat Back</div>
+  </div>
+  <div class="icon-card">
+    <img src="com.simracing.lmu-icons.sdIconPack/icons/seat-up.svg" alt="Seat Up">
+    <div class="label">Seat Up</div>
+  </div>
+  <div class="icon-card">
+    <img src="com.simracing.lmu-icons.sdIconPack/icons/seat-down.svg" alt="Seat Down">
+    <div class="label">Seat Down</div>
+  </div>
+  <div class="icon-card">
+    <img src="com.simracing.lmu-icons.sdIconPack/icons/fov-increase.svg" alt="FOV Increase">
+    <div class="label">FOV +</div>
+  </div>
+  <div class="icon-card">
+    <img src="com.simracing.lmu-icons.sdIconPack/icons/fov-decrease.svg" alt="FOV Decrease">
+    <div class="label">FOV -</div>
+  </div>
+  <div class="icon-card">
+    <img src="com.simracing.lmu-icons.sdIconPack/icons/zoom-in.svg" alt="Zoom In">
+    <div class="label">Zoom In</div>
+  </div>
+  <div class="icon-card">
+    <img src="com.simracing.lmu-icons.sdIconPack/icons/zoom-out.svg" alt="Zoom Out">
+    <div class="label">Zoom Out</div>
+  </div>
+</div>
+
+<div class="section-title">HUD & Display</div>
+<div class="grid">
+  <div class="icon-card">
+    <img src="com.simracing.lmu-icons.sdIconPack/icons/toggle-hud.svg" alt="Toggle HUD">
+    <div class="label">HUD</div>
+  </div>
+  <div class="icon-card">
+    <img src="com.simracing.lmu-icons.sdIconPack/icons/prev-mfd.svg" alt="Previous MFD">
+    <div class="label">MFD Prev</div>
+  </div>
+  <div class="icon-card">
+    <img src="com.simracing.lmu-icons.sdIconPack/icons/toggle-mirror.svg" alt="Toggle Mirror">
+    <div class="label">Mirror</div>
+  </div>
+  <div class="icon-card">
+    <img src="com.simracing.lmu-icons.sdIconPack/icons/track-map.svg" alt="Track Map">
+    <div class="label">Track Map</div>
+  </div>
+</div>
+
+<div class="section-title">Session & Utility</div>
+<div class="grid">
+  <div class="icon-card">
+    <img src="com.simracing.lmu-icons.sdIconPack/icons/instant-replay.svg" alt="Instant Replay">
+    <div class="label">Replay</div>
+  </div>
+  <div class="icon-card">
+    <img src="com.simracing.lmu-icons.sdIconPack/icons/screenshot.svg" alt="Screenshot">
+    <div class="label">Screenshot</div>
+  </div>
+  <div class="icon-card">
+    <img src="com.simracing.lmu-icons.sdIconPack/icons/restart-race.svg" alt="Restart Race">
+    <div class="label">Restart</div>
+  </div>
+  <div class="icon-card">
+    <img src="com.simracing.lmu-icons.sdIconPack/icons/launch-control.svg" alt="Launch Control">
+    <div class="label">Launch</div>
+  </div>
+</div>
+
+<div class="section-title">MFD Controls</div>
+<div class="grid">
+  <div class="icon-card">
+    <img src="com.simracing.lmu-icons.sdIconPack/icons/mfd-up.svg" alt="MFD Up">
+    <div class="label">MFD Up</div>
+  </div>
+  <div class="icon-card">
+    <img src="com.simracing.lmu-icons.sdIconPack/icons/mfd-down.svg" alt="MFD Down">
+    <div class="label">MFD Down</div>
+  </div>
+  <div class="icon-card">
+    <img src="com.simracing.lmu-icons.sdIconPack/icons/mfd-next.svg" alt="MFD Next">
+    <div class="label">MFD Next</div>
+  </div>
+  <div class="icon-card">
+    <img src="com.simracing.lmu-icons.sdIconPack/icons/mfd-increase.svg" alt="MFD Increase">
+    <div class="label">MFD Increase</div>
+  </div>
+  <div class="icon-card">
+    <img src="com.simracing.lmu-icons.sdIconPack/icons/mfd-decrease.svg" alt="MFD Decrease">
+    <div class="label">MFD Decrease</div>
+  </div>
+</div>
+
+<div class="section-title">Automation</div>
+<div class="grid">
+  <div class="icon-card">
+    <img src="com.simracing.lmu-icons.sdIconPack/icons/ai-takeover.svg" alt="AI Takeover">
+    <div class="label">AI Takeover</div>
+  </div>
+</div>
+
+</body>
+</html>

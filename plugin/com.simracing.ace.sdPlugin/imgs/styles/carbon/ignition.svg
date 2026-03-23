@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144 144">
+  <defs>
+    <radialGradient id="cig-bg"><stop offset="0%" stop-color="#252525"/><stop offset="100%" stop-color="#0c0c0c"/></radialGradient>
+    <pattern id="cig-cf" width="8" height="8" patternUnits="userSpaceOnUse"><rect width="4" height="4" fill="#1a1a1a"/><rect x="4" width="4" height="4" fill="#1f1f1f"/><rect y="4" width="4" height="4" fill="#1f1f1f"/><rect x="4" y="4" width="4" height="4" fill="#1a1a1a"/></pattern>
+    <linearGradient id="cig-stripe" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#e20613" stop-opacity="0"/><stop offset="20%" stop-color="#e20613"/><stop offset="80%" stop-color="#e20613"/><stop offset="100%" stop-color="#e20613" stop-opacity="0"/></linearGradient>
+    <linearGradient id="cig-chrome" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#e0e0e0"/><stop offset="30%" stop-color="#ffffff"/><stop offset="50%" stop-color="#a0a0a0"/><stop offset="75%" stop-color="#d0d0d0"/><stop offset="100%" stop-color="#707070"/></linearGradient>
+    <linearGradient id="cig-label" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#ffffff"/><stop offset="100%" stop-color="#cccccc"/></linearGradient>
+    <radialGradient id="cig-redglow"><stop offset="0%" stop-color="#e20613" stop-opacity="0.7"/><stop offset="100%" stop-color="#e20613" stop-opacity="0"/></radialGradient>
+    <filter id="cig-shadow"><feDropShadow dx="0" dy="1" stdDeviation="1.5" flood-color="#000000" flood-opacity="0.6"/></filter>
+    <filter id="cig-glow"><feGaussianBlur stdDeviation="3.5" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="144" height="144" fill="url(#cig-bg)"/>
+  <rect width="144" height="144" fill="url(#cig-cf)" opacity="0.3"/>
+  <rect x="0" y="0" width="144" height="3" fill="url(#cig-stripe)"/>
+  <rect x="0" y="141" width="144" height="3" fill="url(#cig-stripe)"/>
+  <!-- Red glow behind -->
+  <circle cx="72" cy="58" r="35" fill="url(#cig-redglow)" filter="url(#cig-glow)"/>
+  <!-- Chrome power symbol -->
+  <g filter="url(#cig-shadow)">
+    <path d="M72 28 A32 32 0 1 0 72 92 A32 32 0 1 0 72 28" fill="none" stroke="url(#cig-chrome)" stroke-width="6" stroke-linecap="round" stroke-dasharray="0 18 82 100"/>
+    <line x1="72" y1="26" x2="72" y2="55" stroke="url(#cig-chrome)" stroke-width="6" stroke-linecap="round"/>
+  </g>
+  <!-- Inner circle arc (power symbol open circle) -->
+  <path d="M52 42 A28 28 0 1 0 92 42" fill="none" stroke="url(#cig-chrome)" stroke-width="5" stroke-linecap="round" filter="url(#cig-shadow)"/>
+  <text x="72" y="120" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" font-weight="bold" letter-spacing="2" fill="url(#cig-label)">IGNITION</text>
+</svg>

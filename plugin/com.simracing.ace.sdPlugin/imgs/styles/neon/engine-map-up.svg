@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144 144" width="144" height="144">
+  <defs>
+    <radialGradient id="nemu-bg" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#1a1520"/>
+      <stop offset="100%" stop-color="#08060a"/>
+    </radialGradient>
+    <radialGradient id="nemu-ambglow" cx="50%" cy="50%" r="60%">
+      <stop offset="0%" stop-color="#e20613" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#e20613" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="nemu-softglow">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feComponentTransfer in="blur"><feFuncA type="linear" slope="0.4"/></feComponentTransfer>
+    </filter>
+    <filter id="nemu-neon">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <linearGradient id="nemu-arrow" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0%" stop-color="#4CAF50"/>
+      <stop offset="100%" stop-color="#81C784"/>
+    </linearGradient>
+    <linearGradient id="nemu-topbar" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#e20613" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#e20613" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#e20613" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="nemu-botbar" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#e20613" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#e20613" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#e20613" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="144" height="144" fill="url(#nemu-bg)"/>
+  <rect width="144" height="144" fill="url(#nemu-ambglow)"/>
+  <rect x="0" y="0" width="144" height="3" fill="url(#nemu-topbar)"/>
+  <!-- Engine silhouette in yellow neon -->
+  <g filter="url(#nemu-softglow)">
+    <path d="M22,78 L22,42 L30,42 L30,35 L40,35 L40,42 L50,42 L50,35 L60,35 L60,42 L70,42 L70,50 L80,50 L80,42 L88,42 L88,55 L82,55 L82,78 Z" fill="none" stroke="#fff300" stroke-width="4"/>
+  </g>
+  <g filter="url(#nemu-neon)">
+    <path d="M22,78 L22,42 L30,42 L30,35 L40,35 L40,42 L50,42 L50,35 L60,35 L60,42 L70,42 L70,50 L80,50 L80,42 L88,42 L88,55 L82,55 L82,78 Z" fill="none" stroke="#fff300" stroke-width="2" stroke-linejoin="round"/>
+  </g>
+  <!-- Exhaust pipe hint -->
+  <g filter="url(#nemu-neon)">
+    <path d="M82,62 L95,62 L95,72 L82,72" fill="none" stroke="#fff300" stroke-width="1.5" opacity="0.6"/>
+  </g>
+  <!-- Green up arrow -->
+  <g filter="url(#nemu-softglow)">
+    <polygon points="120,30 134,50 129,50 129,85 111,85 111,50 106,50" fill="url(#nemu-arrow)"/>
+  </g>
+  <g filter="url(#nemu-neon)">
+    <polygon points="120,30 134,50 129,50 129,85 111,85 111,50 106,50" fill="none" stroke="#81C784" stroke-width="2"/>
+  </g>
+  <rect x="0" y="134" width="144" height="10" fill="url(#nemu-botbar)"/>
+  <text x="72" y="128" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="bold" fill="white" text-anchor="middle" letter-spacing="1.5">ENG MAP +</text>
+</svg>

@@ -1,15 +1,54 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144 144" width="144" height="144">
-  <rect width="144" height="144" fill="#1a1a2e"/>
-  <!-- Steering wheel outer ring -->
-  <circle cx="72" cy="60" r="36" fill="none" stroke="#ffffff" stroke-width="5"/>
-  <!-- Steering wheel inner hub -->
-  <circle cx="72" cy="60" r="10" fill="none" stroke="#ffffff" stroke-width="3"/>
-  <!-- Steering wheel spokes -->
-  <line x1="62" y1="60" x2="36" y2="60" stroke="#ffffff" stroke-width="4" stroke-linecap="round"/>
-  <line x1="82" y1="60" x2="108" y2="60" stroke="#ffffff" stroke-width="4" stroke-linecap="round"/>
-  <line x1="72" y1="70" x2="72" y2="96" stroke="#ffffff" stroke-width="4" stroke-linecap="round"/>
-  <!-- AI text in center of wheel -->
-  <text x="72" y="66" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-weight="bold" font-size="16" fill="#b44dff">AI</text>
-  <!-- Label -->
-  <text x="72" y="124" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#b44dff" opacity="0.9">AI DRIVER</text>
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="40%" r="70%">
+      <stop offset="0%" stop-color="#32373C"/>
+      <stop offset="100%" stop-color="#0a0a0f"/>
+    </radialGradient>
+    <radialGradient id="purpleGlow" cx="50%" cy="45%" r="40%">
+      <stop offset="0%" stop-color="#B44DFF" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#B44DFF" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="wheelGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e0e0e0"/>
+      <stop offset="100%" stop-color="#999999"/>
+    </linearGradient>
+    <linearGradient id="purpleGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#CE93D8"/>
+      <stop offset="100%" stop-color="#B44DFF"/>
+    </linearGradient>
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="2.5" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="shadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#000000" flood-opacity="0.5"/>
+    </filter>
+    <linearGradient id="borderAccent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#B44DFF" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#B44DFF" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#B44DFF" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="144" height="144" fill="url(#bg)"/>
+  <ellipse cx="72" cy="56" rx="50" ry="45" fill="url(#purpleGlow)"/>
+  <!-- Steering wheel with shadow -->
+  <g filter="url(#shadow)">
+    <!-- Outer ring -->
+    <circle cx="72" cy="58" r="34" fill="none" stroke="url(#wheelGrad)" stroke-width="6"/>
+    <!-- Inner hub ring -->
+    <circle cx="72" cy="58" r="11" fill="none" stroke="url(#wheelGrad)" stroke-width="3"/>
+    <!-- Spokes -->
+    <line x1="61" y1="58" x2="38" y2="58" stroke="url(#wheelGrad)" stroke-width="4.5" stroke-linecap="round"/>
+    <line x1="83" y1="58" x2="106" y2="58" stroke="url(#wheelGrad)" stroke-width="4.5" stroke-linecap="round"/>
+    <line x1="72" y1="69" x2="72" y2="92" stroke="url(#wheelGrad)" stroke-width="4.5" stroke-linecap="round"/>
+  </g>
+  <!-- AI text in center with glow -->
+  <g filter="url(#glow)">
+    <text x="72" y="64" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-weight="800" font-size="15" fill="url(#purpleGrad)" letter-spacing="1">AI</text>
+  </g>
+  <!-- Pulsing rings around wheel (automation feel) -->
+  <circle cx="72" cy="58" r="40" fill="none" stroke="#B44DFF" stroke-width="0.8" opacity="0.2"/>
+  <circle cx="72" cy="58" r="46" fill="none" stroke="#B44DFF" stroke-width="0.5" opacity="0.1"/>
+  <rect x="20" y="138" width="104" height="2" rx="1" fill="url(#borderAccent)"/>
+  <text x="72" y="132" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="15" font-weight="700" fill="#ffffff" opacity="0.85" letter-spacing="1">AI DRIVER</text>
 </svg>

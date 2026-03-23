@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144 144" width="144" height="144">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="40%" r="70%">
+      <stop offset="0%" stop-color="#32373C"/>
+      <stop offset="100%" stop-color="#0a0a0f"/>
+    </radialGradient>
+    <radialGradient id="purpleGlow" cx="50%" cy="45%" r="40%">
+      <stop offset="0%" stop-color="#B44DFF" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#B44DFF" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="replayGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#D080FF"/>
+      <stop offset="100%" stop-color="#B44DFF"/>
+    </linearGradient>
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="2.5" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="shadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#000" flood-opacity="0.5"/>
+    </filter>
+    <linearGradient id="borderAccent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#B44DFF" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#B44DFF" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#B44DFF" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="144" height="144" fill="url(#bg)"/>
+  <ellipse cx="72" cy="55" rx="48" ry="40" fill="url(#purpleGlow)"/>
+  <!-- Circular rewind arc -->
+  <g filter="url(#shadow)">
+    <path d="M42 34 A36 36 0 1 1 36 58" fill="none" stroke="url(#replayGrad)" stroke-width="3" stroke-linecap="round"/>
+    <!-- Arrow tip on the arc -->
+    <polygon points="36,58 28,50 42,48" fill="url(#replayGrad)"/>
+  </g>
+  <!-- Double rewind arrows inside -->
+  <g filter="url(#glow)">
+    <path d="M76 48 L60 60 L76 72" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M92 48 L76 60 L92 72" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <!-- Small clock dots on arc -->
+  <g opacity="0.4">
+    <circle cx="72" cy="24" r="2" fill="url(#replayGrad)"/>
+    <circle cx="100" cy="38" r="2" fill="url(#replayGrad)"/>
+    <circle cx="106" cy="60" r="2" fill="url(#replayGrad)"/>
+    <circle cx="96" cy="82" r="2" fill="url(#replayGrad)"/>
+    <circle cx="72" cy="94" r="2" fill="url(#replayGrad)"/>
+    <circle cx="48" cy="82" r="2" fill="url(#replayGrad)"/>
+  </g>
+  <rect x="20" y="138" width="104" height="2" rx="1" fill="url(#borderAccent)"/>
+  <text x="72" y="132" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="15" font-weight="700" fill="#ffffff" opacity="0.85" letter-spacing="1">REPLAY</text>
+</svg>

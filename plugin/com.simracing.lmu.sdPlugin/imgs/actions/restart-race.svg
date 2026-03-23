@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144 144" width="144" height="144">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="40%" r="70%">
+      <stop offset="0%" stop-color="#32373C"/>
+      <stop offset="100%" stop-color="#0a0a0f"/>
+    </radialGradient>
+    <radialGradient id="redGlow" cx="50%" cy="45%" r="40%">
+      <stop offset="0%" stop-color="#FF1D43" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#FF1D43" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="restartGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FF4D6A"/>
+      <stop offset="100%" stop-color="#FF1D43"/>
+    </linearGradient>
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="2.5" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="shadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#000" flood-opacity="0.5"/>
+    </filter>
+    <linearGradient id="borderAccent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#FF1D43" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#FF1D43" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#FF1D43" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="144" height="144" fill="url(#bg)"/>
+  <ellipse cx="72" cy="55" rx="48" ry="40" fill="url(#redGlow)"/>
+  <!-- Circular refresh arrow -->
+  <g filter="url(#shadow)">
+    <path d="M42 34 A36 36 0 1 1 36 60" fill="none" stroke="url(#restartGrad)" stroke-width="3.5" stroke-linecap="round"/>
+    <polygon points="36,60 28,50 44,50" fill="url(#restartGrad)"/>
+  </g>
+  <!-- Checkered flag inside circle -->
+  <g filter="url(#glow)" opacity="0.85">
+    <!-- Flag pole -->
+    <line x1="64" y1="42" x2="64" y2="80" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/>
+    <!-- Flag -->
+    <rect x="66" y="42" width="20" height="14" fill="none" stroke="#ffffff" stroke-width="1.5"/>
+    <!-- Checker pattern -->
+    <rect x="66" y="42" width="5" height="7" fill="#ffffff" opacity="0.8"/>
+    <rect x="76" y="42" width="5" height="7" fill="#ffffff" opacity="0.8"/>
+    <rect x="71" y="49" width="5" height="7" fill="#ffffff" opacity="0.8"/>
+    <rect x="81" y="49" width="5" height="7" fill="#ffffff" opacity="0.8"/>
+  </g>
+  <rect x="20" y="138" width="104" height="2" rx="1" fill="url(#borderAccent)"/>
+  <text x="72" y="132" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="15" font-weight="700" fill="#ffffff" opacity="0.85" letter-spacing="1">RESTART</text>
+</svg>

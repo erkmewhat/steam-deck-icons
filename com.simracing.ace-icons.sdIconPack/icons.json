@@ -1,0 +1,191 @@
+[
+    {
+        "path": "icons/headlights",
+        "name": "Headlights",
+        "tags": [
+            "Car Systems"
+        ]
+    },
+    {
+        "path": "icons/flash-lights",
+        "name": "Flashing Lights",
+        "tags": [
+            "Car Systems"
+        ]
+    },
+    {
+        "path": "icons/rain-lights",
+        "name": "Rain Lights",
+        "tags": [
+            "Car Systems"
+        ]
+    },
+    {
+        "path": "icons/wipers-up",
+        "name": "Wiper Cycle Up",
+        "tags": [
+            "Car Systems"
+        ]
+    },
+    {
+        "path": "icons/wipers-down",
+        "name": "Wiper Cycle Down",
+        "tags": [
+            "Car Systems"
+        ]
+    },
+    {
+        "path": "icons/ignition",
+        "name": "Toggle Ignition",
+        "tags": [
+            "Car Systems"
+        ]
+    },
+    {
+        "path": "icons/starter",
+        "name": "Toggle Starter",
+        "tags": [
+            "Car Systems"
+        ]
+    },
+    {
+        "path": "icons/pit-limiter",
+        "name": "Pit Limiter",
+        "tags": [
+            "Car Systems"
+        ]
+    },
+    {
+        "path": "icons/horn",
+        "name": "Horn",
+        "tags": [
+            "Car Systems"
+        ]
+    },
+    {
+        "path": "icons/drs",
+        "name": "DRS",
+        "tags": [
+            "Car Systems"
+        ]
+    },
+    {
+        "path": "icons/kers",
+        "name": "KERS",
+        "tags": [
+            "Car Systems"
+        ]
+    },
+    {
+        "path": "icons/bb-front",
+        "name": "Brake Bias Front",
+        "tags": [
+            "Adjustments"
+        ]
+    },
+    {
+        "path": "icons/bb-rear",
+        "name": "Brake Bias Rear",
+        "tags": [
+            "Adjustments"
+        ]
+    },
+    {
+        "path": "icons/tc-increase",
+        "name": "TC Increase",
+        "tags": [
+            "Adjustments"
+        ]
+    },
+    {
+        "path": "icons/tc-decrease",
+        "name": "TC Decrease",
+        "tags": [
+            "Adjustments"
+        ]
+    },
+    {
+        "path": "icons/abs-increase",
+        "name": "ABS Increase",
+        "tags": [
+            "Adjustments"
+        ]
+    },
+    {
+        "path": "icons/abs-decrease",
+        "name": "ABS Decrease",
+        "tags": [
+            "Adjustments"
+        ]
+    },
+    {
+        "path": "icons/engine-map-up",
+        "name": "Engine Map Increase",
+        "tags": [
+            "Adjustments"
+        ]
+    },
+    {
+        "path": "icons/engine-map-down",
+        "name": "Engine Map Decrease",
+        "tags": [
+            "Adjustments"
+        ]
+    },
+    {
+        "path": "icons/glance-left",
+        "name": "Glance Left",
+        "tags": [
+            "Race & Camera"
+        ]
+    },
+    {
+        "path": "icons/glance-right",
+        "name": "Glance Right",
+        "tags": [
+            "Race & Camera"
+        ]
+    },
+    {
+        "path": "icons/look-behind",
+        "name": "Look Behind",
+        "tags": [
+            "Race & Camera"
+        ]
+    },
+    {
+        "path": "icons/ai-takeover",
+        "name": "AI Takeover",
+        "tags": [
+            "Race & Camera"
+        ]
+    },
+    {
+        "path": "icons/pit-request",
+        "name": "Pit Request",
+        "tags": [
+            "Race & Camera"
+        ]
+    },
+    {
+        "path": "icons/restart-session",
+        "name": "Restart Session",
+        "tags": [
+            "Race & Camera"
+        ]
+    },
+    {
+        "path": "icons/replay",
+        "name": "Start Replay",
+        "tags": [
+            "Race & Camera"
+        ]
+    },
+    {
+        "path": "icons/screenshot",
+        "name": "Screenshot",
+        "tags": [
+            "Race & Camera"
+        ]
+    }
+]

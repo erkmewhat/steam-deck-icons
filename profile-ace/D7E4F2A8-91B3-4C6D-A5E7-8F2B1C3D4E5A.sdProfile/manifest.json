@@ -1,0 +1,16 @@
+{
+  "Version": "3.0",
+  "Name": "ACE Sim Racing",
+  "Device": {
+    "Model": "20GBA9901",
+    "UUID": "@(1)[4057/128/A00SA3272JF6DK]"
+  },
+  "Pages": {
+    "Default": "B9C8D7E6-F5A4-4321-8765-1A2B3C4D5E6F",
+    "Current": "B9C8D7E6-F5A4-4321-8765-1A2B3C4D5E6F",
+    "Pages": [
+      "B9C8D7E6-F5A4-4321-8765-1A2B3C4D5E6F",
+      "E3F4A5B6-C7D8-4E9F-0A1B-2C3D4E5F6A7B"
+    ]
+  }
+}

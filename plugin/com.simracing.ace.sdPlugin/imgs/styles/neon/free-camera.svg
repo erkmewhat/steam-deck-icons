@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144 144" width="144" height="144">
+  <defs>
+    <radialGradient id="fc-bg" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#1a1520"/>
+      <stop offset="100%" stop-color="#08060a"/>
+    </radialGradient>
+    <filter id="fc-glow-soft">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+    <filter id="fc-glow-crisp">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+    <linearGradient id="fc-bar-top" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#4a9eff" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#4a9eff" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#4a9eff" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="fc-bar-bot" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#4a9eff" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#4a9eff" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#4a9eff" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="144" height="144" fill="url(#fc-bg)" rx="12"/>
+  <rect x="10" y="2" width="124" height="2" fill="url(#fc-bar-top)" rx="1"/>
+  <rect x="10" y="140" width="124" height="2" fill="url(#fc-bar-bot)" rx="1"/>
+  <g opacity="0.4" filter="url(#fc-glow-soft)">
+    <rect x="32" y="40" width="56" height="38" rx="5" fill="none" stroke="#4a9eff" stroke-width="2.5"/>
+    <polygon points="88,46 108,36 108,82 88,72" fill="none" stroke="#4a9eff" stroke-width="2.5"/>
+    <circle cx="72" cy="59" r="14" fill="none" stroke="#4a9eff" stroke-width="2"/>
+  </g>
+  <g filter="url(#fc-glow-crisp)">
+    <!-- Camera body -->
+    <rect x="32" y="40" width="56" height="38" rx="5" fill="none" stroke="#4a9eff" stroke-width="2"/>
+    <!-- Camera lens/viewfinder -->
+    <polygon points="88,46 108,36 108,82 88,72" fill="none" stroke="#4a9eff" stroke-width="1.8" stroke-linejoin="round"/>
+    <!-- Crosshair overlay -->
+    <circle cx="60" cy="59" r="14" fill="none" stroke="#4a9eff" stroke-width="1.5" opacity="0.7"/>
+    <line x1="60" y1="42" x2="60" y2="49" stroke="#4a9eff" stroke-width="1.5" stroke-linecap="round"/>
+    <line x1="60" y1="69" x2="60" y2="76" stroke="#4a9eff" stroke-width="1.5" stroke-linecap="round"/>
+    <line x1="43" y1="59" x2="50" y2="59" stroke="#4a9eff" stroke-width="1.5" stroke-linecap="round"/>
+    <line x1="70" y1="59" x2="77" y2="59" stroke="#4a9eff" stroke-width="1.5" stroke-linecap="round"/>
+    <circle cx="60" cy="59" r="2" fill="#4a9eff"/>
+  </g>
+  <text x="72" y="106" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="bold" fill="white" letter-spacing="1.5">FREE CAM</text>
+</svg>

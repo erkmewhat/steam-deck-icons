@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144 144" width="144" height="144">
+  <defs>
+    <radialGradient id="nwu-bg" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#1a1520"/>
+      <stop offset="100%" stop-color="#08060a"/>
+    </radialGradient>
+    <radialGradient id="nwu-ambglow" cx="50%" cy="50%" r="60%">
+      <stop offset="0%" stop-color="#e20613" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#e20613" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="nwu-softglow">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feComponentTransfer in="blur"><feFuncA type="linear" slope="0.4"/></feComponentTransfer>
+    </filter>
+    <filter id="nwu-neon">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <linearGradient id="nwu-chrome" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="50%" stop-color="#b0b0b0"/>
+      <stop offset="100%" stop-color="#666666"/>
+    </linearGradient>
+    <linearGradient id="nwu-topbar" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#e20613" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#e20613" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#e20613" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="nwu-botbar" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#e20613" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#e20613" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#e20613" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="144" height="144" fill="url(#nwu-bg)"/>
+  <rect width="144" height="144" fill="url(#nwu-ambglow)"/>
+  <rect x="0" y="0" width="144" height="3" fill="url(#nwu-topbar)"/>
+  <!-- Windshield trapezoid -->
+  <path d="M30,90 L45,30 L99,30 L114,90 Z" fill="none" stroke="#b0b0b0" stroke-width="2" opacity="0.6"/>
+  <!-- Wiper arm -->
+  <g filter="url(#nwu-neon)">
+    <line x1="72" y1="90" x2="50" y2="35" stroke="#b0b0b0" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="M72,90 Q55,55 48,32" fill="none" stroke="white" stroke-width="1" opacity="0.4" stroke-dasharray="3,3"/>
+  </g>
+  <!-- Yellow neon up arrow -->
+  <g filter="url(#nwu-softglow)">
+    <polygon points="120,65 130,80 125,80 125,100 115,100 115,80 110,80" fill="#fff300"/>
+  </g>
+  <g filter="url(#nwu-neon)">
+    <polygon points="120,65 130,80 125,80 125,100 115,100 115,80 110,80" fill="none" stroke="#fff300" stroke-width="2"/>
+  </g>
+  <rect x="0" y="134" width="144" height="10" fill="url(#nwu-botbar)"/>
+  <text x="72" y="128" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="bold" fill="white" text-anchor="middle" letter-spacing="1.5">WIPER +</text>
+</svg>

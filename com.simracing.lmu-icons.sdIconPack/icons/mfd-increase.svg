@@ -1,17 +1,49 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144 144" width="144" height="144">
-  <rect width="144" height="144" rx="12" fill="#1a1a2e"/>
-  <!-- Monitor body -->
-  <rect x="28" y="28" width="88" height="64" rx="6" fill="none" stroke="#44ff44" stroke-width="4"/>
-  <!-- Screen inner glow -->
-  <rect x="34" y="34" width="76" height="52" rx="3" fill="#1a2e1a"/>
-  <!-- Monitor stand -->
-  <line x1="72" y1="92" x2="72" y2="106" stroke="#44ff44" stroke-width="4" stroke-linecap="round"/>
-  <line x1="54" y1="106" x2="90" y2="106" stroke="#44ff44" stroke-width="4" stroke-linecap="round"/>
-  <!-- Plus symbol on screen -->
-  <line x1="56" y1="60" x2="72" y2="60" stroke="#44ff44" stroke-width="4" stroke-linecap="round"/>
-  <line x1="64" y1="52" x2="64" y2="68" stroke="#44ff44" stroke-width="4" stroke-linecap="round"/>
-  <!-- Right arrow -->
-  <path d="M78 60 L90 60 M84 54 L90 60 L84 66" fill="none" stroke="#44ff44" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-  <!-- Label -->
-  <text x="72" y="128" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" font-weight="bold" fill="#44ff44" opacity="0.8">INCREASE</text>
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="40%" r="70%">
+      <stop offset="0%" stop-color="#32373C"/>
+      <stop offset="100%" stop-color="#0a0a0f"/>
+    </radialGradient>
+    <radialGradient id="screenGlow" cx="50%" cy="42%" r="35%">
+      <stop offset="0%" stop-color="#4CAF50" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#4CAF50" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="monitorGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e0e0e0"/>
+      <stop offset="100%" stop-color="#888888"/>
+    </linearGradient>
+    <linearGradient id="screenBg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1a1a2e"/>
+      <stop offset="100%" stop-color="#12121f"/>
+    </linearGradient>
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="2" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="shadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#000" flood-opacity="0.5"/>
+    </filter>
+    <linearGradient id="borderAccent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#4CAF50" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#4CAF50" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#4CAF50" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="144" height="144" fill="url(#bg)"/>
+  <ellipse cx="72" cy="50" rx="45" ry="35" fill="url(#screenGlow)"/>
+  <!-- Monitor -->
+  <g filter="url(#shadow)">
+    <rect x="28" y="24" width="88" height="64" rx="5" fill="none" stroke="url(#monitorGrad)" stroke-width="3"/>
+    <rect x="33" y="29" width="78" height="54" rx="3" fill="url(#screenBg)"/>
+    <line x1="72" y1="88" x2="72" y2="100" stroke="url(#monitorGrad)" stroke-width="3" stroke-linecap="round"/>
+    <line x1="56" y1="100" x2="88" y2="100" stroke="url(#monitorGrad)" stroke-width="3" stroke-linecap="round"/>
+  </g>
+  <!-- Plus/increase + right arrow on screen -->
+  <g filter="url(#glow)">
+    <line x1="50" y1="56" x2="66" y2="56" stroke="#81C784" stroke-width="4" stroke-linecap="round"/>
+    <line x1="58" y1="48" x2="58" y2="64" stroke="#81C784" stroke-width="4" stroke-linecap="round"/>
+    <path d="M76 56 L88 56 M82 50 L88 56 L82 62" fill="none" stroke="#81C784" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <rect x="20" y="138" width="104" height="2" rx="1" fill="url(#borderAccent)"/>
+  <text x="72" y="132" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="15" font-weight="700" fill="#ffffff" opacity="0.85" letter-spacing="1">INCREASE</text>
 </svg>

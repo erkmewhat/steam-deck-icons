@@ -1,0 +1,808 @@
+{
+    "$schema": "https://schemas.elgato.com/streamdeck/plugins/manifest.json",
+    "Name": "Assetto Corsa EVO",
+    "Version": "1.0.0.0",
+    "Author": "Charles Costello",
+    "Description": "Stream Deck hotkey actions for Assetto Corsa EVO.",
+    "Icon": "imgs/plugin-icon",
+    "UUID": "com.simracing.ace",
+    "SDKVersion": 2,
+    "CodePath": "bin/plugin.js",
+    "Category": "Assetto Corsa EVO",
+    "CategoryIcon": "imgs/category-icon",
+    "PropertyInspectorPath": "ui/pi.html",
+    "Nodejs": {
+        "Version": "20",
+        "Debug": "enabled"
+    },
+    "Software": {
+        "MinimumVersion": "6.7"
+    },
+    "OS": [
+        {
+            "Platform": "windows",
+            "MinimumVersion": "10"
+        }
+    ],
+    "Actions": [
+        {
+            "UUID": "com.simracing.ace.headlights",
+            "Name": "Headlights",
+            "Icon": "imgs/actions/headlights",
+            "Tooltip": "Headlights (Key: L)",
+            "PropertyInspectorPath": "ui/pi.html",
+            "Controllers": [
+                "Keypad"
+            ],
+            "States": [
+                {
+                    "Image": "imgs/actions/headlights",
+                    "Name": "Headlights",
+                    "ShowTitle": true,
+                    "TitleAlignment": "bottom",
+                    "TitleColor": "#FFFFFF"
+                }
+            ]
+        },
+        {
+            "UUID": "com.simracing.ace.flash-lights",
+            "Name": "Flashing Lights",
+            "Icon": "imgs/actions/flash-lights",
+            "Tooltip": "Flashing Lights (Key: F)",
+            "PropertyInspectorPath": "ui/pi.html",
+            "Controllers": [
+                "Keypad"
+            ],
+            "States": [
+                {
+                    "Image": "imgs/actions/flash-lights",
+                    "Name": "Flashing Lights",
+                    "ShowTitle": true,
+                    "TitleAlignment": "bottom",
+                    "TitleColor": "#FFFFFF"
+                }
+            ]
+        },
+        {
+            "UUID": "com.simracing.ace.rain-lights",
+            "Name": "Rain Lights",
+            "Icon": "imgs/actions/rain-lights",
+            "Tooltip": "Rain Lights (Key: R)",
+            "PropertyInspectorPath": "ui/pi.html",
+            "Controllers": [
+                "Keypad"
+            ],
+            "States": [
+                {
+                    "Image": "imgs/actions/rain-lights",
+                    "Name": "Rain Lights",
+                    "ShowTitle": true,
+                    "TitleAlignment": "bottom",
+                    "TitleColor": "#FFFFFF"
+                }
+            ]
+        },
+        {
+            "UUID": "com.simracing.ace.wipers-up",
+            "Name": "Wiper Cycle Up",
+            "Icon": "imgs/actions/wipers-up",
+            "Tooltip": "Wiper Cycle Up (Key: P)",
+            "PropertyInspectorPath": "ui/pi.html",
+            "Controllers": [
+                "Keypad"
+            ],
+            "States": [
+                {
+                    "Image": "imgs/actions/wipers-up",
+                    "Name": "Wiper Cycle Up",
+                    "ShowTitle": true,
+                    "TitleAlignment": "bottom",
+                    "TitleColor": "#FFFFFF"
+                }
+            ]
+        },
+        {
+            "UUID": "com.simracing.ace.wipers-down",
+            "Name": "Wiper Cycle Down",
+            "Icon": "imgs/actions/wipers-down",
+            "Tooltip": "Wiper Cycle Down (Key: O)",
+            "PropertyInspectorPath": "ui/pi.html",
+            "Controllers": [
+                "Keypad"
+            ],
+            "States": [
+                {
+                    "Image": "imgs/actions/wipers-down",
+                    "Name": "Wiper Cycle Down",
+                    "ShowTitle": true,
+                    "TitleAlignment": "bottom",
+                    "TitleColor": "#FFFFFF"
+                }
+            ]
+        },
+        {
+            "UUID": "com.simracing.ace.ignition",
+            "Name": "Toggle Ignition",
+            "Icon": "imgs/actions/ignition",
+            "Tooltip": "Toggle Ignition (Key: I)",
+            "PropertyInspectorPath": "ui/pi.html",
+            "Controllers": [
+                "Keypad"
+            ],
+            "States": [
+                {
+                    "Image": "imgs/actions/ignition",
+                    "Name": "Toggle Ignition",
+                    "ShowTitle": true,
+                    "TitleAlignment": "bottom",
+                    "TitleColor": "#FFFFFF"
+                }
+            ]
+        },
+        {
+            "UUID": "com.simracing.ace.starter",
+            "Name": "Toggle Starter",
+            "Icon": "imgs/actions/starter",
+            "Tooltip": "Toggle Starter (Key: K)",
+            "PropertyInspectorPath": "ui/pi.html",
+            "Controllers": [
+                "Keypad"
+            ],
+            "States": [
+                {
+                    "Image": "imgs/actions/starter",
+                    "Name": "Toggle Starter",
+                    "ShowTitle": true,
+                    "TitleAlignment": "bottom",
+                    "TitleColor": "#FFFFFF"
+                }
+            ]
+        },
+        {
+            "UUID": "com.simracing.ace.pit-limiter",
+            "Name": "Pit Limiter",
+            "Icon": "imgs/actions/pit-limiter",
+            "Tooltip": "Pit Limiter (Key: N)",
+            "PropertyInspectorPath": "ui/pi.html",
+            "Controllers": [
+                "Keypad"
+            ],
+            "States": [
+                {
+                    "Image": "imgs/actions/pit-limiter",
+                    "Name": "Pit Limiter",
+                    "ShowTitle": true,
+                    "TitleAlignment": "bottom",
+                    "TitleColor": "#FFFFFF"
+                }
+            ]
+        },
+        {
+            "UUID": "com.simracing.ace.horn",
+            "Name": "Horn",
+            "Icon": "imgs/actions/horn",
+            "Tooltip": "Horn (Key: H)",
+            "PropertyInspectorPath": "ui/pi.html",
+            "Controllers": [
+                "Keypad"
+            ],
+            "States": [
+                {
+                    "Image": "imgs/actions/horn",
+                    "Name": "Horn",
+                    "ShowTitle": true,
+                    "TitleAlignment": "bottom",
+                    "TitleColor": "#FFFFFF"
+                }
+            ]
+        },
+        {
+            "UUID": "com.simracing.ace.drs",
+            "Name": "DRS",
+            "Icon": "imgs/actions/drs",
+            "Tooltip": "DRS (Key: J)",
+            "PropertyInspectorPath": "ui/pi.html",
+            "Controllers": [
+                "Keypad"
+            ],
+            "States": [
+                {
+                    "Image": "imgs/actions/drs",
+                    "Name": "DRS",
+                    "ShowTitle": true,
+                    "TitleAlignment": "bottom",
+                    "TitleColor": "#FFFFFF"
+                }
+            ]
+        },
+        {
+            "UUID": "com.simracing.ace.kers",
+            "Name": "KERS",
+            "Icon": "imgs/actions/kers",
+            "Tooltip": "KERS (Key: Y)",
+            "PropertyInspectorPath": "ui/pi.html",
+            "Controllers": [
+                "Keypad"
+            ],
+            "States": [
+                {
+                    "Image": "imgs/actions/kers",
+                    "Name": "KERS",
+                    "ShowTitle": true,
+                    "TitleAlignment": "bottom",
+                    "TitleColor": "#FFFFFF"
+                }
+            ]
+        },
+        {
+            "UUID": "com.simracing.ace.bb-front",
+            "Name": "Brake Bias Front",
+            "Icon": "imgs/actions/bb-front",
+            "Tooltip": "Brake Bias Front (Key: B)",
+            "PropertyInspectorPath": "ui/pi.html",
+            "Controllers": [
+                "Keypad"
+            ],
+            "States": [
+                {
+                    "Image": "imgs/actions/bb-front",
+                    "Name": "Brake Bias Front",
+                    "ShowTitle": true,
+                    "TitleAlignment": "bottom",
+                    "TitleColor": "#FFFFFF"
+                }
+            ]
+        },
+        {
+            "UUID": "com.simracing.ace.bb-rear",
+            "Name": "Brake Bias Rear",
+            "Icon": "imgs/actions/bb-rear",
+            "Tooltip": "Brake Bias Rear (Key: V)",
+            "PropertyInspectorPath": "ui/pi.html",
+            "Controllers": [
+                "Keypad"
+            ],
+            "States": [
+                {
+                    "Image": "imgs/actions/bb-rear",
+                    "Name": "Brake Bias Rear",
+                    "ShowTitle": true,
+                    "TitleAlignment": "bottom",
+                    "TitleColor": "#FFFFFF"
+                }
+            ]
+        },
+        {
+            "UUID": "com.simracing.ace.tc-increase",
+            "Name": "TC Increase",
+            "Icon": "imgs/actions/tc-increase",
+            "Tooltip": "TC Increase (Key: T)",
+            "PropertyInspectorPath": "ui/pi.html",
+            "Controllers": [
+                "Keypad"
+            ],
+            "States": [
+                {
+                    "Image": "imgs/actions/tc-increase",
+                    "Name": "TC Increase",
+                    "ShowTitle": true,
+                    "TitleAlignment": "bottom",
+                    "TitleColor": "#FFFFFF"
+                }
+            ]
+        },
+        {
+            "UUID": "com.simracing.ace.tc-decrease",
+            "Name": "TC Decrease",
+            "Icon": "imgs/actions/tc-decrease",
+            "Tooltip": "TC Decrease (Key: G)",
+            "PropertyInspectorPath": "ui/pi.html",
+            "Controllers": [
+                "Keypad"
+            ],
+            "States": [
+                {
+                    "Image": "imgs/actions/tc-decrease",
+                    "Name": "TC Decrease",
+                    "ShowTitle": true,
+                    "TitleAlignment": "bottom",
+                    "TitleColor": "#FFFFFF"
+                }
+            ]
+        },
+        {
+            "UUID": "com.simracing.ace.abs-increase",
+            "Name": "ABS Increase",
+            "Icon": "imgs/actions/abs-increase",
+            "Tooltip": "ABS Increase (Key: A)",
+            "PropertyInspectorPath": "ui/pi.html",
+            "Controllers": [
+                "Keypad"
+            ],
+            "States": [
+                {
+                    "Image": "imgs/actions/abs-increase",
+                    "Name": "ABS Increase",
+                    "ShowTitle": true,
+                    "TitleAlignment": "bottom",
+                    "TitleColor": "#FFFFFF"
+                }
+            ]
+        },
+        {
+            "UUID": "com.simracing.ace.abs-decrease",
+            "Name": "ABS Decrease",
+            "Icon": "imgs/actions/abs-decrease",
+            "Tooltip": "ABS Decrease (Key: S)",
+            "PropertyInspectorPath": "ui/pi.html",
+            "Controllers": [
+                "Keypad"
+            ],
+            "States": [
+                {
+                    "Image": "imgs/actions/abs-decrease",
+                    "Name": "ABS Decrease",
+                    "ShowTitle": true,
+                    "TitleAlignment": "bottom",
+                    "TitleColor": "#FFFFFF"
+                }
+            ]
+        },
+        {
+            "UUID": "com.simracing.ace.engine-map-up",
+            "Name": "Engine Map Increase",
+            "Icon": "imgs/actions/engine-map-up",
+            "Tooltip": "Engine Map Increase (Key: E)",
+            "PropertyInspectorPath": "ui/pi.html",
+            "Controllers": [
+                "Keypad"
+            ],
+            "States": [
+                {
+                    "Image": "imgs/actions/engine-map-up",
+                    "Name": "Engine Map Increase",
+                    "ShowTitle": true,
+                    "TitleAlignment": "bottom",
+                    "TitleColor": "#FFFFFF"
+                }
+            ]
+        },
+        {
+            "UUID": "com.simracing.ace.engine-map-down",
+            "Name": "Engine Map Decrease",
+            "Icon": "imgs/actions/engine-map-down",
+            "Tooltip": "Engine Map Decrease (Key: D)",
+            "PropertyInspectorPath": "ui/pi.html",
+            "Controllers": [
+                "Keypad"
+            ],
+            "States": [
+                {
+                    "Image": "imgs/actions/engine-map-down",
+                    "Name": "Engine Map Decrease",
+                    "ShowTitle": true,
+                    "TitleAlignment": "bottom",
+                    "TitleColor": "#FFFFFF"
+                }
+            ]
+        },
+        {
+            "UUID": "com.simracing.ace.glance-left",
+            "Name": "Glance Left",
+            "Icon": "imgs/actions/glance-left",
+            "Tooltip": "Glance Left (Key: Q)",
+            "PropertyInspectorPath": "ui/pi.html",
+            "Controllers": [
+                "Keypad"
+            ],
+            "States": [
+                {
+                    "Image": "imgs/actions/glance-left",
+                    "Name": "Glance Left",
+                    "ShowTitle": true,
+                    "TitleAlignment": "bottom",
+                    "TitleColor": "#FFFFFF"
+                }
+            ]
+        },
+        {
+            "UUID": "com.simracing.ace.glance-right",
+            "Name": "Glance Right",
+            "Icon": "imgs/actions/glance-right",
+            "Tooltip": "Glance Right (Key: W)",
+            "PropertyInspectorPath": "ui/pi.html",
+            "Controllers": [
+                "Keypad"
+            ],
+            "States": [
+                {
+                    "Image": "imgs/actions/glance-right",
+                    "Name": "Glance Right",
+                    "ShowTitle": true,
+                    "TitleAlignment": "bottom",
+                    "TitleColor": "#FFFFFF"
+                }
+            ]
+        },
+        {
+            "UUID": "com.simracing.ace.look-behind",
+            "Name": "Look Behind",
+            "Icon": "imgs/actions/look-behind",
+            "Tooltip": "Look Behind (Key: C)",
+            "PropertyInspectorPath": "ui/pi.html",
+            "Controllers": [
+                "Keypad"
+            ],
+            "States": [
+                {
+                    "Image": "imgs/actions/look-behind",
+                    "Name": "Look Behind",
+                    "ShowTitle": true,
+                    "TitleAlignment": "bottom",
+                    "TitleColor": "#FFFFFF"
+                }
+            ]
+        },
+        {
+            "UUID": "com.simracing.ace.free-camera",
+            "Name": "Free Camera",
+            "Icon": "imgs/actions/free-camera",
+            "Tooltip": "Free Camera (Key: F5)",
+            "PropertyInspectorPath": "ui/pi.html",
+            "Controllers": [
+                "Keypad"
+            ],
+            "States": [
+                {
+                    "Image": "imgs/actions/free-camera",
+                    "Name": "Free Camera",
+                    "ShowTitle": true,
+                    "TitleAlignment": "bottom",
+                    "TitleColor": "#FFFFFF"
+                }
+            ]
+        },
+        {
+            "UUID": "com.simracing.ace.track-camera",
+            "Name": "Track Camera",
+            "Icon": "imgs/actions/track-camera",
+            "Tooltip": "Track Camera (Key: F1)",
+            "PropertyInspectorPath": "ui/pi.html",
+            "Controllers": [
+                "Keypad"
+            ],
+            "States": [
+                {
+                    "Image": "imgs/actions/track-camera",
+                    "Name": "Track Camera",
+                    "ShowTitle": true,
+                    "TitleAlignment": "bottom",
+                    "TitleColor": "#FFFFFF"
+                }
+            ]
+        },
+        {
+            "UUID": "com.simracing.ace.chase-camera",
+            "Name": "Chase Camera",
+            "Icon": "imgs/actions/chase-camera",
+            "Tooltip": "Chase Camera (Key: F3)",
+            "PropertyInspectorPath": "ui/pi.html",
+            "Controllers": [
+                "Keypad"
+            ],
+            "States": [
+                {
+                    "Image": "imgs/actions/chase-camera",
+                    "Name": "Chase Camera",
+                    "ShowTitle": true,
+                    "TitleAlignment": "bottom",
+                    "TitleColor": "#FFFFFF"
+                }
+            ]
+        },
+        {
+            "UUID": "com.simracing.ace.virtual-mirror",
+            "Name": "Virtual Mirror",
+            "Icon": "imgs/actions/virtual-mirror",
+            "Tooltip": "Virtual Mirror (Key: F8)",
+            "PropertyInspectorPath": "ui/pi.html",
+            "Controllers": [
+                "Keypad"
+            ],
+            "States": [
+                {
+                    "Image": "imgs/actions/virtual-mirror",
+                    "Name": "Virtual Mirror",
+                    "ShowTitle": true,
+                    "TitleAlignment": "bottom",
+                    "TitleColor": "#FFFFFF"
+                }
+            ]
+        },
+        {
+            "UUID": "com.simracing.ace.hud-toggle",
+            "Name": "Toggle HUD",
+            "Icon": "imgs/actions/hud-toggle",
+            "Tooltip": "Toggle HUD (Key: F4)",
+            "PropertyInspectorPath": "ui/pi.html",
+            "Controllers": [
+                "Keypad"
+            ],
+            "States": [
+                {
+                    "Image": "imgs/actions/hud-toggle",
+                    "Name": "Toggle HUD",
+                    "ShowTitle": true,
+                    "TitleAlignment": "bottom",
+                    "TitleColor": "#FFFFFF"
+                }
+            ]
+        },
+        {
+            "UUID": "com.simracing.ace.leaderboard",
+            "Name": "Leaderboard",
+            "Icon": "imgs/actions/leaderboard",
+            "Tooltip": "Leaderboard (Key: F7)",
+            "PropertyInspectorPath": "ui/pi.html",
+            "Controllers": [
+                "Keypad"
+            ],
+            "States": [
+                {
+                    "Image": "imgs/actions/leaderboard",
+                    "Name": "Leaderboard",
+                    "ShowTitle": true,
+                    "TitleAlignment": "bottom",
+                    "TitleColor": "#FFFFFF"
+                }
+            ]
+        },
+        {
+            "UUID": "com.simracing.ace.damage-display",
+            "Name": "Damage Display",
+            "Icon": "imgs/actions/damage-display",
+            "Tooltip": "Damage Display (Key: F9)",
+            "PropertyInspectorPath": "ui/pi.html",
+            "Controllers": [
+                "Keypad"
+            ],
+            "States": [
+                {
+                    "Image": "imgs/actions/damage-display",
+                    "Name": "Damage Display",
+                    "ShowTitle": true,
+                    "TitleAlignment": "bottom",
+                    "TitleColor": "#FFFFFF"
+                }
+            ]
+        },
+        {
+            "UUID": "com.simracing.ace.ideal-line",
+            "Name": "Ideal Racing Line",
+            "Icon": "imgs/actions/ideal-line",
+            "Tooltip": "Ideal Racing Line (Key: F10)",
+            "PropertyInspectorPath": "ui/pi.html",
+            "Controllers": [
+                "Keypad"
+            ],
+            "States": [
+                {
+                    "Image": "imgs/actions/ideal-line",
+                    "Name": "Ideal Racing Line",
+                    "ShowTitle": true,
+                    "TitleAlignment": "bottom",
+                    "TitleColor": "#FFFFFF"
+                }
+            ]
+        },
+        {
+            "UUID": "com.simracing.ace.ai-takeover",
+            "Name": "AI Takeover",
+            "Icon": "imgs/actions/ai-takeover",
+            "Tooltip": "AI Takeover (Key: U)",
+            "PropertyInspectorPath": "ui/pi.html",
+            "Controllers": [
+                "Keypad"
+            ],
+            "States": [
+                {
+                    "Image": "imgs/actions/ai-takeover",
+                    "Name": "AI Takeover",
+                    "ShowTitle": true,
+                    "TitleAlignment": "bottom",
+                    "TitleColor": "#FFFFFF"
+                }
+            ]
+        },
+        {
+            "UUID": "com.simracing.ace.pit-request",
+            "Name": "Pit Request",
+            "Icon": "imgs/actions/pit-request",
+            "Tooltip": "Pit Request (Key: M)",
+            "PropertyInspectorPath": "ui/pi.html",
+            "Controllers": [
+                "Keypad"
+            ],
+            "States": [
+                {
+                    "Image": "imgs/actions/pit-request",
+                    "Name": "Pit Request",
+                    "ShowTitle": true,
+                    "TitleAlignment": "bottom",
+                    "TitleColor": "#FFFFFF"
+                }
+            ]
+        },
+        {
+            "UUID": "com.simracing.ace.restart-session",
+            "Name": "Restart Session",
+            "Icon": "imgs/actions/restart-session",
+            "Tooltip": "Restart Session (Key: `)",
+            "PropertyInspectorPath": "ui/pi.html",
+            "Controllers": [
+                "Keypad"
+            ],
+            "States": [
+                {
+                    "Image": "imgs/actions/restart-session",
+                    "Name": "Restart Session",
+                    "ShowTitle": true,
+                    "TitleAlignment": "bottom",
+                    "TitleColor": "#FFFFFF"
+                }
+            ]
+        },
+        {
+            "UUID": "com.simracing.ace.replay",
+            "Name": "Start Replay",
+            "Icon": "imgs/actions/replay",
+            "Tooltip": "Start Replay (Key: ;)",
+            "PropertyInspectorPath": "ui/pi.html",
+            "Controllers": [
+                "Keypad"
+            ],
+            "States": [
+                {
+                    "Image": "imgs/actions/replay",
+                    "Name": "Start Replay",
+                    "ShowTitle": true,
+                    "TitleAlignment": "bottom",
+                    "TitleColor": "#FFFFFF"
+                }
+            ]
+        },
+        {
+            "UUID": "com.simracing.ace.slow-motion",
+            "Name": "Slow Motion",
+            "Icon": "imgs/actions/slow-motion",
+            "Tooltip": "Slow Motion (Key: F11)",
+            "PropertyInspectorPath": "ui/pi.html",
+            "Controllers": [
+                "Keypad"
+            ],
+            "States": [
+                {
+                    "Image": "imgs/actions/slow-motion",
+                    "Name": "Slow Motion",
+                    "ShowTitle": true,
+                    "TitleAlignment": "bottom",
+                    "TitleColor": "#FFFFFF"
+                }
+            ]
+        },
+        {
+            "UUID": "com.simracing.ace.fast-forward",
+            "Name": "Fast Forward",
+            "Icon": "imgs/actions/fast-forward",
+            "Tooltip": "Fast Forward (Key: F12)",
+            "PropertyInspectorPath": "ui/pi.html",
+            "Controllers": [
+                "Keypad"
+            ],
+            "States": [
+                {
+                    "Image": "imgs/actions/fast-forward",
+                    "Name": "Fast Forward",
+                    "ShowTitle": true,
+                    "TitleAlignment": "bottom",
+                    "TitleColor": "#FFFFFF"
+                }
+            ]
+        },
+        {
+            "UUID": "com.simracing.ace.rewind",
+            "Name": "Rewind",
+            "Icon": "imgs/actions/rewind",
+            "Tooltip": "Rewind (Key: F2)",
+            "PropertyInspectorPath": "ui/pi.html",
+            "Controllers": [
+                "Keypad"
+            ],
+            "States": [
+                {
+                    "Image": "imgs/actions/rewind",
+                    "Name": "Rewind",
+                    "ShowTitle": true,
+                    "TitleAlignment": "bottom",
+                    "TitleColor": "#FFFFFF"
+                }
+            ]
+        },
+        {
+            "UUID": "com.simracing.ace.screenshot",
+            "Name": "Screenshot",
+            "Icon": "imgs/actions/screenshot",
+            "Tooltip": "Screenshot (Key: F6)",
+            "PropertyInspectorPath": "ui/pi.html",
+            "Controllers": [
+                "Keypad"
+            ],
+            "States": [
+                {
+                    "Image": "imgs/actions/screenshot",
+                    "Name": "Screenshot",
+                    "ShowTitle": true,
+                    "TitleAlignment": "bottom",
+                    "TitleColor": "#FFFFFF"
+                }
+            ]
+        },
+        {
+            "UUID": "com.simracing.ace.next-car",
+            "Name": "Next Car",
+            "Icon": "imgs/actions/next-car",
+            "Tooltip": "Next Car (Key: X)",
+            "PropertyInspectorPath": "ui/pi.html",
+            "Controllers": [
+                "Keypad"
+            ],
+            "States": [
+                {
+                    "Image": "imgs/actions/next-car",
+                    "Name": "Next Car",
+                    "ShowTitle": true,
+                    "TitleAlignment": "bottom",
+                    "TitleColor": "#FFFFFF"
+                }
+            ]
+        },
+        {
+            "UUID": "com.simracing.ace.prev-car",
+            "Name": "Previous Car",
+            "Icon": "imgs/actions/prev-car",
+            "Tooltip": "Previous Car (Key: Z)",
+            "PropertyInspectorPath": "ui/pi.html",
+            "Controllers": [
+                "Keypad"
+            ],
+            "States": [
+                {
+                    "Image": "imgs/actions/prev-car",
+                    "Name": "Previous Car",
+                    "ShowTitle": true,
+                    "TitleAlignment": "bottom",
+                    "TitleColor": "#FFFFFF"
+                }
+            ]
+        },
+        {
+            "UUID": "com.simracing.ace.pause",
+            "Name": "Pause",
+            "Icon": "imgs/actions/pause",
+            "Tooltip": "Pause (Key: Esc)",
+            "PropertyInspectorPath": "ui/pi.html",
+            "Controllers": [
+                "Keypad"
+            ],
+            "States": [
+                {
+                    "Image": "imgs/actions/pause",
+                    "Name": "Pause",
+                    "ShowTitle": true,
+                    "TitleAlignment": "bottom",
+                    "TitleColor": "#FFFFFF"
+                }
+            ]
+        }
+    ]
+}

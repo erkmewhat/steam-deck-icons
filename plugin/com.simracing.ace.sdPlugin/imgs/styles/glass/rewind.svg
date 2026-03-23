@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144 144">
+  <defs>
+    <linearGradient id="grw-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2a1215"/>
+      <stop offset="50%" stop-color="#180a0c"/>
+      <stop offset="100%" stop-color="#0a0406"/>
+    </linearGradient>
+    <linearGradient id="grw-border" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#e20613"/>
+      <stop offset="50%" stop-color="#ff3333" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#e20613"/>
+    </linearGradient>
+    <linearGradient id="grw-shine" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.12"/>
+      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.02"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.06"/>
+    </linearGradient>
+    <linearGradient id="grw-accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#e20613"/>
+      <stop offset="100%" stop-color="#fff300"/>
+    </linearGradient>
+  </defs>
+  <rect x="1" y="1" width="142" height="142" rx="14" fill="url(#grw-bg)" stroke="url(#grw-border)" stroke-width="1.5"/>
+  <rect x="3" y="3" width="138" height="68" rx="12" fill="url(#grw-shine)"/>
+  <!-- Double backward arrows -->
+  <polygon points="76,42 46,64 76,86" fill="#4a9eff" opacity="0.7" stroke="#6bb8ff" stroke-width="1"/>
+  <polygon points="106,42 76,64 106,86" fill="#4a9eff" opacity="0.7" stroke="#6bb8ff" stroke-width="1"/>
+  <!-- Speed lines -->
+  <line x1="38" y1="52" x2="22" y2="52" stroke="#4a9eff" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/>
+  <line x1="34" y1="64" x2="16" y2="64" stroke="#4a9eff" stroke-width="1.5" stroke-linecap="round" opacity="0.6"/>
+  <line x1="38" y1="76" x2="22" y2="76" stroke="#4a9eff" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/>
+  <!-- Glass reflection on arrows -->
+  <polygon points="102,44 82,58 102,58" fill="#ffffff" opacity="0.06"/>
+  <polygon points="72,44 52,58 72,58" fill="#ffffff" opacity="0.06"/>
+  <!-- Accent bar -->
+  <rect x="14" y="114" width="116" height="3" rx="1.5" fill="url(#grw-accent)"/>
+  <text x="72" y="127" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="bold" fill="#ffffff" letter-spacing="1.5">REWIND</text>
+</svg>

@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144 144" width="144" height="144">
+  <rect x="4" y="4" width="136" height="136" rx="12" fill="#212529" stroke="#e20613" stroke-width="2"/>
+  <rect x="8" y="8" width="128" height="128" rx="10" fill="none" stroke="#2d3238" stroke-width="1"/>
+  <!-- Pole -->
+  <rect x="70" y="70" width="4" height="40" rx="1" fill="#777"/>
+  <!-- Pit board sign -->
+  <rect x="34" y="24" width="76" height="48" rx="4" fill="#fff300" stroke="#cc9900" stroke-width="1"/>
+  <!-- Checkered pattern on sign (2 rows x 6 cols) -->
+  <rect x="36" y="26" width="9" height="9" fill="#212529"/>
+  <rect x="54" y="26" width="9" height="9" fill="#212529"/>
+  <rect x="72" y="26" width="9" height="9" fill="#212529"/>
+  <rect x="90" y="26" width="9" height="9" fill="#212529"/>
+  <rect x="45" y="35" width="9" height="9" fill="#212529"/>
+  <rect x="63" y="35" width="9" height="9" fill="#212529"/>
+  <rect x="81" y="35" width="9" height="9" fill="#212529"/>
+  <!-- Wrench icon overlaid on sign center -->
+  <path d="M58,56 L62,48 L66,50 L74,42 L78,42 L82,38 L86,42 L82,46 L82,50 L74,58 L76,62 L68,66 Z" fill="white" stroke="#555" stroke-width="0.5"/>
+  <!-- Wrench head detail -->
+  <path d="M82,38 L88,32 L92,36 L86,42" fill="none" stroke="white" stroke-width="2" stroke-linecap="round"/>
+  <path d="M58,56 L52,62 L56,66 L62,60" fill="none" stroke="white" stroke-width="2" stroke-linecap="round"/>
+  <!-- Pole bracket -->
+  <rect x="64" y="68" width="16" height="6" rx="1" fill="#777"/>
+
+  <text x="72" y="126" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="bold" fill="white">PIT REQ</text>
+</svg>

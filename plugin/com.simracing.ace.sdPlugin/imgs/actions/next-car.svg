@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144 144" width="144" height="144">
+  <rect x="4" y="4" width="136" height="136" rx="12" fill="#212529" stroke="#e20613" stroke-width="2"/>
+  <rect x="8" y="8" width="128" height="128" rx="10" fill="none" stroke="#2d3238" stroke-width="1"/>
+  <!-- Rear car (current, grey) - left side -->
+  <g transform="translate(16, 52)">
+    <!-- Car body -->
+    <path d="M8,30 L8,20 Q8,14 14,14 L22,8 L38,8 L44,14 Q48,14 48,20 L48,30 Z" fill="#777" stroke="#999" stroke-width="1"/>
+    <!-- Windshield -->
+    <path d="M22,10 L18,16 L36,16 L38,10 Z" fill="#555"/>
+    <!-- Wheels -->
+    <circle cx="16" cy="32" r="5" fill="#444" stroke="#666" stroke-width="1.5"/>
+    <circle cx="40" cy="32" r="5" fill="#444" stroke="#666" stroke-width="1.5"/>
+    <!-- Wheel detail -->
+    <circle cx="16" cy="32" r="2" fill="#555"/>
+    <circle cx="40" cy="32" r="2" fill="#555"/>
+  </g>
+  <!-- Arrow pointing right (white) -->
+  <g transform="translate(62, 50)">
+    <rect x="0" y="10" width="18" height="6" rx="2" fill="white"/>
+    <polygon points="16,6 28,13 16,20" fill="white"/>
+  </g>
+  <!-- Front car (next, cyan) - right side -->
+  <g transform="translate(82, 44)">
+    <!-- Car body -->
+    <path d="M8,30 L8,20 Q8,14 14,14 L22,8 L38,8 L44,14 Q48,14 48,20 L48,30 Z" fill="#4a9eff" stroke="#6ab4ff" stroke-width="1"/>
+    <!-- Windshield -->
+    <path d="M22,10 L18,16 L36,16 L38,10 Z" fill="#2d6db5"/>
+    <!-- Wheels -->
+    <circle cx="16" cy="32" r="5" fill="#333" stroke="#4a9eff" stroke-width="1.5"/>
+    <circle cx="40" cy="32" r="5" fill="#333" stroke="#4a9eff" stroke-width="1.5"/>
+    <!-- Wheel detail -->
+    <circle cx="16" cy="32" r="2" fill="#444"/>
+    <circle cx="40" cy="32" r="2" fill="#444"/>
+    <!-- Glow effect -->
+    <path d="M8,30 L8,20 Q8,14 14,14 L22,8 L38,8 L44,14 Q48,14 48,20 L48,30 Z" fill="#4a9eff" opacity="0.15"/>
+  </g>
+
+  <text x="72" y="126" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="bold" fill="white">NEXT CAR</text>
+</svg>

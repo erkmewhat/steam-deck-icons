@@ -1,0 +1,89 @@
+{
+    "id": "ace",
+    "name": "Assetto Corsa EVO",
+    "author": "Charles Costello",
+    "plugin_id": "com.simracing.ace.sdPlugin",
+    "plugin_uuid": "com.simracing.ace",
+    "icon_pack_id": "com.simracing.ace-icons.sdIconPack",
+    "profile_uuid": "D7E4F2A8-91B3-4C6D-A5E7-8F2B1C3D4E5A",
+    "device": {
+        "model": "20GBA9901",
+        "uuid": "@(1)[4057/128/A00SA3272JF6DK]",
+        "type": "standard",
+        "cols": 5,
+        "rows": 3
+    },
+    "keybind_config": {
+        "path": "C:\\Users\\charc\\OneDrive\\Documents\\ACE\\input_keyboard.keyboardinputconfiguration",
+        "format": "protobuf_binary",
+        "key_field": null,
+        "note": "AC Evo uses binary protobuf configs. Keybinds must be set in-game via Settings > Controls > Keyboard."
+    },
+    "categories": {
+        "Car Systems": [
+            "headlights", "flash-lights", "rain-lights", "wipers-up", "wipers-down",
+            "ignition", "starter", "pit-limiter", "horn", "drs", "kers"
+        ],
+        "Adjustments": [
+            "bb-front", "bb-rear", "tc-increase", "tc-decrease",
+            "abs-increase", "abs-decrease", "engine-map-up", "engine-map-down"
+        ],
+        "Camera & Display": [
+            "glance-left", "glance-right", "look-behind",
+            "free-camera", "track-camera", "chase-camera",
+            "virtual-mirror", "hud-toggle", "leaderboard",
+            "damage-display", "ideal-line"
+        ],
+        "Race & Replay": [
+            "ai-takeover", "pit-request", "restart-session",
+            "replay", "slow-motion", "fast-forward", "rewind",
+            "screenshot", "next-car", "prev-car", "pause"
+        ]
+    },
+    "bindings": {
+        "headlights":      {"key": "L",  "scan": 38, "game_action": "Headlights",          "has_default": true,  "category": "Car Systems"},
+        "flash-lights":    {"key": "F",  "scan": 33, "game_action": "Flashing Lights",      "has_default": false, "category": "Car Systems"},
+        "rain-lights":     {"key": "R",  "scan": 19, "game_action": "Rain Lights",          "has_default": false, "category": "Car Systems"},
+        "wipers-up":       {"key": "P",  "scan": 25, "game_action": "Wiper Cycle Up",       "has_default": false, "category": "Car Systems"},
+        "wipers-down":     {"key": "O",  "scan": 24, "game_action": "Wiper Cycle Down",     "has_default": false, "category": "Car Systems"},
+        "ignition":        {"key": "I",  "scan": 23, "game_action": "Toggle Ignition",      "has_default": false, "category": "Car Systems"},
+        "starter":         {"key": "K",  "scan": 37, "game_action": "Toggle Starter",       "has_default": false, "category": "Car Systems"},
+        "pit-limiter":     {"key": "N",  "scan": 49, "game_action": "Pit Limiter",          "has_default": false, "category": "Car Systems"},
+        "horn":            {"key": "H",  "scan": 35, "game_action": "Horn",                 "has_default": true,  "category": "Car Systems"},
+        "drs":             {"key": "J",  "scan": 36, "game_action": "DRS",                  "has_default": false, "category": "Car Systems"},
+        "kers":            {"key": "Y",  "scan": 21, "game_action": "KERS",                 "has_default": false, "category": "Car Systems"},
+
+        "bb-front":        {"key": "B",  "scan": 48, "game_action": "Brake Bias Front",     "has_default": false, "category": "Adjustments"},
+        "bb-rear":         {"key": "V",  "scan": 47, "game_action": "Brake Bias Rear",      "has_default": false, "category": "Adjustments"},
+        "tc-increase":     {"key": "T",  "scan": 20, "game_action": "TC Increase",          "has_default": false, "category": "Adjustments"},
+        "tc-decrease":     {"key": "G",  "scan": 34, "game_action": "TC Decrease",          "has_default": false, "category": "Adjustments"},
+        "abs-increase":    {"key": "A",  "scan": 30, "game_action": "ABS Increase",         "has_default": false, "category": "Adjustments"},
+        "abs-decrease":    {"key": "S",  "scan": 31, "game_action": "ABS Decrease",         "has_default": false, "category": "Adjustments"},
+        "engine-map-up":   {"key": "E",  "scan": 18, "game_action": "Engine Map Increase",  "has_default": false, "category": "Adjustments"},
+        "engine-map-down": {"key": "D",  "scan": 32, "game_action": "Engine Map Decrease",  "has_default": false, "category": "Adjustments"},
+
+        "glance-left":     {"key": "Q",  "scan": 16, "game_action": "Glance Left",          "has_default": true,  "category": "Camera & Display"},
+        "glance-right":    {"key": "W",  "scan": 17, "game_action": "Glance Right",         "has_default": true,  "category": "Camera & Display"},
+        "look-behind":     {"key": "C",  "scan": 46, "game_action": "Look Behind",          "has_default": false, "category": "Camera & Display"},
+        "free-camera":     {"key": "F5", "scan": 63, "game_action": "Free Camera",          "has_default": true,  "category": "Camera & Display"},
+        "track-camera":    {"key": "F1", "scan": 59, "game_action": "Track Camera",         "has_default": true,  "category": "Camera & Display"},
+        "chase-camera":    {"key": "F3", "scan": 61, "game_action": "Chase Camera",         "has_default": true,  "category": "Camera & Display"},
+        "virtual-mirror":  {"key": "F8", "scan": 66, "game_action": "Virtual Mirror",       "has_default": true,  "category": "Camera & Display"},
+        "hud-toggle":      {"key": "F4", "scan": 62, "game_action": "Toggle HUD",           "has_default": false, "category": "Camera & Display"},
+        "leaderboard":     {"key": "F7", "scan": 65, "game_action": "Leaderboard",          "has_default": true,  "category": "Camera & Display"},
+        "damage-display":  {"key": "F9", "scan": 67, "game_action": "Damage Display",       "has_default": false, "category": "Camera & Display"},
+        "ideal-line":      {"key": "F10","scan": 68, "game_action": "Ideal Racing Line",    "has_default": false, "category": "Camera & Display"},
+
+        "ai-takeover":     {"key": "U",  "scan": 22, "game_action": "AI Takeover",          "has_default": false, "category": "Race & Replay"},
+        "pit-request":     {"key": "M",  "scan": 50, "game_action": "Pit Request",          "has_default": false, "category": "Race & Replay"},
+        "restart-session": {"key": "`",  "scan": 41, "game_action": "Restart Session",      "has_default": false, "category": "Race & Replay"},
+        "replay":          {"key": ";",  "scan": 39, "game_action": "Start Replay",         "has_default": false, "category": "Race & Replay"},
+        "slow-motion":     {"key": "F11","scan": 87, "game_action": "Slow Motion",          "has_default": false, "category": "Race & Replay"},
+        "fast-forward":    {"key": "F12","scan": 88, "game_action": "Fast Forward",         "has_default": false, "category": "Race & Replay"},
+        "rewind":          {"key": "F2", "scan": 60, "game_action": "Rewind",               "has_default": false, "category": "Race & Replay"},
+        "screenshot":      {"key": "F6", "scan": 64, "game_action": "Screenshot",           "has_default": true,  "category": "Race & Replay"},
+        "next-car":        {"key": "X",  "scan": 45, "game_action": "Next Car",             "has_default": false, "category": "Race & Replay"},
+        "prev-car":        {"key": "Z",  "scan": 44, "game_action": "Previous Car",         "has_default": false, "category": "Race & Replay"},
+        "pause":           {"key": "Esc","scan": 1,  "game_action": "Pause",                "has_default": true,  "category": "Race & Replay"}
+    }
+}

@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144 144">
+  <defs>
+    <radialGradient id="cad-bg"><stop offset="0%" stop-color="#252525"/><stop offset="100%" stop-color="#0c0c0c"/></radialGradient>
+    <pattern id="cad-cf" width="8" height="8" patternUnits="userSpaceOnUse"><rect width="4" height="4" fill="#1a1a1a"/><rect x="4" width="4" height="4" fill="#1f1f1f"/><rect y="4" width="4" height="4" fill="#1f1f1f"/><rect x="4" y="4" width="4" height="4" fill="#1a1a1a"/></pattern>
+    <linearGradient id="cad-stripe" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#e20613" stop-opacity="0"/><stop offset="20%" stop-color="#e20613"/><stop offset="80%" stop-color="#e20613"/><stop offset="100%" stop-color="#e20613" stop-opacity="0"/></linearGradient>
+    <linearGradient id="cad-rchrome" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#ff4444"/><stop offset="30%" stop-color="#ff6666"/><stop offset="50%" stop-color="#cc2200"/><stop offset="75%" stop-color="#ff3333"/><stop offset="100%" stop-color="#991100"/></linearGradient>
+    <linearGradient id="cad-label" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#ffffff"/><stop offset="100%" stop-color="#cccccc"/></linearGradient>
+    <filter id="cad-shadow"><feDropShadow dx="0" dy="1" stdDeviation="1.5" flood-color="#000000" flood-opacity="0.6"/></filter>
+  </defs>
+  <rect width="144" height="144" fill="url(#cad-bg)"/>
+  <rect width="144" height="144" fill="url(#cad-cf)" opacity="0.3"/>
+  <rect x="0" y="0" width="144" height="3" fill="url(#cad-stripe)"/>
+  <rect x="0" y="141" width="144" height="3" fill="url(#cad-stripe)"/>
+  <!-- Red chrome ABS circle -->
+  <g filter="url(#cad-shadow)">
+    <circle cx="55" cy="55" r="28" fill="none" stroke="url(#cad-rchrome)" stroke-width="5"/>
+    <text x="55" y="62" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" font-weight="bold" fill="url(#cad-rchrome)">ABS</text>
+  </g>
+  <!-- Red down arrow -->
+  <polygon points="115,80 130,55 123,55 123,30 107,30 107,55 100,55" fill="#e20613" filter="url(#cad-shadow)"/>
+  <text x="72" y="120" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" font-weight="bold" letter-spacing="2" fill="url(#cad-label)">ABS -</text>
+</svg>

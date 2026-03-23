@@ -5,4 +5,5 @@ import { HotkeyAction } from "./hotkey-action";
 export class MfdDecrease extends HotkeyAction {
     readonly defaultHotkey = "Left";
     readonly actionName = "MFD Decrease";
+    readonly iconFile = "mfd-decrease";
 }

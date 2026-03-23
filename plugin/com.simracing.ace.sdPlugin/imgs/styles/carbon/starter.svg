@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144 144">
+  <defs>
+    <radialGradient id="cst-bg"><stop offset="0%" stop-color="#252525"/><stop offset="100%" stop-color="#0c0c0c"/></radialGradient>
+    <pattern id="cst-cf" width="8" height="8" patternUnits="userSpaceOnUse"><rect width="4" height="4" fill="#1a1a1a"/><rect x="4" width="4" height="4" fill="#1f1f1f"/><rect y="4" width="4" height="4" fill="#1f1f1f"/><rect x="4" y="4" width="4" height="4" fill="#1a1a1a"/></pattern>
+    <linearGradient id="cst-stripe" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#e20613" stop-opacity="0"/><stop offset="20%" stop-color="#e20613"/><stop offset="80%" stop-color="#e20613"/><stop offset="100%" stop-color="#e20613" stop-opacity="0"/></linearGradient>
+    <linearGradient id="cst-chrome" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#e0e0e0"/><stop offset="30%" stop-color="#ffffff"/><stop offset="50%" stop-color="#a0a0a0"/><stop offset="75%" stop-color="#d0d0d0"/><stop offset="100%" stop-color="#707070"/></linearGradient>
+    <linearGradient id="cst-label" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#ffffff"/><stop offset="100%" stop-color="#cccccc"/></linearGradient>
+    <filter id="cst-shadow"><feDropShadow dx="0" dy="1" stdDeviation="1.5" flood-color="#000000" flood-opacity="0.6"/></filter>
+  </defs>
+  <rect width="144" height="144" fill="url(#cst-bg)"/>
+  <rect width="144" height="144" fill="url(#cst-cf)" opacity="0.3"/>
+  <rect x="0" y="0" width="144" height="3" fill="url(#cst-stripe)"/>
+  <rect x="0" y="141" width="144" height="3" fill="url(#cst-stripe)"/>
+  <!-- Chrome button ring -->
+  <g filter="url(#cst-shadow)">
+    <circle cx="72" cy="58" r="34" fill="none" stroke="url(#cst-chrome)" stroke-width="7"/>
+    <circle cx="72" cy="58" r="28" fill="#1a1a1a"/>
+    <circle cx="72" cy="58" r="26" fill="#222"/>
+  </g>
+  <!-- Inner bevel -->
+  <circle cx="72" cy="58" r="24" fill="none" stroke="#333" stroke-width="1"/>
+  <!-- START text -->
+  <text x="72" y="55" text-anchor="middle" font-family="Arial,sans-serif" font-size="14" font-weight="bold" letter-spacing="3" fill="#ffffff">START</text>
+  <!-- Engine subtitle -->
+  <text x="72" y="69" text-anchor="middle" font-family="Arial,sans-serif" font-size="8" letter-spacing="2" fill="#888">ENGINE</text>
+  <text x="72" y="120" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" font-weight="bold" letter-spacing="2" fill="url(#cst-label)">STARTER</text>
+</svg>

@@ -1,14 +1,65 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144 144" width="144" height="144">
-  <rect width="144" height="144" fill="#1a1a2e"/>
-  <!-- Power symbol circle (broken at top) -->
-  <path d="M52 42 A30 30 0 1 0 92 42" fill="none" stroke="#ff4444" stroke-width="5" stroke-linecap="round"/>
-  <!-- Power symbol vertical line -->
-  <line x1="72" y1="30" x2="72" y2="62" stroke="#ff4444" stroke-width="5" stroke-linecap="round"/>
-  <!-- Small key teeth detail at bottom -->
-  <line x1="62" y1="95" x2="82" y2="95" stroke="#ffffff" stroke-width="2" stroke-linecap="round" opacity="0.5"/>
-  <line x1="66" y1="95" x2="66" y2="100" stroke="#ffffff" stroke-width="2" stroke-linecap="round" opacity="0.5"/>
-  <line x1="74" y1="95" x2="74" y2="100" stroke="#ffffff" stroke-width="2" stroke-linecap="round" opacity="0.5"/>
-  <line x1="78" y1="95" x2="78" y2="98" stroke="#ffffff" stroke-width="2" stroke-linecap="round" opacity="0.5"/>
+  <defs>
+    <!-- Background gradient -->
+    <radialGradient id="bg" cx="50%" cy="40%" r="70%">
+      <stop offset="0%" stop-color="#32373C"/>
+      <stop offset="100%" stop-color="#0a0a0f"/>
+    </radialGradient>
+    <!-- Red glow -->
+    <radialGradient id="redGlow" cx="50%" cy="45%" r="40%">
+      <stop offset="0%" stop-color="#FF1D43" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#FF1D43" stop-opacity="0"/>
+    </radialGradient>
+    <!-- Power symbol gradient -->
+    <linearGradient id="powerGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FF4D6A"/>
+      <stop offset="100%" stop-color="#FF1D43"/>
+    </linearGradient>
+    <!-- Glow filter -->
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <!-- Subtle drop shadow -->
+    <filter id="shadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#000000" flood-opacity="0.5"/>
+    </filter>
+    <!-- Bottom border accent -->
+    <linearGradient id="borderAccent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#FF1D43" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#FF1D43" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#FF1D43" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="144" height="144" fill="url(#bg)"/>
+
+  <!-- Ambient glow behind icon -->
+  <ellipse cx="72" cy="58" rx="50" ry="45" fill="url(#redGlow)"/>
+
+  <!-- Power symbol with glow -->
+  <g filter="url(#glow)">
+    <!-- Power circle (broken at top) -->
+    <path d="M48 40 A32 32 0 1 0 96 40" fill="none" stroke="url(#powerGrad)" stroke-width="6" stroke-linecap="round"/>
+    <!-- Power vertical line -->
+    <line x1="72" y1="26" x2="72" y2="60" stroke="url(#powerGrad)" stroke-width="6" stroke-linecap="round"/>
+  </g>
+
+  <!-- Key silhouette below power symbol -->
+  <g filter="url(#shadow)" opacity="0.6">
+    <rect x="68" y="88" width="8" height="16" rx="2" fill="#ffffff"/>
+    <rect x="63" y="96" width="18" height="3" rx="1" fill="#ffffff"/>
+    <rect x="66" y="100" width="4" height="5" rx="1" fill="#ffffff"/>
+    <rect x="74" y="100" width="4" height="4" rx="1" fill="#ffffff"/>
+  </g>
+
+  <!-- Bottom accent line -->
+  <rect x="20" y="138" width="104" height="2" rx="1" fill="url(#borderAccent)"/>
+
   <!-- Label -->
-  <text x="72" y="124" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#ff4444" opacity="0.9">IGNITION</text>
+  <text x="72" y="132" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="15" font-weight="700" fill="#ffffff" opacity="0.85" letter-spacing="1">IGNITION</text>
 </svg>

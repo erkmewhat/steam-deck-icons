@@ -5,4 +5,5 @@ import { HotkeyAction } from "./hotkey-action";
 export class Headlights extends HotkeyAction {
     readonly defaultHotkey = "H";
     readonly actionName = "Headlights";
+    readonly iconFile = "headlights";
 }

@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144 144" width="144" height="144">
+  <defs>
+    <radialGradient id="ld-bg" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#1a1520"/>
+      <stop offset="100%" stop-color="#08060a"/>
+    </radialGradient>
+    <filter id="ld-glow-soft">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+    <filter id="ld-glow-crisp">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+    <linearGradient id="ld-bar-top" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#4ade80" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#4ade80" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#4ade80" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="ld-bar-bot" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#4ade80" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#4ade80" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#4ade80" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="144" height="144" fill="url(#ld-bg)" rx="12"/>
+  <rect x="10" y="2" width="124" height="2" fill="url(#ld-bar-top)" rx="1"/>
+  <rect x="10" y="140" width="124" height="2" fill="url(#ld-bar-bot)" rx="1"/>
+  <g opacity="0.4" filter="url(#ld-glow-soft)">
+    <rect x="28" y="22" width="88" height="22" rx="4" fill="none" stroke="#ffd700" stroke-width="2"/>
+    <rect x="28" y="48" width="88" height="22" rx="4" fill="none" stroke="#c0c0c0" stroke-width="2"/>
+    <rect x="28" y="74" width="88" height="22" rx="4" fill="none" stroke="#cd7f32" stroke-width="2"/>
+  </g>
+  <g filter="url(#ld-glow-crisp)">
+    <!-- #1 Gold row -->
+    <rect x="28" y="22" width="88" height="22" rx="4" fill="none" stroke="#ffd700" stroke-width="1.8"/>
+    <text x="40" y="38" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="bold" fill="#ffd700">#1</text>
+    <line x1="58" y1="28" x2="58" y2="38" stroke="#ffd700" stroke-width="1" opacity="0.4"/>
+    <rect x="64" y="29" width="40" height="4" rx="2" fill="#ffd700" opacity="0.4"/>
+    <rect x="64" y="35" width="28" height="3" rx="1.5" fill="#ffd700" opacity="0.25"/>
+    <!-- #2 Silver row -->
+    <rect x="28" y="48" width="88" height="22" rx="4" fill="none" stroke="#c0c0c0" stroke-width="1.8"/>
+    <text x="40" y="64" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="bold" fill="#c0c0c0">#2</text>
+    <line x1="58" y1="54" x2="58" y2="64" stroke="#c0c0c0" stroke-width="1" opacity="0.4"/>
+    <rect x="64" y="55" width="36" height="4" rx="2" fill="#c0c0c0" opacity="0.4"/>
+    <rect x="64" y="61" width="24" height="3" rx="1.5" fill="#c0c0c0" opacity="0.25"/>
+    <!-- #3 Bronze row -->
+    <rect x="28" y="74" width="88" height="22" rx="4" fill="none" stroke="#cd7f32" stroke-width="1.8"/>
+    <text x="40" y="90" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="bold" fill="#cd7f32">#3</text>
+    <line x1="58" y1="80" x2="58" y2="90" stroke="#cd7f32" stroke-width="1" opacity="0.4"/>
+    <rect x="64" y="81" width="32" height="4" rx="2" fill="#cd7f32" opacity="0.4"/>
+    <rect x="64" y="87" width="20" height="3" rx="1.5" fill="#cd7f32" opacity="0.25"/>
+  </g>
+  <text x="72" y="118" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="bold" fill="white" letter-spacing="1.5">LEADERBOARD</text>
+</svg>

@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144 144" width="144" height="144">
+  <rect x="4" y="4" width="136" height="136" rx="12" fill="#212529" stroke="#e20613" stroke-width="2"/>
+  <rect x="8" y="8" width="128" height="128" rx="10" fill="none" stroke="#2d3238" stroke-width="1"/>
+  <!-- Speed lines behind -->
+  <line x1="18" y1="46" x2="40" y2="46" stroke="#555" stroke-width="2" stroke-linecap="round"/>
+  <line x1="14" y1="58" x2="38" y2="58" stroke="#555" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="18" y1="70" x2="40" y2="70" stroke="#555" stroke-width="2" stroke-linecap="round"/>
+  <line x1="22" y1="82" x2="36" y2="82" stroke="#555" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="22" y1="34" x2="36" y2="34" stroke="#555" stroke-width="1.5" stroke-linecap="round"/>
+  <!-- First right-pointing triangle -->
+  <polygon points="44,32 80,58 44,84" fill="#4a9eff"/>
+  <!-- Highlight on first triangle -->
+  <polygon points="48,40 72,58 48,76" fill="#6ab4ff" opacity="0.25"/>
+  <!-- Second right-pointing triangle -->
+  <polygon points="74,32 110,58 74,84" fill="#4a9eff"/>
+  <!-- Highlight on second triangle -->
+  <polygon points="78,40 102,58 78,76" fill="#6ab4ff" opacity="0.25"/>
+  <!-- Small edge accent -->
+  <line x1="112" y1="44" x2="118" y2="44" stroke="#4a9eff" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/>
+  <line x1="112" y1="58" x2="122" y2="58" stroke="#4a9eff" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/>
+  <line x1="112" y1="72" x2="118" y2="72" stroke="#4a9eff" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/>
+
+  <text x="72" y="126" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="bold" fill="white">FAST FWD</text>
+</svg>

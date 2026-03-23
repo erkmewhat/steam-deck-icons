@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144 144" width="144" height="144">
+  <defs>
+    <radialGradient id="cb-cc-bg" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#252525"/>
+      <stop offset="100%" stop-color="#0c0c0c"/>
+    </radialGradient>
+    <pattern id="cb-cc-cf" width="8" height="8" patternUnits="userSpaceOnUse">
+      <rect width="4" height="4" fill="#1a1a1a"/>
+      <rect x="4" width="4" height="4" fill="#1f1f1f"/>
+      <rect y="4" width="4" height="4" fill="#1f1f1f"/>
+      <rect x="4" y="4" width="4" height="4" fill="#1a1a1a"/>
+    </pattern>
+    <linearGradient id="cb-cc-red" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#ff1a1a"/>
+      <stop offset="50%" stop-color="#cc0000"/>
+      <stop offset="100%" stop-color="#ff1a1a"/>
+    </linearGradient>
+    <linearGradient id="cb-cc-chrome" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e0e0e0"/>
+      <stop offset="25%" stop-color="#ffffff"/>
+      <stop offset="50%" stop-color="#a0a0a0"/>
+      <stop offset="75%" stop-color="#d0d0d0"/>
+      <stop offset="100%" stop-color="#707070"/>
+    </linearGradient>
+    <linearGradient id="cb-cc-label" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#999999"/>
+    </linearGradient>
+    <filter id="cb-cc-shadow">
+      <feDropShadow dx="0" dy="1" stdDeviation="2" flood-color="#000" flood-opacity="0.6"/>
+    </filter>
+    <filter id="cb-cc-glow">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+  <rect width="144" height="144" fill="url(#cb-cc-bg)" rx="12"/>
+  <rect width="144" height="144" fill="url(#cb-cc-cf)" rx="12" opacity="0.3"/>
+  <rect x="0" y="0" width="144" height="3" fill="url(#cb-cc-red)"/>
+  <rect x="0" y="141" width="144" height="3" fill="url(#cb-cc-red)"/>
+  <!-- Car silhouette -->
+  <g filter="url(#cb-cc-shadow)">
+    <rect x="52" y="50" width="40" height="18" rx="6" fill="url(#cb-cc-chrome)" opacity="0.7"/>
+    <rect x="46" y="62" width="52" height="14" rx="3" fill="url(#cb-cc-chrome)" opacity="0.8"/>
+    <circle cx="56" cy="78" r="5" fill="url(#cb-cc-chrome)" opacity="0.6"/>
+    <circle cx="88" cy="78" r="5" fill="url(#cb-cc-chrome)" opacity="0.6"/>
+  </g>
+  <!-- Camera behind car -->
+  <g opacity="0.5" filter="url(#cb-cc-glow)">
+    <rect x="62" y="34" width="20" height="12" rx="2" fill="#4a9eff"/>
+  </g>
+  <rect x="63" y="35" width="18" height="10" rx="2" fill="none" stroke="#4a9eff" stroke-width="1.5"/>
+  <circle cx="72" cy="40" r="3" fill="#4a9eff" opacity="0.8"/>
+  <!-- Dotted line from camera to car -->
+  <line x1="72" y1="46" x2="72" y2="50" stroke="#4a9eff" stroke-width="1" stroke-dasharray="2,2" opacity="0.6"/>
+  <text x="72" y="108" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="bold" fill="url(#cb-cc-label)" letter-spacing="2">CHASE CAM</text>
+</svg>

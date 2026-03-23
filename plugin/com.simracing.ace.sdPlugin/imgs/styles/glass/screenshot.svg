@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144 144">
+  <defs>
+    <linearGradient id="gss-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2a1215"/>
+      <stop offset="50%" stop-color="#180a0c"/>
+      <stop offset="100%" stop-color="#0a0406"/>
+    </linearGradient>
+    <linearGradient id="gss-border" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#e20613"/>
+      <stop offset="50%" stop-color="#ff3333" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#e20613"/>
+    </linearGradient>
+    <linearGradient id="gss-shine" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.12"/>
+      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.02"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.06"/>
+    </linearGradient>
+    <linearGradient id="gss-body" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#6bb8ff"/>
+      <stop offset="100%" stop-color="#4a9eff"/>
+    </linearGradient>
+    <linearGradient id="gss-accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#e20613"/>
+      <stop offset="100%" stop-color="#fff300"/>
+    </linearGradient>
+  </defs>
+  <rect x="1" y="1" width="142" height="142" rx="14" fill="url(#gss-bg)" stroke="url(#gss-border)" stroke-width="1.5"/>
+  <rect x="3" y="3" width="138" height="68" rx="12" fill="url(#gss-shine)"/>
+  <!-- Camera body -->
+  <rect x="32" y="44" width="80" height="48" rx="6" fill="url(#gss-body)" opacity="0.8"/>
+  <rect x="32" y="44" width="80" height="48" rx="6" fill="none" stroke="#ffffff" stroke-width="0.5" opacity="0.3"/>
+  <!-- Viewfinder bump -->
+  <rect x="56" y="36" width="32" height="12" rx="3" fill="#4a9eff" opacity="0.6"/>
+  <!-- Lens -->
+  <circle cx="72" cy="68" r="16" fill="#0a0406" stroke="#6bb8ff" stroke-width="2"/>
+  <circle cx="72" cy="68" r="10" fill="#1a3050" stroke="#4a9eff" stroke-width="1"/>
+  <circle cx="72" cy="68" r="5" fill="#2a4060"/>
+  <!-- Lens flare -->
+  <circle cx="68" cy="63" r="3" fill="#ffffff" opacity="0.2"/>
+  <circle cx="76" cy="72" r="1.5" fill="#ffffff" opacity="0.15"/>
+  <!-- Flash burst -->
+  <line x1="100" y1="48" x2="108" y2="42" stroke="#fff300" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/>
+  <line x1="104" y1="52" x2="114" y2="50" stroke="#fff300" stroke-width="1.5" stroke-linecap="round" opacity="0.4"/>
+  <line x1="102" y1="56" x2="112" y2="58" stroke="#fff300" stroke-width="1.5" stroke-linecap="round" opacity="0.3"/>
+  <!-- Glass reflection -->
+  <rect x="36" y="46" width="32" height="3" rx="1.5" fill="#ffffff" opacity="0.1"/>
+  <!-- Accent bar -->
+  <rect x="14" y="114" width="116" height="3" rx="1.5" fill="url(#gss-accent)"/>
+  <text x="72" y="127" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="bold" fill="#ffffff" letter-spacing="1.5">SCREENSHOT</text>
+</svg>

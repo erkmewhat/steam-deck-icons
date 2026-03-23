@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144 144" width="144" height="144">
+  <rect x="4" y="4" width="136" height="136" rx="12" fill="#212529" stroke="#e20613" stroke-width="2"/>
+  <rect x="8" y="8" width="128" height="128" rx="10" fill="none" stroke="#2d3238" stroke-width="1"/>
+  <!-- Camera/eye above -->
+  <rect x="48" y="24" width="48" height="30" rx="6" fill="#4a9eff" opacity="0.85"/>
+  <rect x="48" y="24" width="48" height="30" rx="6" fill="none" stroke="#5ab0ff" stroke-width="1"/>
+  <!-- Camera lens -->
+  <circle cx="72" cy="39" r="9" fill="#212529" stroke="#7bbfff" stroke-width="1.5"/>
+  <circle cx="72" cy="39" r="4.5" fill="#2a5a8f"/>
+  <circle cx="70" cy="37" r="1.5" fill="#7bbfff" opacity="0.4"/>
+  <!-- Recording indicator -->
+  <circle cx="90" cy="30" r="3" fill="#e20613"/>
+  <!-- Dotted sight lines from camera to car -->
+  <line x1="58" y1="54" x2="50" y2="82" stroke="#4a9eff" stroke-width="1.5" stroke-dasharray="3,3" opacity="0.6"/>
+  <line x1="86" y1="54" x2="94" y2="82" stroke="#4a9eff" stroke-width="1.5" stroke-dasharray="3,3" opacity="0.6"/>
+  <!-- Car silhouette at bottom -->
+  <g transform="translate(72, 96)">
+    <!-- Car body -->
+    <rect x="-22" y="-6" width="44" height="12" rx="4" fill="#777"/>
+    <!-- Car roof/cabin -->
+    <rect x="-14" y="-12" width="28" height="8" rx="3" fill="#888"/>
+    <!-- Wheels -->
+    <circle cx="-16" cy="8" r="4" fill="#555" stroke="#777" stroke-width="1"/>
+    <circle cx="16" cy="8" r="4" fill="#555" stroke="#777" stroke-width="1"/>
+    <!-- Windshield -->
+    <rect x="-12" y="-11" width="24" height="5" rx="2" fill="#4a9eff" opacity="0.3"/>
+    <!-- Taillights -->
+    <rect x="-20" y="-3" width="4" height="3" rx="1" fill="#e20613" opacity="0.6"/>
+    <rect x="16" y="-3" width="4" height="3" rx="1" fill="#e20613" opacity="0.6"/>
+  </g>
+
+  <text x="72" y="126" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="bold" fill="white">CHASE CAM</text>
+</svg>

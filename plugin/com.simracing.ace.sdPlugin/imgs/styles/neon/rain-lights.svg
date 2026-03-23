@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144 144" width="144" height="144">
+  <defs>
+    <radialGradient id="nrl-bg" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#1a1520"/>
+      <stop offset="100%" stop-color="#08060a"/>
+    </radialGradient>
+    <radialGradient id="nrl-ambglow" cx="50%" cy="50%" r="60%">
+      <stop offset="0%" stop-color="#e20613" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#e20613" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="nrl-softglow">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feComponentTransfer in="blur"><feFuncA type="linear" slope="0.4"/></feComponentTransfer>
+    </filter>
+    <filter id="nrl-neon">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <linearGradient id="nrl-topbar" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#e20613" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#e20613" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#e20613" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="nrl-botbar" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#e20613" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#e20613" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#e20613" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="144" height="144" fill="url(#nrl-bg)"/>
+  <rect width="144" height="144" fill="url(#nrl-ambglow)"/>
+  <rect x="0" y="0" width="144" height="3" fill="url(#nrl-topbar)"/>
+  <!-- Red rear light soft glow -->
+  <g filter="url(#nrl-softglow)">
+    <ellipse cx="95" cy="60" rx="22" ry="14" fill="#e20613"/>
+    <line x1="75" y1="52" x2="25" y2="35" stroke="#e20613" stroke-width="5"/>
+    <line x1="75" y1="60" x2="20" y2="55" stroke="#e20613" stroke-width="5"/>
+    <line x1="75" y1="68" x2="25" y2="80" stroke="#e20613" stroke-width="5"/>
+  </g>
+  <!-- Crisp red light and beams -->
+  <g filter="url(#nrl-neon)">
+    <ellipse cx="95" cy="60" rx="18" ry="11" fill="none" stroke="#e20613" stroke-width="2.5"/>
+    <ellipse cx="95" cy="60" rx="10" ry="6" fill="#e20613" opacity="0.6"/>
+    <line x1="75" y1="52" x2="25" y2="35" stroke="#e20613" stroke-width="2" stroke-linecap="round"/>
+    <line x1="75" y1="60" x2="20" y2="55" stroke="#e20613" stroke-width="2" stroke-linecap="round"/>
+    <line x1="75" y1="68" x2="25" y2="80" stroke="#e20613" stroke-width="2" stroke-linecap="round"/>
+  </g>
+  <!-- Rain lines -->
+  <g filter="url(#nrl-neon)" opacity="0.7">
+    <path d="M40,25 Q38,35 42,45" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+    <path d="M55,20 Q53,30 57,40" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+    <path d="M70,28 Q68,38 72,48" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+    <path d="M35,70 Q33,80 37,90" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+    <path d="M50,75 Q48,85 52,95" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+    <path d="M110,40 Q108,50 112,60" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+    <path d="M120,65 Q118,75 122,85" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+  </g>
+  <rect x="0" y="134" width="144" height="10" fill="url(#nrl-botbar)"/>
+  <text x="72" y="128" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="bold" fill="white" text-anchor="middle" letter-spacing="1.5">RAIN LIGHTS</text>
+</svg>

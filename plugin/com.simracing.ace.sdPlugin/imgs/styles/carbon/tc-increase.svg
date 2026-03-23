@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144 144">
+  <defs>
+    <radialGradient id="cti-bg"><stop offset="0%" stop-color="#252525"/><stop offset="100%" stop-color="#0c0c0c"/></radialGradient>
+    <pattern id="cti-cf" width="8" height="8" patternUnits="userSpaceOnUse"><rect width="4" height="4" fill="#1a1a1a"/><rect x="4" width="4" height="4" fill="#1f1f1f"/><rect y="4" width="4" height="4" fill="#1f1f1f"/><rect x="4" y="4" width="4" height="4" fill="#1a1a1a"/></pattern>
+    <linearGradient id="cti-stripe" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#e20613" stop-opacity="0"/><stop offset="20%" stop-color="#e20613"/><stop offset="80%" stop-color="#e20613"/><stop offset="100%" stop-color="#e20613" stop-opacity="0"/></linearGradient>
+    <linearGradient id="cti-ychrome" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#fff300"/><stop offset="30%" stop-color="#ffff66"/><stop offset="50%" stop-color="#ccaa00"/><stop offset="75%" stop-color="#fff300"/><stop offset="100%" stop-color="#997700"/></linearGradient>
+    <linearGradient id="cti-green" x1="0" y1="1" x2="0" y2="0"><stop offset="0%" stop-color="#00cc44"/><stop offset="100%" stop-color="#00ff66"/></linearGradient>
+    <linearGradient id="cti-label" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#ffffff"/><stop offset="100%" stop-color="#cccccc"/></linearGradient>
+    <filter id="cti-shadow"><feDropShadow dx="0" dy="1" stdDeviation="1.5" flood-color="#000000" flood-opacity="0.6"/></filter>
+  </defs>
+  <rect width="144" height="144" fill="url(#cti-bg)"/>
+  <rect width="144" height="144" fill="url(#cti-cf)" opacity="0.3"/>
+  <rect x="0" y="0" width="144" height="3" fill="url(#cti-stripe)"/>
+  <rect x="0" y="141" width="144" height="3" fill="url(#cti-stripe)"/>
+  <!-- Yellow chrome TC triangle -->
+  <g filter="url(#cti-shadow)">
+    <polygon points="55,25 25,80 85,80" fill="none" stroke="url(#cti-ychrome)" stroke-width="5" stroke-linejoin="round"/>
+    <text x="55" y="72" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" font-weight="bold" fill="url(#cti-ychrome)">TC</text>
+  </g>
+  <!-- Green up arrow -->
+  <polygon points="115,30 130,55 123,55 123,80 107,80 107,55 100,55" fill="url(#cti-green)" filter="url(#cti-shadow)"/>
+  <text x="72" y="120" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" font-weight="bold" letter-spacing="2" fill="url(#cti-label)">TC +</text>
+</svg>

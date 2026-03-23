@@ -5,4 +5,5 @@ import { HotkeyAction } from "./hotkey-action";
 export class MfdUp extends HotkeyAction {
     readonly defaultHotkey = "Up";
     readonly actionName = "MFD Up";
+    readonly iconFile = "mfd-up";
 }

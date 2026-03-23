@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144 144" width="144" height="144">
+  <defs>
+    <radialGradient id="gr-bg" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#1a1520"/>
+      <stop offset="100%" stop-color="#08060a"/>
+    </radialGradient>
+    <filter id="gr-glow-soft">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+    <filter id="gr-glow-crisp">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+    <linearGradient id="gr-bar-top" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#4a9eff" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#4a9eff" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#4a9eff" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="gr-bar-bot" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#4a9eff" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#4a9eff" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#4a9eff" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="144" height="144" fill="url(#gr-bg)" rx="12"/>
+  <rect x="10" y="2" width="124" height="2" fill="url(#gr-bar-top)" rx="1"/>
+  <rect x="10" y="140" width="124" height="2" fill="url(#gr-bar-bot)" rx="1"/>
+  <g opacity="0.4" filter="url(#gr-glow-soft)">
+    <ellipse cx="72" cy="62" rx="34" ry="18" fill="none" stroke="#4a9eff" stroke-width="2.5"/>
+    <circle cx="84" cy="62" r="7" fill="#4a9eff"/>
+    <polyline points="116,62 126,55 126,69" fill="none" stroke="#4a9eff" stroke-width="3"/>
+  </g>
+  <g filter="url(#gr-glow-crisp)">
+    <ellipse cx="72" cy="62" rx="34" ry="18" fill="none" stroke="#4a9eff" stroke-width="2" stroke-linecap="round"/>
+    <circle cx="84" cy="62" r="7" fill="#4a9eff" opacity="0.9"/>
+    <circle cx="84" cy="62" r="3" fill="#08060a"/>
+    <polyline points="116,62 128,53 128,71" fill="none" stroke="#4a9eff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <line x1="128" y1="62" x2="108" y2="62" stroke="#4a9eff" stroke-width="2" stroke-linecap="round"/>
+  </g>
+  <text x="72" y="106" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="bold" fill="white" letter-spacing="1.5">LOOK RIGHT</text>
+</svg>

@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144 144" width="144" height="144">
+  <defs>
+    <radialGradient id="lb-bg" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#1a1520"/>
+      <stop offset="100%" stop-color="#08060a"/>
+    </radialGradient>
+    <filter id="lb-glow-soft">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+    <filter id="lb-glow-crisp">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+    <linearGradient id="lb-bar-top" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#4a9eff" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#4a9eff" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#4a9eff" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="lb-bar-bot" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#4a9eff" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#4a9eff" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#4a9eff" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="144" height="144" fill="url(#lb-bg)" rx="12"/>
+  <rect x="10" y="2" width="124" height="2" fill="url(#lb-bar-top)" rx="1"/>
+  <rect x="10" y="140" width="124" height="2" fill="url(#lb-bar-bot)" rx="1"/>
+  <g opacity="0.4" filter="url(#lb-glow-soft)">
+    <rect x="30" y="35" width="84" height="36" rx="6" fill="none" stroke="#4a9eff" stroke-width="2.5"/>
+    <rect x="42" y="44" width="18" height="10" rx="2" fill="#e20613"/>
+    <path d="M72,88 L60,78 L60,82 L48,82 L48,94 L60,94 L60,98 Z" fill="#4a9eff"/>
+  </g>
+  <g filter="url(#lb-glow-crisp)">
+    <!-- Rearview mirror frame -->
+    <rect x="30" y="35" width="84" height="36" rx="6" fill="none" stroke="#4a9eff" stroke-width="2"/>
+    <!-- Mirror glass -->
+    <rect x="34" y="39" width="76" height="28" rx="3" fill="#0d0b12" opacity="0.6"/>
+    <!-- Red car reflection in mirror -->
+    <rect x="44" y="46" width="16" height="8" rx="2" fill="#e20613" opacity="0.8"/>
+    <circle cx="46" cy="56" r="2" fill="#e20613" opacity="0.6"/>
+    <circle cx="58" cy="56" r="2" fill="#e20613" opacity="0.6"/>
+    <!-- Mirror mount -->
+    <line x1="72" y1="71" x2="72" y2="78" stroke="#4a9eff" stroke-width="2" stroke-linecap="round"/>
+    <!-- Backward arrow -->
+    <path d="M72,92 L58,82 L58,87 L44,87 L44,97 L58,97 L58,102 Z" fill="none" stroke="#4a9eff" stroke-width="2" stroke-linejoin="round"/>
+  </g>
+  <text x="72" y="124" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="bold" fill="white" letter-spacing="1.5">LOOK BACK</text>
+</svg>

@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "WebSearch",
+      "WebFetch(domain:www.magicgameworld.com)",
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:docs.elgato.com)",
+      "WebFetch(domain:marketplace.elgato.com)",
+      "Skill(keybindings-help)"
+    ]
+  }
+}

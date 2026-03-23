@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144 144" width="144" height="144">
+  <defs>
+    <radialGradient id="pr-bg" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#1a1520"/>
+      <stop offset="100%" stop-color="#08060a"/>
+    </radialGradient>
+    <filter id="pr-glow-soft">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+    <filter id="pr-glow-crisp">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+    <linearGradient id="pr-bar-top" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#fff300" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#fff300" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#fff300" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="pr-bar-bot" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#fff300" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#fff300" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#fff300" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="144" height="144" fill="url(#pr-bg)" rx="12"/>
+  <rect x="10" y="2" width="124" height="2" fill="url(#pr-bar-top)" rx="1"/>
+  <rect x="10" y="140" width="124" height="2" fill="url(#pr-bar-bot)" rx="1"/>
+  <g opacity="0.4" filter="url(#pr-glow-soft)">
+    <rect x="38" y="14" width="68" height="50" rx="4" fill="none" stroke="#fff300" stroke-width="2.5"/>
+    <line x1="72" y1="64" x2="72" y2="88" stroke="#fff300" stroke-width="3"/>
+  </g>
+  <g filter="url(#pr-glow-crisp)">
+    <!-- Pit board sign -->
+    <rect x="38" y="14" width="68" height="50" rx="4" fill="none" stroke="#fff300" stroke-width="2"/>
+    <!-- Checkered pattern on board top -->
+    <rect x="40" y="16" width="8" height="8" fill="#fff300" opacity="0.2"/>
+    <rect x="56" y="16" width="8" height="8" fill="#fff300" opacity="0.2"/>
+    <rect x="72" y="16" width="8" height="8" fill="#fff300" opacity="0.2"/>
+    <rect x="88" y="16" width="8" height="8" fill="#fff300" opacity="0.2"/>
+    <rect x="48" y="24" width="8" height="8" fill="#fff300" opacity="0.2"/>
+    <rect x="64" y="24" width="8" height="8" fill="#fff300" opacity="0.2"/>
+    <rect x="80" y="24" width="8" height="8" fill="#fff300" opacity="0.2"/>
+    <rect x="96" y="24" width="8" height="8" fill="#fff300" opacity="0.2"/>
+    <!-- Wrench icon -->
+    <path d="M60,40 L64,44 L80,44 L84,40 L82,48 L76,52 L68,52 L62,48 Z" fill="none" stroke="#fff300" stroke-width="1.8" stroke-linejoin="round"/>
+    <line x1="66" y1="52" x2="62" y2="60" stroke="#fff300" stroke-width="2" stroke-linecap="round"/>
+    <line x1="78" y1="52" x2="82" y2="60" stroke="#fff300" stroke-width="2" stroke-linecap="round"/>
+    <!-- Pole -->
+    <line x1="72" y1="64" x2="72" y2="90" stroke="#fff300" stroke-width="2.5" stroke-linecap="round"/>
+    <!-- Base -->
+    <line x1="58" y1="90" x2="86" y2="90" stroke="#fff300" stroke-width="2" stroke-linecap="round"/>
+  </g>
+  <text x="72" y="116" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="bold" fill="white" letter-spacing="1.5">PIT REQUEST</text>
+</svg>

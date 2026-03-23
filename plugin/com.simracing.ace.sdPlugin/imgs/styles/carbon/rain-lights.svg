@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144 144">
+  <defs>
+    <radialGradient id="crl-bg"><stop offset="0%" stop-color="#252525"/><stop offset="100%" stop-color="#0c0c0c"/></radialGradient>
+    <pattern id="crl-cf" width="8" height="8" patternUnits="userSpaceOnUse"><rect width="4" height="4" fill="#1a1a1a"/><rect x="4" width="4" height="4" fill="#1f1f1f"/><rect y="4" width="4" height="4" fill="#1f1f1f"/><rect x="4" y="4" width="4" height="4" fill="#1a1a1a"/></pattern>
+    <linearGradient id="crl-stripe" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#e20613" stop-opacity="0"/><stop offset="20%" stop-color="#e20613"/><stop offset="80%" stop-color="#e20613"/><stop offset="100%" stop-color="#e20613" stop-opacity="0"/></linearGradient>
+    <linearGradient id="crl-chrome" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#e0e0e0"/><stop offset="30%" stop-color="#ffffff"/><stop offset="50%" stop-color="#a0a0a0"/><stop offset="75%" stop-color="#d0d0d0"/><stop offset="100%" stop-color="#707070"/></linearGradient>
+    <linearGradient id="crl-redbeam" x1="1" y1="0" x2="0" y2="0"><stop offset="0%" stop-color="#ff2222"/><stop offset="50%" stop-color="#e20613"/><stop offset="100%" stop-color="#e20613" stop-opacity="0"/></linearGradient>
+    <linearGradient id="crl-label" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#ffffff"/><stop offset="100%" stop-color="#cccccc"/></linearGradient>
+    <filter id="crl-shadow"><feDropShadow dx="0" dy="1" stdDeviation="1.5" flood-color="#000000" flood-opacity="0.6"/></filter>
+    <filter id="crl-glow"><feGaussianBlur stdDeviation="3.5" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="144" height="144" fill="url(#crl-bg)"/>
+  <rect width="144" height="144" fill="url(#crl-cf)" opacity="0.3"/>
+  <rect x="0" y="0" width="144" height="3" fill="url(#crl-stripe)"/>
+  <rect x="0" y="141" width="144" height="3" fill="url(#crl-stripe)"/>
+  <!-- Chrome rear light housing -->
+  <rect x="80" y="30" width="35" height="55" rx="6" fill="url(#crl-chrome)" filter="url(#crl-shadow)"/>
+  <rect x="85" y="35" width="25" height="45" rx="3" fill="#330000"/>
+  <rect x="87" y="38" width="21" height="10" rx="2" fill="#e20613" opacity="0.9"/>
+  <rect x="87" y="52" width="21" height="10" rx="2" fill="#e20613" opacity="0.9"/>
+  <rect x="87" y="66" width="21" height="10" rx="2" fill="#e20613" opacity="0.7"/>
+  <!-- Red beams -->
+  <g filter="url(#crl-glow)">
+    <line x1="80" y1="43" x2="25" y2="35" stroke="url(#crl-redbeam)" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="80" y1="50" x2="20" y2="48" stroke="url(#crl-redbeam)" stroke-width="3" stroke-linecap="round"/>
+    <line x1="80" y1="57" x2="18" y2="57" stroke="url(#crl-redbeam)" stroke-width="3" stroke-linecap="round"/>
+    <line x1="80" y1="64" x2="20" y2="66" stroke="url(#crl-redbeam)" stroke-width="3" stroke-linecap="round"/>
+    <line x1="80" y1="71" x2="25" y2="79" stroke="url(#crl-redbeam)" stroke-width="2.5" stroke-linecap="round"/>
+  </g>
+  <!-- Wavy rain lines -->
+  <g stroke="#6699cc" stroke-width="1" fill="none" opacity="0.5">
+    <path d="M30 25 Q33 30 30 35 Q27 40 30 45"/>
+    <path d="M45 20 Q48 25 45 30 Q42 35 45 40"/>
+    <path d="M60 28 Q63 33 60 38 Q57 43 60 48"/>
+    <path d="M38 50 Q41 55 38 60 Q35 65 38 70"/>
+    <path d="M55 55 Q58 60 55 65 Q52 70 55 75"/>
+    <path d="M22 48 Q25 53 22 58 Q19 63 22 68"/>
+  </g>
+  <text x="72" y="120" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" font-weight="bold" letter-spacing="2" fill="url(#crl-label)">RAIN LIGHTS</text>
+</svg>

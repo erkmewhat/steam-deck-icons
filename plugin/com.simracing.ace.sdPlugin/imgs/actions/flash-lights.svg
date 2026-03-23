@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144 144" width="144" height="144">
+  <rect x="4" y="4" width="136" height="136" rx="12" fill="#212529" stroke="#e20613" stroke-width="2"/>
+  <rect x="8" y="8" width="128" height="128" rx="10" fill="none" stroke="#2d3238" stroke-width="1"/>
+  <!-- Headlight housing shadow -->
+  <path d="M36 62 C36 48 48 37 62 37 L62 87 C48 87 36 76 36 62Z" fill="#999"/>
+  <!-- Headlight housing body -->
+  <path d="M34 60 C34 46 46 35 60 35 L60 85 C46 85 34 74 34 60Z" fill="#ddd"/>
+  <!-- Lens detail -->
+  <ellipse cx="60" cy="60" rx="4" ry="25" fill="#bbb"/>
+  <!-- Housing highlight -->
+  <path d="M38 48 C40 42 48 38 56 38" fill="none" stroke="white" stroke-width="1.5" opacity="0.4"/>
+  <!-- Bright glow beams -->
+  <line x1="68" y1="48" x2="100" y2="42" stroke="#fff300" stroke-width="10" stroke-linecap="round" opacity="0.2"/>
+  <line x1="68" y1="60" x2="102" y2="60" stroke="#fff300" stroke-width="10" stroke-linecap="round" opacity="0.2"/>
+  <line x1="68" y1="72" x2="100" y2="78" stroke="#fff300" stroke-width="10" stroke-linecap="round" opacity="0.2"/>
+  <!-- Sharp beam lines -->
+  <line x1="68" y1="48" x2="100" y2="42" stroke="#fff300" stroke-width="3.5" stroke-linecap="round"/>
+  <line x1="68" y1="60" x2="102" y2="60" stroke="#fff300" stroke-width="3.5" stroke-linecap="round"/>
+  <line x1="68" y1="72" x2="100" y2="78" stroke="#fff300" stroke-width="3.5" stroke-linecap="round"/>
+  <!-- Starburst radiating lines -->
+  <line x1="106" y1="32" x2="118" y2="22" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="112" y1="44" x2="126" y2="38" stroke="white" stroke-width="2" stroke-linecap="round" opacity="0.9"/>
+  <line x1="114" y1="60" x2="128" y2="60" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="112" y1="76" x2="126" y2="82" stroke="white" stroke-width="2" stroke-linecap="round" opacity="0.9"/>
+  <line x1="106" y1="88" x2="118" y2="98" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- Secondary shorter bursts -->
+  <line x1="104" y1="24" x2="110" y2="18" stroke="white" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/>
+  <line x1="118" y1="52" x2="124" y2="50" stroke="white" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/>
+  <line x1="118" y1="68" x2="124" y2="70" stroke="white" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/>
+  <line x1="104" y1="96" x2="110" y2="102" stroke="white" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/>
+
+  <text x="72" y="126" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="bold" fill="white">FLASH</text>
+</svg>

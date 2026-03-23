@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144 144" width="144" height="144">
+  <defs>
+    <radialGradient id="nfl-bg" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#1a1520"/>
+      <stop offset="100%" stop-color="#08060a"/>
+    </radialGradient>
+    <radialGradient id="nfl-ambglow" cx="50%" cy="50%" r="60%">
+      <stop offset="0%" stop-color="#e20613" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#e20613" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="nfl-softglow">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feComponentTransfer in="blur"><feFuncA type="linear" slope="0.5"/></feComponentTransfer>
+    </filter>
+    <filter id="nfl-neon">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <radialGradient id="nfl-burst" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="20%" stop-color="#fff300"/>
+      <stop offset="60%" stop-color="#fff300" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#fff300" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="nfl-topbar" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#e20613" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#e20613" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#e20613" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="nfl-botbar" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#e20613" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#e20613" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#e20613" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="144" height="144" fill="url(#nfl-bg)"/>
+  <rect width="144" height="144" fill="url(#nfl-ambglow)"/>
+  <rect x="0" y="0" width="144" height="3" fill="url(#nfl-topbar)"/>
+  <!-- Soft burst wash -->
+  <g filter="url(#nfl-softglow)">
+    <circle cx="72" cy="58" r="28" fill="#fff300" opacity="0.6"/>
+    <line x1="72" y1="58" x2="72" y2="18" stroke="#fff300" stroke-width="6" stroke-linecap="round"/>
+    <line x1="72" y1="58" x2="72" y2="98" stroke="#fff300" stroke-width="6" stroke-linecap="round"/>
+    <line x1="72" y1="58" x2="32" y2="58" stroke="#fff300" stroke-width="6" stroke-linecap="round"/>
+    <line x1="72" y1="58" x2="112" y2="58" stroke="#fff300" stroke-width="6" stroke-linecap="round"/>
+    <line x1="72" y1="58" x2="44" y2="30" stroke="#fff300" stroke-width="5" stroke-linecap="round"/>
+    <line x1="72" y1="58" x2="100" y2="30" stroke="#fff300" stroke-width="5" stroke-linecap="round"/>
+    <line x1="72" y1="58" x2="44" y2="86" stroke="#fff300" stroke-width="5" stroke-linecap="round"/>
+    <line x1="72" y1="58" x2="100" y2="86" stroke="#fff300" stroke-width="5" stroke-linecap="round"/>
+    <line x1="72" y1="58" x2="38" y2="42" stroke="#fff300" stroke-width="4" stroke-linecap="round"/>
+    <line x1="72" y1="58" x2="106" y2="42" stroke="#fff300" stroke-width="4" stroke-linecap="round"/>
+  </g>
+  <!-- Crisp neon rays -->
+  <g filter="url(#nfl-neon)">
+    <line x1="72" y1="58" x2="72" y2="18" stroke="#fff300" stroke-width="3" stroke-linecap="round"/>
+    <line x1="72" y1="58" x2="72" y2="98" stroke="#fff300" stroke-width="3" stroke-linecap="round"/>
+    <line x1="72" y1="58" x2="32" y2="58" stroke="#fff300" stroke-width="3" stroke-linecap="round"/>
+    <line x1="72" y1="58" x2="112" y2="58" stroke="#fff300" stroke-width="3" stroke-linecap="round"/>
+    <line x1="72" y1="58" x2="44" y2="30" stroke="#fff300" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="72" y1="58" x2="100" y2="30" stroke="#fff300" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="72" y1="58" x2="44" y2="86" stroke="#fff300" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="72" y1="58" x2="100" y2="86" stroke="#fff300" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="72" y1="58" x2="38" y2="42" stroke="#fff300" stroke-width="2" stroke-linecap="round"/>
+    <line x1="72" y1="58" x2="106" y2="42" stroke="#fff300" stroke-width="2" stroke-linecap="round"/>
+  </g>
+  <!-- Central bright burst -->
+  <circle cx="72" cy="58" r="18" fill="url(#nfl-burst)" filter="url(#nfl-neon)"/>
+  <circle cx="72" cy="58" r="8" fill="#ffffff" opacity="0.9"/>
+  <rect x="0" y="134" width="144" height="10" fill="url(#nfl-botbar)"/>
+  <text x="72" y="128" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="bold" fill="white" text-anchor="middle" letter-spacing="1.5">FLASH</text>
+</svg>

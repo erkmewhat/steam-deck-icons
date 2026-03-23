@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144 144">
+  <defs>
+    <linearGradient id="gpr-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2a1215"/>
+      <stop offset="50%" stop-color="#180a0c"/>
+      <stop offset="100%" stop-color="#0a0406"/>
+    </linearGradient>
+    <linearGradient id="gpr-border" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#e20613"/>
+      <stop offset="50%" stop-color="#ff3333" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#e20613"/>
+    </linearGradient>
+    <linearGradient id="gpr-shine" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.12"/>
+      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.02"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.06"/>
+    </linearGradient>
+    <linearGradient id="gpr-warm" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fff300"/>
+      <stop offset="100%" stop-color="#ff6600" stop-opacity="0.7"/>
+    </linearGradient>
+    <linearGradient id="gpr-accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#e20613"/>
+      <stop offset="100%" stop-color="#fff300"/>
+    </linearGradient>
+  </defs>
+  <rect x="1" y="1" width="142" height="142" rx="14" fill="url(#gpr-bg)" stroke="url(#gpr-border)" stroke-width="1.5"/>
+  <rect x="3" y="3" width="138" height="68" rx="12" fill="url(#gpr-shine)"/>
+  <!-- PIT board shape -->
+  <rect x="36" y="30" width="72" height="40" rx="4" fill="none" stroke="url(#gpr-warm)" stroke-width="2"/>
+  <rect x="36" y="30" width="72" height="40" rx="4" fill="#fff300" opacity="0.06"/>
+  <!-- PIT text -->
+  <text x="72" y="58" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="24" font-weight="bold" fill="#fff300" opacity="0.9">PIT</text>
+  <!-- Pit board pole -->
+  <line x1="72" y1="70" x2="72" y2="88" stroke="#ffaa00" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
+  <!-- Arrow into pit -->
+  <path d="M46,84 L60,78 L60,90 Z" fill="#ffaa00" opacity="0.5"/>
+  <path d="M98,84 L84,78 L84,90 Z" fill="#ffaa00" opacity="0.5"/>
+  <!-- Wrench icon small -->
+  <path d="M94,88 L100,82 L104,86 L98,92 Z" fill="none" stroke="#ffaa00" stroke-width="1.2" opacity="0.5"/>
+  <!-- Glass reflection -->
+  <rect x="40" y="32" width="30" height="2" rx="1" fill="#ffffff" opacity="0.1"/>
+  <!-- Accent bar -->
+  <rect x="14" y="114" width="116" height="3" rx="1.5" fill="url(#gpr-accent)"/>
+  <text x="72" y="127" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="bold" fill="#ffffff" letter-spacing="1.5">PIT REQUEST</text>
+</svg>

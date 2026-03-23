@@ -3,6 +3,7 @@ import { HotkeyAction } from "./hotkey-action";
 
 @action({ UUID: "com.simracing.lmu.ignition" })
 export class Ignition extends HotkeyAction {
-    readonly defaultHotkey = ";";
+    readonly defaultHotkey = "N";
     readonly actionName = "Ignition";
+    readonly iconFile = "ignition";
 }

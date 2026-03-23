@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144 144" width="144" height="144">
+  <defs>
+    <radialGradient id="rs-bg" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#1a1520"/>
+      <stop offset="100%" stop-color="#08060a"/>
+    </radialGradient>
+    <filter id="rs-glow-soft">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+    <filter id="rs-glow-crisp">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+    <linearGradient id="rs-bar-top" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#e20613" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#e20613" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#e20613" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="rs-bar-bot" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#e20613" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#e20613" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#e20613" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="144" height="144" fill="url(#rs-bg)" rx="12"/>
+  <rect x="10" y="2" width="124" height="2" fill="url(#rs-bar-top)" rx="1"/>
+  <rect x="10" y="140" width="124" height="2" fill="url(#rs-bar-bot)" rx="1"/>
+  <g opacity="0.4" filter="url(#rs-glow-soft)">
+    <path d="M72,20 A35,35 0 1,1 42,38" fill="none" stroke="#e20613" stroke-width="4"/>
+  </g>
+  <g filter="url(#rs-glow-crisp)">
+    <!-- Circular refresh arrow -->
+    <path d="M72,20 A35,35 0 1,1 42,38" fill="none" stroke="#e20613" stroke-width="3" stroke-linecap="round"/>
+    <!-- Arrowhead -->
+    <polygon points="72,12 72,28 84,20" fill="#e20613"/>
+    <!-- Checkered flag accent in center -->
+    <rect x="58" y="46" width="7" height="7" fill="#fff" opacity="0.3"/>
+    <rect x="72" y="46" width="7" height="7" fill="#fff" opacity="0.3"/>
+    <rect x="65" y="53" width="7" height="7" fill="#fff" opacity="0.3"/>
+    <rect x="79" y="53" width="7" height="7" fill="#fff" opacity="0.3"/>
+    <rect x="58" y="60" width="7" height="7" fill="#fff" opacity="0.3"/>
+    <rect x="72" y="60" width="7" height="7" fill="#fff" opacity="0.3"/>
+    <rect x="65" y="46" width="7" height="7" fill="#e20613" opacity="0.2"/>
+    <rect x="79" y="46" width="7" height="7" fill="#e20613" opacity="0.2"/>
+    <rect x="58" y="53" width="7" height="7" fill="#e20613" opacity="0.2"/>
+    <rect x="72" y="53" width="7" height="7" fill="#e20613" opacity="0.2"/>
+    <rect x="65" y="60" width="7" height="7" fill="#e20613" opacity="0.2"/>
+    <rect x="79" y="60" width="7" height="7" fill="#e20613" opacity="0.2"/>
+  </g>
+  <text x="72" y="108" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="bold" fill="white" letter-spacing="1.5">RESTART</text>
+</svg>

@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144 144" width="144" height="144">
+  <defs>
+    <radialGradient id="sc-bg" cx="50%" cy="30%" r="80%">
+      <stop offset="0%" stop-color="#252525"/>
+      <stop offset="100%" stop-color="#0c0c0c"/>
+    </radialGradient>
+    <!-- Carbon fiber pattern hint -->
+    <pattern id="sc-carbon" x="0" y="0" width="8" height="8" patternUnits="userSpaceOnUse">
+      <rect width="8" height="8" fill="#1a1a1a"/>
+      <rect x="0" y="0" width="4" height="4" fill="#1f1f1f"/>
+      <rect x="4" y="4" width="4" height="4" fill="#1f1f1f"/>
+    </pattern>
+    <radialGradient id="sc-glow" cx="60%" cy="42%" r="40%">
+      <stop offset="0%" stop-color="#fff300" stop-opacity="0.28"/>
+      <stop offset="100%" stop-color="#fff300" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="sc-beam" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="30%" stop-color="#fff300"/>
+      <stop offset="100%" stop-color="#fff300" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="sc-chrome" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e0e0e0"/>
+      <stop offset="20%" stop-color="#ffffff"/>
+      <stop offset="50%" stop-color="#a0a0a0"/>
+      <stop offset="80%" stop-color="#d0d0d0"/>
+      <stop offset="100%" stop-color="#707070"/>
+    </linearGradient>
+    <filter id="sc-gf" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="3.5" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="sc-sharp" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="1" stdDeviation="1.5" flood-color="#000" flood-opacity="0.6"/>
+    </filter>
+    <linearGradient id="sc-redbar" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#e20613" stop-opacity="0"/>
+      <stop offset="25%" stop-color="#e20613"/>
+      <stop offset="75%" stop-color="#e20613"/>
+      <stop offset="100%" stop-color="#e20613" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="sc-label" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#cccccc"/>
+    </linearGradient>
+  </defs>
+  <!-- Carbon background -->
+  <rect width="144" height="144" fill="url(#sc-bg)"/>
+  <rect width="144" height="144" fill="url(#sc-carbon)" opacity="0.3"/>
+  <!-- Top red accent stripe -->
+  <rect x="0" y="0" width="144" height="3" fill="url(#sc-redbar)"/>
+  <!-- Glow -->
+  <ellipse cx="72" cy="52" rx="52" ry="40" fill="url(#sc-glow)"/>
+  <!-- Beams -->
+  <g filter="url(#sc-gf)">
+    <line x1="56" y1="36" x2="122" y2="18" stroke="url(#sc-beam)" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="56" y1="46" x2="126" y2="36" stroke="url(#sc-beam)" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="56" y1="56" x2="128" y2="56" stroke="url(#sc-beam)" stroke-width="3" stroke-linecap="round"/>
+    <line x1="56" y1="66" x2="126" y2="76" stroke="url(#sc-beam)" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="56" y1="76" x2="122" y2="94" stroke="url(#sc-beam)" stroke-width="2.5" stroke-linecap="round"/>
+  </g>
+  <!-- Chrome housing -->
+  <g filter="url(#sc-sharp)">
+    <ellipse cx="44" cy="56" rx="16" ry="24" fill="url(#sc-chrome)"/>
+  </g>
+  <ellipse cx="42" cy="49" rx="6" ry="8" fill="#ffffff" opacity="0.25"/>
+  <!-- Bottom red bar -->
+  <rect x="0" y="141" width="144" height="3" fill="url(#sc-redbar)"/>
+  <!-- Label with gradient -->
+  <text x="72" y="128" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="13" font-weight="700" fill="url(#sc-label)" letter-spacing="2" text-transform="uppercase">HEADLIGHTS</text>
+</svg>

@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144 144" width="144" height="144">
+  <defs>
+    <radialGradient id="nbbr-bg" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#1a1520"/>
+      <stop offset="100%" stop-color="#08060a"/>
+    </radialGradient>
+    <radialGradient id="nbbr-ambglow" cx="50%" cy="50%" r="60%">
+      <stop offset="0%" stop-color="#e20613" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#e20613" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="nbbr-softglow">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feComponentTransfer in="blur"><feFuncA type="linear" slope="0.4"/></feComponentTransfer>
+    </filter>
+    <filter id="nbbr-neon">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <linearGradient id="nbbr-arrow" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FF5252"/>
+      <stop offset="100%" stop-color="#D32F2F"/>
+    </linearGradient>
+    <linearGradient id="nbbr-topbar" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#e20613" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#e20613" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#e20613" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="nbbr-botbar" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#e20613" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#e20613" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#e20613" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="144" height="144" fill="url(#nbbr-bg)"/>
+  <rect width="144" height="144" fill="url(#nbbr-ambglow)"/>
+  <rect x="0" y="0" width="144" height="3" fill="url(#nbbr-topbar)"/>
+  <!-- Brake disc hint circle -->
+  <g filter="url(#nbbr-neon)">
+    <circle cx="50" cy="48" r="26" fill="none" stroke="#888" stroke-width="1.5" opacity="0.5"/>
+    <circle cx="50" cy="48" r="18" fill="none" stroke="#888" stroke-width="1" opacity="0.3" stroke-dasharray="4,3"/>
+    <circle cx="50" cy="48" r="8" fill="none" stroke="#888" stroke-width="1" opacity="0.4"/>
+  </g>
+  <!-- BB text in red neon -->
+  <g filter="url(#nbbr-softglow)">
+    <text x="50" y="55" font-family="Arial,Helvetica,sans-serif" font-size="24" font-weight="bold" fill="#e20613" text-anchor="middle" letter-spacing="2">BB</text>
+  </g>
+  <g filter="url(#nbbr-neon)">
+    <text x="50" y="55" font-family="Arial,Helvetica,sans-serif" font-size="24" font-weight="bold" fill="#e20613" text-anchor="middle" letter-spacing="2">BB</text>
+  </g>
+  <!-- REAR sub-label -->
+  <text x="50" y="84" font-family="Arial,Helvetica,sans-serif" font-size="11" font-weight="bold" fill="#FF5252" text-anchor="middle" letter-spacing="1">REAR</text>
+  <!-- Red down arrow -->
+  <g filter="url(#nbbr-softglow)">
+    <polygon points="118,78 130,61 126,61 126,35 110,35 110,61 106,61" fill="url(#nbbr-arrow)"/>
+  </g>
+  <g filter="url(#nbbr-neon)">
+    <polygon points="118,78 130,61 126,61 126,35 110,35 110,61 106,61" fill="none" stroke="#FF5252" stroke-width="2"/>
+  </g>
+  <rect x="0" y="134" width="144" height="10" fill="url(#nbbr-botbar)"/>
+  <text x="72" y="128" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="bold" fill="white" text-anchor="middle" letter-spacing="1.5">BIAS REAR</text>
+</svg>

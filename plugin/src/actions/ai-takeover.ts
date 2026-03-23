@@ -5,4 +5,5 @@ import { HotkeyAction } from "./hotkey-action";
 export class AiTakeover extends HotkeyAction {
     readonly defaultHotkey = "I";
     readonly actionName = "AI Takeover";
+    readonly iconFile = "ai-takeover";
 }

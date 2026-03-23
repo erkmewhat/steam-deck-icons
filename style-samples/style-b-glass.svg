@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144 144" width="144" height="144">
+  <defs>
+    <linearGradient id="sb-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2a1215"/>
+      <stop offset="40%" stop-color="#180a0c"/>
+      <stop offset="100%" stop-color="#0a0406"/>
+    </linearGradient>
+    <linearGradient id="sb-glass" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.12"/>
+      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.02"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.06"/>
+    </linearGradient>
+    <radialGradient id="sb-glow" cx="60%" cy="40%" r="50%">
+      <stop offset="0%" stop-color="#fff300" stop-opacity="0.3"/>
+      <stop offset="60%" stop-color="#e20613" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#e20613" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="sb-beam" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#fff300"/>
+      <stop offset="70%" stop-color="#ffaa00" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#ff6600" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="sb-housing" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e8e8e8"/>
+      <stop offset="30%" stop-color="#cccccc"/>
+      <stop offset="100%" stop-color="#555555"/>
+    </linearGradient>
+    <filter id="sb-gf" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <linearGradient id="sb-border" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#e20613" stop-opacity="0.6"/>
+      <stop offset="50%" stop-color="#ff3333" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#e20613" stop-opacity="0.6"/>
+    </linearGradient>
+    <linearGradient id="sb-bar" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#e20613" stop-opacity="0"/>
+      <stop offset="30%" stop-color="#e20613" stop-opacity="0.9"/>
+      <stop offset="70%" stop-color="#fff300" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#fff300" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="144" height="144" rx="14" fill="url(#sb-bg)"/>
+  <!-- Glass border -->
+  <rect x="2" y="2" width="140" height="140" rx="13" fill="none" stroke="url(#sb-border)" stroke-width="1.5"/>
+  <!-- Glass shine -->
+  <rect x="3" y="3" width="138" height="68" rx="12" fill="url(#sb-glass)"/>
+  <!-- Glow -->
+  <ellipse cx="72" cy="52" rx="55" ry="42" fill="url(#sb-glow)"/>
+  <!-- Beams with warm gradient -->
+  <g filter="url(#sb-gf)">
+    <line x1="54" y1="38" x2="120" y2="22" stroke="url(#sb-beam)" stroke-width="3" stroke-linecap="round"/>
+    <line x1="54" y1="48" x2="124" y2="40" stroke="url(#sb-beam)" stroke-width="3" stroke-linecap="round"/>
+    <line x1="54" y1="58" x2="126" y2="58" stroke="url(#sb-beam)" stroke-width="3.5" stroke-linecap="round"/>
+    <line x1="54" y1="68" x2="124" y2="76" stroke="url(#sb-beam)" stroke-width="3" stroke-linecap="round"/>
+    <line x1="54" y1="78" x2="120" y2="94" stroke="url(#sb-beam)" stroke-width="3" stroke-linecap="round"/>
+  </g>
+  <!-- Housing with gloss -->
+  <ellipse cx="42" cy="58" rx="16" ry="24" fill="url(#sb-housing)"/>
+  <ellipse cx="40" cy="50" rx="8" ry="10" fill="#ffffff" opacity="0.2"/>
+  <!-- Red-to-yellow accent bar -->
+  <rect x="10" y="138" width="124" height="3" rx="1.5" fill="url(#sb-bar)"/>
+  <text x="72" y="127" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="14" font-weight="700" fill="#ffffff" opacity="0.9" letter-spacing="1.5">HEADLIGHTS</text>
+</svg>

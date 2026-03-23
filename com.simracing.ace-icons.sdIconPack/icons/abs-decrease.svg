@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144 144" width="144" height="144">
+  <rect x="4" y="4" width="136" height="136" rx="12" fill="#212529" stroke="#e20613" stroke-width="2"/>
+  <rect x="8" y="8" width="128" height="128" rx="10" fill="none" stroke="#2d3238" stroke-width="1"/>
+  <!-- Brake disc outer ring -->
+  <circle cx="72" cy="58" r="28" fill="none" stroke="#e20613" stroke-width="3"/>
+  <!-- Disc shadow ring -->
+  <circle cx="72" cy="59" r="28" fill="none" stroke="#8b0000" stroke-width="1" opacity="0.3"/>
+  <!-- Hub center -->
+  <circle cx="72" cy="58" r="8" fill="none" stroke="#999" stroke-width="1.5"/>
+  <circle cx="72" cy="58" r="3" fill="#999" opacity="0.6"/>
+  <!-- Ventilation slots (radial lines) -->
+  <line x1="72" y1="34" x2="72" y2="42" stroke="#999" stroke-width="1.2"/>
+  <line x1="72" y1="74" x2="72" y2="82" stroke="#999" stroke-width="1.2"/>
+  <line x1="48" y1="58" x2="56" y2="58" stroke="#999" stroke-width="1.2"/>
+  <line x1="88" y1="58" x2="96" y2="58" stroke="#999" stroke-width="1.2"/>
+  <line x1="55" y1="41" x2="60" y2="46" stroke="#999" stroke-width="1.2"/>
+  <line x1="84" y1="70" x2="89" y2="75" stroke="#999" stroke-width="1.2"/>
+  <line x1="55" y1="75" x2="60" y2="70" stroke="#999" stroke-width="1.2"/>
+  <line x1="84" y1="46" x2="89" y2="41" stroke="#999" stroke-width="1.2"/>
+  <!-- ABS text overlay -->
+  <!-- ABS text shadow -->
+  <!-- Down arrow -->
+  <polygon points="72,104 84,92 78,92 78,86 66,86 66,92 60,92" fill="white"/>
+  <!-- Label -->
+
+  <text x="72" y="126" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="bold" fill="white">ABS -</text>
+</svg>

@@ -1,0 +1,432 @@
+{
+  "Controllers": [
+    {
+      "Actions": {
+        "0,0": {
+          "ActionID": "a1d8e3f7-6b42-4c91-b5a8-7e3f1d2c4b6a",
+          "LinkedTitle": true,
+          "Name": "Pit\nLimiter",
+          "Plugin": {
+            "Name": "ACE Sim Racing",
+            "UUID": "com.simracing.ace",
+            "Version": "1.0"
+          },
+          "Resources": null,
+          "Settings": {},
+          "State": 0,
+          "States": [
+            {
+              "FontFamily": "",
+              "FontSize": 10,
+              "FontStyle": "Bold",
+              "FontUnderline": false,
+              "OutlineThickness": 2,
+              "ShowTitle": true,
+              "Title": "Pit\nLimiter",
+              "TitleAlignment": "bottom",
+              "TitleColor": "#FFFFFF",
+              "Image": "Images/23B1E715FC0C9BAD935BDDDBADZ.png"
+            }
+          ],
+          "UUID": "com.simracing.ace.pit-limiter"
+        },
+        "1,0": {
+          "ActionID": "b2e9f4a8-7c53-4da2-c6b9-8f4a2e3d5c7b",
+          "LinkedTitle": true,
+          "Name": "Head\nLights",
+          "Plugin": {
+            "Name": "ACE Sim Racing",
+            "UUID": "com.simracing.ace",
+            "Version": "1.0"
+          },
+          "Resources": null,
+          "Settings": {},
+          "State": 0,
+          "States": [
+            {
+              "FontFamily": "",
+              "FontSize": 10,
+              "FontStyle": "Bold",
+              "FontUnderline": false,
+              "OutlineThickness": 2,
+              "ShowTitle": true,
+              "Title": "Head\nLights",
+              "TitleAlignment": "bottom",
+              "TitleColor": "#FFFFFF",
+              "Image": "Images/C715603515937472FF1D83A7A5Z.png"
+            }
+          ],
+          "UUID": "com.simracing.ace.headlights"
+        },
+        "2,0": {
+          "ActionID": "c3fa05b9-8d64-4eb3-d7ca-9a5b3f4e6d8c",
+          "LinkedTitle": true,
+          "Name": "Flash\nLights",
+          "Plugin": {
+            "Name": "ACE Sim Racing",
+            "UUID": "com.simracing.ace",
+            "Version": "1.0"
+          },
+          "Resources": null,
+          "Settings": {},
+          "State": 0,
+          "States": [
+            {
+              "FontFamily": "",
+              "FontSize": 10,
+              "FontStyle": "Bold",
+              "FontUnderline": false,
+              "OutlineThickness": 2,
+              "ShowTitle": true,
+              "Title": "Flash\nLights",
+              "TitleAlignment": "bottom",
+              "TitleColor": "#FFFFFF",
+              "Image": "Images/EB5C49C1BB20F1F57B195A6D54Z.png"
+            }
+          ],
+          "UUID": "com.simracing.ace.headlight-flash"
+        },
+        "3,0": {
+          "ActionID": "d4ab16ca-9e75-4fc4-e8db-ab6c4a5f7e9d",
+          "LinkedTitle": true,
+          "Name": "Rain\nLights",
+          "Plugin": {
+            "Name": "ACE Sim Racing",
+            "UUID": "com.simracing.ace",
+            "Version": "1.0"
+          },
+          "Resources": null,
+          "Settings": {},
+          "State": 0,
+          "States": [
+            {
+              "FontFamily": "",
+              "FontSize": 10,
+              "FontStyle": "Bold",
+              "FontUnderline": false,
+              "OutlineThickness": 2,
+              "ShowTitle": true,
+              "Title": "Rain\nLights",
+              "TitleAlignment": "bottom",
+              "TitleColor": "#FFFFFF",
+              "Image": "Images/024BF007235A069C9F27EFE9AAZ.png"
+            }
+          ],
+          "UUID": "com.simracing.ace.rain-lights"
+        },
+        "4,0": {
+          "ActionID": "e5bc27db-af86-4ad5-f9ec-bc7d5b6a8fae",
+          "LinkedTitle": true,
+          "Name": "Create Folder",
+          "Plugin": {
+            "Name": "Create Folder",
+            "UUID": "com.elgato.streamdeck.profile.openchild",
+            "Version": "1.0"
+          },
+          "Resources": null,
+          "Settings": {
+            "ProfileUUID": "E3F4A5B6-C7D8-4E9F-0A1B-2C3D4E5F6A7B"
+          },
+          "State": 0,
+          "States": [
+            {
+              "FontFamily": "",
+              "FontSize": 10,
+              "FontStyle": "Bold",
+              "FontUnderline": false,
+              "OutlineThickness": 2,
+              "ShowTitle": true,
+              "Title": "Performance",
+              "TitleAlignment": "bottom",
+              "TitleColor": "#ffd700"
+            }
+          ],
+          "UUID": "com.elgato.streamdeck.profile.openchild"
+        },
+        "0,1": {
+          "ActionID": "f6cd38ec-ba97-4be6-0afd-cd8e6c7b9abf",
+          "LinkedTitle": true,
+          "Name": "Ignition",
+          "Plugin": {
+            "Name": "ACE Sim Racing",
+            "UUID": "com.simracing.ace",
+            "Version": "1.0"
+          },
+          "Resources": null,
+          "Settings": {},
+          "State": 0,
+          "States": [
+            {
+              "FontFamily": "",
+              "FontSize": 10,
+              "FontStyle": "Bold",
+              "FontUnderline": false,
+              "OutlineThickness": 2,
+              "ShowTitle": true,
+              "Title": "Ignition",
+              "TitleAlignment": "bottom",
+              "TitleColor": "#FFFFFF",
+              "Image": "Images/837BFBAE2F00EEBBF2388C8BE8Z.png"
+            }
+          ],
+          "UUID": "com.simracing.ace.ignition"
+        },
+        "1,1": {
+          "ActionID": "07de49fd-cba8-4cf7-1b0e-de9f7d8cabc0",
+          "LinkedTitle": true,
+          "Name": "Starter",
+          "Plugin": {
+            "Name": "ACE Sim Racing",
+            "UUID": "com.simracing.ace",
+            "Version": "1.0"
+          },
+          "Resources": null,
+          "Settings": {},
+          "State": 0,
+          "States": [
+            {
+              "FontFamily": "",
+              "FontSize": 10,
+              "FontStyle": "Bold",
+              "FontUnderline": false,
+              "OutlineThickness": 2,
+              "ShowTitle": true,
+              "Title": "Starter",
+              "TitleAlignment": "bottom",
+              "TitleColor": "#FFFFFF",
+              "Image": "Images/6418DAD6EFE2647CB24320FAF9Z.png"
+            }
+          ],
+          "UUID": "com.simracing.ace.starter"
+        },
+        "2,1": {
+          "ActionID": "18ef5a0e-dcb9-4d08-2c1f-efa08e9dbcd1",
+          "LinkedTitle": true,
+          "Name": "Wipers",
+          "Plugin": {
+            "Name": "ACE Sim Racing",
+            "UUID": "com.simracing.ace",
+            "Version": "1.0"
+          },
+          "Resources": null,
+          "Settings": {},
+          "State": 0,
+          "States": [
+            {
+              "FontFamily": "",
+              "FontSize": 10,
+              "FontStyle": "Bold",
+              "FontUnderline": false,
+              "OutlineThickness": 2,
+              "ShowTitle": true,
+              "Title": "Wipers",
+              "TitleAlignment": "bottom",
+              "TitleColor": "#FFFFFF",
+              "Image": "Images/3F9E1701AC38A96A4032A27032Z.png"
+            }
+          ],
+          "UUID": "com.simracing.ace.wipers"
+        },
+        "3,1": {
+          "ActionID": "29fa6b1f-edca-4e19-3d2a-fab19faecde2",
+          "LinkedTitle": true,
+          "Name": "Hazard\nLights",
+          "Plugin": {
+            "Name": "ACE Sim Racing",
+            "UUID": "com.simracing.ace",
+            "Version": "1.0"
+          },
+          "Resources": null,
+          "Settings": {},
+          "State": 0,
+          "States": [
+            {
+              "FontFamily": "",
+              "FontSize": 10,
+              "FontStyle": "Bold",
+              "FontUnderline": false,
+              "OutlineThickness": 2,
+              "ShowTitle": true,
+              "Title": "Hazard\nLights",
+              "TitleAlignment": "bottom",
+              "TitleColor": "#FFFFFF",
+              "Image": "Images/463D506E594669296C6C6B8E64Z.png"
+            }
+          ],
+          "UUID": "com.simracing.ace.hazard-lights"
+        },
+        "4,1": {
+          "ActionID": "3a0b7c2a-fedb-4f2a-4e3b-0bc2a0bfdee3",
+          "LinkedTitle": true,
+          "Name": "Horn",
+          "Plugin": {
+            "Name": "ACE Sim Racing",
+            "UUID": "com.simracing.ace",
+            "Version": "1.0"
+          },
+          "Resources": null,
+          "Settings": {},
+          "State": 0,
+          "States": [
+            {
+              "FontFamily": "",
+              "FontSize": 10,
+              "FontStyle": "Bold",
+              "FontUnderline": false,
+              "OutlineThickness": 2,
+              "ShowTitle": true,
+              "Title": "Horn",
+              "TitleAlignment": "bottom",
+              "TitleColor": "#FFFFFF",
+              "Image": "Images/95BE2C7904FC202BD47515EC56Z.png"
+            }
+          ],
+          "UUID": "com.simracing.ace.horn"
+        },
+        "0,2": {
+          "ActionID": "4b1c8d3b-0fec-4a3b-5f4c-1cd3b1c0eff4",
+          "LinkedTitle": true,
+          "Name": "Look\nLeft",
+          "Plugin": {
+            "Name": "ACE Sim Racing",
+            "UUID": "com.simracing.ace",
+            "Version": "1.0"
+          },
+          "Resources": null,
+          "Settings": {},
+          "State": 0,
+          "States": [
+            {
+              "FontFamily": "",
+              "FontSize": 10,
+              "FontStyle": "Bold",
+              "FontUnderline": false,
+              "OutlineThickness": 2,
+              "ShowTitle": true,
+              "Title": "Look\nLeft",
+              "TitleAlignment": "bottom",
+              "TitleColor": "#FFFFFF",
+              "Image": "Images/0AC681B7FFFEA4E290169DB712Z.png"
+            }
+          ],
+          "UUID": "com.simracing.ace.look-left"
+        },
+        "1,2": {
+          "ActionID": "5c2d9e4c-1afd-4b4c-6a5d-2de4c2d1fa05",
+          "LinkedTitle": true,
+          "Name": "Look\nBehind",
+          "Plugin": {
+            "Name": "ACE Sim Racing",
+            "UUID": "com.simracing.ace",
+            "Version": "1.0"
+          },
+          "Resources": null,
+          "Settings": {},
+          "State": 0,
+          "States": [
+            {
+              "FontFamily": "",
+              "FontSize": 10,
+              "FontStyle": "Bold",
+              "FontUnderline": false,
+              "OutlineThickness": 2,
+              "ShowTitle": true,
+              "Title": "Look\nBehind",
+              "TitleAlignment": "bottom",
+              "TitleColor": "#FFFFFF",
+              "Image": "Images/E3C859074B5E3A44727FFDCD25Z.png"
+            }
+          ],
+          "UUID": "com.simracing.ace.look-behind"
+        },
+        "2,2": {
+          "ActionID": "6d3eaf5d-2bae-4c5d-7b6e-3ef5d3e2ab16",
+          "LinkedTitle": true,
+          "Name": "Look\nRight",
+          "Plugin": {
+            "Name": "ACE Sim Racing",
+            "UUID": "com.simracing.ace",
+            "Version": "1.0"
+          },
+          "Resources": null,
+          "Settings": {},
+          "State": 0,
+          "States": [
+            {
+              "FontFamily": "",
+              "FontSize": 10,
+              "FontStyle": "Bold",
+              "FontUnderline": false,
+              "OutlineThickness": 2,
+              "ShowTitle": true,
+              "Title": "Look\nRight",
+              "TitleAlignment": "bottom",
+              "TitleColor": "#FFFFFF",
+              "Image": "Images/760C3AF82CF38C2F7AA3F76B3AZ.png"
+            }
+          ],
+          "UUID": "com.simracing.ace.look-right"
+        },
+        "3,2": {
+          "ActionID": "7e4fba6e-3cbf-4d6e-8c7f-4fa6e4f3bc27",
+          "LinkedTitle": true,
+          "Name": "Display\nPage",
+          "Plugin": {
+            "Name": "ACE Sim Racing",
+            "UUID": "com.simracing.ace",
+            "Version": "1.0"
+          },
+          "Resources": null,
+          "Settings": {},
+          "State": 0,
+          "States": [
+            {
+              "FontFamily": "",
+              "FontSize": 10,
+              "FontStyle": "Bold",
+              "FontUnderline": false,
+              "OutlineThickness": 2,
+              "ShowTitle": true,
+              "Title": "Display\nPage",
+              "TitleAlignment": "bottom",
+              "TitleColor": "#FFFFFF",
+              "Image": "Images/3C398093EAB324CBD2CF95936CZ.png"
+            }
+          ],
+          "UUID": "com.simracing.ace.display-page"
+        },
+        "4,2": {
+          "ActionID": "8f5acb7f-4dca-4e7f-9d8a-5ab7f5a4cd38",
+          "LinkedTitle": true,
+          "Name": "Display\nDevice",
+          "Plugin": {
+            "Name": "ACE Sim Racing",
+            "UUID": "com.simracing.ace",
+            "Version": "1.0"
+          },
+          "Resources": null,
+          "Settings": {},
+          "State": 0,
+          "States": [
+            {
+              "FontFamily": "",
+              "FontSize": 10,
+              "FontStyle": "Bold",
+              "FontUnderline": false,
+              "OutlineThickness": 2,
+              "ShowTitle": true,
+              "Title": "Display\nDevice",
+              "TitleAlignment": "bottom",
+              "TitleColor": "#FFFFFF",
+              "Image": "Images/8FD2260E0AFEDC6080D4BF1B3EZ.png"
+            }
+          ],
+          "UUID": "com.simracing.ace.display-device"
+        }
+      },
+      "Type": "Keypad"
+    }
+  ],
+  "Icon": "",
+  "Name": "ACE Main"
+}

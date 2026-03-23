@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144 144" width="144" height="144">
+  <defs>
+    <radialGradient id="npl-bg" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#1a1520"/>
+      <stop offset="100%" stop-color="#08060a"/>
+    </radialGradient>
+    <radialGradient id="npl-ambglow" cx="50%" cy="50%" r="60%">
+      <stop offset="0%" stop-color="#e20613" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#e20613" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="npl-softglow">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feComponentTransfer in="blur"><feFuncA type="linear" slope="0.4"/></feComponentTransfer>
+    </filter>
+    <filter id="npl-neon">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <linearGradient id="npl-topbar" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#e20613" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#e20613" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#e20613" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="npl-botbar" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#e20613" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#e20613" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#e20613" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="144" height="144" fill="url(#npl-bg)"/>
+  <rect width="144" height="144" fill="url(#npl-ambglow)"/>
+  <rect x="0" y="0" width="144" height="3" fill="url(#npl-topbar)"/>
+  <!-- Speed limit circle soft glow -->
+  <g filter="url(#npl-softglow)">
+    <circle cx="72" cy="58" r="34" fill="none" stroke="#e20613" stroke-width="5"/>
+  </g>
+  <!-- Speed limit circle crisp -->
+  <g filter="url(#npl-neon)">
+    <circle cx="72" cy="58" r="34" fill="none" stroke="#e20613" stroke-width="3"/>
+  </g>
+  <!-- PIT text -->
+  <text x="72" y="52" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="bold" fill="white" text-anchor="middle" letter-spacing="1">PIT</text>
+  <!-- 60 text -->
+  <text x="72" y="72" font-family="Arial,Helvetica,sans-serif" font-size="18" font-weight="bold" fill="#fff300" text-anchor="middle" letter-spacing="1">60</text>
+  <!-- Diagonal strike -->
+  <g filter="url(#npl-neon)">
+    <line x1="46" y1="82" x2="98" y2="34" stroke="#e20613" stroke-width="2.5" stroke-linecap="round"/>
+  </g>
+  <rect x="0" y="134" width="144" height="10" fill="url(#npl-botbar)"/>
+  <text x="72" y="128" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="bold" fill="white" text-anchor="middle" letter-spacing="1.5">PIT LIMITER</text>
+</svg>

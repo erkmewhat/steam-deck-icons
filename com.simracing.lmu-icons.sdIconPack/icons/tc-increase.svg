@@ -1,9 +1,78 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144 144" width="144" height="144">
-  <rect width="144" height="144" rx="12" fill="#1a1a2e"/>
-  <!-- TC text -->
-  <text x="72" y="82" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="44" font-weight="bold" fill="#ffd700">TC</text>
-  <!-- Up arrow -->
-  <path d="M72 18 L84 34 L76 34 L76 44 L68 44 L68 34 L60 34 Z" fill="white"/>
+  <defs>
+    <!-- Background gradient -->
+    <radialGradient id="bg" cx="50%" cy="40%" r="70%">
+      <stop offset="0%" stop-color="#32373C"/>
+      <stop offset="100%" stop-color="#0a0a0f"/>
+    </radialGradient>
+    <!-- Amber glow -->
+    <radialGradient id="amberGlow" cx="50%" cy="50%" r="38%">
+      <stop offset="0%" stop-color="#FFB800" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#FFB800" stop-opacity="0"/>
+    </radialGradient>
+    <!-- TC text gradient -->
+    <linearGradient id="tcGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFD54F"/>
+      <stop offset="100%" stop-color="#FFB800"/>
+    </linearGradient>
+    <!-- Arrow gradient (green for increase) -->
+    <linearGradient id="arrowUp" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0%" stop-color="#4CAF50"/>
+      <stop offset="100%" stop-color="#81C784"/>
+    </linearGradient>
+    <!-- Glow filter -->
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="2.5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <!-- Text shadow -->
+    <filter id="textShadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="1" stdDeviation="2" flood-color="#FFB800" flood-opacity="0.3"/>
+    </filter>
+    <!-- Bottom border accent -->
+    <linearGradient id="borderAccent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#FFB800" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#FFB800" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#FFB800" stop-opacity="0"/>
+    </linearGradient>
+    <!-- Tire tread pattern circle -->
+    <clipPath id="tireClip">
+      <circle cx="72" cy="62" r="32"/>
+    </clipPath>
+  </defs>
+
+  <!-- Background -->
+  <rect width="144" height="144" fill="url(#bg)"/>
+
+  <!-- Ambient glow -->
+  <ellipse cx="72" cy="58" rx="48" ry="42" fill="url(#amberGlow)"/>
+
+  <!-- Tire circle outline (subtle) -->
+  <circle cx="72" cy="62" r="32" fill="none" stroke="#ffffff" stroke-width="1.5" opacity="0.12"/>
+  <circle cx="72" cy="62" r="28" fill="none" stroke="#ffffff" stroke-width="0.5" opacity="0.08"/>
+
+  <!-- TC text with glow -->
+  <g filter="url(#textShadow)">
+    <text x="72" y="74" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="36" font-weight="800" fill="url(#tcGrad)" letter-spacing="2">TC</text>
+  </g>
+
+  <!-- Up arrow with glow -->
+  <g filter="url(#glow)">
+    <path d="M72 14 L84 30 L77 30 L77 40 L67 40 L67 30 L60 30 Z" fill="url(#arrowUp)"/>
+  </g>
+
+  <!-- Small + indicator -->
+  <g opacity="0.5">
+    <line x1="107" y1="58" x2="107" y2="68" stroke="#81C784" stroke-width="2" stroke-linecap="round"/>
+    <line x1="102" y1="63" x2="112" y2="63" stroke="#81C784" stroke-width="2" stroke-linecap="round"/>
+  </g>
+
+  <!-- Bottom accent line -->
+  <rect x="20" y="138" width="104" height="2" rx="1" fill="url(#borderAccent)"/>
+
   <!-- Label -->
-  <text x="72" y="128" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="11" font-weight="bold" fill="white" opacity="0.8">TC UP</text>
+  <text x="72" y="132" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="15" font-weight="700" fill="#ffffff" opacity="0.85" letter-spacing="1">TC UP</text>
 </svg>

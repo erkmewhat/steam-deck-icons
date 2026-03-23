@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144 144" width="144" height="144">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="40%" r="70%">
+      <stop offset="0%" stop-color="#32373C"/>
+      <stop offset="100%" stop-color="#0a0a0f"/>
+    </radialGradient>
+    <radialGradient id="silverGlow" cx="50%" cy="45%" r="40%">
+      <stop offset="0%" stop-color="#90CAF9" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#90CAF9" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="seatGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#B0D4F1"/>
+      <stop offset="100%" stop-color="#90CAF9"/>
+    </linearGradient>
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="2.5" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="shadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#000" flood-opacity="0.5"/>
+    </filter>
+    <linearGradient id="borderAccent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#90CAF9" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#90CAF9" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#90CAF9" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="144" height="144" fill="url(#bg)"/>
+  <ellipse cx="65" cy="55" rx="48" ry="40" fill="url(#silverGlow)"/>
+  <!-- Car seat silhouette -->
+  <g filter="url(#shadow)">
+    <!-- Seat back -->
+    <path d="M50 28 Q46 28 44 32 L40 72 Q38 78 44 80 L56 82 Q60 82 60 78 L62 32 Q62 28 58 28 Z" fill="none" stroke="url(#seatGrad)" stroke-width="2.5" stroke-linejoin="round"/>
+    <!-- Seat cushion -->
+    <path d="M44 80 L40 88 Q38 94 44 94 L78 96 Q84 96 84 90 L82 82 Q82 78 76 78 L56 82" fill="none" stroke="url(#seatGrad)" stroke-width="2.5" stroke-linejoin="round"/>
+    <!-- Headrest -->
+    <rect x="46" y="22" width="16" height="10" rx="4" fill="none" stroke="url(#seatGrad)" stroke-width="2"/>
+  </g>
+  <!-- Forward arrow -->
+  <g filter="url(#glow)">
+    <line x1="96" y1="60" x2="114" y2="60" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
+    <polyline points="108,52 116,60 108,68" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <rect x="20" y="138" width="104" height="2" rx="1" fill="url(#borderAccent)"/>
+  <text x="72" y="132" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="15" font-weight="700" fill="#ffffff" opacity="0.85" letter-spacing="1">SEAT FWD</text>
+</svg>

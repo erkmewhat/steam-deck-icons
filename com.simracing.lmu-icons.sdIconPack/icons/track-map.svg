@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144 144" width="144" height="144">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="40%" r="70%">
+      <stop offset="0%" stop-color="#32373C"/>
+      <stop offset="100%" stop-color="#0a0a0f"/>
+    </radialGradient>
+    <radialGradient id="blueGlow" cx="50%" cy="45%" r="40%">
+      <stop offset="0%" stop-color="#4a9eff" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#4a9eff" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="trackGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#72b4ff"/>
+      <stop offset="100%" stop-color="#4a9eff"/>
+    </linearGradient>
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="2.5" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="shadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#000" flood-opacity="0.5"/>
+    </filter>
+    <linearGradient id="borderAccent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#4a9eff" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#4a9eff" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#4a9eff" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="144" height="144" fill="url(#bg)"/>
+  <ellipse cx="72" cy="55" rx="48" ry="40" fill="url(#blueGlow)"/>
+  <!-- Race circuit outline (stylized F1-like track) -->
+  <g filter="url(#shadow)">
+    <path d="M72 26 Q110 26 114 50 Q118 68 100 76 Q88 82 80 72 Q72 62 60 68 Q42 78 32 66 Q22 52 36 38 Q48 26 72 26 Z" fill="none" stroke="url(#trackGrad)" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+    <!-- Start/finish line -->
+    <line x1="72" y1="22" x2="72" y2="30" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round"/>
+    <!-- Direction dot markers -->
+    <circle cx="108" cy="42" r="2.5" fill="url(#trackGrad)" opacity="0.6"/>
+    <circle cx="114" cy="58" r="2.5" fill="url(#trackGrad)" opacity="0.6"/>
+    <circle cx="90" cy="78" r="2.5" fill="url(#trackGrad)" opacity="0.6"/>
+    <circle cx="50" cy="74" r="2.5" fill="url(#trackGrad)" opacity="0.6"/>
+    <circle cx="30" cy="56" r="2.5" fill="url(#trackGrad)" opacity="0.6"/>
+    <circle cx="46" cy="34" r="2.5" fill="url(#trackGrad)" opacity="0.6"/>
+  </g>
+  <!-- Car position dot -->
+  <g filter="url(#glow)">
+    <circle cx="72" cy="26" r="4" fill="#FF1D43"/>
+    <circle cx="72" cy="26" r="6" fill="#FF1D43" opacity="0.2"/>
+  </g>
+  <!-- Checkered flag at start -->
+  <g opacity="0.7">
+    <rect x="75" y="20" width="4" height="4" fill="#ffffff"/>
+    <rect x="79" y="24" width="4" height="4" fill="#ffffff"/>
+    <rect x="75" y="24" width="4" height="4" fill="#ffffff" opacity="0.2"/>
+    <rect x="79" y="20" width="4" height="4" fill="#ffffff" opacity="0.2"/>
+  </g>
+  <rect x="20" y="138" width="104" height="2" rx="1" fill="url(#borderAccent)"/>
+  <text x="72" y="132" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="15" font-weight="700" fill="#ffffff" opacity="0.85" letter-spacing="1">TRACK MAP</text>
+</svg>

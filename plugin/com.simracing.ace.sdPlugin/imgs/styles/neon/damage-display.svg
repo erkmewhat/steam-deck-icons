@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144 144" width="144" height="144">
+  <defs>
+    <radialGradient id="dd-bg" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#1a1520"/>
+      <stop offset="100%" stop-color="#08060a"/>
+    </radialGradient>
+    <filter id="dd-glow-soft">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+    <filter id="dd-glow-crisp">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+    <linearGradient id="dd-bar-top" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#4ade80" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#4ade80" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#4ade80" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="dd-bar-bot" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#4ade80" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#4ade80" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#4ade80" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="144" height="144" fill="url(#dd-bg)" rx="12"/>
+  <rect x="10" y="2" width="124" height="2" fill="url(#dd-bar-top)" rx="1"/>
+  <rect x="10" y="140" width="124" height="2" fill="url(#dd-bar-bot)" rx="1"/>
+  <g opacity="0.4" filter="url(#dd-glow-soft)">
+    <path d="M72,20 L100,40 L100,78 L72,90 L44,78 L44,40 Z" fill="none" stroke="#4ade80" stroke-width="2.5"/>
+  </g>
+  <g filter="url(#dd-glow-crisp)">
+    <!-- Top-down car outline -->
+    <path d="M72,20 L100,40 L100,78 L72,90 L44,78 L44,40 Z" fill="none" stroke="#666" stroke-width="1.5" opacity="0.4"/>
+    <!-- Front damage zone (red) -->
+    <path d="M72,20 L92,34 L72,38 L52,34 Z" fill="none" stroke="#e20613" stroke-width="2.5"/>
+    <path d="M72,20 L92,34 L72,38 L52,34 Z" fill="#e20613" opacity="0.15"/>
+    <!-- Left side damage zone (yellow) -->
+    <path d="M44,40 L52,34 L52,74 L44,78 Z" fill="none" stroke="#fff300" stroke-width="2"/>
+    <path d="M44,40 L52,34 L52,74 L44,78 Z" fill="#fff300" opacity="0.1"/>
+    <!-- Right side damage zone (yellow) -->
+    <path d="M100,40 L92,34 L92,74 L100,78 Z" fill="none" stroke="#fff300" stroke-width="2"/>
+    <path d="M100,40 L92,34 L92,74 L100,78 Z" fill="#fff300" opacity="0.1"/>
+    <!-- Rear damage zone (green) -->
+    <path d="M52,74 L72,90 L92,74 L72,78 Z" fill="none" stroke="#4ade80" stroke-width="2"/>
+    <path d="M52,74 L72,90 L92,74 L72,78 Z" fill="#4ade80" opacity="0.1"/>
+    <!-- Center line -->
+    <line x1="72" y1="28" x2="72" y2="84" stroke="#666" stroke-width="0.8" opacity="0.3" stroke-dasharray="3,3"/>
+    <!-- Wheel indicators -->
+    <rect x="42" y="38" width="6" height="10" rx="2" fill="none" stroke="#fff300" stroke-width="1" opacity="0.6"/>
+    <rect x="96" y="38" width="6" height="10" rx="2" fill="none" stroke="#fff300" stroke-width="1" opacity="0.6"/>
+    <rect x="42" y="66" width="6" height="10" rx="2" fill="none" stroke="#4ade80" stroke-width="1" opacity="0.6"/>
+    <rect x="96" y="66" width="6" height="10" rx="2" fill="none" stroke="#4ade80" stroke-width="1" opacity="0.6"/>
+  </g>
+  <text x="72" y="114" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="bold" fill="white" letter-spacing="1.5">DAMAGE</text>
+</svg>

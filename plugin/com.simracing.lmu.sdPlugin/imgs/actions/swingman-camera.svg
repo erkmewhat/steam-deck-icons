@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144 144" width="144" height="144">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="40%" r="70%">
+      <stop offset="0%" stop-color="#32373C"/>
+      <stop offset="100%" stop-color="#0a0a0f"/>
+    </radialGradient>
+    <radialGradient id="cyanGlow" cx="50%" cy="45%" r="40%">
+      <stop offset="0%" stop-color="#00B4D8" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#00B4D8" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="camGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#48D1E8"/>
+      <stop offset="100%" stop-color="#00B4D8"/>
+    </linearGradient>
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="2.5" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="shadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#000" flood-opacity="0.5"/>
+    </filter>
+    <linearGradient id="borderAccent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#00B4D8" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#00B4D8" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#00B4D8" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="144" height="144" fill="url(#bg)"/>
+  <ellipse cx="72" cy="55" rx="48" ry="40" fill="url(#cyanGlow)"/>
+  <!-- Crane arm -->
+  <g filter="url(#shadow)">
+    <!-- Vertical pole -->
+    <line x1="100" y1="100" x2="100" y2="30" stroke="url(#camGrad)" stroke-width="3" stroke-linecap="round"/>
+    <!-- Horizontal arm -->
+    <line x1="100" y1="35" x2="42" y2="35" stroke="url(#camGrad)" stroke-width="3" stroke-linecap="round"/>
+    <!-- Diagonal support -->
+    <line x1="100" y1="55" x2="70" y2="35" stroke="url(#camGrad)" stroke-width="1.5" opacity="0.5"/>
+    <!-- Hanging cable -->
+    <line x1="50" y1="35" x2="50" y2="50" stroke="url(#camGrad)" stroke-width="2" stroke-linecap="round"/>
+    <!-- Base -->
+    <line x1="88" y1="100" x2="112" y2="100" stroke="url(#camGrad)" stroke-width="3" stroke-linecap="round"/>
+  </g>
+  <!-- Camera head -->
+  <g filter="url(#glow)">
+    <rect x="38" y="50" width="24" height="18" rx="3" fill="none" stroke="url(#camGrad)" stroke-width="2.5"/>
+    <!-- Lens -->
+    <circle cx="50" cy="59" r="6" fill="none" stroke="url(#camGrad)" stroke-width="2"/>
+    <circle cx="50" cy="59" r="2.5" fill="url(#camGrad)" opacity="0.5"/>
+    <!-- Rec light -->
+    <circle cx="41" cy="54" r="2" fill="#FF1D43" opacity="0.8"/>
+    <!-- TV text -->
+    <text x="76" y="82" font-family="'Segoe UI', Arial, sans-serif" font-size="18" font-weight="700" fill="url(#camGrad)" opacity="0.5">TV</text>
+  </g>
+  <rect x="20" y="138" width="104" height="2" rx="1" fill="url(#borderAccent)"/>
+  <text x="72" y="132" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="15" font-weight="700" fill="#ffffff" opacity="0.85" letter-spacing="1">TV CAM</text>
+</svg>

@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144 144">
+  <defs>
+    <radialGradient id="cfl-bg"><stop offset="0%" stop-color="#252525"/><stop offset="100%" stop-color="#0c0c0c"/></radialGradient>
+    <pattern id="cfl-cf" width="8" height="8" patternUnits="userSpaceOnUse"><rect width="4" height="4" fill="#1a1a1a"/><rect x="4" width="4" height="4" fill="#1f1f1f"/><rect y="4" width="4" height="4" fill="#1f1f1f"/><rect x="4" y="4" width="4" height="4" fill="#1a1a1a"/></pattern>
+    <linearGradient id="cfl-stripe" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#e20613" stop-opacity="0"/><stop offset="20%" stop-color="#e20613"/><stop offset="80%" stop-color="#e20613"/><stop offset="100%" stop-color="#e20613" stop-opacity="0"/></linearGradient>
+    <linearGradient id="cfl-ray" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#ffffff"/><stop offset="50%" stop-color="#fff300"/><stop offset="100%" stop-color="#fff300" stop-opacity="0"/></linearGradient>
+    <linearGradient id="cfl-label" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#ffffff"/><stop offset="100%" stop-color="#cccccc"/></linearGradient>
+    <filter id="cfl-shadow"><feDropShadow dx="0" dy="1" stdDeviation="1.5" flood-color="#000000" flood-opacity="0.6"/></filter>
+    <filter id="cfl-glow"><feGaussianBlur stdDeviation="3.5" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <filter id="cfl-softwash"><feGaussianBlur stdDeviation="7" result="blur"/><feComponentTransfer in="blur"><feFuncA type="linear" slope="0.5"/></feComponentTransfer></filter>
+    <radialGradient id="cfl-burst"><stop offset="0%" stop-color="#ffffff"/><stop offset="25%" stop-color="#fff300" stop-opacity="0.9"/><stop offset="60%" stop-color="#fff300" stop-opacity="0.3"/><stop offset="100%" stop-color="#fff300" stop-opacity="0"/></radialGradient>
+  </defs>
+  <rect width="144" height="144" fill="url(#cfl-bg)"/>
+  <rect width="144" height="144" fill="url(#cfl-cf)" opacity="0.3"/>
+  <rect x="0" y="0" width="144" height="3" fill="url(#cfl-stripe)"/>
+  <rect x="0" y="141" width="144" height="3" fill="url(#cfl-stripe)"/>
+  <!-- Soft burst wash -->
+  <g filter="url(#cfl-softwash)">
+    <circle cx="72" cy="58" r="30" fill="#fff300" opacity="0.5"/>
+    <line x1="72" y1="58" x2="72" y2="16" stroke="#fff300" stroke-width="6" stroke-linecap="round"/>
+    <line x1="72" y1="58" x2="72" y2="100" stroke="#fff300" stroke-width="6" stroke-linecap="round"/>
+    <line x1="72" y1="58" x2="30" y2="58" stroke="#fff300" stroke-width="6" stroke-linecap="round"/>
+    <line x1="72" y1="58" x2="114" y2="58" stroke="#fff300" stroke-width="6" stroke-linecap="round"/>
+    <line x1="72" y1="58" x2="42" y2="28" stroke="#fff300" stroke-width="5" stroke-linecap="round"/>
+    <line x1="72" y1="58" x2="102" y2="28" stroke="#fff300" stroke-width="5" stroke-linecap="round"/>
+    <line x1="72" y1="58" x2="42" y2="88" stroke="#fff300" stroke-width="5" stroke-linecap="round"/>
+    <line x1="72" y1="58" x2="102" y2="88" stroke="#fff300" stroke-width="5" stroke-linecap="round"/>
+    <line x1="72" y1="58" x2="36" y2="42" stroke="#fff300" stroke-width="4" stroke-linecap="round"/>
+    <line x1="72" y1="58" x2="108" y2="42" stroke="#fff300" stroke-width="4" stroke-linecap="round"/>
+  </g>
+  <!-- Crisp chrome/white rays -->
+  <g filter="url(#cfl-glow)">
+    <line x1="72" y1="58" x2="72" y2="16" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
+    <line x1="72" y1="58" x2="72" y2="100" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
+    <line x1="72" y1="58" x2="30" y2="58" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
+    <line x1="72" y1="58" x2="114" y2="58" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
+    <line x1="72" y1="58" x2="42" y2="28" stroke="#fff300" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="72" y1="58" x2="102" y2="28" stroke="#fff300" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="72" y1="58" x2="42" y2="88" stroke="#fff300" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="72" y1="58" x2="102" y2="88" stroke="#fff300" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="72" y1="58" x2="36" y2="42" stroke="#fff300" stroke-width="2" stroke-linecap="round"/>
+    <line x1="72" y1="58" x2="108" y2="42" stroke="#fff300" stroke-width="2" stroke-linecap="round"/>
+  </g>
+  <!-- Central bright burst -->
+  <circle cx="72" cy="58" r="18" fill="url(#cfl-burst)" filter="url(#cfl-glow)"/>
+  <circle cx="72" cy="58" r="7" fill="#ffffff" opacity="0.9" filter="url(#cfl-shadow)"/>
+  <text x="72" y="120" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" font-weight="bold" letter-spacing="2" fill="url(#cfl-label)">FLASH</text>
+</svg>

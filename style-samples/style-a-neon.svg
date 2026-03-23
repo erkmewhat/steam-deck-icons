@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144 144" width="144" height="144">
+  <defs>
+    <radialGradient id="sa-bg" cx="50%" cy="35%" r="75%">
+      <stop offset="0%" stop-color="#1a1520"/>
+      <stop offset="100%" stop-color="#08060a"/>
+    </radialGradient>
+    <radialGradient id="sa-glow" cx="55%" cy="45%" r="45%">
+      <stop offset="0%" stop-color="#e20613" stop-opacity="0.35"/>
+      <stop offset="50%" stop-color="#e20613" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#e20613" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="sa-beam" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#fff300"/>
+      <stop offset="100%" stop-color="#fff300" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="sa-housing" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="50%" stop-color="#b0b0b0"/>
+      <stop offset="100%" stop-color="#666666"/>
+    </linearGradient>
+    <filter id="sa-neon" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="4" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="sa-softglow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="6"/>
+    </filter>
+    <linearGradient id="sa-bar" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#e20613" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#e20613" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#e20613" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="144" height="144" fill="url(#sa-bg)"/>
+  <ellipse cx="75" cy="55" rx="55" ry="45" fill="url(#sa-glow)"/>
+  <!-- Soft beam wash -->
+  <g filter="url(#sa-softglow)" opacity="0.4">
+    <line x1="58" y1="45" x2="125" y2="30" stroke="#fff300" stroke-width="8"/>
+    <line x1="58" y1="55" x2="130" y2="55" stroke="#fff300" stroke-width="10"/>
+    <line x1="58" y1="65" x2="125" y2="80" stroke="#fff300" stroke-width="8"/>
+  </g>
+  <!-- Crisp beams -->
+  <g filter="url(#sa-neon)">
+    <line x1="55" y1="42" x2="118" y2="28" stroke="#fff300" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="55" y1="50" x2="122" y2="43" stroke="#fff300" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="55" y1="58" x2="124" y2="58" stroke="#fff300" stroke-width="3" stroke-linecap="round"/>
+    <line x1="55" y1="66" x2="122" y2="73" stroke="#fff300" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="55" y1="74" x2="118" y2="88" stroke="#fff300" stroke-width="2.5" stroke-linecap="round"/>
+  </g>
+  <!-- Housing -->
+  <ellipse cx="46" cy="58" rx="16" ry="22" fill="url(#sa-housing)" opacity="0.9"/>
+  <ellipse cx="48" cy="55" rx="8" ry="12" fill="#ffffff" opacity="0.15"/>
+  <!-- Accent line -->
+  <rect x="15" y="139" width="114" height="2.5" rx="1.25" fill="url(#sa-bar)"/>
+  <!-- Thin top line -->
+  <rect x="30" y="3" width="84" height="1" rx="0.5" fill="url(#sa-bar)" opacity="0.4"/>
+  <text x="72" y="128" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="14" font-weight="700" fill="#ffffff" opacity="0.9" letter-spacing="1.5">HEADLIGHTS</text>
+</svg>

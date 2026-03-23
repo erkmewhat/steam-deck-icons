@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144 144" width="144" height="144">
+  <rect x="4" y="4" width="136" height="136" rx="12" fill="#212529" stroke="#e20613" stroke-width="2"/>
+  <rect x="8" y="8" width="128" height="128" rx="10" fill="none" stroke="#2d3238" stroke-width="1"/>
+  <!-- Tripod legs -->
+  <line x1="72" y1="72" x2="44" y2="108" stroke="#777" stroke-width="3" stroke-linecap="round"/>
+  <line x1="72" y1="72" x2="100" y2="108" stroke="#777" stroke-width="3" stroke-linecap="round"/>
+  <line x1="72" y1="72" x2="72" y2="110" stroke="#777" stroke-width="3" stroke-linecap="round"/>
+  <!-- Tripod head plate -->
+  <rect x="62" y="66" width="20" height="8" rx="2" fill="#888"/>
+  <!-- Camera body -->
+  <rect x="40" y="34" width="56" height="34" rx="5" fill="#4a9eff"/>
+  <rect x="40" y="34" width="56" height="34" rx="5" fill="none" stroke="#3a8aef" stroke-width="1"/>
+  <!-- Lens -->
+  <rect x="92" y="42" width="16" height="18" rx="3" fill="#3a8aef" stroke="#4a9eff" stroke-width="1"/>
+  <circle cx="108" cy="51" r="6" fill="#212529" stroke="#5ab0ff" stroke-width="1.5"/>
+  <circle cx="108" cy="51" r="3" fill="#1a2030"/>
+  <!-- Viewfinder -->
+  <rect x="42" y="36" width="14" height="10" rx="2" fill="#3a8aef" stroke="#5ab0ff" stroke-width="0.5"/>
+  <!-- Camera detail lines -->
+  <line x1="46" y1="58" x2="60" y2="58" stroke="#2a6abf" stroke-width="1"/>
+  <line x1="46" y1="61" x2="55" y2="61" stroke="#2a6abf" stroke-width="1"/>
+  <!-- Broadcast recording dot -->
+  <circle cx="114" cy="30" r="6" fill="#e20613"/>
+  <circle cx="114" cy="30" r="3" fill="#ff4444" opacity="0.8"/>
+  <circle cx="114" cy="30" r="6" fill="none" stroke="#e20613" stroke-width="1" opacity="0.4"/>
+
+  <text x="72" y="126" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="bold" fill="white">TRACK CAM</text>
+</svg>

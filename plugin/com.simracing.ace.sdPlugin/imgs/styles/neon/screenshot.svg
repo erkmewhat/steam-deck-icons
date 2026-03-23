@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144 144" width="144" height="144">
+  <defs>
+    <radialGradient id="ss-bg" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#1a1520"/>
+      <stop offset="100%" stop-color="#08060a"/>
+    </radialGradient>
+    <filter id="ss-glow-soft">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+    <filter id="ss-glow-crisp">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+    <linearGradient id="ss-bar-top" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#e20613" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#e20613" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#e20613" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="ss-bar-bot" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#fff300" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#fff300" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#fff300" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="144" height="144" fill="url(#ss-bg)" rx="12"/>
+  <rect x="10" y="2" width="124" height="2" fill="url(#ss-bar-top)" rx="1"/>
+  <rect x="10" y="140" width="124" height="2" fill="url(#ss-bar-bot)" rx="1"/>
+  <g opacity="0.4" filter="url(#ss-glow-soft)">
+    <rect x="28" y="32" width="88" height="56" rx="8" fill="none" stroke="white" stroke-width="2.5"/>
+    <circle cx="72" cy="58" r="16" fill="none" stroke="#e20613" stroke-width="2.5"/>
+  </g>
+  <g filter="url(#ss-glow-crisp)">
+    <!-- Camera body -->
+    <rect x="28" y="32" width="88" height="56" rx="8" fill="none" stroke="white" stroke-width="2"/>
+    <!-- Viewfinder bump -->
+    <rect x="58" y="24" width="28" height="12" rx="3" fill="none" stroke="white" stroke-width="1.5"/>
+    <!-- Lens (red neon) -->
+    <circle cx="72" cy="58" r="16" fill="none" stroke="#e20613" stroke-width="2.5"/>
+    <circle cx="72" cy="58" r="10" fill="none" stroke="#e20613" stroke-width="1.2" opacity="0.5"/>
+    <circle cx="72" cy="58" r="4" fill="#e20613" opacity="0.4"/>
+    <!-- Yellow flash burst -->
+    <line x1="100" y1="28" x2="108" y2="16" stroke="#fff300" stroke-width="2" stroke-linecap="round"/>
+    <line x1="106" y1="32" x2="118" y2="22" stroke="#fff300" stroke-width="2" stroke-linecap="round"/>
+    <line x1="110" y1="40" x2="122" y2="34" stroke="#fff300" stroke-width="2" stroke-linecap="round"/>
+    <line x1="104" y1="24" x2="114" y2="14" stroke="#fff300" stroke-width="1.5" stroke-linecap="round" opacity="0.6"/>
+    <circle cx="108" cy="16" r="2" fill="#fff300" opacity="0.5"/>
+  </g>
+  <text x="72" y="112" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="bold" fill="white" letter-spacing="1.5">SCREENSHOT</text>
+</svg>

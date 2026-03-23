@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144 144" width="144" height="144">
+  <rect x="4" y="4" width="136" height="136" rx="12" fill="#212529" stroke="#e20613" stroke-width="2"/>
+  <rect x="8" y="8" width="128" height="128" rx="10" fill="none" stroke="#2d3238" stroke-width="1"/>
+  <!-- Film strip frame -->
+  <rect x="24" y="28" width="96" height="64" rx="4" fill="none" stroke="#777" stroke-width="2.5"/>
+  <!-- Sprocket holes top row -->
+  <circle cx="34" cy="34" r="3" fill="none" stroke="#777" stroke-width="1.5"/>
+  <circle cx="50" cy="34" r="3" fill="none" stroke="#777" stroke-width="1.5"/>
+  <circle cx="66" cy="34" r="3" fill="none" stroke="#777" stroke-width="1.5"/>
+  <circle cx="82" cy="34" r="3" fill="none" stroke="#777" stroke-width="1.5"/>
+  <circle cx="98" cy="34" r="3" fill="none" stroke="#777" stroke-width="1.5"/>
+  <circle cx="110" cy="34" r="3" fill="none" stroke="#777" stroke-width="1.5"/>
+  <!-- Sprocket holes bottom row -->
+  <circle cx="34" cy="86" r="3" fill="none" stroke="#777" stroke-width="1.5"/>
+  <circle cx="50" cy="86" r="3" fill="none" stroke="#777" stroke-width="1.5"/>
+  <circle cx="66" cy="86" r="3" fill="none" stroke="#777" stroke-width="1.5"/>
+  <circle cx="82" cy="86" r="3" fill="none" stroke="#777" stroke-width="1.5"/>
+  <circle cx="98" cy="86" r="3" fill="none" stroke="#777" stroke-width="1.5"/>
+  <circle cx="110" cy="86" r="3" fill="none" stroke="#777" stroke-width="1.5"/>
+  <!-- Film strip inner border lines -->
+  <line x1="24" y1="40" x2="120" y2="40" stroke="#777" stroke-width="1"/>
+  <line x1="24" y1="80" x2="120" y2="80" stroke="#777" stroke-width="1"/>
+  <!-- Rewind symbol (two left-pointing triangles) inside film frame -->
+  <polygon points="76,48 56,60 76,72" fill="#4a9eff"/>
+  <polygon points="96,48 76,60 96,72" fill="#4a9eff"/>
+  <!-- Subtle highlight on triangles -->
+  <polygon points="76,52 62,60 76,68" fill="#6ab4ff" opacity="0.3"/>
+  <polygon points="96,52 82,60 96,68" fill="#6ab4ff" opacity="0.3"/>
+
+  <text x="72" y="126" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="bold" fill="white">REPLAY</text>
+</svg>

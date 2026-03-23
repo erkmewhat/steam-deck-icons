@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144 144" width="144" height="144">
+  <defs>
+    <radialGradient id="sm-bg" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#1a1520"/>
+      <stop offset="100%" stop-color="#08060a"/>
+    </radialGradient>
+    <filter id="sm-glow-soft">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+    <filter id="sm-glow-crisp">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+    <linearGradient id="sm-bar-top" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#4a9eff" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#4a9eff" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#4a9eff" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="sm-bar-bot" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#4a9eff" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#4a9eff" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#4a9eff" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="144" height="144" fill="url(#sm-bg)" rx="12"/>
+  <rect x="10" y="2" width="124" height="2" fill="url(#sm-bar-top)" rx="1"/>
+  <rect x="10" y="140" width="124" height="2" fill="url(#sm-bar-bot)" rx="1"/>
+  <g opacity="0.4" filter="url(#sm-glow-soft)">
+    <circle cx="72" cy="52" r="32" fill="none" stroke="#4a9eff" stroke-width="2.5"/>
+  </g>
+  <g filter="url(#sm-glow-crisp)">
+    <!-- Clock face -->
+    <circle cx="72" cy="52" r="32" fill="none" stroke="#4a9eff" stroke-width="2"/>
+    <!-- Hour markers -->
+    <line x1="72" y1="24" x2="72" y2="28" stroke="#4a9eff" stroke-width="1.5" stroke-linecap="round"/>
+    <line x1="72" y1="76" x2="72" y2="80" stroke="#4a9eff" stroke-width="1.5" stroke-linecap="round"/>
+    <line x1="44" y1="52" x2="48" y2="52" stroke="#4a9eff" stroke-width="1.5" stroke-linecap="round"/>
+    <line x1="96" y1="52" x2="100" y2="52" stroke="#4a9eff" stroke-width="1.5" stroke-linecap="round"/>
+    <!-- Clock hands (slow position) -->
+    <line x1="72" y1="52" x2="72" y2="34" stroke="#4a9eff" stroke-width="2" stroke-linecap="round"/>
+    <line x1="72" y1="52" x2="86" y2="46" stroke="#4a9eff" stroke-width="1.5" stroke-linecap="round"/>
+    <circle cx="72" cy="52" r="3" fill="#4a9eff"/>
+    <!-- 0.5x badge -->
+    <rect x="86" y="68" width="36" height="18" rx="4" fill="#08060a" stroke="#4a9eff" stroke-width="1.5"/>
+    <text x="104" y="81" text-anchor="middle" font-family="monospace" font-size="11" font-weight="bold" fill="#4a9eff">0.5x</text>
+  </g>
+  <text x="72" y="112" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="bold" fill="white" letter-spacing="1.5">SLOW MO</text>
+</svg>

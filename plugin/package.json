@@ -1,5 +1,6 @@
 {
     "name": "com.simracing.lmu",
+    "type": "module",
     "version": "1.0.0",
     "description": "Stream Deck plugin for Le Mans Ultimate sim racing hotkey actions",
     "main": "com.simracing.lmu.sdPlugin/bin/plugin.js",
@@ -8,10 +9,11 @@
         "watch": "tsc --watch"
     },
     "dependencies": {
-        "@elgato/streamdeck": "^1.0.0"
+        "@elgato/streamdeck": "^1.0.0",
+        "koffi": "^2.15.2"
     },
     "devDependencies": {
-        "typescript": "^5.3.0",
-        "@types/node": "^20.0.0"
+        "@types/node": "^20.0.0",
+        "typescript": "^5.3.0"
     }
 }

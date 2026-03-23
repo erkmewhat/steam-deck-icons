@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144 144" width="144" height="144">
+  <defs>
+    <radialGradient id="ht-bg" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#1a1520"/>
+      <stop offset="100%" stop-color="#08060a"/>
+    </radialGradient>
+    <filter id="ht-glow-soft">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+    <filter id="ht-glow-crisp">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+    <linearGradient id="ht-bar-top" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#4ade80" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#4ade80" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#4ade80" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="ht-bar-bot" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#4ade80" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#4ade80" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#4ade80" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="144" height="144" fill="url(#ht-bg)" rx="12"/>
+  <rect x="10" y="2" width="124" height="2" fill="url(#ht-bar-top)" rx="1"/>
+  <rect x="10" y="140" width="124" height="2" fill="url(#ht-bar-bot)" rx="1"/>
+  <g opacity="0.4" filter="url(#ht-glow-soft)">
+    <circle cx="72" cy="56" r="32" fill="none" stroke="#4ade80" stroke-width="2.5"/>
+  </g>
+  <g filter="url(#ht-glow-crisp)">
+    <!-- Steering wheel outer ring -->
+    <circle cx="72" cy="56" r="32" fill="none" stroke="#4ade80" stroke-width="2.5"/>
+    <!-- Steering wheel spokes -->
+    <line x1="72" y1="24" x2="72" y2="40" stroke="#4ade80" stroke-width="2" stroke-linecap="round"/>
+    <line x1="44" y1="68" x2="56" y2="62" stroke="#4ade80" stroke-width="2" stroke-linecap="round"/>
+    <line x1="100" y1="68" x2="88" y2="62" stroke="#4ade80" stroke-width="2" stroke-linecap="round"/>
+    <!-- Center hub -->
+    <circle cx="72" cy="56" r="8" fill="none" stroke="#4ade80" stroke-width="1.5"/>
+    <!-- HUD overlay: speed -->
+    <text x="72" y="52" text-anchor="middle" font-family="monospace" font-size="8" fill="#4ade80" opacity="0.9">287</text>
+    <!-- HUD overlay: gear -->
+    <text x="72" y="62" text-anchor="middle" font-family="monospace" font-size="9" font-weight="bold" fill="#4ade80">5</text>
+    <!-- RPM bar indicators -->
+    <rect x="52" y="34" width="4" height="6" rx="1" fill="#4ade80" opacity="0.5"/>
+    <rect x="58" y="32" width="4" height="8" rx="1" fill="#4ade80" opacity="0.6"/>
+    <rect x="64" y="30" width="4" height="10" rx="1" fill="#4ade80" opacity="0.7"/>
+    <rect x="70" y="28" width="4" height="12" rx="1" fill="#4ade80" opacity="0.8"/>
+    <rect x="76" y="30" width="4" height="10" rx="1" fill="#4ade80" opacity="0.7"/>
+    <rect x="82" y="32" width="4" height="8" rx="1" fill="#4ade80" opacity="0.6"/>
+    <rect x="88" y="34" width="4" height="6" rx="1" fill="#4ade80" opacity="0.5"/>
+  </g>
+  <text x="72" y="110" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="bold" fill="white" letter-spacing="1.5">HUD</text>
+</svg>

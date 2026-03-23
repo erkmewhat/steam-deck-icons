@@ -1,0 +1,42 @@
+{
+    "id": "lmu",
+    "name": "Le Mans Ultimate",
+    "plugin_id": "com.simracing.lmu.sdPlugin",
+    "icon_pack_id": "com.simracing.lmu-icons.sdIconPack",
+    "profile_uuid": "EBAAB49C-EFF9-4A7F-9C43-FFCE95C09427",
+    "device": {
+        "model": "20GBA9901",
+        "uuid": "@(1)[4057/128/A00SA3272JF6DK]"
+    },
+    "keybind_config": {
+        "path": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\Le Mans Ultimate\\UserData\\player\\keyboard.json",
+        "format": "scan_code",
+        "key_field": "Input"
+    },
+    "bindings": {
+        "pit-limiter": {"key": "L", "scan": 38, "lmu_action": "Speed Limiter", "has_default": false},
+        "headlights": {"key": "H", "scan": 35, "lmu_action": "Headlights", "has_default": false},
+        "headlight-flash": {"key": "G", "scan": 34, "lmu_action": "Headlights Pulse", "has_default": false},
+        "wipers": {"key": "P", "scan": 25, "lmu_action": "Wipers", "has_default": false},
+        "ignition": {"key": "N", "scan": 49, "lmu_action": "Ignition", "has_default": false},
+        "starter": {"key": "M", "scan": 50, "lmu_action": "Starter", "has_default": false},
+        "request-pitstop": {"key": "E", "scan": 18, "lmu_action": "Request Pit Stop", "has_default": false},
+        "ai-takeover": {"key": "I", "scan": 23, "lmu_action": "Toggle AI Control", "has_default": true},
+        "mfd-next": {"key": "RShift", "scan": 54, "lmu_action": "Driver Overlay Next MFD", "has_default": true},
+        "mfd-up": {"key": "Up", "scan": 200, "lmu_action": "Pit Menu Up", "has_default": true},
+        "mfd-down": {"key": "Down", "scan": 208, "lmu_action": "Pit Menu Down", "has_default": true},
+        "mfd-increase": {"key": "Right", "scan": 205, "lmu_action": "Pit Menu Inc", "has_default": true},
+        "mfd-decrease": {"key": "Left", "scan": 203, "lmu_action": "Pit Menu Dec", "has_default": true},
+        "brake-bias-forward": {"key": "X", "scan": 45, "lmu_action": "Bias Forward", "has_default": false},
+        "brake-bias-backward": {"key": "V", "scan": 47, "lmu_action": "Bias Rearward", "has_default": false},
+        "tc-increase": {"key": "T", "scan": 20, "lmu_action": "Traction Control Up", "has_default": false},
+        "tc-decrease": {"key": "B", "scan": 48, "lmu_action": "Traction Control Down", "has_default": false},
+        "abs-increase": {"key": "O", "scan": 24, "lmu_action": "Antilock Brake System Up", "has_default": false},
+        "abs-decrease": {"key": "K", "scan": 37, "lmu_action": "Antilock Brake System Down", "has_default": false},
+        "motor-map-up": {"key": "U", "scan": 22, "lmu_action": "Increment Motor Map", "has_default": false},
+        "motor-map-down": {"key": "J", "scan": 36, "lmu_action": "Decrement Motor Map", "has_default": false},
+        "look-left": {"key": "D", "scan": 32, "lmu_action": "Look Left", "has_default": false},
+        "look-right": {"key": "Q", "scan": 16, "lmu_action": "Look Right", "has_default": false},
+        "look-behind": {"key": "W", "scan": 17, "lmu_action": "Look Behind", "has_default": false}
+    }
+}

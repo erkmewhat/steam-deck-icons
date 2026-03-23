@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144 144" width="144" height="144">
+  <rect x="4" y="4" width="136" height="136" rx="12" fill="#212529" stroke="#e20613" stroke-width="2"/>
+  <rect x="8" y="8" width="128" height="128" rx="10" fill="none" stroke="#2d3238" stroke-width="1"/>
+  <!-- Camera body -->
+  <rect x="26" y="46" width="92" height="56" rx="6" fill="none" stroke="#fff" stroke-width="2.5"/>
+  <!-- Camera body inner fill for depth -->
+  <rect x="28" y="48" width="88" height="52" rx="5" fill="#2d3238"/>
+  <!-- Camera top viewfinder bump -->
+  <polygon points="54,46 62,32 82,32 90,46" fill="#2d3238" stroke="#fff" stroke-width="2.5" stroke-linejoin="round"/>
+  <!-- Shutter button on top -->
+  <rect x="96" y="38" width="12" height="8" rx="3" fill="#555" stroke="#777" stroke-width="1"/>
+  <rect x="99" y="40" width="6" height="4" rx="2" fill="#888"/>
+  <!-- Lens outer ring -->
+  <circle cx="72" cy="72" r="18" fill="none" stroke="#e20613" stroke-width="3"/>
+  <!-- Lens middle ring -->
+  <circle cx="72" cy="72" r="12" fill="none" stroke="#e20613" stroke-width="1.5" opacity="0.6"/>
+  <!-- Lens inner -->
+  <circle cx="72" cy="72" r="7" fill="#e20613"/>
+  <!-- Lens highlight -->
+  <circle cx="68" cy="68" r="3" fill="#ff4444" opacity="0.5"/>
+  <!-- Flash burst top-right -->
+  <polygon points="108,28 112,20 116,28" fill="#fff300"/>
+  <polygon points="104,24 108,18 112,24" fill="#fff300" opacity="0.7"/>
+  <polygon points="112,24 118,18 118,26" fill="#fff300" opacity="0.7"/>
+  <!-- Flash rays -->
+  <line x1="112" y1="16" x2="112" y2="12" stroke="#fff300" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="120" y1="20" x2="124" y2="18" stroke="#fff300" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="106" y1="16" x2="104" y2="12" stroke="#fff300" stroke-width="1.5" stroke-linecap="round"/>
+  <!-- Mode indicator light -->
+  <circle cx="38" cy="56" r="3" fill="#e20613" opacity="0.8"/>
+
+  <text x="72" y="126" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="bold" fill="white">SCREENSHOT</text>
+</svg>

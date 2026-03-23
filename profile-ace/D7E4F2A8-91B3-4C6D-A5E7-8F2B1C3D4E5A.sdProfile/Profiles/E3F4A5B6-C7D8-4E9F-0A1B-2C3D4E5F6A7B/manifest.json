@@ -1,0 +1,262 @@
+{
+  "Controllers": [
+    {
+      "Actions": {
+        "0,0": {
+          "ActionID": "9a6bdc8a-5edb-4f8a-ae9b-6bc8a6b5de49",
+          "LinkedTitle": true,
+          "Name": "BB\nFwd",
+          "Plugin": {
+            "Name": "ACE Sim Racing",
+            "UUID": "com.simracing.ace",
+            "Version": "1.0"
+          },
+          "Resources": null,
+          "Settings": {},
+          "State": 0,
+          "States": [
+            {
+              "FontFamily": "",
+              "FontSize": 10,
+              "FontStyle": "Bold",
+              "FontUnderline": false,
+              "OutlineThickness": 2,
+              "ShowTitle": true,
+              "Title": "BB\nFwd",
+              "TitleAlignment": "bottom",
+              "TitleColor": "#FFFFFF",
+              "Image": "Images/81BF08D46151D01388F12ECFEAZ.png"
+            }
+          ],
+          "UUID": "com.simracing.ace.brake-bias-fwd"
+        },
+        "1,0": {
+          "ActionID": "ab7ced9b-6fec-4a9b-bfac-7cd9b7c6ef5a",
+          "LinkedTitle": true,
+          "Name": "TC\n+",
+          "Plugin": {
+            "Name": "ACE Sim Racing",
+            "UUID": "com.simracing.ace",
+            "Version": "1.0"
+          },
+          "Resources": null,
+          "Settings": {},
+          "State": 0,
+          "States": [
+            {
+              "FontFamily": "",
+              "FontSize": 10,
+              "FontStyle": "Bold",
+              "FontUnderline": false,
+              "OutlineThickness": 2,
+              "ShowTitle": true,
+              "Title": "TC\n+",
+              "TitleAlignment": "bottom",
+              "TitleColor": "#FFFFFF",
+              "Image": "Images/482812FD2149D4328061784427Z.png"
+            }
+          ],
+          "UUID": "com.simracing.ace.tc-increase"
+        },
+        "2,0": {
+          "ActionID": "bc8dfeac-7afd-4bac-c0bd-8deac8d7fa6b",
+          "LinkedTitle": true,
+          "Name": "ABS\n+",
+          "Plugin": {
+            "Name": "ACE Sim Racing",
+            "UUID": "com.simracing.ace",
+            "Version": "1.0"
+          },
+          "Resources": null,
+          "Settings": {},
+          "State": 0,
+          "States": [
+            {
+              "FontFamily": "",
+              "FontSize": 10,
+              "FontStyle": "Bold",
+              "FontUnderline": false,
+              "OutlineThickness": 2,
+              "ShowTitle": true,
+              "Title": "ABS\n+",
+              "TitleAlignment": "bottom",
+              "TitleColor": "#FFFFFF",
+              "Image": "Images/0D313BD8A81515F1C08C6F0136Z.png"
+            }
+          ],
+          "UUID": "com.simracing.ace.abs-increase"
+        },
+        "3,0": {
+          "ActionID": "cd9e0fbd-8bae-4cbd-d1ce-9efbd9e80b7c",
+          "LinkedTitle": true,
+          "Name": "Engine\nMap +",
+          "Plugin": {
+            "Name": "ACE Sim Racing",
+            "UUID": "com.simracing.ace",
+            "Version": "1.0"
+          },
+          "Resources": null,
+          "Settings": {},
+          "State": 0,
+          "States": [
+            {
+              "FontFamily": "",
+              "FontSize": 10,
+              "FontStyle": "Bold",
+              "FontUnderline": false,
+              "OutlineThickness": 2,
+              "ShowTitle": true,
+              "Title": "Engine\nMap +",
+              "TitleAlignment": "bottom",
+              "TitleColor": "#FFFFFF",
+              "Image": "Images/C6E4771FC927C75AF67258866FZ.png"
+            }
+          ],
+          "UUID": "com.simracing.ace.engine-map-up"
+        },
+        "4,0": {
+          "ActionID": "deaf1ace-9cbf-4dce-e2df-af0ceaf91c8d",
+          "LinkedTitle": true,
+          "Name": "Parent Folder",
+          "Plugin": {
+            "Name": "Parent Folder",
+            "UUID": "com.elgato.streamdeck.profile.backtoparent",
+            "Version": "1.0"
+          },
+          "Resources": null,
+          "Settings": {},
+          "State": 0,
+          "States": [
+            {
+              "FontFamily": "",
+              "FontSize": 10,
+              "FontStyle": "Bold",
+              "FontUnderline": false,
+              "OutlineThickness": 2,
+              "ShowTitle": true,
+              "Title": "← Back",
+              "TitleAlignment": "middle",
+              "TitleColor": "#FFFFFF"
+            }
+          ],
+          "UUID": "com.elgato.streamdeck.profile.backtoparent"
+        },
+        "0,1": {
+          "ActionID": "efba2bdf-adca-4edf-f3ea-ba1dfba02d9e",
+          "LinkedTitle": true,
+          "Name": "BB\nBwd",
+          "Plugin": {
+            "Name": "ACE Sim Racing",
+            "UUID": "com.simracing.ace",
+            "Version": "1.0"
+          },
+          "Resources": null,
+          "Settings": {},
+          "State": 0,
+          "States": [
+            {
+              "FontFamily": "",
+              "FontSize": 10,
+              "FontStyle": "Bold",
+              "FontUnderline": false,
+              "OutlineThickness": 2,
+              "ShowTitle": true,
+              "Title": "BB\nBwd",
+              "TitleAlignment": "bottom",
+              "TitleColor": "#FFFFFF",
+              "Image": "Images/50E8E445E8E413CCCADA9C963FZ.png"
+            }
+          ],
+          "UUID": "com.simracing.ace.brake-bias-bwd"
+        },
+        "1,1": {
+          "ActionID": "facb3ce0-bedb-4fe0-04fb-cb2e0cb13eaf",
+          "LinkedTitle": true,
+          "Name": "TC\n−",
+          "Plugin": {
+            "Name": "ACE Sim Racing",
+            "UUID": "com.simracing.ace",
+            "Version": "1.0"
+          },
+          "Resources": null,
+          "Settings": {},
+          "State": 0,
+          "States": [
+            {
+              "FontFamily": "",
+              "FontSize": 10,
+              "FontStyle": "Bold",
+              "FontUnderline": false,
+              "OutlineThickness": 2,
+              "ShowTitle": true,
+              "Title": "TC\n−",
+              "TitleAlignment": "bottom",
+              "TitleColor": "#FFFFFF",
+              "Image": "Images/1852CB363E61720E793F4A7D22Z.png"
+            }
+          ],
+          "UUID": "com.simracing.ace.tc-decrease"
+        },
+        "2,1": {
+          "ActionID": "0bdc4df1-cfec-4af1-15ac-dc3f1dc24fb0",
+          "LinkedTitle": true,
+          "Name": "ABS\n−",
+          "Plugin": {
+            "Name": "ACE Sim Racing",
+            "UUID": "com.simracing.ace",
+            "Version": "1.0"
+          },
+          "Resources": null,
+          "Settings": {},
+          "State": 0,
+          "States": [
+            {
+              "FontFamily": "",
+              "FontSize": 10,
+              "FontStyle": "Bold",
+              "FontUnderline": false,
+              "OutlineThickness": 2,
+              "ShowTitle": true,
+              "Title": "ABS\n−",
+              "TitleAlignment": "bottom",
+              "TitleColor": "#FFFFFF",
+              "Image": "Images/7648489CAD1AF9A7D7D0F313B6Z.png"
+            }
+          ],
+          "UUID": "com.simracing.ace.abs-decrease"
+        },
+        "3,1": {
+          "ActionID": "1ced5ea2-dafd-4ba2-26bd-ed4a2ed35ac1",
+          "LinkedTitle": true,
+          "Name": "Engine\nMap −",
+          "Plugin": {
+            "Name": "ACE Sim Racing",
+            "UUID": "com.simracing.ace",
+            "Version": "1.0"
+          },
+          "Resources": null,
+          "Settings": {},
+          "State": 0,
+          "States": [
+            {
+              "FontFamily": "",
+              "FontSize": 10,
+              "FontStyle": "Bold",
+              "FontUnderline": false,
+              "OutlineThickness": 2,
+              "ShowTitle": true,
+              "Title": "Engine\nMap −",
+              "TitleAlignment": "bottom",
+              "TitleColor": "#FFFFFF",
+              "Image": "Images/2EDC24CF62760352288D0647EAZ.png"
+            }
+          ],
+          "UUID": "com.simracing.ace.engine-map-down"
+        }
+      },
+      "Type": "Keypad"
+    }
+  ],
+  "Icon": "",
+  "Name": "Performance"
+}

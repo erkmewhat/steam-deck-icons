@@ -1,0 +1,37 @@
+{
+    "game_id": "ace",
+    "game_name": "Assetto Corsa EVO",
+    "colors": {
+        "primary": "#e20613",
+        "secondary": "#fff300",
+        "background": "#212529",
+        "border": "#e20613",
+        "text": "#ffffff",
+        "text_label": "#ffffff",
+        "increase": "#fff300",
+        "decrease": "#e20613",
+        "neutral": "#ffffff"
+    },
+    "style": {
+        "border_width": 2,
+        "border_inset": 4,
+        "corner_radius": 12,
+        "label_size": 10,
+        "label_opacity": 0.8,
+        "symbol_stroke_width": 3,
+        "font": "Arial,Helvetica,sans-serif"
+    },
+    "research_notes": {
+        "competitor_url": "https://marketplace.elgato.com/product/assetto-corsa-evo-59f531d4-16bd-4905-b517-872cb7c410bd",
+        "competitor_name": "iConCity ACE pack (289 icons)",
+        "competitor_style": "Dark backgrounds, red border strokes, white/yellow automotive symbols, small white labels, dashboard-instrument feel",
+        "brand_primary": "#e20613 (Rosso Corsa variant — KUNOS official)",
+        "brand_secondary": "#fff300 (Signal yellow — official site CSS)",
+        "brand_dark": "#212529 (Official foreground dark)",
+        "brand_source": "https://assettocorsa.gg/assetto-corsa-evo/ CSS custom properties",
+        "ui_style": "Dark minimalist, web-based (Coherent UI), white text on dark backgrounds",
+        "mood": "Premium Italian motorsport, serious sim, clean and professional",
+        "logo_font": "Myriad Condensed Black Italic",
+        "color_usage": "Yellow for increase/active, Red for decrease/warnings, White for neutral symbols"
+    }
+}

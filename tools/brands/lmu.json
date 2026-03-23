@@ -1,0 +1,32 @@
+{
+    "game_id": "lmu",
+    "game_name": "Le Mans Ultimate",
+    "colors": {
+        "primary": "#ff6b35",
+        "secondary": "#1a8fe3",
+        "background": "#1a1a2e",
+        "border": "#ff6b35",
+        "text": "#ffffff",
+        "text_label": "#ffffff",
+        "increase": "#90ee90",
+        "decrease": "#ff6b6b",
+        "neutral": "#ffffff"
+    },
+    "style": {
+        "border_width": 0,
+        "border_inset": 0,
+        "corner_radius": 0,
+        "label_size": 11,
+        "label_opacity": 0.9,
+        "symbol_stroke_width": 3,
+        "font": "Arial,Helvetica,sans-serif"
+    },
+    "research_notes": {
+        "competitor_url": "",
+        "brand_primary": "#ff6b35 (LMU orange from logo)",
+        "brand_secondary": "#1a8fe3 (WEC blue)",
+        "brand_dark": "#1a1a2e (Deep navy)",
+        "ui_style": "Dark with orange/blue motorsport accents, WEC/Le Mans heritage",
+        "mood": "Endurance racing, professional, FIA WEC branding"
+    }
+}

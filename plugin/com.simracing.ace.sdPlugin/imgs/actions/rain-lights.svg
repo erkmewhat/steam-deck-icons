@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144 144" width="144" height="144">
+  <rect x="4" y="4" width="136" height="136" rx="12" fill="#212529" stroke="#e20613" stroke-width="2"/>
+  <rect x="8" y="8" width="128" height="128" rx="10" fill="none" stroke="#2d3238" stroke-width="1"/>
+  <!-- Rear tail light housing (horizontal oval) -->
+  <ellipse cx="82" cy="54" rx="28" ry="18" fill="#8b0000"/>
+  <!-- Light lens highlight -->
+  <ellipse cx="82" cy="54" rx="24" ry="14" fill="#e20613"/>
+  <!-- Inner highlight for 3D depth -->
+  <ellipse cx="80" cy="50" rx="16" ry="8" fill="#ff2020" opacity="0.4"/>
+  <!-- Glow behind beams -->
+  <line x1="50" y1="42" x2="22" y2="36" stroke="#e20613" stroke-width="8" stroke-linecap="round" opacity="0.15"/>
+  <line x1="50" y1="54" x2="18" y2="54" stroke="#e20613" stroke-width="8" stroke-linecap="round" opacity="0.15"/>
+  <line x1="50" y1="66" x2="22" y2="72" stroke="#e20613" stroke-width="8" stroke-linecap="round" opacity="0.15"/>
+  <!-- 3 red beam lines going left -->
+  <line x1="50" y1="42" x2="22" y2="36" stroke="#e20613" stroke-width="3" stroke-linecap="round"/>
+  <line x1="50" y1="54" x2="18" y2="54" stroke="#e20613" stroke-width="3" stroke-linecap="round"/>
+  <line x1="50" y1="66" x2="22" y2="72" stroke="#e20613" stroke-width="3" stroke-linecap="round"/>
+  <!-- Wavy line cutting through beams (fog/rain indicator) -->
+  <path d="M18 48 Q26 42 34 48 Q42 54 50 48 Q58 42 66 48" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" opacity="0.9"/>
+  <path d="M18 62 Q26 56 34 62 Q42 68 50 62 Q58 56 66 62" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" opacity="0.9"/>
+  <!-- Housing edge highlight -->
+  <ellipse cx="82" cy="54" rx="28" ry="18" fill="none" stroke="#ff4444" stroke-width="1" opacity="0.3"/>
+
+  <text x="72" y="126" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="bold" fill="white">RAIN</text>
+</svg>

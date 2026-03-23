@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144 144">
+  <defs>
+    <radialGradient id="chl-bg"><stop offset="0%" stop-color="#252525"/><stop offset="100%" stop-color="#0c0c0c"/></radialGradient>
+    <pattern id="chl-cf" width="8" height="8" patternUnits="userSpaceOnUse"><rect width="4" height="4" fill="#1a1a1a"/><rect x="4" width="4" height="4" fill="#1f1f1f"/><rect y="4" width="4" height="4" fill="#1f1f1f"/><rect x="4" y="4" width="4" height="4" fill="#1a1a1a"/></pattern>
+    <linearGradient id="chl-stripe" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#e20613" stop-opacity="0"/><stop offset="20%" stop-color="#e20613"/><stop offset="80%" stop-color="#e20613"/><stop offset="100%" stop-color="#e20613" stop-opacity="0"/></linearGradient>
+    <linearGradient id="chl-chrome" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#e0e0e0"/><stop offset="30%" stop-color="#ffffff"/><stop offset="50%" stop-color="#a0a0a0"/><stop offset="75%" stop-color="#d0d0d0"/><stop offset="100%" stop-color="#707070"/></linearGradient>
+    <linearGradient id="chl-beam" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#ffffff"/><stop offset="50%" stop-color="#fff300"/><stop offset="100%" stop-color="#fff300" stop-opacity="0"/></linearGradient>
+    <linearGradient id="chl-label" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#ffffff"/><stop offset="100%" stop-color="#cccccc"/></linearGradient>
+    <filter id="chl-shadow"><feDropShadow dx="0" dy="1" stdDeviation="1.5" flood-color="#000000" flood-opacity="0.6"/></filter>
+    <filter id="chl-glow"><feGaussianBlur stdDeviation="3.5" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="144" height="144" fill="url(#chl-bg)"/>
+  <rect width="144" height="144" fill="url(#chl-cf)" opacity="0.3"/>
+  <rect x="0" y="0" width="144" height="3" fill="url(#chl-stripe)"/>
+  <rect x="0" y="141" width="144" height="3" fill="url(#chl-stripe)"/>
+  <!-- Chrome housing -->
+  <path d="M30 45 Q30 35 40 35 L55 35 Q65 35 65 45 L65 80 Q65 90 55 90 L40 90 Q30 90 30 80 Z" fill="url(#chl-chrome)" filter="url(#chl-shadow)"/>
+  <ellipse cx="47" cy="62" rx="10" ry="14" fill="#1a1a1a"/>
+  <ellipse cx="47" cy="62" rx="7" ry="10" fill="#333"/>
+  <!-- Beam lines with glow -->
+  <g filter="url(#chl-glow)">
+    <line x1="65" y1="52" x2="120" y2="40" stroke="url(#chl-beam)" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="65" y1="57" x2="125" y2="50" stroke="url(#chl-beam)" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="65" y1="62" x2="128" y2="62" stroke="url(#chl-beam)" stroke-width="3" stroke-linecap="round"/>
+    <line x1="65" y1="67" x2="125" y2="74" stroke="url(#chl-beam)" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="65" y1="72" x2="120" y2="84" stroke="url(#chl-beam)" stroke-width="2.5" stroke-linecap="round"/>
+  </g>
+  <text x="72" y="120" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" font-weight="bold" letter-spacing="2" fill="url(#chl-label)">HEADLIGHTS</text>
+</svg>

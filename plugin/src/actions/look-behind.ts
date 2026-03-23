@@ -3,6 +3,7 @@ import { HotkeyAction } from "./hotkey-action";
 
 @action({ UUID: "com.simracing.lmu.look-behind" })
 export class LookBehind extends HotkeyAction {
-    readonly defaultHotkey = "B";
+    readonly defaultHotkey = "W";
     readonly actionName = "Look Behind";
+    readonly iconFile = "look-behind";
 }

@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144 144" width="144" height="144">
+  <rect x="4" y="4" width="136" height="136" rx="12" fill="#212529" stroke="#e20613" stroke-width="2"/>
+  <rect x="8" y="8" width="128" height="128" rx="10" fill="none" stroke="#2d3238" stroke-width="1"/>
+  <!-- Steering wheel (partial, bottom arc) -->
+  <circle cx="72" cy="80" r="36" fill="none" stroke="#777" stroke-width="5" stroke-linecap="round"/>
+  <circle cx="72" cy="80" r="36" fill="none" stroke="#888" stroke-width="3"/>
+  <!-- Wheel spokes -->
+  <line x1="72" y1="80" x2="72" y2="116" stroke="#777" stroke-width="4" stroke-linecap="round"/>
+  <line x1="72" y1="80" x2="40" y2="68" stroke="#777" stroke-width="4" stroke-linecap="round"/>
+  <line x1="72" y1="80" x2="104" y2="68" stroke="#777" stroke-width="4" stroke-linecap="round"/>
+  <!-- Wheel center hub -->
+  <circle cx="72" cy="80" r="8" fill="#555" stroke="#777" stroke-width="1.5"/>
+  <!-- HUD overlay - speed display -->
+  <rect x="52" y="26" width="40" height="22" rx="3" fill="none" stroke="#4ade80" stroke-width="1.5" opacity="0.8"/>
+  <!-- HUD gear indicator -->
+  <rect x="62" y="50" width="20" height="18" rx="2" fill="none" stroke="#4ade80" stroke-width="1" opacity="0.7"/>
+  <!-- HUD RPM bar indicators -->
+  <rect x="22" y="32" width="4" height="8" rx="1" fill="#4ade80" opacity="0.5"/>
+  <rect x="28" y="30" width="4" height="10" rx="1" fill="#4ade80" opacity="0.6"/>
+  <rect x="34" y="28" width="4" height="12" rx="1" fill="#4ade80" opacity="0.7"/>
+  <rect x="40" y="26" width="4" height="14" rx="1" fill="#4ade80" opacity="0.8"/>
+  <rect x="100" y="26" width="4" height="14" rx="1" fill="#4ade80" opacity="0.8"/>
+  <rect x="106" y="28" width="4" height="12" rx="1" fill="#4ade80" opacity="0.7"/>
+  <rect x="112" y="30" width="4" height="10" rx="1" fill="#4ade80" opacity="0.6"/>
+  <rect x="118" y="32" width="4" height="8" rx="1" fill="#4ade80" opacity="0.5"/>
+
+  <text x="72" y="126" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="bold" fill="white">HUD</text>
+</svg>

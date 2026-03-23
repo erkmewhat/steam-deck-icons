@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144 144" width="144" height="144">
+  <rect x="4" y="4" width="136" height="136" rx="12" fill="#212529" stroke="#e20613" stroke-width="2"/>
+  <rect x="8" y="8" width="128" height="128" rx="10" fill="none" stroke="#2d3238" stroke-width="1"/>
+  <!-- Steering wheel outer ring -->
+  <circle cx="72" cy="62" r="34" fill="none" stroke="#999" stroke-width="4"/>
+  <!-- Steering wheel grip thickening at 9 and 3 o'clock -->
+  <path d="M38,62 A34,34 0 0,1 42,44" fill="none" stroke="#fff" stroke-width="6" stroke-linecap="round"/>
+  <path d="M106,62 A34,34 0 0,1 102,80" fill="none" stroke="#fff" stroke-width="6" stroke-linecap="round"/>
+  <path d="M42,80 A34,34 0 0,1 38,62" fill="none" stroke="#fff" stroke-width="6" stroke-linecap="round"/>
+  <path d="M102,44 A34,34 0 0,1 106,62" fill="none" stroke="#fff" stroke-width="6" stroke-linecap="round"/>
+  <!-- Steering wheel flat bottom -->
+  <line x1="50" y1="88" x2="94" y2="88" stroke="#999" stroke-width="4" stroke-linecap="round"/>
+  <!-- Wheel spokes -->
+  <line x1="72" y1="48" x2="72" y2="28" stroke="#999" stroke-width="3" stroke-linecap="round"/>
+  <line x1="56" y1="68" x2="40" y2="62" stroke="#999" stroke-width="3" stroke-linecap="round"/>
+  <line x1="88" y1="68" x2="104" y2="62" stroke="#999" stroke-width="3" stroke-linecap="round"/>
+  <!-- Inner hub -->
+  <circle cx="72" cy="64" r="14" fill="#2d3238" stroke="#555" stroke-width="1.5"/>
+  <!-- AI text bold yellow -->
+  <!-- Circuit board lines radiating from AI -->
+  <line x1="60" y1="56" x2="48" y2="44" stroke="#4a9eff" stroke-width="1.5" stroke-linecap="round"/>
+  <circle cx="48" cy="44" r="2" fill="#4a9eff"/>
+  <line x1="84" y1="56" x2="96" y2="44" stroke="#4a9eff" stroke-width="1.5" stroke-linecap="round"/>
+  <circle cx="96" cy="44" r="2" fill="#4a9eff"/>
+  <line x1="60" y1="72" x2="46" y2="80" stroke="#4a9eff" stroke-width="1.5" stroke-linecap="round"/>
+  <circle cx="46" cy="80" r="2" fill="#4a9eff"/>
+  <line x1="84" y1="72" x2="98" y2="80" stroke="#4a9eff" stroke-width="1.5" stroke-linecap="round"/>
+  <circle cx="98" cy="80" r="2" fill="#4a9eff"/>
+  <line x1="72" y1="78" x2="72" y2="90" stroke="#4a9eff" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="72" y1="90" x2="64" y2="96" stroke="#4a9eff" stroke-width="1.5" stroke-linecap="round"/>
+  <circle cx="64" cy="96" r="2" fill="#4a9eff"/>
+  <line x1="72" y1="90" x2="80" y2="96" stroke="#4a9eff" stroke-width="1.5" stroke-linecap="round"/>
+  <circle cx="80" cy="96" r="2" fill="#4a9eff"/>
+
+  <text x="72" y="126" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="bold" fill="white">AI DRIVE</text>
+</svg>

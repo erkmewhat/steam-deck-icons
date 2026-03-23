@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>ACE Icon Styles — Full Preview</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #060606; color: #fff; font-family: 'Segoe UI', Arial, sans-serif; padding: 30px; }
+  h1 { text-align: center; font-size: 28px; font-weight: 300; letter-spacing: 4px; color: #e20613; margin-bottom: 4px; }
+  h2 { text-align: center; font-size: 12px; color: #555; letter-spacing: 3px; margin-bottom: 40px; }
+  .style-section { margin-bottom: 60px; }
+  .style-header {
+    display: flex; align-items: center; gap: 16px; margin-bottom: 20px;
+    padding: 12px 20px; border-radius: 10px;
+  }
+  .style-header.neon { background: linear-gradient(90deg, #1a1520 0%, #0a0610 100%); border-left: 3px solid #e20613; }
+  .style-header.glass { background: linear-gradient(90deg, #2a1215 0%, #0a0406 100%); border-left: 3px solid #ff3333; }
+  .style-header.carbon { background: linear-gradient(90deg, #252525 0%, #0c0c0c 100%); border-left: 3px solid #e20613; }
+  .style-header h3 { font-size: 18px; font-weight: 600; letter-spacing: 3px; }
+  .style-header.neon h3 { color: #ff4466; }
+  .style-header.glass h3 { color: #ff6644; }
+  .style-header.carbon h3 { color: #cccccc; }
+  .style-header .desc { font-size: 11px; color: #666; }
+  .category { margin: 16px 0 8px 0; font-size: 10px; letter-spacing: 3px; color: #444; text-transform: uppercase; padding-left: 4px; }
+  .grid {
+    display: grid; grid-template-columns: repeat(auto-fill, 90px);
+    gap: 12px; justify-content: start; margin-bottom: 16px; padding-left: 4px;
+  }
+  .icon-card { display: flex; flex-direction: column; align-items: center; gap: 4px; }
+  .icon-card img {
+    width: 76px; height: 76px; border-radius: 8px; border: 1px solid #1a1a1a;
+    transition: transform 0.15s, box-shadow 0.15s; cursor: pointer;
+  }
+  .icon-card img:hover { transform: scale(1.4); box-shadow: 0 0 20px rgba(226,6,19,0.3); z-index: 10; position: relative; }
+  .icon-card .label { font-size: 7px; color: #444; text-align: center; letter-spacing: 0.3px; text-transform: uppercase; }
+  .divider { height: 1px; background: linear-gradient(90deg, transparent, #1a1a1a, transparent); margin: 40px 0; }
+</style>
+</head>
+<body>
+
+<h1>ASSETTO CORSA EVO</h1>
+<h2>3 ICON STYLES &middot; 41 ICONS EACH &middot; 123 TOTAL</h2>
+
+<script>
+const styles = ['neon', 'glass', 'carbon'];
+const styleNames = { neon: 'NEON GLOW', glass: 'GLASS', carbon: 'CARBON RACING' };
+const styleDescs = {
+  neon: 'Deep dark backgrounds, intense dual-layer neon glow, crisp lines over soft wash, chrome housings',
+  glass: 'Glass-effect borders with shine overlay, warm yellow→orange gradients, elegant premium feel',
+  carbon: 'Carbon fiber texture, chrome metallic elements, red racing stripes, motorsport aesthetic'
+};
+const categories = {
+  'Car Systems': ['headlights','flash-lights','rain-lights','wipers-up','wipers-down','ignition','starter','pit-limiter','horn','drs','kers'],
+  'Adjustments': ['bb-front','bb-rear','tc-increase','tc-decrease','abs-increase','abs-decrease','engine-map-up','engine-map-down'],
+  'Camera & Display': ['glance-left','glance-right','look-behind','free-camera','track-camera','chase-camera','virtual-mirror','hud-toggle','leaderboard','damage-display','ideal-line'],
+  'Race & Replay': ['ai-takeover','pit-request','restart-session','replay','slow-motion','fast-forward','rewind','screenshot','next-car','prev-car','pause']
+};
+const base = 'plugin/com.simracing.ace.sdPlugin/imgs/styles';
+
+for (const style of styles) {
+  let html = `<div class="style-section">`;
+  html += `<div class="style-header ${style}"><h3>${styleNames[style]}</h3><span class="desc">${styleDescs[style]}</span></div>`;
+  for (const [cat, slugs] of Object.entries(categories)) {
+    html += `<div class="category">${cat}</div><div class="grid">`;
+    for (const slug of slugs) {
+      html += `<div class="icon-card"><img src="${base}/${style}/${slug}.svg" alt="${slug}"><div class="label">${slug.replace(/-/g,' ')}</div></div>`;
+    }
+    html += `</div>`;
+  }
+  html += `</div>`;
+  if (style !== 'carbon') html += `<div class="divider"></div>`;
+  document.write(html);
+}
+</script>
+
+</body>
+</html>

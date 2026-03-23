@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144 144" width="144" height="144">
+  <defs>
+    <radialGradient id="pa-bg" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#1a1520"/>
+      <stop offset="100%" stop-color="#08060a"/>
+    </radialGradient>
+    <filter id="pa-glow-soft">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+    <filter id="pa-glow-crisp">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+    <linearGradient id="pa-bar-top" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#e20613" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#e20613" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#e20613" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="pa-bar-bot" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#e20613" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#e20613" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#e20613" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="144" height="144" fill="url(#pa-bg)" rx="12"/>
+  <rect x="10" y="2" width="124" height="2" fill="url(#pa-bar-top)" rx="1"/>
+  <rect x="10" y="140" width="124" height="2" fill="url(#pa-bar-bot)" rx="1"/>
+  <g opacity="0.4" filter="url(#pa-glow-soft)">
+    <circle cx="72" cy="54" r="34" fill="none" stroke="#e20613" stroke-width="3"/>
+    <rect x="58" y="34" width="8" height="40" rx="2" fill="white"/>
+    <rect x="78" y="34" width="8" height="40" rx="2" fill="white"/>
+  </g>
+  <g filter="url(#pa-glow-crisp)">
+    <!-- Red neon circle border -->
+    <circle cx="72" cy="54" r="34" fill="none" stroke="#e20613" stroke-width="2.5"/>
+    <!-- Checkered hint (subtle, behind pause bars) -->
+    <rect x="50" y="46" width="5" height="5" fill="#fff" opacity="0.06"/>
+    <rect x="60" y="46" width="5" height="5" fill="#fff" opacity="0.06"/>
+    <rect x="55" y="51" width="5" height="5" fill="#fff" opacity="0.06"/>
+    <rect x="79" y="46" width="5" height="5" fill="#fff" opacity="0.06"/>
+    <rect x="89" y="46" width="5" height="5" fill="#fff" opacity="0.06"/>
+    <rect x="84" y="51" width="5" height="5" fill="#fff" opacity="0.06"/>
+    <!-- Two pause bars (white neon) -->
+    <rect x="58" y="34" width="8" height="40" rx="2" fill="none" stroke="white" stroke-width="2.5"/>
+    <rect x="78" y="34" width="8" height="40" rx="2" fill="none" stroke="white" stroke-width="2.5"/>
+  </g>
+  <text x="72" y="112" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="bold" fill="white" letter-spacing="1.5">PAUSE</text>
+</svg>

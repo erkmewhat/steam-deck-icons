@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144 144" width="144" height="144">
+  <rect x="4" y="4" width="136" height="136" rx="12" fill="#212529" stroke="#e20613" stroke-width="2"/>
+  <rect x="8" y="8" width="128" height="128" rx="10" fill="none" stroke="#2d3238" stroke-width="1"/>
+  <!-- Warning triangle -->
+  <polygon points="72,24 104,76 40,76" fill="none" stroke="#e20613" stroke-width="3" stroke-linejoin="round"/>
+  <!-- Triangle shadow -->
+  <polygon points="72,28 100,74 44,74" fill="none" stroke="#8b0000" stroke-width="1" stroke-linejoin="round" opacity="0.3"/>
+  <!-- Car silhouette side view inside triangle -->
+  <g transform="translate(72,58)">
+    <!-- Car body -->
+    <path d="M-18,0 L-16,-4 -10,-4 -7,-10 7,-10 12,-4 18,-4 18,0 Z" fill="#999" stroke="#777" stroke-width="0.5"/>
+    <!-- Roof highlight -->
+    <path d="M-6,-10 L6,-10 11,-4 -9,-4 Z" fill="#aaa" opacity="0.5"/>
+    <!-- Front wheel -->
+    <circle cx="11" cy="2" r="3.5" fill="#555"/>
+    <circle cx="11" cy="2" r="1.5" fill="#777"/>
+    <!-- Rear wheel -->
+    <circle cx="-11" cy="2" r="3.5" fill="#555"/>
+    <circle cx="-11" cy="2" r="1.5" fill="#777"/>
+  </g>
+  <!-- Wavy skid marks behind rear wheels -->
+  <path d="M48,64 Q50,62 52,64 Q54,66 56,64" fill="none" stroke="#e20613" stroke-width="1.5" stroke-linecap="round"/>
+  <path d="M48,67 Q50,65 52,67 Q54,69 56,67" fill="none" stroke="#e20613" stroke-width="1.5" stroke-linecap="round"/>
+  <!-- Down arrow -->
+  <polygon points="72,104 84,92 78,92 78,86 66,86 66,92 60,92" fill="white"/>
+  <!-- Label -->
+
+  <text x="72" y="126" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="bold" fill="white">TC -</text>
+</svg>

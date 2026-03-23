@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144 144" width="144" height="144">
+  <defs>
+    <radialGradient id="cb-pa-bg" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#252525"/>
+      <stop offset="100%" stop-color="#0c0c0c"/>
+    </radialGradient>
+    <pattern id="cb-pa-cf" width="8" height="8" patternUnits="userSpaceOnUse">
+      <rect width="4" height="4" fill="#1a1a1a"/>
+      <rect x="4" width="4" height="4" fill="#1f1f1f"/>
+      <rect y="4" width="4" height="4" fill="#1f1f1f"/>
+      <rect x="4" y="4" width="4" height="4" fill="#1a1a1a"/>
+    </pattern>
+    <linearGradient id="cb-pa-red" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#ff1a1a"/>
+      <stop offset="50%" stop-color="#cc0000"/>
+      <stop offset="100%" stop-color="#ff1a1a"/>
+    </linearGradient>
+    <linearGradient id="cb-pa-chrome" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e0e0e0"/>
+      <stop offset="25%" stop-color="#ffffff"/>
+      <stop offset="50%" stop-color="#a0a0a0"/>
+      <stop offset="75%" stop-color="#d0d0d0"/>
+      <stop offset="100%" stop-color="#707070"/>
+    </linearGradient>
+    <linearGradient id="cb-pa-label" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#999999"/>
+    </linearGradient>
+    <filter id="cb-pa-shadow">
+      <feDropShadow dx="0" dy="1" stdDeviation="2" flood-color="#000" flood-opacity="0.6"/>
+    </filter>
+    <filter id="cb-pa-glow">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+  <rect width="144" height="144" fill="url(#cb-pa-bg)" rx="12"/>
+  <rect width="144" height="144" fill="url(#cb-pa-cf)" rx="12" opacity="0.3"/>
+  <rect x="0" y="0" width="144" height="3" fill="url(#cb-pa-red)"/>
+  <rect x="0" y="141" width="144" height="3" fill="url(#cb-pa-red)"/>
+  <!-- Pause bars -->
+  <g filter="url(#cb-pa-shadow)">
+    <rect x="52" y="34" width="14" height="48" rx="3" fill="url(#cb-pa-chrome)" opacity="0.9"/>
+    <rect x="78" y="34" width="14" height="48" rx="3" fill="url(#cb-pa-chrome)" opacity="0.9"/>
+  </g>
+  <g opacity="0.3" filter="url(#cb-pa-glow)">
+    <rect x="52" y="34" width="14" height="48" rx="3" fill="#4a9eff"/>
+    <rect x="78" y="34" width="14" height="48" rx="3" fill="#4a9eff"/>
+  </g>
+  <text x="72" y="108" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="bold" fill="url(#cb-pa-label)" letter-spacing="2">PAUSE</text>
+</svg>

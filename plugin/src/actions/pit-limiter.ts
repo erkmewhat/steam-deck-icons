@@ -5,4 +5,5 @@ import { HotkeyAction } from "./hotkey-action";
 export class PitLimiter extends HotkeyAction {
     readonly defaultHotkey = "L";
     readonly actionName = "Pit Limiter";
+    readonly iconFile = "pit-limiter";
 }

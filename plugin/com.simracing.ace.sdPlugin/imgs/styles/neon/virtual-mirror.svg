@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144 144" width="144" height="144">
+  <defs>
+    <radialGradient id="vm-bg" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#1a1520"/>
+      <stop offset="100%" stop-color="#08060a"/>
+    </radialGradient>
+    <filter id="vm-glow-soft">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+    <filter id="vm-glow-crisp">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+    <linearGradient id="vm-bar-top" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#4a9eff" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#4a9eff" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#4a9eff" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="vm-bar-bot" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#4a9eff" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#4a9eff" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#4a9eff" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="144" height="144" fill="url(#vm-bg)" rx="12"/>
+  <rect x="10" y="2" width="124" height="2" fill="url(#vm-bar-top)" rx="1"/>
+  <rect x="10" y="140" width="124" height="2" fill="url(#vm-bar-bot)" rx="1"/>
+  <g opacity="0.4" filter="url(#vm-glow-soft)">
+    <path d="M16,42 Q72,28 128,42 L124,72 Q72,78 20,72 Z" fill="none" stroke="#4a9eff" stroke-width="2.5"/>
+  </g>
+  <g filter="url(#vm-glow-crisp)">
+    <!-- Wide mirror frame -->
+    <path d="M16,42 Q72,28 128,42 L124,72 Q72,78 20,72 Z" fill="#0d0b12" fill-opacity="0.4" stroke="#4a9eff" stroke-width="2"/>
+    <!-- Mirror glass interior -->
+    <path d="M22,44 Q72,32 122,44 L119,70 Q72,75 25,70 Z" fill="none" stroke="#4a9eff" stroke-width="0.8" opacity="0.3"/>
+    <!-- 3 car reflections -->
+    <!-- Left car -->
+    <rect x="34" y="50" width="14" height="10" rx="2" fill="none" stroke="#4a9eff" stroke-width="1.2" opacity="0.6"/>
+    <circle cx="36" cy="62" r="1.5" fill="#4a9eff" opacity="0.5"/>
+    <circle cx="46" cy="62" r="1.5" fill="#4a9eff" opacity="0.5"/>
+    <!-- Center car (closer, larger) -->
+    <rect x="58" y="48" width="18" height="12" rx="3" fill="none" stroke="#4a9eff" stroke-width="1.5" opacity="0.8"/>
+    <circle cx="61" cy="62" r="2" fill="#4a9eff" opacity="0.6"/>
+    <circle cx="73" cy="62" r="2" fill="#4a9eff" opacity="0.6"/>
+    <!-- Right car -->
+    <rect x="86" y="50" width="14" height="10" rx="2" fill="none" stroke="#4a9eff" stroke-width="1.2" opacity="0.6"/>
+    <circle cx="88" cy="62" r="1.5" fill="#4a9eff" opacity="0.5"/>
+    <circle cx="98" cy="62" r="1.5" fill="#4a9eff" opacity="0.5"/>
+  </g>
+  <text x="72" y="106" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="bold" fill="white" letter-spacing="1.5">MIRROR</text>
+</svg>

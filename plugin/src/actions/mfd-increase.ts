@@ -5,4 +5,5 @@ import { HotkeyAction } from "./hotkey-action";
 export class MfdIncrease extends HotkeyAction {
     readonly defaultHotkey = "Right";
     readonly actionName = "MFD Increase";
+    readonly iconFile = "mfd-increase";
 }

@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144 144">
+  <defs>
+    <linearGradient id="gfl-bg1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2a1215"/>
+      <stop offset="50%" stop-color="#180a0c"/>
+      <stop offset="100%" stop-color="#0a0406"/>
+    </linearGradient>
+    <linearGradient id="gfl-border" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#e20613"/>
+      <stop offset="50%" stop-color="#ff3333" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#e20613"/>
+    </linearGradient>
+    <linearGradient id="gfl-shine" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.12"/>
+      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.02"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.06"/>
+    </linearGradient>
+    <linearGradient id="gfl-ray" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#fff300"/>
+      <stop offset="60%" stop-color="#ffaa00"/>
+      <stop offset="100%" stop-color="#ff6600" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="gfl-burst" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="25%" stop-color="#fff300" stop-opacity="0.9"/>
+      <stop offset="60%" stop-color="#ffaa00" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#ff6600" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="gfl-accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#e20613"/>
+      <stop offset="100%" stop-color="#fff300"/>
+    </linearGradient>
+    <filter id="gfl-glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="gfl-softwash">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feComponentTransfer in="blur"><feFuncA type="linear" slope="0.5"/></feComponentTransfer>
+    </filter>
+  </defs>
+  <rect x="1" y="1" width="142" height="142" rx="14" fill="url(#gfl-bg1)" stroke="url(#gfl-border)" stroke-width="1.5"/>
+  <rect x="3" y="3" width="138" height="68" rx="12" fill="url(#gfl-shine)"/>
+  <!-- Soft burst wash -->
+  <g filter="url(#gfl-softwash)">
+    <circle cx="72" cy="58" r="30" fill="#fff300" opacity="0.5"/>
+    <line x1="72" y1="58" x2="72" y2="16" stroke="#ffaa00" stroke-width="5" stroke-linecap="round"/>
+    <line x1="72" y1="58" x2="72" y2="100" stroke="#ffaa00" stroke-width="5" stroke-linecap="round"/>
+    <line x1="72" y1="58" x2="30" y2="58" stroke="#ffaa00" stroke-width="5" stroke-linecap="round"/>
+    <line x1="72" y1="58" x2="114" y2="58" stroke="#ffaa00" stroke-width="5" stroke-linecap="round"/>
+    <line x1="72" y1="58" x2="42" y2="28" stroke="#ffaa00" stroke-width="4" stroke-linecap="round"/>
+    <line x1="72" y1="58" x2="102" y2="28" stroke="#ffaa00" stroke-width="4" stroke-linecap="round"/>
+    <line x1="72" y1="58" x2="42" y2="88" stroke="#ffaa00" stroke-width="4" stroke-linecap="round"/>
+    <line x1="72" y1="58" x2="102" y2="88" stroke="#ffaa00" stroke-width="4" stroke-linecap="round"/>
+    <line x1="72" y1="58" x2="36" y2="42" stroke="#ffaa00" stroke-width="3.5" stroke-linecap="round"/>
+    <line x1="72" y1="58" x2="108" y2="42" stroke="#ffaa00" stroke-width="3.5" stroke-linecap="round"/>
+  </g>
+  <!-- Crisp rays -->
+  <g filter="url(#gfl-glow)">
+    <line x1="72" y1="58" x2="72" y2="16" stroke="#fff300" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="72" y1="58" x2="72" y2="100" stroke="#fff300" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="72" y1="58" x2="30" y2="58" stroke="#fff300" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="72" y1="58" x2="114" y2="58" stroke="#fff300" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="72" y1="58" x2="42" y2="28" stroke="#fff300" stroke-width="2" stroke-linecap="round"/>
+    <line x1="72" y1="58" x2="102" y2="28" stroke="#fff300" stroke-width="2" stroke-linecap="round"/>
+    <line x1="72" y1="58" x2="42" y2="88" stroke="#fff300" stroke-width="2" stroke-linecap="round"/>
+    <line x1="72" y1="58" x2="102" y2="88" stroke="#fff300" stroke-width="2" stroke-linecap="round"/>
+    <line x1="72" y1="58" x2="36" y2="42" stroke="#fff300" stroke-width="1.5" stroke-linecap="round"/>
+    <line x1="72" y1="58" x2="108" y2="42" stroke="#fff300" stroke-width="1.5" stroke-linecap="round"/>
+  </g>
+  <!-- Central bright burst -->
+  <circle cx="72" cy="58" r="18" fill="url(#gfl-burst)"/>
+  <circle cx="72" cy="58" r="7" fill="#ffffff" opacity="0.9"/>
+  <!-- Glass highlight on burst -->
+  <ellipse cx="72" cy="52" rx="10" ry="5" fill="#ffffff" opacity="0.2"/>
+  <!-- Accent bar -->
+  <rect x="14" y="114" width="116" height="3" rx="1.5" fill="url(#gfl-accent)"/>
+  <text x="72" y="127" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="bold" fill="#ffffff" letter-spacing="1.5">FLASH</text>
+</svg>

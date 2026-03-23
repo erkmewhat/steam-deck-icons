@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144 144" width="144" height="144">
+  <rect x="4" y="4" width="136" height="136" rx="12" fill="#212529" stroke="#e20613" stroke-width="2"/>
+  <rect x="8" y="8" width="128" height="128" rx="10" fill="none" stroke="#2d3238" stroke-width="1"/>
+  <!-- Key silhouette behind power symbol -->
+  <path d="M72 88 L72 70 L66 64 L72 58 L66 52 L72 46 L72 28" fill="none" stroke="#3a3f44" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="72" cy="92" r="10" fill="#3a3f44"/>
+  <!-- Power symbol outer glow -->
+  <path d="M50 44 A32 32 0 1 0 94 44" fill="none" stroke="#e20613" stroke-width="7" stroke-linecap="round" opacity="0.15"/>
+  <!-- Power symbol: circle with gap at top -->
+  <path d="M50 44 A32 32 0 1 0 94 44" fill="none" stroke="#e20613" stroke-width="4.5" stroke-linecap="round"/>
+  <!-- Vertical line at top -->
+  <line x1="72" y1="28" x2="72" y2="62" stroke="#e20613" stroke-width="4.5" stroke-linecap="round"/>
+  <!-- Glow dot at top of line -->
+  <circle cx="72" cy="28" r="4" fill="#ff4444" opacity="0.6"/>
+  <circle cx="72" cy="28" r="2" fill="#ff8888" opacity="0.8"/>
+  <!-- Power symbol highlight -->
+  <path d="M52 46 A30 30 0 0 0 56 76" fill="none" stroke="#ff4444" stroke-width="1" opacity="0.3"/>
+
+  <text x="72" y="126" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="bold" fill="white">IGNITION</text>
+</svg>

@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144 144" width="144" height="144">
+  <rect x="4" y="4" width="136" height="136" rx="12" fill="#212529" stroke="#e20613" stroke-width="2"/>
+  <rect x="8" y="8" width="128" height="128" rx="10" fill="none" stroke="#2d3238" stroke-width="1"/>
+  <!-- Track surface - S-curve -->
+  <path d="M24,108 Q24,70 52,58 Q80,46 80,34 Q80,22 98,22 L120,22" fill="none" stroke="#555" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Track edge markings -->
+  <path d="M24,108 Q24,70 52,58 Q80,46 80,34 Q80,22 98,22 L120,22" fill="none" stroke="#666" stroke-width="24" stroke-linecap="round" stroke-linejoin="round" opacity="0.3"/>
+  <!-- Track center line (subtle) -->
+  <path d="M24,108 Q24,70 52,58 Q80,46 80,34 Q80,22 98,22 L120,22" fill="none" stroke="#444" stroke-width="1" stroke-dasharray="4,6" opacity="0.5"/>
+  <!-- Ideal racing line (dashed green) -->
+  <path d="M20,104 Q30,78 48,62 Q66,46 74,36 Q82,26 96,24 L118,24" fill="none" stroke="#4ade80" stroke-width="3" stroke-dasharray="6,4" stroke-linecap="round"/>
+  <!-- Ideal line glow -->
+  <path d="M20,104 Q30,78 48,62 Q66,46 74,36 Q82,26 96,24 L118,24" fill="none" stroke="#4ade80" stroke-width="6" opacity="0.15" stroke-linecap="round"/>
+  <!-- Corner apex markers -->
+  <circle cx="40" cy="72" r="4" fill="#e20613" opacity="0.8"/>
+  <circle cx="40" cy="72" r="6" fill="none" stroke="#e20613" stroke-width="1" opacity="0.4"/>
+  <circle cx="86" cy="28" r="4" fill="#e20613" opacity="0.8"/>
+  <circle cx="86" cy="28" r="6" fill="none" stroke="#e20613" stroke-width="1" opacity="0.4"/>
+  <!-- Speed/direction arrows along the line -->
+  <polygon points="34,86 30,92 38,92" fill="#4ade80" opacity="0.6" transform="rotate(-30, 34, 89)"/>
+  <polygon points="60,50 56,56 64,56" fill="#4ade80" opacity="0.6" transform="rotate(-40, 60, 53)"/>
+  <polygon points="106,24 102,30 110,30" fill="#4ade80" opacity="0.6" transform="rotate(-5, 106, 27)"/>
+
+  <text x="72" y="126" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="bold" fill="white">RACE LINE</text>
+</svg>

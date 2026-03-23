@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144 144">
+  <defs>
+    <radialGradient id="cwu-bg"><stop offset="0%" stop-color="#252525"/><stop offset="100%" stop-color="#0c0c0c"/></radialGradient>
+    <pattern id="cwu-cf" width="8" height="8" patternUnits="userSpaceOnUse"><rect width="4" height="4" fill="#1a1a1a"/><rect x="4" width="4" height="4" fill="#1f1f1f"/><rect y="4" width="4" height="4" fill="#1f1f1f"/><rect x="4" y="4" width="4" height="4" fill="#1a1a1a"/></pattern>
+    <linearGradient id="cwu-stripe" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#e20613" stop-opacity="0"/><stop offset="20%" stop-color="#e20613"/><stop offset="80%" stop-color="#e20613"/><stop offset="100%" stop-color="#e20613" stop-opacity="0"/></linearGradient>
+    <linearGradient id="cwu-chrome" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#e0e0e0"/><stop offset="30%" stop-color="#ffffff"/><stop offset="50%" stop-color="#a0a0a0"/><stop offset="75%" stop-color="#d0d0d0"/><stop offset="100%" stop-color="#707070"/></linearGradient>
+    <linearGradient id="cwu-label" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#ffffff"/><stop offset="100%" stop-color="#cccccc"/></linearGradient>
+    <linearGradient id="cwu-gbeam" x1="0" y1="1" x2="0" y2="0"><stop offset="0%" stop-color="#ffffff"/><stop offset="50%" stop-color="#fff300"/><stop offset="100%" stop-color="#fff300" stop-opacity="0"/></linearGradient>
+    <filter id="cwu-shadow"><feDropShadow dx="0" dy="1" stdDeviation="1.5" flood-color="#000000" flood-opacity="0.6"/></filter>
+    <filter id="cwu-glow"><feGaussianBlur stdDeviation="3.5" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="144" height="144" fill="url(#cwu-bg)"/>
+  <rect width="144" height="144" fill="url(#cwu-cf)" opacity="0.3"/>
+  <rect x="0" y="0" width="144" height="3" fill="url(#cwu-stripe)"/>
+  <rect x="0" y="141" width="144" height="3" fill="url(#cwu-stripe)"/>
+  <!-- Chrome wiper arm -->
+  <g filter="url(#cwu-shadow)">
+    <circle cx="52" cy="90" r="5" fill="url(#cwu-chrome)"/>
+    <line x1="52" y1="90" x2="52" y2="30" stroke="url(#cwu-chrome)" stroke-width="4" stroke-linecap="round"/>
+    <path d="M48 30 Q52 25 56 30 L54 55 L50 55 Z" fill="url(#cwu-chrome)"/>
+  </g>
+  <!-- Curved wiper blade -->
+  <path d="M42 32 Q52 22 62 32" stroke="url(#cwu-chrome)" stroke-width="3" fill="none" filter="url(#cwu-shadow)"/>
+  <!-- Yellow up arrow with glow -->
+  <g filter="url(#cwu-glow)">
+    <polygon points="100,30 115,55 108,55 108,75 92,75 92,55 85,55" fill="url(#cwu-gbeam)"/>
+  </g>
+  <text x="72" y="120" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" font-weight="bold" letter-spacing="2" fill="url(#cwu-label)">WIPER +</text>
+</svg>

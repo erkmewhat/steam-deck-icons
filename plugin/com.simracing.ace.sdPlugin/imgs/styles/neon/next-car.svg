@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144 144" width="144" height="144">
+  <defs>
+    <radialGradient id="nc-bg" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#1a1520"/>
+      <stop offset="100%" stop-color="#08060a"/>
+    </radialGradient>
+    <filter id="nc-glow-soft">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+    <filter id="nc-glow-crisp">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+    <linearGradient id="nc-bar-top" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#4a9eff" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#4a9eff" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#4a9eff" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="nc-bar-bot" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#4a9eff" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#4a9eff" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#4a9eff" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="144" height="144" fill="url(#nc-bg)" rx="12"/>
+  <rect x="10" y="2" width="124" height="2" fill="url(#nc-bar-top)" rx="1"/>
+  <rect x="10" y="140" width="124" height="2" fill="url(#nc-bar-bot)" rx="1"/>
+  <g opacity="0.4" filter="url(#nc-glow-soft)">
+    <rect x="18" y="48" width="40" height="20" rx="5" fill="none" stroke="#666" stroke-width="2"/>
+    <rect x="76" y="42" width="46" height="24" rx="6" fill="none" stroke="#4a9eff" stroke-width="2.5"/>
+  </g>
+  <g filter="url(#nc-glow-crisp)">
+    <!-- Grey car (behind) -->
+    <rect x="18" y="48" width="40" height="20" rx="5" fill="none" stroke="#666" stroke-width="1.8"/>
+    <rect x="22" y="52" width="32" height="12" rx="3" fill="none" stroke="#666" stroke-width="1" opacity="0.4"/>
+    <circle cx="24" cy="70" r="3" fill="none" stroke="#666" stroke-width="1.2"/>
+    <circle cx="52" cy="70" r="3" fill="none" stroke="#666" stroke-width="1.2"/>
+    <!-- White arrow pointing right -->
+    <line x1="56" y1="58" x2="74" y2="54" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+    <polyline points="68,48 76,54 68,60" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- Blue neon car (ahead) -->
+    <rect x="76" y="42" width="46" height="24" rx="6" fill="none" stroke="#4a9eff" stroke-width="2"/>
+    <rect x="80" y="46" width="38" height="16" rx="3" fill="none" stroke="#4a9eff" stroke-width="1" opacity="0.5"/>
+    <circle cx="82" cy="68" r="3.5" fill="none" stroke="#4a9eff" stroke-width="1.5"/>
+    <circle cx="116" cy="68" r="3.5" fill="none" stroke="#4a9eff" stroke-width="1.5"/>
+  </g>
+  <text x="72" y="106" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="bold" fill="white" letter-spacing="1.5">NEXT CAR</text>
+</svg>

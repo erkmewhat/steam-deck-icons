@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144 144" width="144" height="144">
+  <defs>
+    <radialGradient id="cb-gl-bg" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#252525"/>
+      <stop offset="100%" stop-color="#0c0c0c"/>
+    </radialGradient>
+    <pattern id="cb-gl-cf" width="8" height="8" patternUnits="userSpaceOnUse">
+      <rect width="4" height="4" fill="#1a1a1a"/>
+      <rect x="4" width="4" height="4" fill="#1f1f1f"/>
+      <rect y="4" width="4" height="4" fill="#1f1f1f"/>
+      <rect x="4" y="4" width="4" height="4" fill="#1a1a1a"/>
+    </pattern>
+    <linearGradient id="cb-gl-red" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#ff1a1a"/>
+      <stop offset="50%" stop-color="#cc0000"/>
+      <stop offset="100%" stop-color="#ff1a1a"/>
+    </linearGradient>
+    <linearGradient id="cb-gl-chrome" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e0e0e0"/>
+      <stop offset="25%" stop-color="#ffffff"/>
+      <stop offset="50%" stop-color="#a0a0a0"/>
+      <stop offset="75%" stop-color="#d0d0d0"/>
+      <stop offset="100%" stop-color="#707070"/>
+    </linearGradient>
+    <linearGradient id="cb-gl-label" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#999999"/>
+    </linearGradient>
+    <filter id="cb-gl-shadow">
+      <feDropShadow dx="0" dy="1" stdDeviation="2" flood-color="#000" flood-opacity="0.6"/>
+    </filter>
+    <filter id="cb-gl-glow">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+  <rect width="144" height="144" fill="url(#cb-gl-bg)" rx="12"/>
+  <rect width="144" height="144" fill="url(#cb-gl-cf)" rx="12" opacity="0.3"/>
+  <rect x="0" y="0" width="144" height="3" fill="url(#cb-gl-red)"/>
+  <rect x="0" y="141" width="144" height="3" fill="url(#cb-gl-red)"/>
+  <g filter="url(#cb-gl-shadow)">
+    <ellipse cx="72" cy="60" rx="34" ry="18" fill="none" stroke="url(#cb-gl-chrome)" stroke-width="2.5"/>
+    <circle cx="60" cy="60" r="7" fill="url(#cb-gl-chrome)" opacity="0.9"/>
+    <circle cx="60" cy="60" r="3" fill="#0c0c0c"/>
+  </g>
+  <g opacity="0.5" filter="url(#cb-gl-glow)">
+    <polyline points="28,60 16,51 16,69" fill="none" stroke="#4a9eff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <polyline points="28,60 16,51 16,69" fill="none" stroke="#4a9eff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <line x1="16" y1="60" x2="36" y2="60" stroke="#4a9eff" stroke-width="2" stroke-linecap="round"/>
+  <text x="72" y="108" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="bold" fill="url(#cb-gl-label)" letter-spacing="2">LOOK LEFT</text>
+</svg>

@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144 144" width="144" height="144">
+  <defs>
+    <radialGradient id="cb-pr-bg" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#252525"/>
+      <stop offset="100%" stop-color="#0c0c0c"/>
+    </radialGradient>
+    <pattern id="cb-pr-cf" width="8" height="8" patternUnits="userSpaceOnUse">
+      <rect width="4" height="4" fill="#1a1a1a"/>
+      <rect x="4" width="4" height="4" fill="#1f1f1f"/>
+      <rect y="4" width="4" height="4" fill="#1f1f1f"/>
+      <rect x="4" y="4" width="4" height="4" fill="#1a1a1a"/>
+    </pattern>
+    <linearGradient id="cb-pr-red" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#ff1a1a"/>
+      <stop offset="50%" stop-color="#cc0000"/>
+      <stop offset="100%" stop-color="#ff1a1a"/>
+    </linearGradient>
+    <linearGradient id="cb-pr-chrome" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e0e0e0"/>
+      <stop offset="25%" stop-color="#ffffff"/>
+      <stop offset="50%" stop-color="#a0a0a0"/>
+      <stop offset="75%" stop-color="#d0d0d0"/>
+      <stop offset="100%" stop-color="#707070"/>
+    </linearGradient>
+    <linearGradient id="cb-pr-label" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#999999"/>
+    </linearGradient>
+    <filter id="cb-pr-shadow">
+      <feDropShadow dx="0" dy="1" stdDeviation="2" flood-color="#000" flood-opacity="0.6"/>
+    </filter>
+    <filter id="cb-pr-glow">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+  <rect width="144" height="144" fill="url(#cb-pr-bg)" rx="12"/>
+  <rect width="144" height="144" fill="url(#cb-pr-cf)" rx="12" opacity="0.3"/>
+  <rect x="0" y="0" width="144" height="3" fill="url(#cb-pr-red)"/>
+  <rect x="0" y="141" width="144" height="3" fill="url(#cb-pr-red)"/>
+  <!-- Pit board -->
+  <g filter="url(#cb-pr-shadow)">
+    <rect x="44" y="30" width="56" height="40" rx="3" fill="none" stroke="url(#cb-pr-chrome)" stroke-width="2.5"/>
+    <line x1="72" y1="70" x2="72" y2="88" stroke="url(#cb-pr-chrome)" stroke-width="3" stroke-linecap="round"/>
+  </g>
+  <!-- PIT text with yellow/red accent -->
+  <g opacity="0.5" filter="url(#cb-pr-glow)">
+    <text x="72" y="58" text-anchor="middle" font-family="Arial" font-size="22" font-weight="bold" fill="#fbbf24">PIT</text>
+  </g>
+  <text x="72" y="58" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="22" font-weight="bold" fill="#fbbf24">PIT</text>
+  <!-- Arrow down -->
+  <polyline points="64,82 72,90 80,82" fill="none" stroke="#ff4444" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="72" y="108" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="11" font-weight="bold" fill="url(#cb-pr-label)" letter-spacing="2">PIT REQUEST</text>
+</svg>

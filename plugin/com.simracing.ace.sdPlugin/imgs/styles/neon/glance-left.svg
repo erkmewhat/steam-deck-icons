@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144 144" width="144" height="144">
+  <defs>
+    <radialGradient id="gl-bg" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#1a1520"/>
+      <stop offset="100%" stop-color="#08060a"/>
+    </radialGradient>
+    <filter id="gl-glow-soft">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+    <filter id="gl-glow-crisp">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+    <linearGradient id="gl-bar-top" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#4a9eff" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#4a9eff" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#4a9eff" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="gl-bar-bot" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#4a9eff" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#4a9eff" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#4a9eff" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="144" height="144" fill="url(#gl-bg)" rx="12"/>
+  <rect x="10" y="2" width="124" height="2" fill="url(#gl-bar-top)" rx="1"/>
+  <rect x="10" y="140" width="124" height="2" fill="url(#gl-bar-bot)" rx="1"/>
+  <!-- Soft glow layer -->
+  <g opacity="0.4" filter="url(#gl-glow-soft)">
+    <ellipse cx="72" cy="62" rx="34" ry="18" fill="none" stroke="#4a9eff" stroke-width="2.5"/>
+    <circle cx="60" cy="62" r="7" fill="#4a9eff"/>
+    <polyline points="28,62 18,55 18,69" fill="none" stroke="#4a9eff" stroke-width="3"/>
+  </g>
+  <!-- Crisp neon layer -->
+  <g filter="url(#gl-glow-crisp)">
+    <ellipse cx="72" cy="62" rx="34" ry="18" fill="none" stroke="#4a9eff" stroke-width="2" stroke-linecap="round"/>
+    <circle cx="60" cy="62" r="7" fill="#4a9eff" opacity="0.9"/>
+    <circle cx="60" cy="62" r="3" fill="#08060a"/>
+    <polyline points="28,62 16,53 16,71" fill="none" stroke="#4a9eff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <line x1="16" y1="62" x2="36" y2="62" stroke="#4a9eff" stroke-width="2" stroke-linecap="round"/>
+  </g>
+  <text x="72" y="106" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="bold" fill="white" letter-spacing="1.5">LOOK LEFT</text>
+</svg>

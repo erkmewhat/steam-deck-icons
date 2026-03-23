@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144 144" width="144" height="144">
+  <defs>
+    <radialGradient id="rw-bg" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#1a1520"/>
+      <stop offset="100%" stop-color="#08060a"/>
+    </radialGradient>
+    <filter id="rw-glow-soft">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+    <filter id="rw-glow-crisp">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+    <linearGradient id="rw-bar-top" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#4a9eff" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#4a9eff" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#4a9eff" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="rw-bar-bot" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#4a9eff" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#4a9eff" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#4a9eff" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="144" height="144" fill="url(#rw-bg)" rx="12"/>
+  <rect x="10" y="2" width="124" height="2" fill="url(#rw-bar-top)" rx="1"/>
+  <rect x="10" y="140" width="124" height="2" fill="url(#rw-bar-bot)" rx="1"/>
+  <g opacity="0.4" filter="url(#rw-glow-soft)">
+    <polygon points="106,30 72,58 106,86" fill="none" stroke="#4a9eff" stroke-width="3"/>
+    <polygon points="72,30 38,58 72,86" fill="none" stroke="#4a9eff" stroke-width="3"/>
+  </g>
+  <g filter="url(#rw-glow-crisp)">
+    <!-- Two left-pointing triangles -->
+    <polygon points="106,30 72,58 106,86" fill="none" stroke="#4a9eff" stroke-width="2.5" stroke-linejoin="round"/>
+    <polygon points="72,30 38,58 72,86" fill="none" stroke="#4a9eff" stroke-width="2.5" stroke-linejoin="round"/>
+    <!-- Speed lines -->
+    <line x1="126" y1="42" x2="112" y2="42" stroke="#4a9eff" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/>
+    <line x1="130" y1="58" x2="112" y2="58" stroke="#4a9eff" stroke-width="1.5" stroke-linecap="round" opacity="0.7"/>
+    <line x1="126" y1="74" x2="112" y2="74" stroke="#4a9eff" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/>
+    <line x1="34" y1="48" x2="22" y2="48" stroke="#4a9eff" stroke-width="1.2" stroke-linecap="round" opacity="0.3"/>
+    <line x1="34" y1="58" x2="18" y2="58" stroke="#4a9eff" stroke-width="1.2" stroke-linecap="round" opacity="0.4"/>
+    <line x1="34" y1="68" x2="22" y2="68" stroke="#4a9eff" stroke-width="1.2" stroke-linecap="round" opacity="0.3"/>
+  </g>
+  <text x="72" y="110" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="bold" fill="white" letter-spacing="1.5">REWIND</text>
+</svg>

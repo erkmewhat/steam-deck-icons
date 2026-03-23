@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144 144" width="144" height="144">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="40%" r="70%">
+      <stop offset="0%" stop-color="#32373C"/>
+      <stop offset="100%" stop-color="#0a0a0f"/>
+    </radialGradient>
+    <radialGradient id="cyanGlow" cx="50%" cy="45%" r="40%">
+      <stop offset="0%" stop-color="#00B4D8" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#00B4D8" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="trackGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#48D1E8"/>
+      <stop offset="100%" stop-color="#00B4D8"/>
+    </linearGradient>
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="2.5" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="shadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#000" flood-opacity="0.5"/>
+    </filter>
+    <linearGradient id="borderAccent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#00B4D8" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#00B4D8" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#00B4D8" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="144" height="144" fill="url(#bg)"/>
+  <ellipse cx="72" cy="55" rx="48" ry="40" fill="url(#cyanGlow)"/>
+  <!-- Crosshair / tracking target -->
+  <g filter="url(#shadow)">
+    <!-- Outer circle -->
+    <circle cx="72" cy="58" r="30" fill="none" stroke="url(#trackGrad)" stroke-width="2.5"/>
+    <!-- Inner circle -->
+    <circle cx="72" cy="58" r="18" fill="none" stroke="url(#trackGrad)" stroke-width="2"/>
+    <!-- Center dot -->
+    <circle cx="72" cy="58" r="4" fill="url(#trackGrad)" opacity="0.7"/>
+  </g>
+  <!-- Crosshair lines -->
+  <g filter="url(#glow)">
+    <!-- Top -->
+    <line x1="72" y1="24" x2="72" y2="38" stroke="url(#trackGrad)" stroke-width="2.5" stroke-linecap="round"/>
+    <!-- Bottom -->
+    <line x1="72" y1="78" x2="72" y2="92" stroke="url(#trackGrad)" stroke-width="2.5" stroke-linecap="round"/>
+    <!-- Left -->
+    <line x1="38" y1="58" x2="52" y2="58" stroke="url(#trackGrad)" stroke-width="2.5" stroke-linecap="round"/>
+    <!-- Right -->
+    <line x1="92" y1="58" x2="106" y2="58" stroke="url(#trackGrad)" stroke-width="2.5" stroke-linecap="round"/>
+    <!-- Corner brackets -->
+    <path d="M46 34 L46 42 L54 42" fill="none" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/>
+    <path d="M98 34 L98 42 L90 42" fill="none" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/>
+    <path d="M46 82 L46 74 L54 74" fill="none" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/>
+    <path d="M98 82 L98 74 L90 74" fill="none" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/>
+  </g>
+  <rect x="20" y="138" width="104" height="2" rx="1" fill="url(#borderAccent)"/>
+  <text x="72" y="132" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="15" font-weight="700" fill="#ffffff" opacity="0.85" letter-spacing="1">TRACKING</text>
+</svg>

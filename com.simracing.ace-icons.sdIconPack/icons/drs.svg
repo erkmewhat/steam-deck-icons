@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144 144" width="144" height="144">
+  <rect x="4" y="4" width="136" height="136" rx="12" fill="#212529" stroke="#e20613" stroke-width="2"/>
+  <rect x="8" y="8" width="128" height="128" rx="10" fill="none" stroke="#2d3238" stroke-width="1"/>
+  <!-- Wing supports / endplates -->
+  <rect x="30" y="28" width="4" height="34" rx="1" fill="#777"/>
+  <rect x="110" y="28" width="4" height="34" rx="1" fill="#777"/>
+  <!-- Main wing element shadow -->
+  <path d="M28 50 L116 50 L118 44 L26 44Z" fill="#666"/>
+  <!-- Main wing element -->
+  <path d="M26 48 L114 48 L116 42 L24 42Z" fill="#999"/>
+  <!-- Wing top highlight -->
+  <path d="M26 42 L114 42 L116 40 L24 40Z" fill="#bbb" opacity="0.5"/>
+  <!-- Open flap (DRS open - angled up) -->
+  <path d="M28 32 L112 32 L116 24 L24 24Z" fill="white" opacity="0.85"/>
+  <!-- Flap shadow underneath -->
+  <path d="M28 32 L112 32 L114 30 L26 30Z" fill="#ccc" opacity="0.4"/>
+  <!-- Flap highlight -->
+  <path d="M26 26 L114 26 L116 24 L24 24Z" fill="white" opacity="0.4"/>
+  <!-- Gap between elements showing DRS is open -->
+  <line x1="30" y1="37" x2="110" y2="37" stroke="#212529" stroke-width="6"/>
+  <!-- Small airflow arrows in gap -->
+  <path d="M50 37 L56 34 L56 40Z" fill="#fff300" opacity="0.3"/>
+  <path d="M72 37 L78 34 L78 40Z" fill="#fff300" opacity="0.3"/>
+  <path d="M94 37 L100 34 L100 40Z" fill="#fff300" opacity="0.3"/>
+  <!-- DRS text bold yellow -->
+  <!-- DRS text shadow -->
+  <text x="73" y="87" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="28" font-weight="bold" fill="#ccb800" opacity="0.3"/>
+
+  <text x="72" y="126" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="bold" fill="white">DRS</text>
+</svg>
