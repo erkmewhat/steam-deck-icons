@@ -50,26 +50,53 @@ with "What do you want to work on?" to hand control to the user.
 ## Project Structure
 
 ```
-CLAUDE.md                              # THIS FILE — project instructions for Claude
+CLAUDE.md                              # THIS FILE — project instructions, roadmap, status
+.claude/
+  settings.json                         # Project Claude Code config (hooks, permissions)
+  settings.local.json                   # Machine-local overrides (gitignored)
+.current-game                           # Active game context (lmu|ace)
+
 com.simracing.lmu-icons.sdIconPack/    # LMU icon pack (47 SVGs + manifest)
 com.simracing.ace-icons.sdIconPack/    # ACE icon pack (51 SVGs + manifest)
+
 plugin/
   src/                                  # TypeScript source (actions, plugin entry points)
   com.simracing.lmu.sdPlugin/          # Compiled LMU plugin (JS + node_modules + manifest)
   com.simracing.ace.sdPlugin/          # Compiled ACE plugin
 plugin-ace/                             # ACE plugin source variant
+
 profile/                                # LMU Stream Deck profile (.sdProfile dir)
 profile-ace/                            # ACE Stream Deck profile
+
 tools/
-  setup.sh                              # Project sync and dependency check
+  # === Workflow & Quality (Claude-facing) ===
+  session-preflight.sh                  # SessionStart hook — injects project state into Claude
+  quality-checklist.md                  # Self-evolving checklist — read on start, update on mistakes
+  setup.sh                              # Interactive project sync and dependency check
+
+  # === Build & Deploy ===
   deploy.sh                             # Full 9-step build + deploy pipeline
+  preflight.py                          # Pre-deploy validation
+  sync-icons.js                         # Sync SVGs from icon packs to plugin imgs/
+
+  # === Game Scaffolding ===
   new-game.py                           # Scaffold a new game (interactive or --config)
   generate-profile.py                   # LMU profile generator
   generate-profile-ace.py               # ACE profile generator
   design-icons.py                       # Icon design agent prompts from brand config
-  sync-icons.js                         # Sync SVGs from icon packs to plugin imgs/
-  preflight.py                          # Pre-deploy validation
+  setup-keybinds.py                     # Keybind configuration helper
+  read-lmu-bindings.py                  # Parse LMU keybind config files
+
+  # === Icon Tools ===
+  convert-icons.mjs                     # SVG to PNG conversion (LMU)
+  convert-ace-icons.mjs                 # SVG to PNG conversion (ACE)
+  switch-style.py                       # Switch icon style variants
+  preview-icons.py                      # Generate icon preview HTML
+
+  # === Validation ===
   validate-profile.py                   # Profile UUID consistency check
+
+  # === Config ===
   games/                                # Game configs (lmu.json, ace.json)
   brands/                               # Branding configs (colors, style)
 ```
@@ -157,11 +184,38 @@ JustPush is a free, closed-source SD plugin (Go) for ACC with: auto fuel calc, a
 5. **Execute** — only after BOTH approvals:
    - Write game config → scaffold with `new-game.py` → design icons with `design-icons.py` → preview → deploy
 
-## Saving Work Checklist
+## Claude Workflow System
+
+This project has an integrated workflow that ensures Claude maintains context, quality,
+and continuity across sessions and machines. The system is self-evolving — it improves
+every time a mistake is caught.
+
+### Components
+
+| File | Purpose | When Used |
+|------|---------|-----------|
+| `CLAUDE.md` | Single source of truth: roadmap, status, procedures | Read every session start |
+| `tools/session-preflight.sh` | SessionStart hook: fetches remote, injects state | Runs automatically via hook |
+| `tools/quality-checklist.md` | Self-evolving checklist with learned failure patterns | Read on start, updated on mistakes |
+| `.claude/settings.json` | Hook wiring, permissions | Loaded by Claude Code |
+| `.current-game` | Active game context | Checked on session start |
+
+### Self-Learning Loop
+
+1. **Session starts** → preflight hook fires → Claude reads CLAUDE.md + quality checklist
+2. **During work** → Claude silently runs checklist checks before major actions
+3. **Mistake happens** → Claude adds learned failure pattern to `tools/quality-checklist.md`
+4. **Session ends** → Claude updates CLAUDE.md status, commits, pushes
+5. **Next session** → new failure pattern is now part of the checklist, preventing repeat
+
+All workflow artifacts live in the repo (not just in Claude memory) so they sync across
+machines and survive context resets.
+
+### Session End Checklist
 
 After every session or major milestone:
-- [ ] Research/plans saved to memory files
-- [ ] CLAUDE.md "Current Status" and "Next Steps" updated if anything changed
-- [ ] Changes committed with descriptive message
-- [ ] Pushed to remote
+- [ ] All work committed and pushed to `develop`
+- [ ] CLAUDE.md "Current Status" and "Roadmap" updated if anything changed
+- [ ] Research/plans/decisions saved to memory files
+- [ ] `tools/quality-checklist.md` updated if any new failure patterns discovered
 - [ ] Version tagged if releasing
