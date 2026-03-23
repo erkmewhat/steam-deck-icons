@@ -60,7 +60,7 @@
                     "Name": "Off"
                 },
                 {
-                    "Image": "imgs/actions/headlights-on.gif",
+                    "Image": "imgs/actions/headlights-on",
                     "Name": "On"
                 }
             ],
