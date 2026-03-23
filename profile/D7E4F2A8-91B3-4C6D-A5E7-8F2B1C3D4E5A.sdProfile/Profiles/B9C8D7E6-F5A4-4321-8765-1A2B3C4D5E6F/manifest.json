@@ -3,127 +3,239 @@
     {
       "Actions": {
         "0,0": {
-          "ActionID": "9a5ed62b-8457-4932-ab0e-f5f29130763d",
+          "ActionID": "4216f428-908d-4177-aaa2-2831375e91f0",
           "LinkedTitle": true,
-          "Name": "Headlights",
-          "Plugin": {
-            "Name": "Assetto Corsa EVO",
-            "UUID": "com.simracing.ace",
-            "Version": "1.0"
-          },
+          "Name": "Hotkey",
           "Resources": null,
           "Settings": {
-            "hotkey": "L"
+            "Coalesce": true,
+            "Hotkeys": [
+              {
+                "KeyCmd": false,
+                "KeyCtrl": false,
+                "KeyModifiers": 0,
+                "KeyOption": false,
+                "KeyShift": false,
+                "NativeCode": 38,
+                "QTKeyCode": 76,
+                "VKeyCode": 76
+              },
+              {
+                "KeyCmd": false,
+                "KeyCtrl": false,
+                "KeyModifiers": 0,
+                "KeyOption": false,
+                "KeyShift": false,
+                "NativeCode": 146,
+                "QTKeyCode": 33554431,
+                "VKeyCode": -1
+              },
+              {
+                "KeyCmd": false,
+                "KeyCtrl": false,
+                "KeyModifiers": 0,
+                "KeyOption": false,
+                "KeyShift": false,
+                "NativeCode": 146,
+                "QTKeyCode": 33554431,
+                "VKeyCode": -1
+              },
+              {
+                "KeyCmd": false,
+                "KeyCtrl": false,
+                "KeyModifiers": 0,
+                "KeyOption": false,
+                "KeyShift": false,
+                "NativeCode": 146,
+                "QTKeyCode": 33554431,
+                "VKeyCode": -1
+              }
+            ]
           },
           "State": 0,
           "States": [
             {
-              "FontFamily": "",
-              "FontSize": 10,
-              "FontStyle": "Bold",
-              "FontUnderline": false,
-              "Image": "Images/D23E4BAC240DDBF0C9C8E05826.png",
-              "OutlineThickness": 2,
-              "ShowTitle": false,
-              "Title": "",
-              "TitleAlignment": "bottom",
-              "TitleColor": "#FFFFFF"
+              "Image": "Images/D23E4BAC240DDBF0C9C8E05826.png"
             }
           ],
-          "UUID": "com.simracing.ace.headlights"
+          "UUID": "com.elgato.streamdeck.system.hotkey"
         },
         "1,0": {
-          "ActionID": "d2b034cc-614e-4612-bdf1-7437c151e58d",
+          "ActionID": "b6b69edc-53d0-4756-99b7-9bd0d7bcdc28",
           "LinkedTitle": true,
-          "Name": "Flashing Lights",
-          "Plugin": {
-            "Name": "Assetto Corsa EVO",
-            "UUID": "com.simracing.ace",
-            "Version": "1.0"
-          },
+          "Name": "Hotkey",
           "Resources": null,
           "Settings": {
-            "hotkey": "F"
+            "Coalesce": true,
+            "Hotkeys": [
+              {
+                "KeyCmd": false,
+                "KeyCtrl": false,
+                "KeyModifiers": 0,
+                "KeyOption": false,
+                "KeyShift": false,
+                "NativeCode": 33,
+                "QTKeyCode": 70,
+                "VKeyCode": 70
+              },
+              {
+                "KeyCmd": false,
+                "KeyCtrl": false,
+                "KeyModifiers": 0,
+                "KeyOption": false,
+                "KeyShift": false,
+                "NativeCode": 146,
+                "QTKeyCode": 33554431,
+                "VKeyCode": -1
+              },
+              {
+                "KeyCmd": false,
+                "KeyCtrl": false,
+                "KeyModifiers": 0,
+                "KeyOption": false,
+                "KeyShift": false,
+                "NativeCode": 146,
+                "QTKeyCode": 33554431,
+                "VKeyCode": -1
+              },
+              {
+                "KeyCmd": false,
+                "KeyCtrl": false,
+                "KeyModifiers": 0,
+                "KeyOption": false,
+                "KeyShift": false,
+                "NativeCode": 146,
+                "QTKeyCode": 33554431,
+                "VKeyCode": -1
+              }
+            ]
           },
           "State": 0,
           "States": [
             {
-              "FontFamily": "",
-              "FontSize": 10,
-              "FontStyle": "Bold",
-              "FontUnderline": false,
-              "Image": "Images/CE5C806FA8B8890AFC76777705.png",
-              "OutlineThickness": 2,
-              "ShowTitle": false,
-              "Title": "",
-              "TitleAlignment": "bottom",
-              "TitleColor": "#FFFFFF"
+              "Image": "Images/CE5C806FA8B8890AFC76777705.png"
             }
           ],
-          "UUID": "com.simracing.ace.flash-lights"
+          "UUID": "com.elgato.streamdeck.system.hotkey"
         },
         "2,0": {
-          "ActionID": "3672f458-89cf-4ca2-88b4-c6faba71ab48",
+          "ActionID": "acf0a104-d6b3-48a3-90c1-5f85676e7157",
           "LinkedTitle": true,
-          "Name": "Rain Lights",
-          "Plugin": {
-            "Name": "Assetto Corsa EVO",
-            "UUID": "com.simracing.ace",
-            "Version": "1.0"
-          },
+          "Name": "Hotkey",
           "Resources": null,
           "Settings": {
-            "hotkey": "R"
+            "Coalesce": true,
+            "Hotkeys": [
+              {
+                "KeyCmd": false,
+                "KeyCtrl": false,
+                "KeyModifiers": 0,
+                "KeyOption": false,
+                "KeyShift": false,
+                "NativeCode": 19,
+                "QTKeyCode": 82,
+                "VKeyCode": 82
+              },
+              {
+                "KeyCmd": false,
+                "KeyCtrl": false,
+                "KeyModifiers": 0,
+                "KeyOption": false,
+                "KeyShift": false,
+                "NativeCode": 146,
+                "QTKeyCode": 33554431,
+                "VKeyCode": -1
+              },
+              {
+                "KeyCmd": false,
+                "KeyCtrl": false,
+                "KeyModifiers": 0,
+                "KeyOption": false,
+                "KeyShift": false,
+                "NativeCode": 146,
+                "QTKeyCode": 33554431,
+                "VKeyCode": -1
+              },
+              {
+                "KeyCmd": false,
+                "KeyCtrl": false,
+                "KeyModifiers": 0,
+                "KeyOption": false,
+                "KeyShift": false,
+                "NativeCode": 146,
+                "QTKeyCode": 33554431,
+                "VKeyCode": -1
+              }
+            ]
           },
           "State": 0,
           "States": [
             {
-              "FontFamily": "",
-              "FontSize": 10,
-              "FontStyle": "Bold",
-              "FontUnderline": false,
-              "Image": "Images/B12F300E4CB6BDCD6BA78A5730.png",
-              "OutlineThickness": 2,
-              "ShowTitle": false,
-              "Title": "",
-              "TitleAlignment": "bottom",
-              "TitleColor": "#FFFFFF"
+              "Image": "Images/B12F300E4CB6BDCD6BA78A5730.png"
             }
           ],
-          "UUID": "com.simracing.ace.rain-lights"
+          "UUID": "com.elgato.streamdeck.system.hotkey"
         },
         "3,0": {
-          "ActionID": "2ae64550-b556-4591-9249-d7f51065a282",
+          "ActionID": "3b058e9a-7f38-4213-ae8a-2de45d4ae41a",
           "LinkedTitle": true,
-          "Name": "Wiper Cycle Up",
-          "Plugin": {
-            "Name": "Assetto Corsa EVO",
-            "UUID": "com.simracing.ace",
-            "Version": "1.0"
-          },
+          "Name": "Hotkey",
           "Resources": null,
           "Settings": {
-            "hotkey": "P"
+            "Coalesce": true,
+            "Hotkeys": [
+              {
+                "KeyCmd": false,
+                "KeyCtrl": false,
+                "KeyModifiers": 0,
+                "KeyOption": false,
+                "KeyShift": false,
+                "NativeCode": 25,
+                "QTKeyCode": 80,
+                "VKeyCode": 80
+              },
+              {
+                "KeyCmd": false,
+                "KeyCtrl": false,
+                "KeyModifiers": 0,
+                "KeyOption": false,
+                "KeyShift": false,
+                "NativeCode": 146,
+                "QTKeyCode": 33554431,
+                "VKeyCode": -1
+              },
+              {
+                "KeyCmd": false,
+                "KeyCtrl": false,
+                "KeyModifiers": 0,
+                "KeyOption": false,
+                "KeyShift": false,
+                "NativeCode": 146,
+                "QTKeyCode": 33554431,
+                "VKeyCode": -1
+              },
+              {
+                "KeyCmd": false,
+                "KeyCtrl": false,
+                "KeyModifiers": 0,
+                "KeyOption": false,
+                "KeyShift": false,
+                "NativeCode": 146,
+                "QTKeyCode": 33554431,
+                "VKeyCode": -1
+              }
+            ]
           },
           "State": 0,
           "States": [
             {
-              "FontFamily": "",
-              "FontSize": 10,
-              "FontStyle": "Bold",
-              "FontUnderline": false,
-              "Image": "Images/C876D1AC6613AEE440ACBE7A46.png",
-              "OutlineThickness": 2,
-              "ShowTitle": false,
-              "Title": "",
-              "TitleAlignment": "bottom",
-              "TitleColor": "#FFFFFF"
+              "Image": "Images/C876D1AC6613AEE440ACBE7A46.png"
             }
           ],
-          "UUID": "com.simracing.ace.wipers-up"
+          "UUID": "com.elgato.streamdeck.system.hotkey"
         },
         "4,0": {
-          "ActionID": "50045d1d-ba12-4179-b771-c74544549f55",
+          "ActionID": "d0730a70-0db2-4a6e-9d7d-dc41f01c3e07",
           "LinkedTitle": true,
           "Name": "Create Folder",
           "Plugin": {
@@ -153,127 +265,239 @@
           "UUID": "com.elgato.streamdeck.profile.openchild"
         },
         "0,1": {
-          "ActionID": "c922a6fd-4c40-4b7c-aa9c-76a91b557d09",
+          "ActionID": "a27c4ced-714c-4771-82bb-0d45eae20eff",
           "LinkedTitle": true,
-          "Name": "Toggle Ignition",
-          "Plugin": {
-            "Name": "Assetto Corsa EVO",
-            "UUID": "com.simracing.ace",
-            "Version": "1.0"
-          },
+          "Name": "Hotkey",
           "Resources": null,
           "Settings": {
-            "hotkey": "I"
+            "Coalesce": true,
+            "Hotkeys": [
+              {
+                "KeyCmd": false,
+                "KeyCtrl": false,
+                "KeyModifiers": 0,
+                "KeyOption": false,
+                "KeyShift": false,
+                "NativeCode": 23,
+                "QTKeyCode": 73,
+                "VKeyCode": 73
+              },
+              {
+                "KeyCmd": false,
+                "KeyCtrl": false,
+                "KeyModifiers": 0,
+                "KeyOption": false,
+                "KeyShift": false,
+                "NativeCode": 146,
+                "QTKeyCode": 33554431,
+                "VKeyCode": -1
+              },
+              {
+                "KeyCmd": false,
+                "KeyCtrl": false,
+                "KeyModifiers": 0,
+                "KeyOption": false,
+                "KeyShift": false,
+                "NativeCode": 146,
+                "QTKeyCode": 33554431,
+                "VKeyCode": -1
+              },
+              {
+                "KeyCmd": false,
+                "KeyCtrl": false,
+                "KeyModifiers": 0,
+                "KeyOption": false,
+                "KeyShift": false,
+                "NativeCode": 146,
+                "QTKeyCode": 33554431,
+                "VKeyCode": -1
+              }
+            ]
           },
           "State": 0,
           "States": [
             {
-              "FontFamily": "",
-              "FontSize": 10,
-              "FontStyle": "Bold",
-              "FontUnderline": false,
-              "Image": "Images/3FE9A8DFCA0F4E96AA36BCA306.png",
-              "OutlineThickness": 2,
-              "ShowTitle": false,
-              "Title": "",
-              "TitleAlignment": "bottom",
-              "TitleColor": "#FFFFFF"
+              "Image": "Images/3FE9A8DFCA0F4E96AA36BCA306.png"
             }
           ],
-          "UUID": "com.simracing.ace.ignition"
+          "UUID": "com.elgato.streamdeck.system.hotkey"
         },
         "1,1": {
-          "ActionID": "452c50ff-9b35-4505-ab1e-2f8014878311",
+          "ActionID": "f3c80412-08a4-477a-8fe8-d768f5669d71",
           "LinkedTitle": true,
-          "Name": "Toggle Starter",
-          "Plugin": {
-            "Name": "Assetto Corsa EVO",
-            "UUID": "com.simracing.ace",
-            "Version": "1.0"
-          },
+          "Name": "Hotkey",
           "Resources": null,
           "Settings": {
-            "hotkey": "K"
+            "Coalesce": true,
+            "Hotkeys": [
+              {
+                "KeyCmd": false,
+                "KeyCtrl": false,
+                "KeyModifiers": 0,
+                "KeyOption": false,
+                "KeyShift": false,
+                "NativeCode": 37,
+                "QTKeyCode": 75,
+                "VKeyCode": 75
+              },
+              {
+                "KeyCmd": false,
+                "KeyCtrl": false,
+                "KeyModifiers": 0,
+                "KeyOption": false,
+                "KeyShift": false,
+                "NativeCode": 146,
+                "QTKeyCode": 33554431,
+                "VKeyCode": -1
+              },
+              {
+                "KeyCmd": false,
+                "KeyCtrl": false,
+                "KeyModifiers": 0,
+                "KeyOption": false,
+                "KeyShift": false,
+                "NativeCode": 146,
+                "QTKeyCode": 33554431,
+                "VKeyCode": -1
+              },
+              {
+                "KeyCmd": false,
+                "KeyCtrl": false,
+                "KeyModifiers": 0,
+                "KeyOption": false,
+                "KeyShift": false,
+                "NativeCode": 146,
+                "QTKeyCode": 33554431,
+                "VKeyCode": -1
+              }
+            ]
           },
           "State": 0,
           "States": [
             {
-              "FontFamily": "",
-              "FontSize": 10,
-              "FontStyle": "Bold",
-              "FontUnderline": false,
-              "Image": "Images/4FF9961269BF7630D32E152765.png",
-              "OutlineThickness": 2,
-              "ShowTitle": false,
-              "Title": "",
-              "TitleAlignment": "bottom",
-              "TitleColor": "#FFFFFF"
+              "Image": "Images/4FF9961269BF7630D32E152765.png"
             }
           ],
-          "UUID": "com.simracing.ace.starter"
+          "UUID": "com.elgato.streamdeck.system.hotkey"
         },
         "2,1": {
-          "ActionID": "00436732-bed3-40a4-a9b9-28f01f54f774",
+          "ActionID": "d70c62f7-08ed-45f4-b215-376f99eadd58",
           "LinkedTitle": true,
-          "Name": "Pit Limiter",
-          "Plugin": {
-            "Name": "Assetto Corsa EVO",
-            "UUID": "com.simracing.ace",
-            "Version": "1.0"
-          },
+          "Name": "Hotkey",
           "Resources": null,
           "Settings": {
-            "hotkey": "N"
+            "Coalesce": true,
+            "Hotkeys": [
+              {
+                "KeyCmd": false,
+                "KeyCtrl": false,
+                "KeyModifiers": 0,
+                "KeyOption": false,
+                "KeyShift": false,
+                "NativeCode": 49,
+                "QTKeyCode": 78,
+                "VKeyCode": 78
+              },
+              {
+                "KeyCmd": false,
+                "KeyCtrl": false,
+                "KeyModifiers": 0,
+                "KeyOption": false,
+                "KeyShift": false,
+                "NativeCode": 146,
+                "QTKeyCode": 33554431,
+                "VKeyCode": -1
+              },
+              {
+                "KeyCmd": false,
+                "KeyCtrl": false,
+                "KeyModifiers": 0,
+                "KeyOption": false,
+                "KeyShift": false,
+                "NativeCode": 146,
+                "QTKeyCode": 33554431,
+                "VKeyCode": -1
+              },
+              {
+                "KeyCmd": false,
+                "KeyCtrl": false,
+                "KeyModifiers": 0,
+                "KeyOption": false,
+                "KeyShift": false,
+                "NativeCode": 146,
+                "QTKeyCode": 33554431,
+                "VKeyCode": -1
+              }
+            ]
           },
           "State": 0,
           "States": [
             {
-              "FontFamily": "",
-              "FontSize": 10,
-              "FontStyle": "Bold",
-              "FontUnderline": false,
-              "Image": "Images/A267BCF1B4C46AADF4C37158BB.png",
-              "OutlineThickness": 2,
-              "ShowTitle": false,
-              "Title": "",
-              "TitleAlignment": "bottom",
-              "TitleColor": "#FFFFFF"
+              "Image": "Images/A267BCF1B4C46AADF4C37158BB.png"
             }
           ],
-          "UUID": "com.simracing.ace.pit-limiter"
+          "UUID": "com.elgato.streamdeck.system.hotkey"
         },
         "3,1": {
-          "ActionID": "dd5d5a05-eea2-46c7-86cd-fdb3d44f7cd0",
+          "ActionID": "ada14ba6-272f-4b61-b53e-49ff60e649ec",
           "LinkedTitle": true,
-          "Name": "Wiper Cycle Down",
-          "Plugin": {
-            "Name": "Assetto Corsa EVO",
-            "UUID": "com.simracing.ace",
-            "Version": "1.0"
-          },
+          "Name": "Hotkey",
           "Resources": null,
           "Settings": {
-            "hotkey": "O"
+            "Coalesce": true,
+            "Hotkeys": [
+              {
+                "KeyCmd": false,
+                "KeyCtrl": false,
+                "KeyModifiers": 0,
+                "KeyOption": false,
+                "KeyShift": false,
+                "NativeCode": 24,
+                "QTKeyCode": 79,
+                "VKeyCode": 79
+              },
+              {
+                "KeyCmd": false,
+                "KeyCtrl": false,
+                "KeyModifiers": 0,
+                "KeyOption": false,
+                "KeyShift": false,
+                "NativeCode": 146,
+                "QTKeyCode": 33554431,
+                "VKeyCode": -1
+              },
+              {
+                "KeyCmd": false,
+                "KeyCtrl": false,
+                "KeyModifiers": 0,
+                "KeyOption": false,
+                "KeyShift": false,
+                "NativeCode": 146,
+                "QTKeyCode": 33554431,
+                "VKeyCode": -1
+              },
+              {
+                "KeyCmd": false,
+                "KeyCtrl": false,
+                "KeyModifiers": 0,
+                "KeyOption": false,
+                "KeyShift": false,
+                "NativeCode": 146,
+                "QTKeyCode": 33554431,
+                "VKeyCode": -1
+              }
+            ]
           },
           "State": 0,
           "States": [
             {
-              "FontFamily": "",
-              "FontSize": 10,
-              "FontStyle": "Bold",
-              "FontUnderline": false,
-              "Image": "Images/6BCA849E0735F9BE559BC3956A.png",
-              "OutlineThickness": 2,
-              "ShowTitle": false,
-              "Title": "",
-              "TitleAlignment": "bottom",
-              "TitleColor": "#FFFFFF"
+              "Image": "Images/6BCA849E0735F9BE559BC3956A.png"
             }
           ],
-          "UUID": "com.simracing.ace.wipers-down"
+          "UUID": "com.elgato.streamdeck.system.hotkey"
         },
         "4,1": {
-          "ActionID": "de8c3730-08ba-4bb8-8c87-55a27ab5b605",
+          "ActionID": "9c7cab7f-9855-4920-9d54-caf96ccc6f35",
           "LinkedTitle": true,
           "Name": "Create Folder",
           "Plugin": {
@@ -303,97 +527,181 @@
           "UUID": "com.elgato.streamdeck.profile.openchild"
         },
         "0,2": {
-          "ActionID": "dc92458d-03a0-49ef-8bb0-9daebf4cb214",
+          "ActionID": "54f48b82-b247-49dd-930b-b92346b8363d",
           "LinkedTitle": true,
-          "Name": "Horn",
-          "Plugin": {
-            "Name": "Assetto Corsa EVO",
-            "UUID": "com.simracing.ace",
-            "Version": "1.0"
-          },
+          "Name": "Hotkey",
           "Resources": null,
           "Settings": {
-            "hotkey": "H"
+            "Coalesce": true,
+            "Hotkeys": [
+              {
+                "KeyCmd": false,
+                "KeyCtrl": false,
+                "KeyModifiers": 0,
+                "KeyOption": false,
+                "KeyShift": false,
+                "NativeCode": 35,
+                "QTKeyCode": 72,
+                "VKeyCode": 72
+              },
+              {
+                "KeyCmd": false,
+                "KeyCtrl": false,
+                "KeyModifiers": 0,
+                "KeyOption": false,
+                "KeyShift": false,
+                "NativeCode": 146,
+                "QTKeyCode": 33554431,
+                "VKeyCode": -1
+              },
+              {
+                "KeyCmd": false,
+                "KeyCtrl": false,
+                "KeyModifiers": 0,
+                "KeyOption": false,
+                "KeyShift": false,
+                "NativeCode": 146,
+                "QTKeyCode": 33554431,
+                "VKeyCode": -1
+              },
+              {
+                "KeyCmd": false,
+                "KeyCtrl": false,
+                "KeyModifiers": 0,
+                "KeyOption": false,
+                "KeyShift": false,
+                "NativeCode": 146,
+                "QTKeyCode": 33554431,
+                "VKeyCode": -1
+              }
+            ]
           },
           "State": 0,
           "States": [
             {
-              "FontFamily": "",
-              "FontSize": 10,
-              "FontStyle": "Bold",
-              "FontUnderline": false,
-              "Image": "Images/9543098F1704584B8EDD35E00C.png",
-              "OutlineThickness": 2,
-              "ShowTitle": false,
-              "Title": "",
-              "TitleAlignment": "bottom",
-              "TitleColor": "#FFFFFF"
+              "Image": "Images/9543098F1704584B8EDD35E00C.png"
             }
           ],
-          "UUID": "com.simracing.ace.horn"
+          "UUID": "com.elgato.streamdeck.system.hotkey"
         },
         "1,2": {
-          "ActionID": "b5e76a0b-e3b2-4725-a815-ac286468e3da",
+          "ActionID": "73b47d6a-4355-4ea1-b27e-a2d19449f22b",
           "LinkedTitle": true,
-          "Name": "DRS",
-          "Plugin": {
-            "Name": "Assetto Corsa EVO",
-            "UUID": "com.simracing.ace",
-            "Version": "1.0"
-          },
+          "Name": "Hotkey",
           "Resources": null,
           "Settings": {
-            "hotkey": "J"
+            "Coalesce": true,
+            "Hotkeys": [
+              {
+                "KeyCmd": false,
+                "KeyCtrl": false,
+                "KeyModifiers": 0,
+                "KeyOption": false,
+                "KeyShift": false,
+                "NativeCode": 36,
+                "QTKeyCode": 74,
+                "VKeyCode": 74
+              },
+              {
+                "KeyCmd": false,
+                "KeyCtrl": false,
+                "KeyModifiers": 0,
+                "KeyOption": false,
+                "KeyShift": false,
+                "NativeCode": 146,
+                "QTKeyCode": 33554431,
+                "VKeyCode": -1
+              },
+              {
+                "KeyCmd": false,
+                "KeyCtrl": false,
+                "KeyModifiers": 0,
+                "KeyOption": false,
+                "KeyShift": false,
+                "NativeCode": 146,
+                "QTKeyCode": 33554431,
+                "VKeyCode": -1
+              },
+              {
+                "KeyCmd": false,
+                "KeyCtrl": false,
+                "KeyModifiers": 0,
+                "KeyOption": false,
+                "KeyShift": false,
+                "NativeCode": 146,
+                "QTKeyCode": 33554431,
+                "VKeyCode": -1
+              }
+            ]
           },
           "State": 0,
           "States": [
             {
-              "FontFamily": "",
-              "FontSize": 10,
-              "FontStyle": "Bold",
-              "FontUnderline": false,
-              "Image": "Images/FA20E43CC591CE0772B90D4650.png",
-              "OutlineThickness": 2,
-              "ShowTitle": false,
-              "Title": "",
-              "TitleAlignment": "bottom",
-              "TitleColor": "#FFFFFF"
+              "Image": "Images/FA20E43CC591CE0772B90D4650.png"
             }
           ],
-          "UUID": "com.simracing.ace.drs"
+          "UUID": "com.elgato.streamdeck.system.hotkey"
         },
         "2,2": {
-          "ActionID": "c7a2c536-dcf2-4efe-b6d4-a7990f797004",
+          "ActionID": "8009bb7b-8f14-4f0a-a273-e2ea96624352",
           "LinkedTitle": true,
-          "Name": "KERS",
-          "Plugin": {
-            "Name": "Assetto Corsa EVO",
-            "UUID": "com.simracing.ace",
-            "Version": "1.0"
-          },
+          "Name": "Hotkey",
           "Resources": null,
           "Settings": {
-            "hotkey": "Y"
+            "Coalesce": true,
+            "Hotkeys": [
+              {
+                "KeyCmd": false,
+                "KeyCtrl": false,
+                "KeyModifiers": 0,
+                "KeyOption": false,
+                "KeyShift": false,
+                "NativeCode": 21,
+                "QTKeyCode": 89,
+                "VKeyCode": 89
+              },
+              {
+                "KeyCmd": false,
+                "KeyCtrl": false,
+                "KeyModifiers": 0,
+                "KeyOption": false,
+                "KeyShift": false,
+                "NativeCode": 146,
+                "QTKeyCode": 33554431,
+                "VKeyCode": -1
+              },
+              {
+                "KeyCmd": false,
+                "KeyCtrl": false,
+                "KeyModifiers": 0,
+                "KeyOption": false,
+                "KeyShift": false,
+                "NativeCode": 146,
+                "QTKeyCode": 33554431,
+                "VKeyCode": -1
+              },
+              {
+                "KeyCmd": false,
+                "KeyCtrl": false,
+                "KeyModifiers": 0,
+                "KeyOption": false,
+                "KeyShift": false,
+                "NativeCode": 146,
+                "QTKeyCode": 33554431,
+                "VKeyCode": -1
+              }
+            ]
           },
           "State": 0,
           "States": [
             {
-              "FontFamily": "",
-              "FontSize": 10,
-              "FontStyle": "Bold",
-              "FontUnderline": false,
-              "Image": "Images/6E9588EA140EFE66B51A8932CB.png",
-              "OutlineThickness": 2,
-              "ShowTitle": false,
-              "Title": "",
-              "TitleAlignment": "bottom",
-              "TitleColor": "#FFFFFF"
+              "Image": "Images/6E9588EA140EFE66B51A8932CB.png"
             }
           ],
-          "UUID": "com.simracing.ace.kers"
+          "UUID": "com.elgato.streamdeck.system.hotkey"
         },
         "4,2": {
-          "ActionID": "b9b440d5-535a-45e8-b0c2-505d40dc40c3",
+          "ActionID": "0fda6eea-54b5-4f70-93fb-5d52a1ff828e",
           "LinkedTitle": true,
           "Name": "Create Folder",
           "Plugin": {

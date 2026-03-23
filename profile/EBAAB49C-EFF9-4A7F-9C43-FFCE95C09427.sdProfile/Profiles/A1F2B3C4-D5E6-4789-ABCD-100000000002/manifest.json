@@ -3,157 +3,297 @@
     {
       "Actions": {
         "0,0": {
-          "ActionID": "ef183cfa-a51e-44c9-a997-79cdd812990e",
+          "ActionID": "41477502-0c42-4c14-8528-fed76a33f682",
           "LinkedTitle": true,
-          "Name": "HUD",
-          "Plugin": {
-            "Name": "LMU Sim Racing",
-            "UUID": "com.simracing.lmu",
-            "Version": "1.0"
-          },
+          "Name": "Hotkey",
           "Resources": null,
           "Settings": {
-            "hotkey": "6"
+            "Coalesce": true,
+            "Hotkeys": [
+              {
+                "KeyCmd": false,
+                "KeyCtrl": false,
+                "KeyShift": false,
+                "KeyOption": false,
+                "KeyModifiers": 0,
+                "NativeCode": 7,
+                "QTKeyCode": 54,
+                "VKeyCode": 54
+              },
+              {
+                "KeyCmd": false,
+                "KeyCtrl": false,
+                "KeyModifiers": 0,
+                "KeyOption": false,
+                "KeyShift": false,
+                "NativeCode": 146,
+                "QTKeyCode": 33554431,
+                "VKeyCode": -1
+              },
+              {
+                "KeyCmd": false,
+                "KeyCtrl": false,
+                "KeyModifiers": 0,
+                "KeyOption": false,
+                "KeyShift": false,
+                "NativeCode": 146,
+                "QTKeyCode": 33554431,
+                "VKeyCode": -1
+              },
+              {
+                "KeyCmd": false,
+                "KeyCtrl": false,
+                "KeyModifiers": 0,
+                "KeyOption": false,
+                "KeyShift": false,
+                "NativeCode": 146,
+                "QTKeyCode": 33554431,
+                "VKeyCode": -1
+              }
+            ]
           },
           "State": 0,
           "States": [
             {
-              "FontFamily": "",
-              "FontSize": 10,
-              "FontStyle": "Bold",
-              "FontUnderline": false,
-              "Image": "Images/ABCDB907F48B0A8AC57011A2B5.png",
-              "OutlineThickness": 2,
-              "ShowTitle": false,
-              "Title": "",
-              "TitleAlignment": "bottom",
-              "TitleColor": "#FFFFFF"
+              "Image": "Images/ABCDB907F48B0A8AC57011A2B5.png"
             }
           ],
-          "UUID": "com.simracing.lmu.toggle-hud"
+          "UUID": "com.elgato.streamdeck.system.hotkey"
         },
         "1,0": {
-          "ActionID": "0edf595c-6c67-41e3-92d8-e4c323e0b18e",
+          "ActionID": "05168484-27e3-4298-a6b2-a590a535c9ef",
           "LinkedTitle": true,
-          "Name": "MFD\nPrev",
-          "Plugin": {
-            "Name": "LMU Sim Racing",
-            "UUID": "com.simracing.lmu",
-            "Version": "1.0"
-          },
+          "Name": "Hotkey",
           "Resources": null,
           "Settings": {
-            "hotkey": "RCtrl"
+            "Coalesce": true,
+            "Hotkeys": [
+              {
+                "KeyCmd": false,
+                "KeyCtrl": false,
+                "KeyShift": false,
+                "KeyOption": false,
+                "KeyModifiers": 0,
+                "NativeCode": 285,
+                "QTKeyCode": 16777249,
+                "VKeyCode": 163
+              },
+              {
+                "KeyCmd": false,
+                "KeyCtrl": false,
+                "KeyModifiers": 0,
+                "KeyOption": false,
+                "KeyShift": false,
+                "NativeCode": 146,
+                "QTKeyCode": 33554431,
+                "VKeyCode": -1
+              },
+              {
+                "KeyCmd": false,
+                "KeyCtrl": false,
+                "KeyModifiers": 0,
+                "KeyOption": false,
+                "KeyShift": false,
+                "NativeCode": 146,
+                "QTKeyCode": 33554431,
+                "VKeyCode": -1
+              },
+              {
+                "KeyCmd": false,
+                "KeyCtrl": false,
+                "KeyModifiers": 0,
+                "KeyOption": false,
+                "KeyShift": false,
+                "NativeCode": 146,
+                "QTKeyCode": 33554431,
+                "VKeyCode": -1
+              }
+            ]
           },
           "State": 0,
           "States": [
             {
-              "FontFamily": "",
-              "FontSize": 10,
-              "FontStyle": "Bold",
-              "FontUnderline": false,
-              "Image": "Images/0B743589B8095FA7D9C1C6F213.png",
-              "OutlineThickness": 2,
-              "ShowTitle": false,
-              "Title": "",
-              "TitleAlignment": "bottom",
-              "TitleColor": "#FFFFFF"
+              "Image": "Images/0B743589B8095FA7D9C1C6F213.png"
             }
           ],
-          "UUID": "com.simracing.lmu.prev-mfd"
+          "UUID": "com.elgato.streamdeck.system.hotkey"
         },
         "2,0": {
-          "ActionID": "0c38ae92-e8f7-42e8-b0a8-bba4c60c1567",
+          "ActionID": "b219e456-06c0-4aee-a876-9fa40d1f593e",
           "LinkedTitle": true,
-          "Name": "MFD\nNext",
-          "Plugin": {
-            "Name": "LMU Sim Racing",
-            "UUID": "com.simracing.lmu",
-            "Version": "1.0"
-          },
+          "Name": "Hotkey",
           "Resources": null,
           "Settings": {
-            "hotkey": "RShift"
+            "Coalesce": true,
+            "Hotkeys": [
+              {
+                "KeyCmd": false,
+                "KeyCtrl": false,
+                "KeyShift": false,
+                "KeyOption": false,
+                "KeyModifiers": 0,
+                "NativeCode": 54,
+                "QTKeyCode": 16777248,
+                "VKeyCode": 161
+              },
+              {
+                "KeyCmd": false,
+                "KeyCtrl": false,
+                "KeyModifiers": 0,
+                "KeyOption": false,
+                "KeyShift": false,
+                "NativeCode": 146,
+                "QTKeyCode": 33554431,
+                "VKeyCode": -1
+              },
+              {
+                "KeyCmd": false,
+                "KeyCtrl": false,
+                "KeyModifiers": 0,
+                "KeyOption": false,
+                "KeyShift": false,
+                "NativeCode": 146,
+                "QTKeyCode": 33554431,
+                "VKeyCode": -1
+              },
+              {
+                "KeyCmd": false,
+                "KeyCtrl": false,
+                "KeyModifiers": 0,
+                "KeyOption": false,
+                "KeyShift": false,
+                "NativeCode": 146,
+                "QTKeyCode": 33554431,
+                "VKeyCode": -1
+              }
+            ]
           },
           "State": 0,
           "States": [
             {
-              "FontFamily": "",
-              "FontSize": 10,
-              "FontStyle": "Bold",
-              "FontUnderline": false,
-              "Image": "Images/1016FD2D6ED13B93A03AD2B7B9.png",
-              "OutlineThickness": 2,
-              "ShowTitle": false,
-              "Title": "",
-              "TitleAlignment": "bottom",
-              "TitleColor": "#FFFFFF"
+              "Image": "Images/1016FD2D6ED13B93A03AD2B7B9.png"
             }
           ],
-          "UUID": "com.simracing.lmu.mfd-next"
+          "UUID": "com.elgato.streamdeck.system.hotkey"
         },
         "3,0": {
-          "ActionID": "ec6072e4-2db7-4a9d-8be2-cf5fb59a594b",
+          "ActionID": "26bfb81d-e2ac-42a0-877c-687451e37a1a",
           "LinkedTitle": true,
-          "Name": "Mirror",
-          "Plugin": {
-            "Name": "LMU Sim Racing",
-            "UUID": "com.simracing.lmu",
-            "Version": "1.0"
-          },
+          "Name": "Hotkey",
           "Resources": null,
           "Settings": {
-            "hotkey": "3"
+            "Coalesce": true,
+            "Hotkeys": [
+              {
+                "KeyCmd": false,
+                "KeyCtrl": false,
+                "KeyShift": false,
+                "KeyOption": false,
+                "KeyModifiers": 0,
+                "NativeCode": 4,
+                "QTKeyCode": 51,
+                "VKeyCode": 51
+              },
+              {
+                "KeyCmd": false,
+                "KeyCtrl": false,
+                "KeyModifiers": 0,
+                "KeyOption": false,
+                "KeyShift": false,
+                "NativeCode": 146,
+                "QTKeyCode": 33554431,
+                "VKeyCode": -1
+              },
+              {
+                "KeyCmd": false,
+                "KeyCtrl": false,
+                "KeyModifiers": 0,
+                "KeyOption": false,
+                "KeyShift": false,
+                "NativeCode": 146,
+                "QTKeyCode": 33554431,
+                "VKeyCode": -1
+              },
+              {
+                "KeyCmd": false,
+                "KeyCtrl": false,
+                "KeyModifiers": 0,
+                "KeyOption": false,
+                "KeyShift": false,
+                "NativeCode": 146,
+                "QTKeyCode": 33554431,
+                "VKeyCode": -1
+              }
+            ]
           },
           "State": 0,
           "States": [
             {
-              "FontFamily": "",
-              "FontSize": 10,
-              "FontStyle": "Bold",
-              "FontUnderline": false,
-              "Image": "Images/63928867DFFF37930F483167CE.png",
-              "OutlineThickness": 2,
-              "ShowTitle": false,
-              "Title": "",
-              "TitleAlignment": "bottom",
-              "TitleColor": "#FFFFFF"
+              "Image": "Images/63928867DFFF37930F483167CE.png"
             }
           ],
-          "UUID": "com.simracing.lmu.toggle-mirror"
+          "UUID": "com.elgato.streamdeck.system.hotkey"
         },
         "4,0": {
-          "ActionID": "ca25db98-56ad-47f8-8fb1-0071258878b7",
+          "ActionID": "ef130dff-ae28-4ebf-8ec0-e834472a3be0",
           "LinkedTitle": true,
-          "Name": "Track\nMap",
-          "Plugin": {
-            "Name": "LMU Sim Racing",
-            "UUID": "com.simracing.lmu",
-            "Version": "1.0"
-          },
+          "Name": "Hotkey",
           "Resources": null,
           "Settings": {
-            "hotkey": "5"
+            "Coalesce": true,
+            "Hotkeys": [
+              {
+                "KeyCmd": false,
+                "KeyCtrl": false,
+                "KeyShift": false,
+                "KeyOption": false,
+                "KeyModifiers": 0,
+                "NativeCode": 6,
+                "QTKeyCode": 53,
+                "VKeyCode": 53
+              },
+              {
+                "KeyCmd": false,
+                "KeyCtrl": false,
+                "KeyModifiers": 0,
+                "KeyOption": false,
+                "KeyShift": false,
+                "NativeCode": 146,
+                "QTKeyCode": 33554431,
+                "VKeyCode": -1
+              },
+              {
+                "KeyCmd": false,
+                "KeyCtrl": false,
+                "KeyModifiers": 0,
+                "KeyOption": false,
+                "KeyShift": false,
+                "NativeCode": 146,
+                "QTKeyCode": 33554431,
+                "VKeyCode": -1
+              },
+              {
+                "KeyCmd": false,
+                "KeyCtrl": false,
+                "KeyModifiers": 0,
+                "KeyOption": false,
+                "KeyShift": false,
+                "NativeCode": 146,
+                "QTKeyCode": 33554431,
+                "VKeyCode": -1
+              }
+            ]
           },
           "State": 0,
           "States": [
             {
-              "FontFamily": "",
-              "FontSize": 10,
-              "FontStyle": "Bold",
-              "FontUnderline": false,
-              "Image": "Images/81E7866F9D59B4388A755F72EC.png",
-              "OutlineThickness": 2,
-              "ShowTitle": false,
-              "Title": "",
-              "TitleAlignment": "bottom",
-              "TitleColor": "#FFFFFF"
+              "Image": "Images/81E7866F9D59B4388A755F72EC.png"
             }
           ],
-          "UUID": "com.simracing.lmu.track-map"
+          "UUID": "com.elgato.streamdeck.system.hotkey"
         },
         "0,2": {
-          "ActionID": "b6585348-9fe3-427f-8158-c17fc1430032",
+          "ActionID": "2ca37e33-a8d7-46cc-86bc-b5ff458e90b5",
           "LinkedTitle": true,
           "Name": "Parent Folder",
           "Plugin": {

@@ -91,24 +91,53 @@ def convert_all_page_icons(profiles_dir):
     print(f"  Converted {total} icons to 72x72 PNG across {len(_page_icons)} pages")
 
 
-def make_plugin_action(title, action_uuid, hotkey="", font_size=10):
-    image = icon_to_image_ref(action_uuid)
-    show_title = not bool(image)
+# Windows scan codes, VKey codes, Qt key codes for hotkey actions
+VKEYS = {
+    "A": 65, "B": 66, "C": 67, "D": 68, "E": 69, "F": 70, "G": 71, "H": 72,
+    "I": 73, "J": 74, "K": 75, "L": 76, "M": 77, "N": 78, "O": 79, "P": 80,
+    "Q": 81, "R": 82, "S": 83, "T": 84, "U": 85, "V": 86, "W": 87, "X": 88,
+    "Y": 89, "Z": 90, "F12": 123, "F5": 116, "F9": 120,
+    "Up": 38, "Down": 40, "Left": 37, "Right": 39,
+}
+SCAN_CODES = {
+    "A": 30, "B": 48, "C": 46, "D": 32, "E": 18, "F": 33, "G": 34, "H": 35,
+    "I": 23, "J": 36, "K": 37, "L": 38, "M": 50, "N": 49, "O": 24, "P": 25,
+    "Q": 16, "R": 19, "S": 31, "T": 20, "U": 22, "V": 47, "W": 17, "X": 45,
+    "Y": 21, "Z": 44, "F12": 88, "F5": 63, "F9": 67,
+    "Up": 328, "Down": 336, "Left": 331, "Right": 333,
+}
+QT_KEYS = {
+    "Up": 16777235, "Down": 16777237, "Left": 16777234, "Right": 16777236,
+    "F12": 16777275, "F5": 16777268, "F9": 16777272,
+}
+EMPTY_SLOT = {"KeyCmd": False, "KeyCtrl": False, "KeyModifiers": 0,
+              "KeyOption": False, "KeyShift": False,
+              "NativeCode": 146, "QTKeyCode": 33554431, "VKeyCode": -1}
+
+
+def make_hotkey_action(title, key, icon_id=""):
+    """Create a built-in hotkey action with icon from icon pack."""
+    image = icon_to_image_ref(icon_id) if icon_id else ""
+    vk = VKEYS.get(key, ord(key) if len(key) == 1 else 0)
+    sc = SCAN_CODES.get(key, 0)
+    qt = QT_KEYS.get(key, ord(key) if len(key) == 1 else 0)
     return {
         "ActionID": str(uuid.uuid4()),
         "LinkedTitle": True,
-        "Name": title,
-        "Plugin": {"Name": "Assetto Corsa EVO", "UUID": PLUGIN_UUID, "Version": "1.0"},
+        "Name": "Hotkey",
         "Resources": None,
-        "Settings": {"hotkey": hotkey} if hotkey else {},
+        "Settings": {
+            "Coalesce": True,
+            "Hotkeys": [
+                {"KeyCmd": False, "KeyCtrl": False, "KeyModifiers": 0,
+                 "KeyOption": False, "KeyShift": False,
+                 "NativeCode": sc, "QTKeyCode": qt, "VKeyCode": vk},
+                EMPTY_SLOT.copy(), EMPTY_SLOT.copy(), EMPTY_SLOT.copy()
+            ]
+        },
         "State": 0,
-        "States": [{
-            "FontFamily": "", "FontSize": font_size, "FontStyle": "Bold",
-            "FontUnderline": False, "Image": image, "OutlineThickness": 2,
-            "ShowTitle": show_title, "Title": title if show_title else "",
-            "TitleAlignment": "bottom", "TitleColor": "#FFFFFF"
-        }],
-        "UUID": f"{PLUGIN_UUID}.{action_uuid}"
+        "States": [{"Image": image}] if image else [{}],
+        "UUID": "com.elgato.streamdeck.system.hotkey"
     }
 
 
@@ -156,7 +185,7 @@ def make_page(actions_dict, name=""):
 
 def _a(slug):
     b = BINDINGS[slug]
-    return make_plugin_action(b["title"], slug, hotkey=b["key"])
+    return make_hotkey_action(b["title"], b["key"], icon_id=slug)
 
 
 def build_main_page():

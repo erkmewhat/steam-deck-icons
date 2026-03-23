@@ -76,20 +76,30 @@ architecture docs, and current status. Claude skipped it and tried to figure eve
 out from scratch by reading random files.
 **Rule:** CLAUDE.md is the single source of truth. Read it first, always.
 
-### 2026-03-23 — Profile icons embedded as base64 SVG instead of PNG files
-**What happened:** Profile generators used `data:image/svg+xml;base64,...` inline data URIs
-in the Image field. Stream Deck ignores these — it expects PNG files in an `Images/` directory
-referenced as `Images/HASH.png`. Icons were also rendered at 144x144 but SD profiles use 72x72.
-Additionally, icon packs were missing the required `previews/` directory (1920x960 PNG mosaic)
-which prevented them from appearing in the Stream Deck icon library.
-**Rule:** Stream Deck profile icons must be:
-- 72x72 PNG files stored in `Profiles/<PAGE_UUID>/Images/` (per-page, NOT profile root)
-- Referenced as `"Image": "Images/HASH.png"` (relative to the page dir, not data URI)
-- Icon packs MUST have a `previews/` directory with at least one 1920x960 PNG
-- Always compare against a working installed profile/pack before assuming format
-- Icon packs for local dev go in `Plugins/com.elgato.StreamDeck/Icons/`, NOT `IconPacks/`
-  (IconPacks/ is for marketplace-installed packs only)
-- Preview images should be named `1-preview.png`, `2-preview.png`, etc.
+### 2026-03-23 — Profile icons never displayed (multiple root causes, hours wasted)
+**What happened:** Icons never appeared on Stream Deck buttons despite multiple fix attempts.
+Three separate issues were discovered over several hours of debugging:
+
+1. **Wrong action UUID** (THE MAIN BLOCKER): Profile actions used custom plugin UUIDs
+   (`com.simracing.lmu.*`, `com.simracing.ace.*`) but those plugins were never installed.
+   Stream Deck silently renders blank buttons for unknown plugin actions. The fix was to use
+   the built-in `com.elgato.streamdeck.system.hotkey` action with proper scan/VKey/Qt codes.
+   Working profiles on the machine (ACC by Hana, AMS2) all use this built-in action.
+
+2. **Wrong image format**: Originally embedded as `data:image/svg+xml;base64,...` inline.
+   SD expects PNG files in `Profiles/<PAGE_UUID>/Images/` referenced as `Images/HASH.png`.
+
+3. **Wrong icon pack location**: Icon packs were copied to `IconPacks/` (marketplace only).
+   Local dev packs go in `Plugins/com.elgato.StreamDeck/Icons/`.
+
+**Rules — Stream Deck Profile Icons:**
+- Actions MUST use `com.elgato.streamdeck.system.hotkey` UUID (NOT custom plugin UUIDs)
+  unless the custom plugin is actually installed and running
+- States should be minimal: `[{"Image": "Images/HASH.png"}]`
+- Images are 72x72 PNGs in per-page `Profiles/<PAGE_UUID>/Images/` directories
+- Icon packs for local dev: `$APPDATA/Elgato/StreamDeck/Plugins/com.elgato.StreamDeck/Icons/`
+- Preview images: `1-preview.png` in `previews/` dir, 1920x960 PNG
+- ALWAYS verify by comparing against a known-working profile on the same device
 
 ---
 

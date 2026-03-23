@@ -201,68 +201,17 @@ def convert_all_page_icons(profiles_dir):
 
 def make_hotkey_action(title, key, ctrl=False, shift=False, alt=False,
                        font_size=10, title_color="#FFFFFF", icon_id=""):
-    """Create a built-in hotkey action button."""
+    """Create a built-in hotkey action button with icon from icon pack."""
     image = icon_to_image_ref(icon_id) if icon_id else ""
-    show_title = not bool(image)
     return {
         "ActionID": str(uuid.uuid4()),
         "LinkedTitle": True,
         "Name": "Hotkey",
-        "Plugin": {
-            "Name": "Activate a Key Command",
-            "UUID": "com.elgato.streamdeck.system.hotkey",
-            "Version": "1.0"
-        },
         "Resources": None,
         "Settings": make_hotkey_settings(key, ctrl=ctrl, shift=shift, alt=alt),
         "State": 0,
-        "States": [{
-            "FontFamily": "",
-            "FontSize": font_size,
-            "FontStyle": "Bold",
-            "FontUnderline": False,
-            "Image": image,
-            "OutlineThickness": 2,
-            "ShowTitle": show_title,
-            "Title": title if show_title else "",
-            "TitleAlignment": "bottom",
-            "TitleColor": title_color
-        }],
+        "States": [{"Image": image}] if image else [{}],
         "UUID": "com.elgato.streamdeck.system.hotkey"
-    }
-
-
-def make_plugin_action(title, action_uuid, hotkey="", font_size=10, title_color="#FFFFFF"):
-    """Create a custom plugin action button with embedded icon from the icon pack."""
-    # Extract action_id from UUID (e.g. 'com.simracing.lmu.pit-limiter' -> 'pit-limiter')
-    action_id = action_uuid.rsplit(".", 1)[-1] if "." in action_uuid else ""
-    image = icon_to_image_ref(action_id)
-    show_title = not bool(image)
-    return {
-        "ActionID": str(uuid.uuid4()),
-        "LinkedTitle": True,
-        "Name": title,
-        "Plugin": {
-            "Name": "LMU Sim Racing",
-            "UUID": "com.simracing.lmu",
-            "Version": "1.0"
-        },
-        "Resources": None,
-        "Settings": {"hotkey": hotkey} if hotkey else {},
-        "State": 0,
-        "States": [{
-            "FontFamily": "",
-            "FontSize": font_size,
-            "FontStyle": "Bold",
-            "FontUnderline": False,
-            "Image": image,
-            "OutlineThickness": 2,
-            "ShowTitle": show_title,
-            "Title": title if show_title else "",
-            "TitleAlignment": "bottom",
-            "TitleColor": title_color
-        }],
-        "UUID": action_uuid
     }
 
 
@@ -446,8 +395,7 @@ def build_main_page():
     ]
     for coord, action_id in row0:
         b = BINDINGS[action_id]
-        actions[coord] = make_plugin_action(
-            b["title"], f"com.simracing.lmu.{action_id}", hotkey=b["key"])
+        actions[coord] = make_hotkey_action(b["title"], b["key"], icon_id=action_id)
 
     # Row 1: Engine & pit
     row1 = [
@@ -458,8 +406,7 @@ def build_main_page():
     ]
     for coord, action_id in row1:
         b = BINDINGS[action_id]
-        actions[coord] = make_plugin_action(
-            b["title"], f"com.simracing.lmu.{action_id}", hotkey=b["key"])
+        actions[coord] = make_hotkey_action(b["title"], b["key"], icon_id=action_id)
 
     # Row 2: Navigation bar — one folder per sub-page (with nav icons)
     actions["0,2"] = make_folder_button("MFD\n▶", MFD_PAGE, title_color="#00BFFF", icon_id="nav-mfd")
@@ -489,9 +436,7 @@ def build_mfd_page():
     ]
     for coord, action_id in mfd:
         b = BINDINGS[action_id]
-        actions[coord] = make_plugin_action(
-            b["title"], f"com.simracing.lmu.{action_id}",
-            hotkey=b["key"], font_size=14)
+        actions[coord] = make_hotkey_action(b["title"], b["key"], icon_id=action_id)
 
     actions["0,2"] = make_back_button()
 
@@ -516,8 +461,7 @@ def build_perf_page():
     ]
     for coord, action_id in inc:
         b = BINDINGS[action_id]
-        actions[coord] = make_plugin_action(
-            b["title"], f"com.simracing.lmu.{action_id}", hotkey=b["key"])
+        actions[coord] = make_hotkey_action(b["title"], b["key"], icon_id=action_id)
 
     # Row 1: decrease row
     dec = [
@@ -528,8 +472,7 @@ def build_perf_page():
     ]
     for coord, action_id in dec:
         b = BINDINGS[action_id]
-        actions[coord] = make_plugin_action(
-            b["title"], f"com.simracing.lmu.{action_id}", hotkey=b["key"])
+        actions[coord] = make_hotkey_action(b["title"], b["key"], icon_id=action_id)
 
     actions["0,2"] = make_back_button()
 
@@ -555,8 +498,7 @@ def build_camera_page():
     ]
     for coord, action_id in cameras:
         b = BINDINGS[action_id]
-        actions[coord] = make_plugin_action(
-            b["title"], f"com.simracing.lmu.{action_id}", hotkey=b["key"])
+        actions[coord] = make_hotkey_action(b["title"], b["key"], icon_id=action_id)
 
     # Row 1: Seat adjustments
     seats = [
@@ -567,8 +509,7 @@ def build_camera_page():
     ]
     for coord, action_id in seats:
         b = BINDINGS[action_id]
-        actions[coord] = make_plugin_action(
-            b["title"], f"com.simracing.lmu.{action_id}", hotkey=b["key"])
+        actions[coord] = make_hotkey_action(b["title"], b["key"], icon_id=action_id)
 
     # Row 2: Back + FOV/Zoom
     actions["0,2"] = make_back_button()
@@ -581,8 +522,7 @@ def build_camera_page():
     ]
     for coord, action_id in fov_zoom:
         b = BINDINGS[action_id]
-        actions[coord] = make_plugin_action(
-            b["title"], f"com.simracing.lmu.{action_id}", hotkey=b["key"])
+        actions[coord] = make_hotkey_action(b["title"], b["key"], icon_id=action_id)
 
     return make_page(actions, "Camera & Seat")
 
@@ -604,8 +544,7 @@ def build_look_page():
     ]
     for coord, action_id in look:
         b = BINDINGS[action_id]
-        actions[coord] = make_plugin_action(
-            b["title"], f"com.simracing.lmu.{action_id}", hotkey=b["key"])
+        actions[coord] = make_hotkey_action(b["title"], b["key"], icon_id=action_id)
 
     # Row 1: Session utilities
     session = [
@@ -615,8 +554,7 @@ def build_look_page():
     ]
     for coord, action_id in session:
         b = BINDINGS[action_id]
-        actions[coord] = make_plugin_action(
-            b["title"], f"com.simracing.lmu.{action_id}", hotkey=b["key"])
+        actions[coord] = make_hotkey_action(b["title"], b["key"], icon_id=action_id)
 
     actions["0,2"] = make_back_button()
 
@@ -642,8 +580,7 @@ def build_hud_page():
     ]
     for coord, action_id in hud:
         b = BINDINGS[action_id]
-        actions[coord] = make_plugin_action(
-            b["title"], f"com.simracing.lmu.{action_id}", hotkey=b["key"])
+        actions[coord] = make_hotkey_action(b["title"], b["key"], icon_id=action_id)
 
     # Row 2: Back
     actions["0,2"] = make_back_button()
