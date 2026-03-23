@@ -1,14 +1,39 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144 144" width="144" height="144">
-  <rect width="144" height="144" rx="12" fill="#1a1a2e"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144 144">
+  <defs>
+    <linearGradient id="glr-bg1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2a1215"/>
+      <stop offset="50%" stop-color="#180a0c"/>
+      <stop offset="100%" stop-color="#0a0406"/>
+    </linearGradient>
+    <linearGradient id="glr-border" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#e20613"/>
+      <stop offset="50%" stop-color="#ff3333" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#e20613"/>
+    </linearGradient>
+    <linearGradient id="glr-shine" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.12"/>
+      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.02"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.06"/>
+    </linearGradient>
+    <linearGradient id="glr-accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#e20613"/>
+      <stop offset="100%" stop-color="#fff300"/>
+    </linearGradient>
+  </defs>
+  <rect x="1" y="1" width="142" height="142" rx="14" fill="url(#glr-bg1)" stroke="url(#glr-border)" stroke-width="1.5"/>
+  <rect x="3" y="3" width="138" height="68" rx="12" fill="url(#glr-shine)"/>
   <!-- Eye shape -->
-  <path d="M42 72c0 0 15-24 30-24s30 24 30 24-15 24-30 24S42 72 42 72z" fill="none" stroke="#ffffff" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M36,62 Q72,30 108,62 Q72,94 36,62 Z" fill="none" stroke="#cccccc" stroke-width="2.5" stroke-linejoin="round"/>
   <!-- Iris -->
-  <circle cx="72" cy="72" r="10" fill="none" stroke="#ffffff" stroke-width="2.5"/>
-  <!-- Pupil - shifted right -->
-  <circle cx="75" cy="72" r="4" fill="#ffffff"/>
+  <circle cx="72" cy="62" r="14" fill="none" stroke="#cccccc" stroke-width="2"/>
+  <!-- Pupil shifted right -->
+  <circle cx="79" cy="62" r="7" fill="#cccccc"/>
+  <circle cx="77" cy="60" r="2.5" fill="#ffffff" opacity="0.4"/>
   <!-- Right arrow -->
-  <polyline points="106 108 120 108 120 94" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-  <line x1="120" y1="108" x2="96" y2="84" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
-  <!-- Label -->
-  <text x="72" y="136" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#ffffff" opacity="0.9">LOOK RIGHT</text>
+  <polygon points="120,62 106,52 106,72" fill="#cccccc" opacity="0.8"/>
+  <!-- Eye highlight -->
+  <ellipse cx="72" cy="50" rx="18" ry="5" fill="#ffffff" opacity="0.06"/>
+  <!-- Accent bar -->
+  <rect x="14" y="114" width="116" height="3" rx="1.5" fill="url(#glr-accent)"/>
+  <text x="72" y="127" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="bold" fill="#ffffff" letter-spacing="1.5">LOOK RIGHT</text>
 </svg>

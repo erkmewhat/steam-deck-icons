@@ -1,28 +1,45 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144 144" width="144" height="144">
-  <rect x="4" y="4" width="136" height="136" rx="12" fill="#212529" stroke="#e20613" stroke-width="2"/>
-  <rect x="8" y="8" width="128" height="128" rx="10" fill="none" stroke="#2d3238" stroke-width="1"/>
-  <!-- Windshield outline (trapezoid) -->
-  <path d="M24 94 L48 32 L88 32 L112 94" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="0.3"/>
-  <!-- Windshield subtle fill -->
-  <path d="M24 94 L48 32 L88 32 L112 94Z" fill="white" opacity="0.03"/>
-  <!-- Wiper sweep arc -->
-  <path d="M48 40 A44 44 0 0 1 92 40" fill="none" stroke="white" stroke-width="1.5" stroke-dasharray="4 3" opacity="0.35"/>
-  <!-- Wiper pivot point shadow -->
-  <circle cx="69" cy="93" r="4" fill="#999" opacity="0.5"/>
-  <!-- Wiper pivot point -->
-  <circle cx="68" cy="92" r="3.5" fill="#bbb"/>
-  <circle cx="67" cy="91" r="1.5" fill="white" opacity="0.5"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144 144">
+  <defs>
+    <linearGradient id="gwd-bg1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2a1215"/>
+      <stop offset="50%" stop-color="#180a0c"/>
+      <stop offset="100%" stop-color="#0a0406"/>
+    </linearGradient>
+    <linearGradient id="gwd-border" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#e20613"/>
+      <stop offset="50%" stop-color="#ff3333" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#e20613"/>
+    </linearGradient>
+    <linearGradient id="gwd-shine" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.12"/>
+      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.02"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.06"/>
+    </linearGradient>
+    <linearGradient id="gwd-glass" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#4488aa" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#224466" stop-opacity="0.5"/>
+    </linearGradient>
+    <linearGradient id="gwd-accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#e20613"/>
+      <stop offset="100%" stop-color="#fff300"/>
+    </linearGradient>
+  </defs>
+  <rect x="1" y="1" width="142" height="142" rx="14" fill="url(#gwd-bg1)" stroke="url(#gwd-border)" stroke-width="1.5"/>
+  <rect x="3" y="3" width="138" height="68" rx="12" fill="url(#gwd-shine)"/>
+  <!-- Windshield -->
+  <path d="M24,92 L42,36 L102,36 L120,92 Z" fill="url(#gwd-glass)" stroke="#8899aa" stroke-width="1.2"/>
+  <path d="M30,88 L46,40 L98,40 L114,88 Z" fill="none" stroke="#667788" stroke-width="0.5" opacity="0.5"/>
   <!-- Wiper arm -->
-  <line x1="68" y1="92" x2="48" y2="40" stroke="#ccc" stroke-width="2.5" stroke-linecap="round"/>
-  <line x1="68" y1="92" x2="48" y2="40" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="72" y1="92" x2="52" y2="40" stroke="#cccccc" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="72" y1="92" x2="50" y2="38" stroke="#999999" stroke-width="4" stroke-linecap="round" opacity="0.3"/>
   <!-- Wiper blade -->
-  <line x1="44" y1="44" x2="52" y2="36" stroke="#ccc" stroke-width="5" stroke-linecap="round"/>
-  <line x1="44" y1="44" x2="52" y2="36" stroke="white" stroke-width="3.5" stroke-linecap="round"/>
-  <!-- Down arrow in red -->
-  <polygon points="122,62 114,46 130,46" fill="#e20613"/>
-  <rect x="119" y="26" width="6" height="20" fill="#e20613"/>
-  <!-- Arrow shadow -->
-  <polygon points="122,62 126,50 130,46" fill="#8b0000" opacity="0.4"/>
-
-  <text x="72" y="126" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="bold" fill="white">WIPER -</text>
+  <line x1="52" y1="40" x2="88" y2="36" stroke="#333333" stroke-width="3" stroke-linecap="round"/>
+  <!-- Pivot point -->
+  <circle cx="72" cy="92" r="3" fill="#888888" stroke="#666666" stroke-width="0.5"/>
+  <!-- Red down arrow -->
+  <polygon points="112,98 102,84 107,84 107,70 117,70 117,84 122,84" fill="#e20613" opacity="0.9"/>
+  <ellipse cx="112" cy="72" rx="4" ry="2" fill="#ffffff" opacity="0.2"/>
+  <!-- Accent bar -->
+  <rect x="14" y="114" width="116" height="3" rx="1.5" fill="url(#gwd-accent)"/>
+  <text x="72" y="127" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="bold" fill="#ffffff" letter-spacing="1.5">WIPER -</text>
 </svg>

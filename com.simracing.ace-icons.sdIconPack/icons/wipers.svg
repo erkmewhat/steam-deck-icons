@@ -1,19 +1,50 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144 144" width="144" height="144">
-  <rect width="144" height="144" rx="12" fill="#1a1a2e"/>
-  <!-- Windshield outline -->
-  <path d="M25 95 L45 30 Q72 20 99 30 L119 95" fill="none" stroke="#ffffff" stroke-width="2.5" opacity="0.35" stroke-linecap="round" stroke-linejoin="round"/>
-  <!-- Wiper pivot point -->
-  <circle cx="72" cy="95" r="4" fill="#3498db"/>
-  <!-- Wiper arm 1 - current position -->
-  <line x1="72" y1="95" x2="45" y2="38" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
-  <!-- Wiper blade 1 -->
-  <line x1="45" y1="38" x2="38" y2="42" stroke="#3498db" stroke-width="4" stroke-linecap="round"/>
-  <!-- Wiper arm 2 - swept position -->
-  <line x1="72" y1="95" x2="99" y2="38" stroke="#ffffff" stroke-width="3" stroke-linecap="round" opacity="0.4"/>
-  <!-- Wiper blade 2 -->
-  <line x1="99" y1="38" x2="106" y2="42" stroke="#3498db" stroke-width="4" stroke-linecap="round" opacity="0.4"/>
-  <!-- Arc showing sweep -->
-  <path d="M48 42 Q72 22 96 42" fill="none" stroke="#3498db" stroke-width="1.5" stroke-dasharray="4 3" opacity="0.6"/>
-  <!-- Label -->
-  <text x="72" y="124" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#3498db" opacity="0.9">WIPERS</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144 144">
+  <defs>
+    <linearGradient id="gwp-bg1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2a1215"/>
+      <stop offset="50%" stop-color="#180a0c"/>
+      <stop offset="100%" stop-color="#0a0406"/>
+    </linearGradient>
+    <linearGradient id="gwp-border" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#e20613"/>
+      <stop offset="50%" stop-color="#ff3333" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#e20613"/>
+    </linearGradient>
+    <linearGradient id="gwp-shine" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.12"/>
+      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.02"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.06"/>
+    </linearGradient>
+    <linearGradient id="gwp-glass" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#4488aa" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#224466" stop-opacity="0.5"/>
+    </linearGradient>
+    <linearGradient id="gwp-accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#e20613"/>
+      <stop offset="100%" stop-color="#fff300"/>
+    </linearGradient>
+  </defs>
+  <rect x="1" y="1" width="142" height="142" rx="14" fill="url(#gwp-bg1)" stroke="url(#gwp-border)" stroke-width="1.5"/>
+  <rect x="3" y="3" width="138" height="68" rx="12" fill="url(#gwp-shine)"/>
+  <!-- Windshield -->
+  <path d="M24,94 L42,36 L102,36 L120,94 Z" fill="url(#gwp-glass)" stroke="#8899aa" stroke-width="1.2"/>
+  <path d="M30,90 L46,40 L98,40 L114,90 Z" fill="none" stroke="#667788" stroke-width="0.5" opacity="0.5"/>
+  <!-- Wiper arm -->
+  <line x1="72" y1="94" x2="52" y2="40" stroke="#cccccc" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="72" y1="94" x2="50" y2="38" stroke="#999999" stroke-width="4" stroke-linecap="round" opacity="0.3"/>
+  <!-- Wiper blade -->
+  <line x1="52" y1="40" x2="88" y2="36" stroke="#333333" stroke-width="3" stroke-linecap="round"/>
+  <!-- Sweep arc hint -->
+  <path d="M52,40 Q72,30 92,40" fill="none" stroke="#6699bb" stroke-width="1" stroke-dasharray="3,3" opacity="0.4"/>
+  <!-- Pivot point -->
+  <circle cx="72" cy="94" r="3" fill="#888888" stroke="#666666" stroke-width="0.5"/>
+  <!-- Rain drops -->
+  <circle cx="40" cy="52" r="1.5" fill="#6699bb" opacity="0.4"/>
+  <circle cx="100" cy="48" r="1.5" fill="#6699bb" opacity="0.4"/>
+  <circle cx="60" cy="60" r="1" fill="#6699bb" opacity="0.3"/>
+  <circle cx="90" cy="70" r="1.5" fill="#6699bb" opacity="0.35"/>
+  <circle cx="80" cy="50" r="1" fill="#6699bb" opacity="0.3"/>
+  <!-- Accent bar -->
+  <rect x="14" y="114" width="116" height="3" rx="1.5" fill="url(#gwp-accent)"/>
+  <text x="72" y="127" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="bold" fill="#ffffff" letter-spacing="1.5">WIPERS</text>
 </svg>
