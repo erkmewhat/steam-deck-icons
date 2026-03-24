@@ -91,7 +91,7 @@
             "UUID": "com.simracing.lmu.wipers",
             "Name": "Wipers",
             "Icon": "imgs/actions/wipers",
-            "Tooltip": "Toggle windshield wipers (Key: P)",
+            "Tooltip": "Cycle wipers: Off → Slow → Fast (Key: P)",
             "Controllers": [
                 "Keypad"
             ],

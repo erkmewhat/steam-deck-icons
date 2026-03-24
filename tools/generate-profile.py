@@ -205,8 +205,10 @@ def convert_all_page_icons(profiles_dir):
 # All others use built-in hotkey UUID.
 TOGGLE_ACTIONS = {
     "headlights", "ignition", "pit-limiter", "wipers", "starter",
-    "headlight-flash", "request-pitstop", "ai-takeover", "launch-control",
+    "request-pitstop", "ai-takeover", "launch-control",
 }
+# Note: headlights and wipers are CycleActions (multi-state) but still use
+# plugin UUID in the profile so the plugin receives button events.
 
 PLUGIN_UUID = "com.simracing.lmu"
 
@@ -250,10 +252,11 @@ def make_plugin_toggle_action(title, action_id, hotkey="", icon_id=""):
 def make_action(action_id):
     """Create the right action type based on whether it's a toggle or not."""
     b = BINDINGS[action_id]
+    icon = b.get("icon", action_id)
     if action_id in TOGGLE_ACTIONS:
-        return make_plugin_toggle_action(b["title"], action_id, hotkey=b["key"], icon_id=action_id)
+        return make_plugin_toggle_action(b["title"], action_id, hotkey=b["key"], icon_id=icon)
     else:
-        return make_hotkey_action(b["title"], b["key"], icon_id=action_id)
+        return make_hotkey_action(b["title"], b["key"], icon_id=icon)
 
 
 def make_folder_button(title, target_page_uuid, title_color="#00BFFF", icon_id=""):
@@ -320,7 +323,7 @@ BINDINGS = {
     # Assignments use unused keys that don't conflict with LMU defaults.
     "pit-limiter":     {"key": "L",  "title": "Pit\nLimiter",    "needs_lmu_bind": True,  "lmu_action": "Speed Limiter"},
     "headlights":      {"key": "H",  "title": "Head\nLights",    "needs_lmu_bind": True,  "lmu_action": "Headlights"},
-    "headlight-flash": {"key": "G",  "title": "Flash",           "needs_lmu_bind": True,  "lmu_action": "Headlights Pulse"},
+    "headlight-flash": {"key": "G",  "title": "Flash",           "needs_lmu_bind": True,  "lmu_action": "Headlights Pulse", "icon": "headlight-flash-on"},
     "wipers":          {"key": "P",  "title": "Wipers",          "needs_lmu_bind": True,  "lmu_action": "Wipers"},
     "ignition":        {"key": "N",  "title": "Ignition",        "needs_lmu_bind": True,  "lmu_action": "Ignition"},
     "starter":         {"key": "M",  "title": "Starter",         "needs_lmu_bind": True,  "lmu_action": "Starter"},

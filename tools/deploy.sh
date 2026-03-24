@@ -84,6 +84,7 @@ if [ "$PLUGIN_ID" != "com.simracing.lmu.sdPlugin" ]; then
         cp "$ROOT/plugin/com.simracing.lmu.sdPlugin/bin/plugin.js" "$ROOT/plugin/$PLUGIN_ID/bin/plugin.js"
     fi
     cp "$ROOT/plugin/com.simracing.lmu.sdPlugin/bin/actions/hotkey-action.js" "$ROOT/plugin/$PLUGIN_ID/bin/actions/" 2>/dev/null || true
+    cp "$ROOT/plugin/com.simracing.lmu.sdPlugin/bin/actions/cycle-action.js" "$ROOT/plugin/$PLUGIN_ID/bin/actions/" 2>/dev/null || true
     cp "$ROOT/plugin/com.simracing.lmu.sdPlugin/bin/actions/send-key.js" "$ROOT/plugin/$PLUGIN_ID/bin/actions/" 2>/dev/null || true
 fi
 echo "  ✓ Build complete (entry: $ENTRY_SRC)"

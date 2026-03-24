@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144 144" width="144" height="144">
+  <defs>
+    <radialGradient id="wa-bg" cx="50%" cy="40%" r="70%">
+      <stop offset="0%" stop-color="#1A2830"/>
+      <stop offset="100%" stop-color="#0a0e12"/>
+    </radialGradient>
+    <radialGradient id="wa-cyanGlow" cx="50%" cy="55%" r="42%">
+      <stop offset="0%" stop-color="#00B4D8" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#00B4D8" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="wa-wiperGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e8e8e8"/>
+      <stop offset="100%" stop-color="#aaaaaa"/>
+    </linearGradient>
+    <linearGradient id="wa-bladeGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#50D0E8"/>
+      <stop offset="100%" stop-color="#00B8D8"/>
+    </linearGradient>
+    <filter id="wa-glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="2.5" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="wa-shadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="1" stdDeviation="2" flood-color="#00B8D8" flood-opacity="0.25"/>
+    </filter>
+    <linearGradient id="wa-borderAccent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#00B8D8" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#20C8E0" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#00B8D8" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="144" height="144" fill="url(#wa-bg)"/>
+  <ellipse cx="72" cy="65" rx="49" ry="39" fill="url(#wa-cyanGlow)"/>
+  <!-- Windshield outline -->
+  <path d="M22 95 L44 26 Q72 14 100 26 L122 95" fill="none" stroke="#20C8E0" stroke-width="2" opacity="0.18" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Rain drops (light) -->
+  <g opacity="0.22">
+    <circle cx="50" cy="42" r="1.6" fill="#50D0E8"/>
+    <circle cx="85" cy="35" r="1.6" fill="#50D0E8"/>
+    <circle cx="62" cy="55" r="1.2" fill="#50D0E8"/>
+    <circle cx="95" cy="52" r="1.2" fill="#50D0E8"/>
+    <circle cx="40" cy="68" r="1.4" fill="#50D0E8"/>
+    <circle cx="105" cy="65" r="1.4" fill="#50D0E8"/>
+  </g>
+  <!-- "A" badge for auto mode -->
+  <g opacity="0.7">
+    <circle cx="108" cy="28" r="12" fill="#0a0e12" stroke="#20C8E0" stroke-width="1.5"/>
+    <text x="108" y="33" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="15" font-weight="700" fill="#20C8E0">A</text>
+  </g>
+  <!-- Wiper pivot -->
+  <g filter="url(#wa-glow)">
+    <circle cx="72" cy="95" r="4" fill="url(#wa-bladeGrad)"/>
+  </g>
+  <!-- Wiper arm 1 (current position) -->
+  <g filter="url(#wa-shadow)">
+    <line x1="72" y1="95" x2="42" y2="34" stroke="url(#wa-wiperGrad)" stroke-width="3" stroke-linecap="round"/>
+    <line x1="42" y1="34" x2="34" y2="38" stroke="url(#wa-bladeGrad)" stroke-width="4.5" stroke-linecap="round"/>
+  </g>
+  <!-- Wiper arm 2 (swept/ghost) -->
+  <g opacity="0.35">
+    <line x1="72" y1="95" x2="102" y2="34" stroke="url(#wa-wiperGrad)" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="102" y1="34" x2="110" y2="38" stroke="url(#wa-bladeGrad)" stroke-width="4" stroke-linecap="round"/>
+  </g>
+  <!-- Sweep arc -->
+  <path d="M46 38 Q72 18 98 38" fill="none" stroke="url(#wa-bladeGrad)" stroke-width="1.5" stroke-dasharray="4 3" opacity="0.45"/>
+  <rect x="19" y="138" width="106" height="2" rx="1" fill="url(#wa-borderAccent)"/>
+  <text x="72" y="132" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="20" font-weight="700" fill="#20C8E0" opacity="0.9" letter-spacing="1">AUTO</text>
+</svg>

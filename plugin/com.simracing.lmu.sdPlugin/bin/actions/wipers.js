@@ -33,13 +33,13 @@ var __runInitializers = (this && this.__runInitializers) || function (thisArg, i
     return useValue ? value : void 0;
 };
 import { action } from "@elgato/streamdeck";
-import { HotkeyAction } from "./hotkey-action.js";
+import { CycleAction } from "./cycle-action.js";
 let Wipers = (() => {
     let _classDecorators = [action({ UUID: "com.simracing.lmu.wipers" })];
     let _classDescriptor;
     let _classExtraInitializers = [];
     let _classThis;
-    let _classSuper = HotkeyAction;
+    let _classSuper = CycleAction;
     var Wipers = class extends _classSuper {
         static { _classThis = this; }
         static {
@@ -51,8 +51,12 @@ let Wipers = (() => {
         }
         defaultHotkey = "P";
         actionName = "Wipers";
-        iconFile = "wipers";
-        isToggle = true;
+        cycleStates = [
+            { image: "imgs/actions/wipers", title: "WIPERS\nOFF" },
+            { image: "imgs/actions/wipers-auto", title: "AUTO\nWIPERS" },
+            { image: "imgs/actions/wipers-slow", title: "SLOW\nWIPERS" },
+            { image: "imgs/actions/wipers-on", title: "FAST\nWIPERS" },
+        ];
     };
     return Wipers = _classThis;
 })();

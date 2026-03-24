@@ -33,13 +33,13 @@ var __runInitializers = (this && this.__runInitializers) || function (thisArg, i
     return useValue ? value : void 0;
 };
 import { action } from "@elgato/streamdeck";
-import { HotkeyAction } from "./hotkey-action.js";
+import { CycleAction } from "./cycle-action.js";
 let Headlights = (() => {
     let _classDecorators = [action({ UUID: "com.simracing.lmu.headlights" })];
     let _classDescriptor;
     let _classExtraInitializers = [];
     let _classThis;
-    let _classSuper = HotkeyAction;
+    let _classSuper = CycleAction;
     var Headlights = class extends _classSuper {
         static { _classThis = this; }
         static {
@@ -51,8 +51,11 @@ let Headlights = (() => {
         }
         defaultHotkey = "H";
         actionName = "Headlights";
-        iconFile = "headlights";
-        isToggle = true;
+        cycleStates = [
+            { image: "imgs/actions/headlights", title: "LIGHTS\nOFF" },
+            { image: "imgs/actions/headlights-auto", title: "AUTO\nLIGHTS" },
+            { image: "imgs/actions/headlights-on", title: "LIGHTS\nON" },
+        ];
     };
     return Headlights = _classThis;
 })();

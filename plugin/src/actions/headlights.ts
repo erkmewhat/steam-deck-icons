@@ -1,10 +1,13 @@
 import { action } from "@elgato/streamdeck";
-import { HotkeyAction } from "./hotkey-action";
+import { CycleAction } from "./cycle-action";
 
 @action({ UUID: "com.simracing.lmu.headlights" })
-export class Headlights extends HotkeyAction {
+export class Headlights extends CycleAction {
     readonly defaultHotkey = "H";
     readonly actionName = "Headlights";
-    readonly iconFile = "headlights";
-    readonly isToggle = true;
+    readonly cycleStates = [
+        { image: "imgs/actions/headlights", title: "LIGHTS\nOFF" },
+        { image: "imgs/actions/headlights-auto", title: "AUTO\nLIGHTS" },
+        { image: "imgs/actions/headlights-on", title: "LIGHTS\nON" },
+    ];
 }

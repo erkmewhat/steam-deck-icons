@@ -1,10 +1,14 @@
 import { action } from "@elgato/streamdeck";
-import { HotkeyAction } from "./hotkey-action";
+import { CycleAction } from "./cycle-action";
 
 @action({ UUID: "com.simracing.lmu.wipers" })
-export class Wipers extends HotkeyAction {
+export class Wipers extends CycleAction {
     readonly defaultHotkey = "P";
     readonly actionName = "Wipers";
-    readonly iconFile = "wipers";
-    readonly isToggle = true;
+    readonly cycleStates = [
+        { image: "imgs/actions/wipers", title: "WIPERS\nOFF" },
+        { image: "imgs/actions/wipers-auto", title: "AUTO\nWIPERS" },
+        { image: "imgs/actions/wipers-slow", title: "SLOW\nWIPERS" },
+        { image: "imgs/actions/wipers-on", title: "FAST\nWIPERS" },
+    ];
 }

@@ -55,6 +55,8 @@ const KEY_MAP = {
 };
 /**
  * Send a key press and release using Windows SendInput.
+ * Holds the key for ~80ms so frame-based input polling (DirectInput games
+ * running at 60Hz / 16ms per frame) reliably detects the press.
  * @param keyName - Key name from KEY_MAP (e.g. "L", "Up", "RShift")
  */
 export function sendKey(keyName) {
@@ -62,19 +64,19 @@ export function sendKey(keyName) {
     if (!key)
         return;
     const baseFlags = KEYEVENTF_SCANCODE | (key.extended ? KEYEVENTF_EXTENDEDKEY : 0);
-    const inputs = [
-        // Key down
-        {
+    const size = koffi.sizeof(INPUT);
+    // Key down
+    SendInput(1, [{
             type: INPUT_KEYBOARD,
             ki: { wVk: key.vk, wScan: key.scan, dwFlags: baseFlags, time: 0, dwExtraInfo: 0 },
             padding: 0,
-        },
-        // Key up
-        {
-            type: INPUT_KEYBOARD,
-            ki: { wVk: key.vk, wScan: key.scan, dwFlags: baseFlags | KEYEVENTF_KEYUP, time: 0, dwExtraInfo: 0 },
-            padding: 0,
-        },
-    ];
-    SendInput(2, inputs, koffi.sizeof(INPUT));
+        }], size);
+    // Hold for ~80ms so the game's input poll catches it, then release
+    setTimeout(() => {
+        SendInput(1, [{
+                type: INPUT_KEYBOARD,
+                ki: { wVk: key.vk, wScan: key.scan, dwFlags: baseFlags | KEYEVENTF_KEYUP, time: 0, dwExtraInfo: 0 },
+                padding: 0,
+            }], size);
+    }, 80);
 }

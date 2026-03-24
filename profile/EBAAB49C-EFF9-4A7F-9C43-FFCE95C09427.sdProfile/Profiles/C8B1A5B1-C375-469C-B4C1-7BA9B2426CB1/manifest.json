@@ -3,7 +3,7 @@
     {
       "Actions": {
         "0,0": {
-          "ActionID": "7e4fa92f-580a-44fd-ad80-5ea5ab07e87e",
+          "ActionID": "06c7e713-32f6-41c0-bf59-dc879faf0b26",
           "LinkedTitle": true,
           "Name": "Pit\nLimiter",
           "Plugin": {
@@ -24,7 +24,7 @@
           "UUID": "com.simracing.lmu.pit-limiter"
         },
         "1,0": {
-          "ActionID": "5fb224c0-7c5d-49a2-9037-590048fb9055",
+          "ActionID": "d7c11c17-adf1-4ec6-befe-5df1d0c1a099",
           "LinkedTitle": true,
           "Name": "Head\nLights",
           "Plugin": {
@@ -45,28 +45,65 @@
           "UUID": "com.simracing.lmu.headlights"
         },
         "2,0": {
-          "ActionID": "97530c36-946b-4c72-a06e-38ac31be9cb3",
+          "ActionID": "9ade38df-d1de-450a-b74d-c11b073ebb54",
           "LinkedTitle": true,
-          "Name": "Flash",
-          "Plugin": {
-            "Name": "LMU Sim Racing",
-            "UUID": "com.simracing.lmu",
-            "Version": "1.0.0.0"
-          },
+          "Name": "Hotkey",
           "Resources": null,
           "Settings": {
-            "hotkey": "G"
+            "Coalesce": true,
+            "Hotkeys": [
+              {
+                "KeyCmd": false,
+                "KeyCtrl": false,
+                "KeyShift": false,
+                "KeyOption": false,
+                "KeyModifiers": 0,
+                "NativeCode": 34,
+                "QTKeyCode": 71,
+                "VKeyCode": 71
+              },
+              {
+                "KeyCmd": false,
+                "KeyCtrl": false,
+                "KeyModifiers": 0,
+                "KeyOption": false,
+                "KeyShift": false,
+                "NativeCode": 146,
+                "QTKeyCode": 33554431,
+                "VKeyCode": -1
+              },
+              {
+                "KeyCmd": false,
+                "KeyCtrl": false,
+                "KeyModifiers": 0,
+                "KeyOption": false,
+                "KeyShift": false,
+                "NativeCode": 146,
+                "QTKeyCode": 33554431,
+                "VKeyCode": -1
+              },
+              {
+                "KeyCmd": false,
+                "KeyCtrl": false,
+                "KeyModifiers": 0,
+                "KeyOption": false,
+                "KeyShift": false,
+                "NativeCode": 146,
+                "QTKeyCode": 33554431,
+                "VKeyCode": -1
+              }
+            ]
           },
           "State": 0,
           "States": [
             {
-              "Image": "Images/972FF588F115C4AA968103A1F8.png"
+              "Image": "Images/0BD6A2DAC3DE51F5CA028C69B1.png"
             }
           ],
-          "UUID": "com.simracing.lmu.headlight-flash"
+          "UUID": "com.elgato.streamdeck.system.hotkey"
         },
         "3,0": {
-          "ActionID": "9583e028-4c9c-4db1-8f53-4f64c948d1c2",
+          "ActionID": "838f1541-6a47-4d51-827b-4aaa400b17bc",
           "LinkedTitle": true,
           "Name": "Wipers",
           "Plugin": {
@@ -87,7 +124,7 @@
           "UUID": "com.simracing.lmu.wipers"
         },
         "4,0": {
-          "ActionID": "16e77232-d0da-46b3-ac98-aba49bef1c88",
+          "ActionID": "7b80f370-fa09-4f17-b124-cfb2ca397cf6",
           "LinkedTitle": true,
           "Name": "Launch\nCtrl",
           "Plugin": {
@@ -108,7 +145,7 @@
           "UUID": "com.simracing.lmu.launch-control"
         },
         "0,1": {
-          "ActionID": "a71eaa35-2723-495b-9ad1-abf6288efd94",
+          "ActionID": "24a43eef-e1c9-43d4-b551-de94b01785b2",
           "LinkedTitle": true,
           "Name": "Ignition",
           "Plugin": {
@@ -129,7 +166,7 @@
           "UUID": "com.simracing.lmu.ignition"
         },
         "1,1": {
-          "ActionID": "0eb42846-38cb-45be-9e13-de08d1cfc4d6",
+          "ActionID": "a52c497d-3f8b-4c59-bd1c-6c56f849dca3",
           "LinkedTitle": true,
           "Name": "Starter",
           "Plugin": {
@@ -150,7 +187,7 @@
           "UUID": "com.simracing.lmu.starter"
         },
         "2,1": {
-          "ActionID": "103c9b18-c460-4f79-a32c-932edb377dc9",
+          "ActionID": "fd5f8e5c-6314-42fe-a52b-878b687ccac5",
           "LinkedTitle": true,
           "Name": "Req\nPit",
           "Plugin": {
@@ -171,7 +208,7 @@
           "UUID": "com.simracing.lmu.request-pitstop"
         },
         "3,1": {
-          "ActionID": "66c44a75-dac4-478b-a3e9-4c3f2833bbf2",
+          "ActionID": "f799d6ca-5888-4d79-8277-58b6493eb12b",
           "LinkedTitle": true,
           "Name": "AI\nTakeover",
           "Plugin": {
@@ -192,7 +229,7 @@
           "UUID": "com.simracing.lmu.ai-takeover"
         },
         "0,2": {
-          "ActionID": "dd2576a8-2f1e-4ba0-856a-79b5d790a862",
+          "ActionID": "e4e6c257-15e8-4008-a08b-d13ecfc198e9",
           "LinkedTitle": true,
           "Name": "Create Folder",
           "Plugin": {
@@ -213,7 +250,7 @@
           "UUID": "com.elgato.streamdeck.profile.openchild"
         },
         "1,2": {
-          "ActionID": "bdd11332-94bf-4dc9-9305-7e6ec6993f3a",
+          "ActionID": "69379ced-f95b-486c-bfae-5e07a31dea91",
           "LinkedTitle": true,
           "Name": "Create Folder",
           "Plugin": {
@@ -234,7 +271,7 @@
           "UUID": "com.elgato.streamdeck.profile.openchild"
         },
         "2,2": {
-          "ActionID": "3b7fe5cb-c9a4-4c24-b25a-2555daebcc7c",
+          "ActionID": "423b2a3c-e4d4-4f18-a418-e225e06f6345",
           "LinkedTitle": true,
           "Name": "Create Folder",
           "Plugin": {
@@ -255,7 +292,7 @@
           "UUID": "com.elgato.streamdeck.profile.openchild"
         },
         "3,2": {
-          "ActionID": "17e9ccec-8f9b-40e9-9f66-34c12bd97212",
+          "ActionID": "d2d209c8-296b-4a8f-8e13-a2ab825a3f93",
           "LinkedTitle": true,
           "Name": "Create Folder",
           "Plugin": {
@@ -276,7 +313,7 @@
           "UUID": "com.elgato.streamdeck.profile.openchild"
         },
         "4,2": {
-          "ActionID": "9b16e593-3a95-4ba4-8242-e7867bf82607",
+          "ActionID": "c3dc0705-d77d-4041-9948-9a9f6719296f",
           "LinkedTitle": true,
           "Name": "Create Folder",
           "Plugin": {
