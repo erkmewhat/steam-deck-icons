@@ -75,9 +75,13 @@ function clearAlert(): void {
     if (alertTimeout) { clearTimeout(alertTimeout); alertTimeout = null; }
     if (alertPulseTimer) { clearInterval(alertPulseTimer); alertPulseTimer = null; }
 
-    // Force all actions back to their normal SVG
+    // Force all actions back to their normal SVG immediately
+    const state = telemetryManager.state;
     for (const action of activeActions) {
-        action.clearAlert();
+        action.inAlert = false;
+        // Re-render current telemetry and push immediately
+        const svg = state.available ? action.render(state) : renderNoData();
+        action.forceNormal(svg);
     }
 }
 
@@ -124,7 +128,7 @@ export abstract class TelemetryActionBase extends SingletonAction<TelemetrySetti
     private pendingSvg = "";
     private actionRef: any = null;
     private listener: ((state: TelemetryState) => void) | null = null;
-    private inAlert = false;
+    inAlert = false;
 
     get needsRender(): boolean {
         return this.pendingSvg !== "" && this.pendingSvg !== this.lastSvg;
@@ -141,10 +145,12 @@ export abstract class TelemetryActionBase extends SingletonAction<TelemetrySetti
         this.lastSvg = "";
     }
 
-    /** Called when alert ends — resume normal rendering. */
-    clearAlert(): void {
+    /** Called when alert ends — immediately push normal telemetry back. */
+    forceNormal(svg: string): void {
         this.inAlert = false;
-        this.lastSvg = ""; // force next normal render to push
+        this.pendingSvg = svg;
+        this.lastSvg = "";
+        this.setImageSafe(svg);
     }
 
     override async onWillAppear(ev: WillAppearEvent<TelemetrySettings>): Promise<void> {

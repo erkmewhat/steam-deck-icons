@@ -3,7 +3,7 @@
     {
       "Actions": {
         "0,0": {
-          "ActionID": "3c20274b-d8d1-4716-af2f-569bc9b3430b",
+          "ActionID": "2ff4f372-41b6-4b58-a6a3-ef154ec8a24f",
           "LinkedTitle": true,
           "Name": "Pit\nLimiter",
           "Plugin": {
@@ -24,7 +24,7 @@
           "UUID": "com.simracing.lmu.pit-limiter"
         },
         "1,0": {
-          "ActionID": "327d6eef-40ca-4d49-82c4-b412b61e2424",
+          "ActionID": "98bda2dc-d05a-4535-bc4d-9c85a4af6f77",
           "LinkedTitle": true,
           "Name": "Head\nLights",
           "Plugin": {
@@ -45,7 +45,7 @@
           "UUID": "com.simracing.lmu.headlights"
         },
         "2,0": {
-          "ActionID": "052fdbb1-d38a-4154-83ef-468819adab42",
+          "ActionID": "351ad0e7-53f7-4504-9c42-5e3d835143a2",
           "LinkedTitle": true,
           "Name": "Hotkey",
           "Resources": null,
@@ -103,7 +103,7 @@
           "UUID": "com.elgato.streamdeck.system.hotkey"
         },
         "3,0": {
-          "ActionID": "9a84cced-71fa-4f8a-b941-aec27db0d8ad",
+          "ActionID": "b9c7d532-0d1d-4f29-ba84-ecaeafa0383e",
           "LinkedTitle": true,
           "Name": "Wipers",
           "Plugin": {
@@ -124,7 +124,7 @@
           "UUID": "com.simracing.lmu.wipers"
         },
         "4,0": {
-          "ActionID": "81ae05cf-97b6-4cee-919c-c93f5d009f22",
+          "ActionID": "70c03ad3-ab89-4af9-a8b6-70520a5d3f86",
           "LinkedTitle": true,
           "Name": "Launch\nCtrl",
           "Plugin": {
@@ -145,7 +145,7 @@
           "UUID": "com.simracing.lmu.launch-control"
         },
         "0,1": {
-          "ActionID": "ceed031f-ffdc-4d89-a01f-30cfcf20f7f2",
+          "ActionID": "85acb5f4-052b-44c4-a141-93fcc0e7ac09",
           "LinkedTitle": true,
           "Name": "Ignition",
           "Plugin": {
@@ -166,7 +166,7 @@
           "UUID": "com.simracing.lmu.ignition"
         },
         "1,1": {
-          "ActionID": "d4f9c009-30ad-4eca-a56c-c51184c00ae9",
+          "ActionID": "5960bfc4-f513-43eb-b728-b69dce8293b7",
           "LinkedTitle": true,
           "Name": "Starter",
           "Plugin": {
@@ -187,7 +187,7 @@
           "UUID": "com.simracing.lmu.starter"
         },
         "2,1": {
-          "ActionID": "52a742fa-b873-4a93-9320-52a44f92d31c",
+          "ActionID": "c4a42b1f-2253-4a34-8866-df71b48c9232",
           "LinkedTitle": true,
           "Name": "Req\nPit",
           "Plugin": {
@@ -208,7 +208,7 @@
           "UUID": "com.simracing.lmu.request-pitstop"
         },
         "3,1": {
-          "ActionID": "fcdbcb3d-923d-49e2-a0bf-82b8b6a0b7bc",
+          "ActionID": "85e8f00b-769f-4119-9d0a-d653ed5f2080",
           "LinkedTitle": true,
           "Name": "AI\nTakeover",
           "Plugin": {
@@ -229,7 +229,7 @@
           "UUID": "com.simracing.lmu.ai-takeover"
         },
         "4,1": {
-          "ActionID": "2552f24a-3244-4e23-bfdb-08ff5b7838b5",
+          "ActionID": "f15b30d8-6af3-4825-a950-b3b0cfb5f125",
           "LinkedTitle": true,
           "Name": "Create Folder",
           "Plugin": {
@@ -250,7 +250,7 @@
           "UUID": "com.elgato.streamdeck.profile.openchild"
         },
         "0,2": {
-          "ActionID": "4e75b804-f86f-4977-bd1a-bf4e0d55d25e",
+          "ActionID": "ffb58d2c-def7-43c4-854a-892b4b828a53",
           "LinkedTitle": true,
           "Name": "Create Folder",
           "Plugin": {
@@ -271,7 +271,7 @@
           "UUID": "com.elgato.streamdeck.profile.openchild"
         },
         "1,2": {
-          "ActionID": "8a502e66-35ea-449f-9a9b-ab4e2f0aa904",
+          "ActionID": "9acd77f9-6f77-4b92-8e81-1043acc833b7",
           "LinkedTitle": true,
           "Name": "Create Folder",
           "Plugin": {
@@ -292,7 +292,7 @@
           "UUID": "com.elgato.streamdeck.profile.openchild"
         },
         "2,2": {
-          "ActionID": "095d6e33-cc8e-4f6e-875c-4a9699f7013e",
+          "ActionID": "5bc12a0b-490e-4a51-953e-be3914fa7416",
           "LinkedTitle": true,
           "Name": "Create Folder",
           "Plugin": {
@@ -313,7 +313,7 @@
           "UUID": "com.elgato.streamdeck.profile.openchild"
         },
         "3,2": {
-          "ActionID": "97a4a283-1219-4775-a2a6-88bcefc78afa",
+          "ActionID": "532875c0-279e-4cb4-ae9b-d3755d98ee33",
           "LinkedTitle": true,
           "Name": "Create Folder",
           "Plugin": {
@@ -334,7 +334,7 @@
           "UUID": "com.elgato.streamdeck.profile.openchild"
         },
         "4,2": {
-          "ActionID": "8f046fe7-52ff-476f-ba93-2cda16ce7f8f",
+          "ActionID": "5cd0fce3-f5f4-4cbb-bb05-368067fba9f3",
           "LinkedTitle": true,
           "Name": "Create Folder",
           "Plugin": {

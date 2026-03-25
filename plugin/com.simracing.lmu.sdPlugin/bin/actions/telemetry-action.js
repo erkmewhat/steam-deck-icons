@@ -70,9 +70,13 @@ function clearAlert() {
         clearInterval(alertPulseTimer);
         alertPulseTimer = null;
     }
-    // Force all actions back to their normal SVG
+    // Force all actions back to their normal SVG immediately
+    const state = telemetryManager.state;
     for (const action of activeActions) {
-        action.clearAlert();
+        action.inAlert = false;
+        // Re-render current telemetry and push immediately
+        const svg = state.available ? action.render(state) : renderNoData();
+        action.forceNormal(svg);
     }
 }
 // ── Render loop ─────────────────────────────────────────────────────
@@ -123,10 +127,12 @@ export class TelemetryActionBase extends SingletonAction {
         this.setImageSafe(svg);
         this.lastSvg = "";
     }
-    /** Called when alert ends — resume normal rendering. */
-    clearAlert() {
+    /** Called when alert ends — immediately push normal telemetry back. */
+    forceNormal(svg) {
         this.inAlert = false;
-        this.lastSvg = ""; // force next normal render to push
+        this.pendingSvg = svg;
+        this.lastSvg = "";
+        this.setImageSafe(svg);
     }
     async onWillAppear(ev) {
         this.actionRef = ev.action;
