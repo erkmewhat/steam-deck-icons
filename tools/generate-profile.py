@@ -22,13 +22,14 @@ import uuid
 # ── Profile / page UUIDs ──────────────────────────────────────────────
 # NOTE: UUIDs MUST be lowercase — Stream Deck uses lowercase internally
 # and will strip folder actions whose ProfileUUID doesn't match.
-PROFILE_UUID = "ebaab49c-eff9-4a7f-9c43-ffce95c09427"
-MAIN_PAGE    = "c8b1a5b1-c375-469c-b4c1-7ba9b2426cb1"
-MFD_PAGE     = "c68f250f-93f5-41f9-b888-d9dd28d9df3e"
-PERF_PAGE    = "3aa706b4-3603-4898-b84a-e320a619c8f7"
-CAMERA_PAGE  = "a1f2b3c4-d5e6-4789-abcd-100000000001"
-HUD_PAGE     = "a1f2b3c4-d5e6-4789-abcd-100000000002"
-LOOK_PAGE    = "a1f2b3c4-d5e6-4789-abcd-100000000003"
+PROFILE_UUID   = "ebaab49c-eff9-4a7f-9c43-ffce95c09427"
+MAIN_PAGE      = "c8b1a5b1-c375-469c-b4c1-7ba9b2426cb1"
+MFD_PAGE       = "c68f250f-93f5-41f9-b888-d9dd28d9df3e"
+PERF_PAGE      = "3aa706b4-3603-4898-b84a-e320a619c8f7"
+CAMERA_PAGE    = "a1f2b3c4-d5e6-4789-abcd-100000000001"
+HUD_PAGE       = "a1f2b3c4-d5e6-4789-abcd-100000000002"
+LOOK_PAGE      = "a1f2b3c4-d5e6-4789-abcd-100000000003"
+TELEMETRY_PAGE = "a1f2b3c4-d5e6-4789-abcd-200000000001"
 
 DEVICE_MODEL = "20GBA9901"
 DEVICE_UUID  = "@(1)[4057/128/A00SA3272JF6DK]"
@@ -249,6 +250,26 @@ def make_plugin_toggle_action(title, action_id, hotkey="", icon_id=""):
     }
 
 
+def make_plugin_telemetry_action(title, action_id, icon_id=""):
+    """Create a telemetry display action (plugin-rendered, no hotkey).
+
+    These actions use the custom plugin UUID so the plugin can call setImage()
+    to render live telemetry data via dynamic SVG.
+    """
+    image = icon_to_image_ref(icon_id) if icon_id else ""
+    return {
+        "ActionID": str(uuid.uuid4()),
+        "LinkedTitle": True,
+        "Name": title,
+        "Plugin": {"Name": "LMU Sim Racing", "UUID": PLUGIN_UUID, "Version": "1.0.0.0"},
+        "Resources": None,
+        "Settings": {},
+        "State": 0,
+        "States": [{"Image": image}] if image else [{}],
+        "UUID": f"{PLUGIN_UUID}.{action_id}"
+    }
+
+
 def make_action(action_id):
     """Create the right action type based on whether it's a toggle or not."""
     b = BINDINGS[action_id]
@@ -416,6 +437,9 @@ def build_main_page():
     for coord, action_id in row1:
         b = BINDINGS[action_id]
         actions[coord] = make_action(action_id)
+
+    # Row 1 col 4: Telemetry nav (was empty)
+    actions["4,1"] = make_folder_button("Telem\n▶", TELEMETRY_PAGE, title_color="#00cc66", icon_id="nav-telemetry")
 
     # Row 2: Navigation bar — one folder per sub-page (with nav icons)
     actions["0,2"] = make_folder_button("MFD\n▶", MFD_PAGE, title_color="#00BFFF", icon_id="nav-mfd")
@@ -597,6 +621,46 @@ def build_hud_page():
     return make_page(actions, "HUD & Display")
 
 
+def build_telemetry_page():
+    """
+    Telemetry page layout (live data from rF2 shared memory):
+    (0,0) Flag         (1,0) Fuel         (2,0) Fuel Calc    (3,0) Position     (4,0) Lap Delta
+    (0,1) Tire Press   (1,1) Tire Temp    (2,1) Tire Wear    (3,1) Battery      (4,1) Pit State
+    (0,2) <- Back      (1,2)              (2,2)              (3,2)              (4,2)
+
+    All buttons are telemetry display actions (plugin-rendered, no hotkeys).
+    The plugin dynamically renders SVG content via setImage().
+    """
+    actions = {}
+
+    # Row 0: Glance data (most checked during racing)
+    tel_row0 = [
+        ("0,0", "Flag",      "flag-display"),
+        ("1,0", "Fuel",      "fuel-display"),
+        ("2,0", "Fuel\nCalc","fuel-calc"),
+        ("3,0", "Position",  "position-display"),
+        ("4,0", "Lap\nDelta","lap-delta"),
+    ]
+    for coord, title, action_id in tel_row0:
+        actions[coord] = make_plugin_telemetry_action(title, action_id)
+
+    # Row 1: Detail data
+    tel_row1 = [
+        ("0,1", "Tire\nPress",  "tire-pressure"),
+        ("1,1", "Tire\nTemp",   "tire-temp"),
+        ("2,1", "Tire\nWear",   "tire-wear"),
+        ("3,1", "Battery",      "battery-display"),
+        ("4,1", "Pit\nState",   "pit-state"),
+    ]
+    for coord, title, action_id in tel_row1:
+        actions[coord] = make_plugin_telemetry_action(title, action_id)
+
+    # Row 2: Back button
+    actions["0,2"] = make_back_button()
+
+    return make_page(actions, "Telemetry")
+
+
 def write_profile(output_dir):
     """Write the complete profile directory structure."""
     # Directory names use UPPERCASE UUIDs, JSON content uses lowercase
@@ -609,7 +673,7 @@ def write_profile(output_dir):
     profiles_dir = os.path.join(profile_dir, "Profiles")
 
     # Create page directories (uppercase dir names)
-    for page_uuid in [MAIN_PAGE, MFD_PAGE, PERF_PAGE, CAMERA_PAGE, LOOK_PAGE, HUD_PAGE]:
+    for page_uuid in [MAIN_PAGE, MFD_PAGE, PERF_PAGE, CAMERA_PAGE, LOOK_PAGE, HUD_PAGE, TELEMETRY_PAGE]:
         os.makedirs(os.path.join(profiles_dir, page_uuid.upper()), exist_ok=True)
 
     # Top-level profile manifest
@@ -638,6 +702,7 @@ def write_profile(output_dir):
         (CAMERA_PAGE, build_camera_page),
         (LOOK_PAGE,   build_look_page),
         (HUD_PAGE,    build_hud_page),
+        (TELEMETRY_PAGE, build_telemetry_page),
     ]
     for page_uuid, builder in pages:
         set_current_page(page_uuid)
@@ -655,6 +720,7 @@ def write_profile(output_dir):
     print(f"  Camera page: {CAMERA_PAGE}")
     print(f"  Look page:   {LOOK_PAGE}")
     print(f"  HUD page:    {HUD_PAGE}")
+    print(f"  Telem page:  {TELEMETRY_PAGE}")
 
     # Print all keybinding assignments
     print("\n" + "=" * 70)

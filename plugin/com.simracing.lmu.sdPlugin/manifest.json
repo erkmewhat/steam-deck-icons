@@ -896,6 +896,86 @@
             ],
             "PropertyInspectorPath": "ui/pi.html",
             "DisableAutomaticStates": true
+        },
+        {
+            "UUID": "com.simracing.lmu.fuel-display",
+            "Name": "Fuel Display",
+            "Icon": "imgs/actions/fuel-display",
+            "Tooltip": "Live fuel level gauge (telemetry)",
+            "Controllers": ["Keypad"],
+            "States": [{ "Image": "imgs/actions/fuel-display", "Name": "Fuel" }]
+        },
+        {
+            "UUID": "com.simracing.lmu.fuel-calc",
+            "Name": "Fuel Calculator",
+            "Icon": "imgs/actions/fuel-calc",
+            "Tooltip": "Laps remaining and fuel needed (telemetry)",
+            "Controllers": ["Keypad"],
+            "States": [{ "Image": "imgs/actions/fuel-calc", "Name": "Fuel Calc" }]
+        },
+        {
+            "UUID": "com.simracing.lmu.tire-pressure",
+            "Name": "Tire Pressure",
+            "Icon": "imgs/actions/tire-pressure",
+            "Tooltip": "Live 4-corner tire pressure (telemetry)",
+            "Controllers": ["Keypad"],
+            "States": [{ "Image": "imgs/actions/tire-pressure", "Name": "Pressure" }]
+        },
+        {
+            "UUID": "com.simracing.lmu.tire-temp",
+            "Name": "Tire Temperature",
+            "Icon": "imgs/actions/tire-temp",
+            "Tooltip": "Live 4-corner tire temperature (telemetry)",
+            "Controllers": ["Keypad"],
+            "States": [{ "Image": "imgs/actions/tire-temp", "Name": "Temp" }]
+        },
+        {
+            "UUID": "com.simracing.lmu.tire-wear",
+            "Name": "Tire Wear",
+            "Icon": "imgs/actions/tire-wear",
+            "Tooltip": "Live 4-corner tire wear percentage (telemetry)",
+            "Controllers": ["Keypad"],
+            "States": [{ "Image": "imgs/actions/tire-wear", "Name": "Wear" }]
+        },
+        {
+            "UUID": "com.simracing.lmu.flag-display",
+            "Name": "Flag Display",
+            "Icon": "imgs/actions/flag-display",
+            "Tooltip": "Current race flag indicator (telemetry)",
+            "Controllers": ["Keypad"],
+            "States": [{ "Image": "imgs/actions/flag-display", "Name": "Flag" }]
+        },
+        {
+            "UUID": "com.simracing.lmu.position-display",
+            "Name": "Position Display",
+            "Icon": "imgs/actions/position-display",
+            "Tooltip": "Race position and gap to car ahead (telemetry)",
+            "Controllers": ["Keypad"],
+            "States": [{ "Image": "imgs/actions/position-display", "Name": "Position" }]
+        },
+        {
+            "UUID": "com.simracing.lmu.lap-delta",
+            "Name": "Lap Delta",
+            "Icon": "imgs/actions/lap-delta",
+            "Tooltip": "Current lap time delta vs best (telemetry)",
+            "Controllers": ["Keypad"],
+            "States": [{ "Image": "imgs/actions/lap-delta", "Name": "Delta" }]
+        },
+        {
+            "UUID": "com.simracing.lmu.battery-display",
+            "Name": "Battery Display",
+            "Icon": "imgs/actions/battery-display",
+            "Tooltip": "Hybrid battery charge level (telemetry, Hypercar)",
+            "Controllers": ["Keypad"],
+            "States": [{ "Image": "imgs/actions/battery-display", "Name": "Battery" }]
+        },
+        {
+            "UUID": "com.simracing.lmu.pit-state",
+            "Name": "Pit State",
+            "Icon": "imgs/actions/pit-state",
+            "Tooltip": "Current pit lane state (telemetry)",
+            "Controllers": ["Keypad"],
+            "States": [{ "Image": "imgs/actions/pit-state", "Name": "Pit" }]
         }
     ],
     "PropertyInspectorPath": "ui/pi.html"
