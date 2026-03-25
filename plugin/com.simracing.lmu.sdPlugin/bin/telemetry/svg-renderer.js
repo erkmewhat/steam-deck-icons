@@ -2,8 +2,8 @@
  * SVG template generators for telemetry display buttons.
  * All output 144x144 SVGs (resvg renders to 72x72 PNG for Stream Deck).
  *
- * Design: big bold numbers, high contrast, color-coded backgrounds.
- * At 72x72 pixels, every pixel counts — maximize readability.
+ * Tire colors match LMU's rfDynHUD scheme: blue → yellow → red interpolation.
+ * RPM bar mirrors the in-game tachometer color gradient.
  */
 const W = 144;
 const H = 144;
@@ -11,33 +11,33 @@ const SVG_OPEN = `<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="$
 const SVG_CLOSE = `</svg>`;
 const FONT = `font-family="'Segoe UI',Arial,sans-serif"`;
 const BG = "#0c0c18";
-// ── Color helpers ───────────────────────────────────────────────────
+// ── LMU Tire Color Scheme ───────────────────────────────────────────
+// Matches rfDynHUD: blue(cold) → green(warming) → yellow(optimal) → orange(hot) → red(overheat)
+function lmuTireColor(celsius) {
+    if (celsius < 50)
+        return "#0044ff"; // very cold — dark blue
+    if (celsius < 65)
+        return "#0088ff"; // cold — light blue
+    if (celsius < 75)
+        return "#00dd88"; // warming — cyan-green
+    if (celsius < 82)
+        return "#88ee00"; // near optimal — green-yellow
+    if (celsius <= 95)
+        return "#ffee00"; // optimal — yellow
+    if (celsius <= 110)
+        return "#ff8800"; // hot — orange
+    return "#ff0000"; // overheating — red
+}
+function dimColor(hex, amount = 0.2) {
+    const r = parseInt(hex.slice(1, 3), 16);
+    const g = parseInt(hex.slice(3, 5), 16);
+    const b = parseInt(hex.slice(5, 7), 16);
+    return `rgb(${Math.round(r * amount)},${Math.round(g * amount)},${Math.round(b * amount)})`;
+}
 function fuelColor(lapsRemaining) {
     if (lapsRemaining > 5)
         return "#00ee77";
     if (lapsRemaining > 3)
-        return "#ffcc00";
-    return "#ff3333";
-}
-function pressureColor(kpa, optMin, optMax) {
-    if (kpa < optMin - 5)
-        return "#2288ff";
-    if (kpa < optMin)
-        return "#55bbff";
-    if (kpa <= optMax)
-        return "#00ee77";
-    if (kpa <= optMax + 5)
-        return "#ffcc00";
-    return "#ff3333";
-}
-function tempColor(celsius) {
-    if (celsius < 70)
-        return "#2288ff";
-    if (celsius < 80)
-        return "#55bbff";
-    if (celsius <= 95)
-        return "#00ee77";
-    if (celsius <= 105)
         return "#ffcc00";
     return "#ff3333";
 }
@@ -48,23 +48,14 @@ function wearColor(fraction) {
         return "#ffcc00";
     return "#ff3333";
 }
-function batteryColor(fraction) {
-    if (fraction > 0.8)
-        return "#2288ff";
-    if (fraction > 0.4)
-        return "#00ee77";
-    if (fraction > 0.2)
-        return "#ffcc00";
-    return "#ff3333";
-}
-// Dim version of a color for cell backgrounds
-function dimColor(hex) {
-    // Parse hex and reduce to ~20% brightness
-    const r = parseInt(hex.slice(1, 3), 16);
-    const g = parseInt(hex.slice(3, 5), 16);
-    const b = parseInt(hex.slice(5, 7), 16);
-    return `rgb(${Math.round(r * 0.2)},${Math.round(g * 0.2)},${Math.round(b * 0.2)})`;
-}
+// ── RPM Colors (matches tachometer) ─────────────────────────────────
+const RPM_SEGMENT_COLORS = [
+    "#44aaff", // Seg 1: 0-20% — light blue
+    "#2266cc", // Seg 2: 20-40% — darker blue
+    "#ffdd00", // Seg 3: 40-60% — yellow
+    "#ff8800", // Seg 4: 60-80% — orange
+    "#ee2200", // Seg 5: 80-100% — red
+];
 // ── Flag colors ─────────────────────────────────────────────────────
 const FLAG_COLORS = {
     green: { bg: "#009933", text: "#ffffff", label: "GREEN" },
@@ -75,35 +66,6 @@ const FLAG_COLORS = {
     checkered: { bg: "#222222", text: "#ffffff", label: "FINISH" },
     none: { bg: BG, text: "#555555", label: "NO FLAG" },
 };
-function renderTireGrid(title, cells) {
-    // 2x2 grid with colored background cells, big values
-    const cellW = 64;
-    const cellH = 52;
-    const gap = 4;
-    const startX = (W - cellW * 2 - gap) / 2;
-    const startY = 30;
-    let grid = "";
-    const coords = [
-        { x: startX, y: startY }, // FL
-        { x: startX + cellW + gap, y: startY }, // FR
-        { x: startX, y: startY + cellH + gap }, // RL
-        { x: startX + cellW + gap, y: startY + cellH + gap }, // RR
-    ];
-    for (let i = 0; i < 4; i++) {
-        const { x, y } = coords[i];
-        const c = cells[i];
-        const bg = dimColor(c.color);
-        grid += `
-<rect x="${x}" y="${y}" width="${cellW}" height="${cellH}" fill="${bg}" rx="6"/>
-<text x="${x + 10}" y="${y + 16}" ${FONT} font-size="13" font-weight="700" fill="#999">${c.label}</text>
-<text x="${x + cellW / 2}" y="${y + 42}" text-anchor="middle" ${FONT} font-size="24" font-weight="900" fill="${c.color}">${c.value}</text>`;
-    }
-    return `${SVG_OPEN}
-<rect width="${W}" height="${H}" fill="${BG}" rx="10"/>
-<text x="72" y="22" text-anchor="middle" ${FONT} font-size="16" font-weight="700" fill="#777">${title}</text>
-${grid}
-${SVG_CLOSE}`;
-}
 // ── Renderers ───────────────────────────────────────────────────────
 export function renderNoData() {
     return `${SVG_OPEN}
@@ -112,6 +74,126 @@ export function renderNoData() {
 <text x="72" y="96" text-anchor="middle" ${FONT} font-size="22" font-weight="900" fill="#333">DATA</text>
 ${SVG_CLOSE}`;
 }
+// ── RPM Segment ─────────────────────────────────────────────────────
+/**
+ * Render one RPM bar segment (1 of 5 across the top row).
+ * @param segIndex 0-4 (which segment)
+ * @param rpmPct 0.0-1.0 (current RPM as fraction of max)
+ */
+export function renderRpmSegment(segIndex, rpmPct) {
+    const segStart = segIndex * 0.2;
+    const segEnd = (segIndex + 1) * 0.2;
+    const segColor = RPM_SEGMENT_COLORS[segIndex];
+    // At 98%+ RPM, ALL segments flash red — shift indicator
+    if (rpmPct >= 0.98) {
+        return `${SVG_OPEN}
+<rect width="${W}" height="${H}" fill="#ff0000" rx="6"/>
+<rect x="8" y="20" width="128" height="104" fill="#cc0000" rx="8"/>
+${SVG_CLOSE}`;
+    }
+    // Is this segment fully lit, partially lit, or off?
+    const isLit = rpmPct >= segEnd;
+    const isPartial = rpmPct > segStart && rpmPct < segEnd;
+    if (isLit) {
+        // Fully lit segment
+        return `${SVG_OPEN}
+<rect width="${W}" height="${H}" fill="${dimColor(segColor, 0.15)}" rx="6"/>
+<rect x="8" y="20" width="128" height="104" fill="${segColor}" rx="8"/>
+${SVG_CLOSE}`;
+    }
+    if (isPartial) {
+        // Partially lit — fill proportionally
+        const fillPct = (rpmPct - segStart) / 0.2;
+        const fillH = Math.round(fillPct * 104);
+        const fillY = 20 + (104 - fillH);
+        return `${SVG_OPEN}
+<rect width="${W}" height="${H}" fill="${dimColor(segColor, 0.08)}" rx="6"/>
+<rect x="8" y="20" width="128" height="104" fill="${dimColor(segColor, 0.15)}" rx="8"/>
+<rect x="8" y="${fillY}" width="128" height="${fillH}" fill="${segColor}" rx="8"/>
+${SVG_CLOSE}`;
+    }
+    // Off segment — very dim
+    return `${SVG_OPEN}
+<rect width="${W}" height="${H}" fill="${dimColor(segColor, 0.06)}" rx="6"/>
+<rect x="8" y="20" width="128" height="104" fill="${dimColor(segColor, 0.12)}" rx="8"/>
+${SVG_CLOSE}`;
+}
+// ── Tire (shaped like a tire) ───────────────────────────────────────
+export function renderSingleTire(corner, pressureKpa, tempC, wear, optMinKpa, optMaxKpa) {
+    const psi = pressureKpa / 6.895;
+    const tireColor = lmuTireColor(tempC);
+    const wColor = wearColor(wear);
+    const wearPct = Math.round(wear * 100);
+    const wearBarW = Math.round(wear * 100);
+    const bgTint = dimColor(tireColor, 0.25);
+    // Tire shape: rounded rectangle (like a tire cross-section) with tread grooves
+    return `${SVG_OPEN}
+<rect width="${W}" height="${H}" fill="${BG}" rx="10"/>
+<!-- Tire body (rounded rectangle with thick sidewalls) -->
+<rect x="14" y="8" width="116" height="128" fill="${bgTint}" rx="22"/>
+<rect x="22" y="14" width="100" height="116" fill="${tireColor}" rx="16" opacity="0.3"/>
+<!-- Tread grooves -->
+<rect x="30" y="14" width="3" height="116" fill="${BG}" opacity="0.4" rx="1"/>
+<rect x="70" y="14" width="4" height="116" fill="${BG}" opacity="0.4" rx="1"/>
+<rect x="111" y="14" width="3" height="116" fill="${BG}" opacity="0.4" rx="1"/>
+<!-- Corner label -->
+<text x="72" y="32" text-anchor="middle" ${FONT} font-size="18" font-weight="900" fill="#fff" opacity="0.9">${corner}</text>
+<!-- Pressure (main value) -->
+<text x="72" y="70" text-anchor="middle" ${FONT} font-size="38" font-weight="900" fill="#fff">${psi.toFixed(1)}</text>
+<!-- Temperature -->
+<text x="72" y="98" text-anchor="middle" ${FONT} font-size="22" font-weight="900" fill="#fff">${tempC.toFixed(0)}°C</text>
+<!-- Wear bar at bottom -->
+<rect x="28" y="114" width="88" height="8" fill="rgba(0,0,0,0.5)" rx="3"/>
+<rect x="28" y="114" width="${Math.round(wear * 88)}" height="8" fill="${wColor}" rx="3"/>
+${SVG_CLOSE}`;
+}
+// ── Flag Alert ──────────────────────────────────────────────────────
+export function renderFlagAlert(flagType, pulse) {
+    if (flagType === "yellow") {
+        return `${SVG_OPEN}
+<rect width="${W}" height="${H}" fill="#ddaa00" rx="10"/>
+<rect x="0" y="0" width="20" height="${H}" fill="#000" opacity="0.3"/>
+<rect x="${W - 20}" y="0" width="20" height="${H}" fill="#000" opacity="0.3"/>
+<text x="72" y="56" text-anchor="middle" ${FONT} font-size="20" font-weight="900" fill="#000">YELLOW</text>
+<text x="72" y="90" text-anchor="middle" ${FONT} font-size="32" font-weight="900" fill="#000">FLAG</text>
+<text x="72" y="126" text-anchor="middle" ${FONT} font-size="22" font-weight="900" fill="#000">${pulse ? "\u26a0" : "\u26a0\u26a0\u26a0"}</text>
+${SVG_CLOSE}`;
+    }
+    if (flagType === "blue") {
+        return `${SVG_OPEN}
+<rect width="${W}" height="${H}" fill="#0066ee" rx="10"/>
+<text x="72" y="56" text-anchor="middle" ${FONT} font-size="20" font-weight="900" fill="#fff">BLUE FLAG</text>
+<text x="72" y="96" text-anchor="middle" ${FONT} font-size="18" font-weight="900" fill="#fff">LET PASS</text>
+${SVG_CLOSE}`;
+    }
+    if (flagType === "red") {
+        return `${SVG_OPEN}
+<rect width="${W}" height="${H}" fill="#dd0000" rx="10"/>
+<text x="72" y="56" text-anchor="middle" ${FONT} font-size="20" font-weight="900" fill="#fff">RED FLAG</text>
+<text x="72" y="96" text-anchor="middle" ${FONT} font-size="18" font-weight="900" fill="#fff">STOP</text>
+${SVG_CLOSE}`;
+    }
+    return renderFlag(flagType);
+}
+export function renderFlag(flagType) {
+    const flag = FLAG_COLORS[flagType] || FLAG_COLORS.none;
+    if (flagType === "checkered") {
+        return `${SVG_OPEN}
+<defs><pattern id="ck" width="36" height="36" patternUnits="userSpaceOnUse">
+<rect width="18" height="18" fill="#fff"/><rect x="18" y="18" width="18" height="18" fill="#fff"/>
+<rect x="18" width="18" height="18" fill="#111"/><rect y="18" width="18" height="18" fill="#111"/>
+</pattern></defs>
+<rect width="${W}" height="${H}" fill="url(#ck)" rx="10"/>
+<rect x="12" y="48" width="120" height="48" fill="rgba(0,0,0,0.8)" rx="8"/>
+<text x="72" y="82" text-anchor="middle" ${FONT} font-size="28" font-weight="900" fill="#fff">FINISH</text>
+${SVG_CLOSE}`;
+    }
+    return `${SVG_OPEN}
+<rect width="${W}" height="${H}" fill="${flag.bg}" rx="10"/>
+<text x="72" y="88" text-anchor="middle" ${FONT} font-size="32" font-weight="900" fill="${flag.text}">${flag.label}</text>
+${SVG_CLOSE}`;
+}
+// ── Other displays ──────────────────────────────────────────────────
 export function renderFuelGauge(fuel, fuelCapacity, lapsRemaining) {
     const pct = Math.min(fuel / Math.max(fuelCapacity, 1), 1);
     const barW = Math.round(pct * 124);
@@ -138,76 +220,6 @@ export function renderFuelCalc(lapsRemaining, fuelNeeded, fuelPerLap) {
 <text x="72" y="136" text-anchor="middle" ${FONT} font-size="13" font-weight="600" fill="#666">${fuelPerLap.toFixed(2)} L/lap</text>
 ${SVG_CLOSE}`;
 }
-/** Single tire button — shows pressure (big), temp, and wear bar for one corner. */
-export function renderSingleTire(corner, pressureKpa, tempC, wear, optMinKpa, optMaxKpa) {
-    const psi = pressureKpa / 6.895;
-    const pColor = pressureColor(pressureKpa, optMinKpa, optMaxKpa);
-    const tColor = tempColor(tempC);
-    const wColor = wearColor(wear);
-    const wearPct = Math.round(wear * 100);
-    const wearBarW = Math.round(wear * 100);
-    const bgTint = dimColor(pColor);
-    return `${SVG_OPEN}
-<rect width="${W}" height="${H}" fill="${BG}" rx="10"/>
-<rect x="6" y="6" width="132" height="132" fill="${bgTint}" rx="8"/>
-<text x="72" y="26" text-anchor="middle" ${FONT} font-size="18" font-weight="900" fill="#bbb">${corner}</text>
-<text x="72" y="68" text-anchor="middle" ${FONT} font-size="42" font-weight="900" fill="${pColor}">${psi.toFixed(1)}</text>
-<text x="72" y="88" text-anchor="middle" ${FONT} font-size="12" font-weight="600" fill="#888">PSI</text>
-<text x="72" y="112" text-anchor="middle" ${FONT} font-size="22" font-weight="900" fill="${tColor}">${tempC.toFixed(0)}°C</text>
-<rect x="22" y="124" width="100" height="10" fill="#222" rx="3"/>
-<rect x="22" y="124" width="${wearBarW}" height="10" fill="${wColor}" rx="3"/>
-${SVG_CLOSE}`;
-}
-/** Full-button flag alert — used to take over ALL buttons during flag changes. */
-export function renderFlagAlert(flagType, pulse) {
-    const flag = FLAG_COLORS[flagType] || FLAG_COLORS.none;
-    const bg = pulse ? flag.bg : `${flag.bg}cc`; // slightly dimmed on off-pulse
-    if (flagType === "yellow") {
-        // Yellow flag alert — high-vis warning stripes
-        return `${SVG_OPEN}
-<rect width="${W}" height="${H}" fill="#ddaa00" rx="10"/>
-<rect x="0" y="0" width="20" height="${H}" fill="#000" opacity="0.3"/>
-<rect x="${W - 20}" y="0" width="20" height="${H}" fill="#000" opacity="0.3"/>
-<text x="72" y="56" text-anchor="middle" ${FONT} font-size="20" font-weight="900" fill="#000">YELLOW</text>
-<text x="72" y="90" text-anchor="middle" ${FONT} font-size="32" font-weight="900" fill="#000">FLAG</text>
-<text x="72" y="126" text-anchor="middle" ${FONT} font-size="22" font-weight="900" fill="#000">${pulse ? "\u26a0" : "\u26a0\u26a0\u26a0"}</text>
-${SVG_CLOSE}`;
-    }
-    if (flagType === "blue") {
-        return `${SVG_OPEN}
-<rect width="${W}" height="${H}" fill="#0066ee" rx="10"/>
-<text x="72" y="56" text-anchor="middle" ${FONT} font-size="20" font-weight="900" fill="#fff">BLUE FLAG</text>
-<text x="72" y="96" text-anchor="middle" ${FONT} font-size="18" font-weight="900" fill="#fff">LET PASS</text>
-${SVG_CLOSE}`;
-    }
-    if (flagType === "red") {
-        return `${SVG_OPEN}
-<rect width="${W}" height="${H}" fill="#dd0000" rx="10"/>
-<text x="72" y="56" text-anchor="middle" ${FONT} font-size="20" font-weight="900" fill="#fff">RED FLAG</text>
-<text x="72" y="96" text-anchor="middle" ${FONT} font-size="18" font-weight="900" fill="#fff">STOP</text>
-${SVG_CLOSE}`;
-    }
-    // Generic alert for other flag types
-    return renderFlag(flagType);
-}
-export function renderFlag(flagType) {
-    const flag = FLAG_COLORS[flagType] || FLAG_COLORS.none;
-    if (flagType === "checkered") {
-        return `${SVG_OPEN}
-<defs><pattern id="ck" width="36" height="36" patternUnits="userSpaceOnUse">
-<rect width="18" height="18" fill="#fff"/><rect x="18" y="18" width="18" height="18" fill="#fff"/>
-<rect x="18" width="18" height="18" fill="#111"/><rect y="18" width="18" height="18" fill="#111"/>
-</pattern></defs>
-<rect width="${W}" height="${H}" fill="url(#ck)" rx="10"/>
-<rect x="12" y="48" width="120" height="48" fill="rgba(0,0,0,0.8)" rx="8"/>
-<text x="72" y="82" text-anchor="middle" ${FONT} font-size="28" font-weight="900" fill="#fff">FINISH</text>
-${SVG_CLOSE}`;
-    }
-    return `${SVG_OPEN}
-<rect width="${W}" height="${H}" fill="${flag.bg}" rx="10"/>
-<text x="72" y="88" text-anchor="middle" ${FONT} font-size="32" font-weight="900" fill="${flag.text}">${flag.label}</text>
-${SVG_CLOSE}`;
-}
 export function renderPosition(place, gap) {
     const placeColor = place <= 3 ? "#ffd700" : "#ffffff";
     const gapStr = gap > 0 ? `+${gap.toFixed(1)}s` : gap === 0 ? "LEADER" : `${gap.toFixed(1)}s`;
@@ -232,7 +244,7 @@ ${SVG_CLOSE}`;
 export function renderBattery(charge) {
     const pct = Math.round(charge * 100);
     const barW = Math.round(charge * 124);
-    const color = batteryColor(charge);
+    const color = charge > 0.4 ? "#00ee77" : charge > 0.2 ? "#ffcc00" : "#ff3333";
     return `${SVG_OPEN}
 <rect width="${W}" height="${H}" fill="${BG}" rx="10"/>
 <text x="72" y="24" text-anchor="middle" ${FONT} font-size="16" font-weight="700" fill="#777">BATTERY</text>

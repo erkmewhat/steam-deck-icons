@@ -985,6 +985,46 @@
             "Controllers": ["Keypad"],
             "States": [{ "Image": "imgs/actions/pit-state", "Name": "Pit" }]
         }
+        ,{
+            "UUID": "com.simracing.lmu.rpm-seg1",
+            "Name": "RPM Seg 1",
+            "Icon": "imgs/actions/fuel-display",
+            "Tooltip": "RPM bar segment 1 (telemetry)",
+            "Controllers": ["Keypad"],
+            "States": [{ "Image": "imgs/actions/fuel-display", "Name": "RPM1" }]
+        },
+        {
+            "UUID": "com.simracing.lmu.rpm-seg2",
+            "Name": "RPM Seg 2",
+            "Icon": "imgs/actions/fuel-display",
+            "Tooltip": "RPM bar segment 2 (telemetry)",
+            "Controllers": ["Keypad"],
+            "States": [{ "Image": "imgs/actions/fuel-display", "Name": "RPM2" }]
+        },
+        {
+            "UUID": "com.simracing.lmu.rpm-seg3",
+            "Name": "RPM Seg 3",
+            "Icon": "imgs/actions/fuel-display",
+            "Tooltip": "RPM bar segment 3 (telemetry)",
+            "Controllers": ["Keypad"],
+            "States": [{ "Image": "imgs/actions/fuel-display", "Name": "RPM3" }]
+        },
+        {
+            "UUID": "com.simracing.lmu.rpm-seg4",
+            "Name": "RPM Seg 4",
+            "Icon": "imgs/actions/fuel-display",
+            "Tooltip": "RPM bar segment 4 (telemetry)",
+            "Controllers": ["Keypad"],
+            "States": [{ "Image": "imgs/actions/fuel-display", "Name": "RPM4" }]
+        },
+        {
+            "UUID": "com.simracing.lmu.rpm-seg5",
+            "Name": "RPM Seg 5",
+            "Icon": "imgs/actions/fuel-display",
+            "Tooltip": "RPM bar segment 5 (telemetry)",
+            "Controllers": ["Keypad"],
+            "States": [{ "Image": "imgs/actions/fuel-display", "Name": "RPM5" }]
+        }
     ],
     "PropertyInspectorPath": "ui/pi.html"
 }

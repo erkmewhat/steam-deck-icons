@@ -624,32 +624,33 @@ def build_hud_page():
 def build_telemetry_page():
     """
     Telemetry page layout (live data from rF2 shared memory):
-    (0,0) Flag         (1,0) Tire FL      (2,0) Tire FR      (3,0) Fuel         (4,0) Fuel Calc
-    (0,1) Position     (1,1) Tire RL      (2,1) Tire RR      (3,1) Lap Delta    (4,1) Battery
-    (0,2) <- Back      (1,2)              (2,2)              (3,2) Pit State    (4,2)
+    (0,0) RPM1         (1,0) RPM2         (2,0) RPM3         (3,0) RPM4         (4,0) RPM5
+    (0,1) Flag         (1,1) Tire FL      (2,1) Tire FR      (3,1) Fuel         (4,1) Fuel Calc
+    (0,2) <- Back      (1,2) Tire RL      (2,2) Tire RR      (3,2) Position     (4,2) Lap Delta
 
-    Tires arranged in car layout (FL/FR top, RL/RR bottom) in center columns.
-    All buttons are telemetry display actions (plugin-rendered via setImage).
+    Row 0: RPM bar — light blue → dark blue → yellow → orange → red, all flash red at 98%+
+    Row 1-2: Tires in car layout (FL/FR, RL/RR), fuel, flag, position, delta
+    Battery and pit state moved off this page.
     """
     actions = {}
 
-    # Row 0
-    actions["0,0"] = make_plugin_telemetry_action("Flag", "flag-display")
-    actions["1,0"] = make_plugin_telemetry_action("FL", "tire-fl")
-    actions["2,0"] = make_plugin_telemetry_action("FR", "tire-fr")
-    actions["3,0"] = make_plugin_telemetry_action("Fuel", "fuel-display")
-    actions["4,0"] = make_plugin_telemetry_action("Fuel\nCalc", "fuel-calc")
+    # Row 0: RPM bar segments
+    for i in range(5):
+        actions[f"{i},0"] = make_plugin_telemetry_action(f"RPM{i+1}", f"rpm-seg{i+1}")
 
-    # Row 1
-    actions["0,1"] = make_plugin_telemetry_action("Position", "position-display")
-    actions["1,1"] = make_plugin_telemetry_action("RL", "tire-rl")
-    actions["2,1"] = make_plugin_telemetry_action("RR", "tire-rr")
-    actions["3,1"] = make_plugin_telemetry_action("Lap\nDelta", "lap-delta")
-    actions["4,1"] = make_plugin_telemetry_action("Battery", "battery-display")
+    # Row 1: Flag + front tires + fuel
+    actions["0,1"] = make_plugin_telemetry_action("Flag", "flag-display")
+    actions["1,1"] = make_plugin_telemetry_action("FL", "tire-fl")
+    actions["2,1"] = make_plugin_telemetry_action("FR", "tire-fr")
+    actions["3,1"] = make_plugin_telemetry_action("Fuel", "fuel-display")
+    actions["4,1"] = make_plugin_telemetry_action("Fuel\nCalc", "fuel-calc")
 
-    # Row 2
+    # Row 2: Back + rear tires + position + delta
     actions["0,2"] = make_back_button()
-    actions["3,2"] = make_plugin_telemetry_action("Pit\nState", "pit-state")
+    actions["1,2"] = make_plugin_telemetry_action("RL", "tire-rl")
+    actions["2,2"] = make_plugin_telemetry_action("RR", "tire-rr")
+    actions["3,2"] = make_plugin_telemetry_action("Position", "position-display")
+    actions["4,2"] = make_plugin_telemetry_action("Lap\nDelta", "lap-delta")
 
     return make_page(actions, "Telemetry")
 

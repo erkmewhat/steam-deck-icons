@@ -3,7 +3,7 @@
     {
       "Actions": {
         "0,0": {
-          "ActionID": "99c43b38-1eae-46b3-8fbe-f44afe30a315",
+          "ActionID": "412037b3-e02d-4e3f-8046-7825a85115ea",
           "LinkedTitle": true,
           "Name": "Hotkey",
           "Resources": null,
@@ -61,7 +61,7 @@
           "UUID": "com.elgato.streamdeck.system.hotkey"
         },
         "1,0": {
-          "ActionID": "2fed500e-c761-47b6-880b-d4848cb8e26b",
+          "ActionID": "bcb0f2ef-d4fc-495d-92f1-72efc4408dff",
           "LinkedTitle": true,
           "Name": "Hotkey",
           "Resources": null,
@@ -119,7 +119,7 @@
           "UUID": "com.elgato.streamdeck.system.hotkey"
         },
         "2,0": {
-          "ActionID": "6270fb12-7910-460e-b3a8-c5d25155ec63",
+          "ActionID": "0712e39b-bc9f-4112-8483-814ff06c9605",
           "LinkedTitle": true,
           "Name": "Hotkey",
           "Resources": null,
@@ -177,7 +177,7 @@
           "UUID": "com.elgato.streamdeck.system.hotkey"
         },
         "0,1": {
-          "ActionID": "dab152d4-8030-4f38-a87d-c20230d7d430",
+          "ActionID": "1bda6a5e-26cb-45e6-b927-6fd0fd262e6c",
           "LinkedTitle": true,
           "Name": "Hotkey",
           "Resources": null,
@@ -235,7 +235,7 @@
           "UUID": "com.elgato.streamdeck.system.hotkey"
         },
         "1,1": {
-          "ActionID": "2676d759-1ef9-49a8-b340-dc01068a3352",
+          "ActionID": "0f36a752-83b6-48f3-90f6-fb546e05de4b",
           "LinkedTitle": true,
           "Name": "Hotkey",
           "Resources": null,
@@ -293,7 +293,7 @@
           "UUID": "com.elgato.streamdeck.system.hotkey"
         },
         "2,1": {
-          "ActionID": "db049494-7314-47be-a5d6-efba6b1a9330",
+          "ActionID": "92920377-c137-4b9a-8435-3f5b5cea8e51",
           "LinkedTitle": true,
           "Name": "Hotkey",
           "Resources": null,
@@ -351,7 +351,7 @@
           "UUID": "com.elgato.streamdeck.system.hotkey"
         },
         "0,2": {
-          "ActionID": "90cb3d3e-a0c3-4bba-aec1-a88dfa20043c",
+          "ActionID": "8f6c1055-efc1-4f20-8cdc-ab8e6d59d7f0",
           "LinkedTitle": true,
           "Name": "Parent Folder",
           "Plugin": {

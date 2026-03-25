@@ -36,6 +36,11 @@ import { PositionDisplay } from "./actions/position-display.js";
 import { LapDelta } from "./actions/lap-delta.js";
 import { BatteryDisplay } from "./actions/battery-display.js";
 import { PitStateDisplay } from "./actions/pit-state-display.js";
+import { RpmSeg1 } from "./actions/rpm-seg1.js";
+import { RpmSeg2 } from "./actions/rpm-seg2.js";
+import { RpmSeg3 } from "./actions/rpm-seg3.js";
+import { RpmSeg4 } from "./actions/rpm-seg4.js";
+import { RpmSeg5 } from "./actions/rpm-seg5.js";
 // streamDeck.logger.setLevel("TRACE");
 streamDeck.logger.info("=== LMU Plugin starting, registering actions ===");
 // Log ALL incoming events for debugging
@@ -87,6 +92,11 @@ streamDeck.actions.registerAction(new PositionDisplay());
 streamDeck.actions.registerAction(new LapDelta());
 streamDeck.actions.registerAction(new BatteryDisplay());
 streamDeck.actions.registerAction(new PitStateDisplay());
+streamDeck.actions.registerAction(new RpmSeg1());
+streamDeck.actions.registerAction(new RpmSeg2());
+streamDeck.actions.registerAction(new RpmSeg3());
+streamDeck.actions.registerAction(new RpmSeg4());
+streamDeck.actions.registerAction(new RpmSeg5());
 // Start telemetry polling (connects to rF2 shared memory when LMU is running)
 telemetryManager.start();
 streamDeck.logger.info("=== Telemetry manager started ===");

@@ -38,6 +38,11 @@ import { PositionDisplay } from "./actions/position-display";
 import { LapDelta } from "./actions/lap-delta";
 import { BatteryDisplay } from "./actions/battery-display";
 import { PitStateDisplay } from "./actions/pit-state-display";
+import { RpmSeg1 } from "./actions/rpm-seg1";
+import { RpmSeg2 } from "./actions/rpm-seg2";
+import { RpmSeg3 } from "./actions/rpm-seg3";
+import { RpmSeg4 } from "./actions/rpm-seg4";
+import { RpmSeg5 } from "./actions/rpm-seg5";
 
 // streamDeck.logger.setLevel("TRACE");
 
@@ -98,6 +103,11 @@ streamDeck.actions.registerAction(new PositionDisplay());
 streamDeck.actions.registerAction(new LapDelta());
 streamDeck.actions.registerAction(new BatteryDisplay());
 streamDeck.actions.registerAction(new PitStateDisplay());
+streamDeck.actions.registerAction(new RpmSeg1());
+streamDeck.actions.registerAction(new RpmSeg2());
+streamDeck.actions.registerAction(new RpmSeg3());
+streamDeck.actions.registerAction(new RpmSeg4());
+streamDeck.actions.registerAction(new RpmSeg5());
 
 // Start telemetry polling (connects to rF2 shared memory when LMU is running)
 telemetryManager.start();
