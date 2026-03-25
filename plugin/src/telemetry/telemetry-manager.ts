@@ -53,21 +53,29 @@ export interface TelemetryState {
 type Listener = (state: TelemetryState) => void;
 
 /** Convert rF2 flag byte to string. */
-function flagToString(flagByte: number, yellowState: number, gamePhase: number): string {
+function flagToString(
+    flagByte: number,
+    yellowState: number,
+    gamePhase: number,
+    sectorFlags: [number, number, number],
+): string {
     // Game phase 8 = session over (checkered)
     if (gamePhase === 8) return "checkered";
 
-    // Yellow flag states
-    if (yellowState >= 3) return "yellow"; // full course yellow/caution
+    // Game phase 6 = full course yellow
+    if (gamePhase === RF2_GAME_PHASE.FULL_COURSE_YELLOW) return "yellow";
 
-    // Per-vehicle flags
-    switch (flagByte) {
-        case 6: return "blue";
-        case 4: return "yellow";
-        case 1: return "red";
-        default: break;
-    }
+    // Any non-zero yellowFlagState means some form of yellow is active
+    // 1=pending, 2=pit closed, 3=pit lead lap, 4=pit open, 5=last lap, 6=resume, 7=race halt
+    if (yellowState > 0) return "yellow";
 
+    // Local sector yellows — any sector showing yellow
+    if (sectorFlags[0] > 0 || sectorFlags[1] > 0 || sectorFlags[2] > 0) return "yellow";
+
+    // Per-vehicle flags (from rF2PrimaryFlag enum)
+    if (flagByte === 6) return "blue";
+
+    // rF2 doesn't define a yellow primary flag — yellows come from the above checks
     return "green";
 }
 
@@ -216,6 +224,11 @@ export class TelemetryManager {
             const pi = playerScoringIdx;
             const gamePhase = scrView.getUint8(scoringInfoOffset(SI.mGamePhase));
             const yellowState = scrView.getInt8(scoringInfoOffset(SI.mYellowFlagState));
+            const sectorFlags: [number, number, number] = [
+                scrView.getInt8(scoringInfoOffset(SI.mSectorFlag)),
+                scrView.getInt8(scoringInfoOffset(SI.mSectorFlag) + 1),
+                scrView.getInt8(scoringInfoOffset(SI.mSectorFlag) + 2),
+            ];
 
             s.position = scrView.getUint8(vehicleScoringOffset(pi, VS.mPlace));
             s.totalLaps = scrView.getInt16(vehicleScoringOffset(pi, VS.mTotalLaps), true);
@@ -227,7 +240,7 @@ export class TelemetryManager {
             s.gap = scrView.getFloat64(vehicleScoringOffset(pi, VS.mTimeBehindNext), true);
 
             const flagByte = scrView.getUint8(vehicleScoringOffset(pi, VS.mFlag));
-            s.flag = flagToString(flagByte, yellowState, gamePhase);
+            s.flag = flagToString(flagByte, yellowState, gamePhase, sectorFlags);
 
             // Lap delta: estimated current lap - best lap (negative = faster)
             if (s.bestLap > 0 && s.estimatedLap > 0) {

@@ -4,22 +4,26 @@
  * and notifies registered actions when values change.
  */
 import { RF2SharedMemory } from "./rf2-shared-memory.js";
-import { VEHICLE_TELEMETRY as VT, VEHICLE_SCORING as VS, SCORING_INFO as SI, WHEEL, TELEMETRY_BUFFER as TB, telemetryOffset, scoringInfoOffset, vehicleScoringOffset, wheelOffset, } from "./rf2-offsets.js";
+import { VEHICLE_TELEMETRY as VT, VEHICLE_SCORING as VS, SCORING_INFO as SI, WHEEL, RF2_GAME_PHASE, TELEMETRY_BUFFER as TB, telemetryOffset, scoringInfoOffset, vehicleScoringOffset, wheelOffset, } from "./rf2-offsets.js";
 /** Convert rF2 flag byte to string. */
-function flagToString(flagByte, yellowState, gamePhase) {
+function flagToString(flagByte, yellowState, gamePhase, sectorFlags) {
     // Game phase 8 = session over (checkered)
     if (gamePhase === 8)
         return "checkered";
-    // Yellow flag states
-    if (yellowState >= 3)
-        return "yellow"; // full course yellow/caution
-    // Per-vehicle flags
-    switch (flagByte) {
-        case 6: return "blue";
-        case 4: return "yellow";
-        case 1: return "red";
-        default: break;
-    }
+    // Game phase 6 = full course yellow
+    if (gamePhase === RF2_GAME_PHASE.FULL_COURSE_YELLOW)
+        return "yellow";
+    // Any non-zero yellowFlagState means some form of yellow is active
+    // 1=pending, 2=pit closed, 3=pit lead lap, 4=pit open, 5=last lap, 6=resume, 7=race halt
+    if (yellowState > 0)
+        return "yellow";
+    // Local sector yellows — any sector showing yellow
+    if (sectorFlags[0] > 0 || sectorFlags[1] > 0 || sectorFlags[2] > 0)
+        return "yellow";
+    // Per-vehicle flags (from rF2PrimaryFlag enum)
+    if (flagByte === 6)
+        return "blue";
+    // rF2 doesn't define a yellow primary flag — yellows come from the above checks
     return "green";
 }
 /** Kelvin to Celsius. */
@@ -149,6 +153,11 @@ export class TelemetryManager {
             const pi = playerScoringIdx;
             const gamePhase = scrView.getUint8(scoringInfoOffset(SI.mGamePhase));
             const yellowState = scrView.getInt8(scoringInfoOffset(SI.mYellowFlagState));
+            const sectorFlags = [
+                scrView.getInt8(scoringInfoOffset(SI.mSectorFlag)),
+                scrView.getInt8(scoringInfoOffset(SI.mSectorFlag) + 1),
+                scrView.getInt8(scoringInfoOffset(SI.mSectorFlag) + 2),
+            ];
             s.position = scrView.getUint8(vehicleScoringOffset(pi, VS.mPlace));
             s.totalLaps = scrView.getInt16(vehicleScoringOffset(pi, VS.mTotalLaps), true);
             s.bestLap = scrView.getFloat64(vehicleScoringOffset(pi, VS.mBestLapTime), true);
@@ -158,7 +167,7 @@ export class TelemetryManager {
             s.inPits = scrView.getUint8(vehicleScoringOffset(pi, VS.mInPits)) !== 0;
             s.gap = scrView.getFloat64(vehicleScoringOffset(pi, VS.mTimeBehindNext), true);
             const flagByte = scrView.getUint8(vehicleScoringOffset(pi, VS.mFlag));
-            s.flag = flagToString(flagByte, yellowState, gamePhase);
+            s.flag = flagToString(flagByte, yellowState, gamePhase, sectorFlags);
             // Lap delta: estimated current lap - best lap (negative = faster)
             if (s.bestLap > 0 && s.estimatedLap > 0) {
                 s.lapDelta = s.estimatedLap - s.bestLap;

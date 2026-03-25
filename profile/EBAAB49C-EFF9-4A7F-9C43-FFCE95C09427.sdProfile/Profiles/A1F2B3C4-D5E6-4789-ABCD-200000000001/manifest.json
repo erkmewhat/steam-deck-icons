@@ -3,7 +3,7 @@
     {
       "Actions": {
         "0,0": {
-          "ActionID": "83c22d0a-fc5f-42d0-b1e6-4efc3ba2c6c1",
+          "ActionID": "5207bedb-a111-49ee-86e3-03514c4e106e",
           "LinkedTitle": true,
           "Name": "Flag",
           "Plugin": {
@@ -20,7 +20,7 @@
           "UUID": "com.simracing.lmu.flag-display"
         },
         "1,0": {
-          "ActionID": "f067e964-9cd3-444f-87ca-8df1d726f99f",
+          "ActionID": "fd01a3bb-af88-4e24-8543-bdd536c17aac",
           "LinkedTitle": true,
           "Name": "FL",
           "Plugin": {
@@ -37,7 +37,7 @@
           "UUID": "com.simracing.lmu.tire-fl"
         },
         "2,0": {
-          "ActionID": "d27e9371-59ef-46d3-89b1-1a8491748b80",
+          "ActionID": "efa8581c-0de2-4551-8db8-bb9ffa126ac0",
           "LinkedTitle": true,
           "Name": "FR",
           "Plugin": {
@@ -54,7 +54,7 @@
           "UUID": "com.simracing.lmu.tire-fr"
         },
         "3,0": {
-          "ActionID": "1dc9601a-c4ff-4bed-9f92-476abd72a443",
+          "ActionID": "1d6096ad-6a3b-4750-bb9a-16390d76d066",
           "LinkedTitle": true,
           "Name": "Fuel",
           "Plugin": {
@@ -71,7 +71,7 @@
           "UUID": "com.simracing.lmu.fuel-display"
         },
         "4,0": {
-          "ActionID": "9d19f7f0-2a77-4e13-9862-97cdc1b4140b",
+          "ActionID": "bd104e1d-47b5-4ce1-8480-8d9004515e91",
           "LinkedTitle": true,
           "Name": "Fuel\nCalc",
           "Plugin": {
@@ -88,7 +88,7 @@
           "UUID": "com.simracing.lmu.fuel-calc"
         },
         "0,1": {
-          "ActionID": "c8e85e99-c002-4d7f-b1f4-8466d83442bd",
+          "ActionID": "066406a4-e119-4f20-b7a3-579dac666cf7",
           "LinkedTitle": true,
           "Name": "Position",
           "Plugin": {
@@ -105,7 +105,7 @@
           "UUID": "com.simracing.lmu.position-display"
         },
         "1,1": {
-          "ActionID": "76a1e6ad-17c4-4171-b39d-302f8b66207e",
+          "ActionID": "c8ba4c37-ee00-4850-88b9-fb42c1372b54",
           "LinkedTitle": true,
           "Name": "RL",
           "Plugin": {
@@ -122,7 +122,7 @@
           "UUID": "com.simracing.lmu.tire-rl"
         },
         "2,1": {
-          "ActionID": "ed69f5df-4f71-4894-9209-8373d58be505",
+          "ActionID": "76f70f11-38e8-4ef0-9090-6af38c3fd86a",
           "LinkedTitle": true,
           "Name": "RR",
           "Plugin": {
@@ -139,7 +139,7 @@
           "UUID": "com.simracing.lmu.tire-rr"
         },
         "3,1": {
-          "ActionID": "e37a0387-3a22-4b17-919f-65de0c9dba78",
+          "ActionID": "71923e35-a800-497e-9ada-c4347c665817",
           "LinkedTitle": true,
           "Name": "Lap\nDelta",
           "Plugin": {
@@ -156,7 +156,7 @@
           "UUID": "com.simracing.lmu.lap-delta"
         },
         "4,1": {
-          "ActionID": "0a76d141-749d-4e9d-885c-f84bd6ebb9b2",
+          "ActionID": "4169ad1d-17e8-438c-b474-622cb99193bc",
           "LinkedTitle": true,
           "Name": "Battery",
           "Plugin": {
@@ -173,7 +173,7 @@
           "UUID": "com.simracing.lmu.battery-display"
         },
         "0,2": {
-          "ActionID": "e192173b-dd03-4970-a9ce-5e23c14d10a4",
+          "ActionID": "f940fb0e-0009-484d-b22e-e251f96b94d2",
           "LinkedTitle": true,
           "Name": "Parent Folder",
           "Plugin": {
@@ -190,7 +190,7 @@
           "UUID": "com.elgato.streamdeck.profile.backtoparent"
         },
         "3,2": {
-          "ActionID": "4bbef0b0-e227-4ed0-960e-8da098f6a6cc",
+          "ActionID": "7c965389-1186-4641-94c4-583aa340af30",
           "LinkedTitle": true,
           "Name": "Pit\nState",
           "Plugin": {
