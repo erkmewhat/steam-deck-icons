@@ -5,36 +5,47 @@
  * Subclasses implement render(state) to produce an SVG string.
  * The base class handles:
  * - Registering/unregistering with the telemetry manager
- * - Throttling setImage calls (respecting 10/sec global limit)
+ * - Throttling setImage calls (hard limit: 10/sec across all actions)
  * - Deduplication: skipping setImage if SVG hasn't changed
  */
 import { SingletonAction } from "@elgato/streamdeck";
 import { telemetryManager } from "../telemetry/telemetry-manager.js";
 import { renderNoData } from "../telemetry/svg-renderer.js";
-/** Tracks all active telemetry actions for global rate limiting. */
-const activeActions = new Set();
+import { svgToPngDataUri } from "../telemetry/svg-to-png.js";
+/** Tracks all active telemetry actions for round-robin rendering. */
+const activeActions = [];
 let renderTimer = null;
-/** Start the shared render loop if not already running. */
+let roundRobinIndex = 0;
+/**
+ * Render loop: fires every 500ms, updates up to 4 actions per tick.
+ * 4 actions / 500ms = 8 setImage calls/sec max — safely under the 10/sec SDK limit.
+ * Actions are served round-robin so all get equal update time.
+ */
 function ensureRenderLoop() {
     if (renderTimer)
         return;
-    // 200ms interval = 5 ticks/sec. With max ~8 updates per tick, stays under 10/sec.
     renderTimer = setInterval(() => {
-        let budget = 8; // max setImage calls per tick
-        for (const action of activeActions) {
-            if (budget <= 0)
-                break;
+        if (activeActions.length === 0)
+            return;
+        let budget = 4;
+        let checked = 0;
+        while (budget > 0 && checked < activeActions.length) {
+            const idx = roundRobinIndex % activeActions.length;
+            roundRobinIndex++;
+            checked++;
+            const action = activeActions[idx];
             if (action.needsRender) {
                 action.flush();
                 budget--;
             }
         }
-    }, 200);
+    }, 500);
 }
 function stopRenderLoop() {
-    if (renderTimer && activeActions.size === 0) {
+    if (renderTimer && activeActions.length === 0) {
         clearInterval(renderTimer);
         renderTimer = null;
+        roundRobinIndex = 0;
     }
 }
 export class TelemetryActionBase extends SingletonAction {
@@ -53,12 +64,13 @@ export class TelemetryActionBase extends SingletonAction {
             ? this.render(telemetryManager.state)
             : renderNoData();
         await this.setImageSafe(svg);
-        // Subscribe to updates
+        this.lastSvg = svg;
+        // Subscribe to updates — listener just stages the SVG, render loop flushes it
         this.listener = (state) => {
             this.pendingSvg = state.available ? this.render(state) : renderNoData();
         };
         telemetryManager.subscribe(this.listener);
-        activeActions.add(this);
+        activeActions.push(this);
         ensureRenderLoop();
     }
     async onWillDisappear(ev) {
@@ -66,14 +78,16 @@ export class TelemetryActionBase extends SingletonAction {
             telemetryManager.unsubscribe(this.listener);
             this.listener = null;
         }
-        activeActions.delete(this);
+        const idx = activeActions.indexOf(this);
+        if (idx >= 0)
+            activeActions.splice(idx, 1);
         this.actionRef = null;
         stopRenderLoop();
     }
     /** Called by the render loop when budget allows. */
-    async flush() {
+    flush() {
         if (this.pendingSvg && this.pendingSvg !== this.lastSvg) {
-            await this.setImageSafe(this.pendingSvg);
+            this.setImageSafe(this.pendingSvg);
             this.lastSvg = this.pendingSvg;
         }
     }
@@ -81,10 +95,12 @@ export class TelemetryActionBase extends SingletonAction {
         if (!this.actionRef)
             return;
         try {
-            await this.actionRef.setImage(`data:image/svg+xml,${encodeURIComponent(svg)}`);
+            // SVG data URIs don't work reliably on SD — render to PNG first
+            const pngUri = svgToPngDataUri(svg);
+            await this.actionRef.setImage(pngUri);
         }
         catch {
-            // Swallow errors (action may have disappeared)
+            // Swallow errors (action may have disappeared or render failed)
         }
     }
 }

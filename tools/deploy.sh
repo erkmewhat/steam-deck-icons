@@ -101,6 +101,11 @@ done
 for dep in koffi ws; do
     [ -d "node_modules/$dep" ] && cp -r "node_modules/$dep" "$PLUGIN_NM/"
 done
+# resvg-js for SVG→PNG rendering (telemetry display)
+mkdir -p "$PLUGIN_NM/@resvg"
+[ -d "node_modules/@resvg/resvg-js" ] && cp -r "node_modules/@resvg/resvg-js" "$PLUGIN_NM/@resvg/"
+# resvg-js loads a platform-specific native addon
+[ -d "node_modules/@resvg/resvg-js-win32-x64-msvc" ] && cp -r "node_modules/@resvg/resvg-js-win32-x64-msvc" "$PLUGIN_NM/@resvg/"
 echo "  ✓ Dependencies bundled"
 
 # 3. Sync icons: icon pack (source of truth) → plugin + profile (PNG embed)

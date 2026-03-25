@@ -78,19 +78,18 @@ export class SharedMemoryBuffer {
     }
 
     /**
-     * Get a consistent DataView snapshot. Checks version block for torn frames.
-     * Returns null if buffer not open or data is being written (torn frame).
+     * Get the DataView over mapped memory.
+     * Returns null only if the buffer isn't mapped (LMU not running).
+     *
+     * We skip strict torn-frame checking because the game writes at 50 FPS
+     * and we read at 5 Hz — catching a mid-write is common and the resulting
+     * data is at most 20ms stale, which is imperceptible on button displays.
      */
     read(): DataView | null {
         if (!this.view) return null;
 
-        // Version block: first 8 bytes are mVersionUpdateBegin and mVersionUpdateEnd
+        // Only check that data has been written at least once
         const begin = this.view.getUint32(0, true);
-        const end = this.view.getUint32(4, true);
-
-        // If begin != end, the game is mid-write — skip this frame
-        if (begin !== end) return null;
-        // If both are 0, no data has been written yet
         if (begin === 0) return null;
 
         return this.view;

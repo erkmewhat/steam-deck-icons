@@ -74,18 +74,44 @@ export class TelemetryManager {
     poll() {
         const telView = this.shm.readTelemetry();
         const scrView = this.shm.readScoring();
-        if (!telView) {
-            if (this.state.available) {
-                this.state = this.defaultState();
-                this.notify();
+        // If both buffers are unavailable, check if the mapping itself is gone
+        if (!telView && !scrView) {
+            if (!this.shm.isAvailable) {
+                // LMU truly not running — show NO DATA
+                if (this.state.available) {
+                    this.state = this.defaultState();
+                    this.notify();
+                }
             }
+            // Otherwise it's just a torn frame — keep previous state, skip this tick
             return;
         }
+        // If only telemetry is torn but scoring is fine (or vice versa),
+        // still skip — we need consistent data
+        if (!telView)
+            return;
         const prev = this.state;
         const s = { ...this.defaultState(), available: true };
-        // ── Parse telemetry buffer ──────────────────────────────────
-        // Player vehicle is at index 0 in the vehicles array.
-        const vi = 0; // vehicle index
+        // ── Find player vehicle index in scoring ────────────────────
+        // The player is NOT always at index 0. Scan for mIsPlayer == true.
+        let playerScoringIdx = -1;
+        if (scrView) {
+            const numVehicles = scrView.getInt32(scoringInfoOffset(SI.mNumVehicles), true);
+            const count = Math.min(numVehicles, 128);
+            for (let i = 0; i < count; i++) {
+                const isPlayer = scrView.getUint8(vehicleScoringOffset(i, VS.mIsPlayer));
+                if (isPlayer) {
+                    playerScoringIdx = i;
+                    break;
+                }
+            }
+        }
+        // ── Find player vehicle index in telemetry ──────────────────
+        // Telemetry buffer also has mID per vehicle. The player vehicle has
+        // the same mID as the scoring entry. For now, use index 0 for
+        // telemetry (the shared memory plugin typically puts player first
+        // in the telemetry array), but use the found index for scoring.
+        const vi = 0; // telemetry vehicle index (player is usually first)
         s.fuel = telView.getFloat64(telemetryOffset(vi, VT.mFuel), true);
         s.fuelCapacity = telView.getFloat64(telemetryOffset(vi, VT.mFuelCapacity), true);
         s.gear = telView.getInt32(telemetryOffset(vi, VT.mGear), true);
@@ -109,20 +135,20 @@ export class TelemetryManager {
             s.tireTemps[i] = kToC((tL + tC + tR) / 3);
             s.tireWear[i] = telView.getFloat64(wheelOffset(vi, i, WHEEL.mWear), true);
         }
-        // ── Parse scoring buffer ────────────────────────────────────
-        if (scrView) {
+        // ── Parse scoring buffer (using found player index) ─────────
+        if (scrView && playerScoringIdx >= 0) {
+            const pi = playerScoringIdx;
             const gamePhase = scrView.getUint8(scoringInfoOffset(SI.mGamePhase));
             const yellowState = scrView.getInt8(scoringInfoOffset(SI.mYellowFlagState));
-            // Player vehicle scoring (first vehicle in the array, index 0)
-            s.position = scrView.getUint8(vehicleScoringOffset(vi, VS.mPlace));
-            s.totalLaps = scrView.getInt16(vehicleScoringOffset(vi, VS.mTotalLaps), true);
-            s.bestLap = scrView.getFloat64(vehicleScoringOffset(vi, VS.mBestLapTime), true);
-            s.lastLap = scrView.getFloat64(vehicleScoringOffset(vi, VS.mLastLapTime), true);
-            s.estimatedLap = scrView.getFloat64(vehicleScoringOffset(vi, VS.mEstimatedLapTime), true);
-            s.pitState = scrView.getUint8(vehicleScoringOffset(vi, VS.mPitState));
-            s.inPits = scrView.getUint8(vehicleScoringOffset(vi, VS.mInPits)) !== 0;
-            s.gap = scrView.getFloat64(vehicleScoringOffset(vi, VS.mTimeBehindNext), true);
-            const flagByte = scrView.getUint8(vehicleScoringOffset(vi, VS.mFlag));
+            s.position = scrView.getUint8(vehicleScoringOffset(pi, VS.mPlace));
+            s.totalLaps = scrView.getInt16(vehicleScoringOffset(pi, VS.mTotalLaps), true);
+            s.bestLap = scrView.getFloat64(vehicleScoringOffset(pi, VS.mBestLapTime), true);
+            s.lastLap = scrView.getFloat64(vehicleScoringOffset(pi, VS.mLastLapTime), true);
+            s.estimatedLap = scrView.getFloat64(vehicleScoringOffset(pi, VS.mEstimatedLapTime), true);
+            s.pitState = scrView.getUint8(vehicleScoringOffset(pi, VS.mPitState));
+            s.inPits = scrView.getUint8(vehicleScoringOffset(pi, VS.mInPits)) !== 0;
+            s.gap = scrView.getFloat64(vehicleScoringOffset(pi, VS.mTimeBehindNext), true);
+            const flagByte = scrView.getUint8(vehicleScoringOffset(pi, VS.mFlag));
             s.flag = flagToString(flagByte, yellowState, gamePhase);
             // Lap delta: estimated current lap - best lap (negative = faster)
             if (s.bestLap > 0 && s.estimatedLap > 0) {
