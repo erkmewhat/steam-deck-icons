@@ -11,23 +11,6 @@ const SVG_OPEN = `<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="$
 const SVG_CLOSE = `</svg>`;
 const FONT = `font-family="'Segoe UI',Arial,sans-serif"`;
 const BG = "#0c0c18";
-// ── LMU Tire Color Scheme ───────────────────────────────────────────
-// Matches rfDynHUD: blue(cold) → green(warming) → yellow(optimal) → orange(hot) → red(overheat)
-function lmuTireColor(celsius) {
-    if (celsius < 50)
-        return "#0044ff"; // very cold — dark blue
-    if (celsius < 65)
-        return "#0088ff"; // cold — light blue
-    if (celsius < 75)
-        return "#00dd88"; // warming — cyan-green
-    if (celsius < 82)
-        return "#88ee00"; // near optimal — green-yellow
-    if (celsius <= 95)
-        return "#ffee00"; // optimal — yellow
-    if (celsius <= 110)
-        return "#ff8800"; // hot — orange
-    return "#ff0000"; // overheating — red
-}
 function dimColor(hex, amount = 0.2) {
     const r = parseInt(hex.slice(1, 3), 16);
     const g = parseInt(hex.slice(3, 5), 16);
@@ -48,14 +31,6 @@ function wearColor(fraction) {
         return "#ffcc00";
     return "#ff3333";
 }
-// ── RPM Colors (matches tachometer) ─────────────────────────────────
-const RPM_SEGMENT_COLORS = [
-    "#44aaff", // Seg 1: 0-20% — light blue
-    "#2266cc", // Seg 2: 20-40% — darker blue
-    "#ffdd00", // Seg 3: 40-60% — yellow
-    "#ff8800", // Seg 4: 60-80% — orange
-    "#ee2200", // Seg 5: 80-100% — red
-];
 // ── Flag colors ─────────────────────────────────────────────────────
 const FLAG_COLORS = {
     green: { bg: "#009933", text: "#ffffff", label: "GREEN" },
@@ -74,77 +49,79 @@ export function renderNoData() {
 <text x="72" y="96" text-anchor="middle" ${FONT} font-size="22" font-weight="900" fill="#333">DATA</text>
 ${SVG_CLOSE}`;
 }
-// ── RPM Segment ─────────────────────────────────────────────────────
+// ── Gear Display ────────────────────────────────────────────────────
+function rpmColor(pct) {
+    if (pct < 0.5)
+        return "#2266cc"; // low RPM — blue
+    if (pct < 0.7)
+        return "#44aaff"; // mid RPM — light blue
+    if (pct < 0.85)
+        return "#ffdd00"; // high RPM — yellow
+    if (pct < 0.95)
+        return "#ff8800"; // very high — orange
+    return "#ff0000"; // redline — red
+}
 /**
- * Render one RPM bar segment (1 of 5 across the top row).
- * @param segIndex 0-4 (which segment)
- * @param rpmPct 0.0-1.0 (current RPM as fraction of max)
+ * Render gear number with RPM-colored background.
+ * Background shifts blue → yellow → orange → flashing red at redline.
  */
-export function renderRpmSegment(segIndex, rpmPct) {
-    const segStart = segIndex * 0.2;
-    const segEnd = (segIndex + 1) * 0.2;
-    const segColor = RPM_SEGMENT_COLORS[segIndex];
-    // At 98%+ RPM, ALL segments flash red — shift indicator
-    if (rpmPct >= 0.98) {
+export function renderGear(gear, rpmPct) {
+    const gearStr = gear < 0 ? "R" : gear === 0 ? "N" : `${gear}`;
+    const color = rpmColor(rpmPct);
+    const isRedline = rpmPct >= 0.98;
+    if (isRedline) {
+        // Flashing red at redline
         return `${SVG_OPEN}
-<rect width="${W}" height="${H}" fill="#ff0000" rx="6"/>
-<rect x="8" y="20" width="128" height="104" fill="#cc0000" rx="8"/>
+<rect width="${W}" height="${H}" fill="#ff0000" rx="10"/>
+<text x="72" y="105" text-anchor="middle" ${FONT} font-size="90" font-weight="900" fill="#fff">${gearStr}</text>
 ${SVG_CLOSE}`;
     }
-    // Is this segment fully lit, partially lit, or off?
-    const isLit = rpmPct >= segEnd;
-    const isPartial = rpmPct > segStart && rpmPct < segEnd;
-    if (isLit) {
-        // Fully lit segment
-        return `${SVG_OPEN}
-<rect width="${W}" height="${H}" fill="${dimColor(segColor, 0.15)}" rx="6"/>
-<rect x="8" y="20" width="128" height="104" fill="${segColor}" rx="8"/>
-${SVG_CLOSE}`;
-    }
-    if (isPartial) {
-        // Partially lit — fill proportionally
-        const fillPct = (rpmPct - segStart) / 0.2;
-        const fillH = Math.round(fillPct * 104);
-        const fillY = 20 + (104 - fillH);
-        return `${SVG_OPEN}
-<rect width="${W}" height="${H}" fill="${dimColor(segColor, 0.08)}" rx="6"/>
-<rect x="8" y="20" width="128" height="104" fill="${dimColor(segColor, 0.15)}" rx="8"/>
-<rect x="8" y="${fillY}" width="128" height="${fillH}" fill="${segColor}" rx="8"/>
-${SVG_CLOSE}`;
-    }
-    // Off segment — very dim
+    const bgTint = dimColor(color, 0.25);
     return `${SVG_OPEN}
-<rect width="${W}" height="${H}" fill="${dimColor(segColor, 0.06)}" rx="6"/>
-<rect x="8" y="20" width="128" height="104" fill="${dimColor(segColor, 0.12)}" rx="8"/>
+<rect width="${W}" height="${H}" fill="${bgTint}" rx="10"/>
+<text x="72" y="30" text-anchor="middle" ${FONT} font-size="14" font-weight="700" fill="#999">GEAR</text>
+<text x="72" y="105" text-anchor="middle" ${FONT} font-size="90" font-weight="900" fill="${color}">${gearStr}</text>
 ${SVG_CLOSE}`;
 }
-// ── Tire (shaped like a tire) ───────────────────────────────────────
+// ── Tire (rectangular style with colored tint background) ────────────
+function pressureColor(kpa, optMin, optMax) {
+    if (kpa < optMin - 5)
+        return "#2288ff";
+    if (kpa < optMin)
+        return "#55bbff";
+    if (kpa <= optMax)
+        return "#00ee77";
+    if (kpa <= optMax + 5)
+        return "#ffcc00";
+    return "#ff3333";
+}
+function tempColor(celsius) {
+    if (celsius < 70)
+        return "#2288ff";
+    if (celsius < 80)
+        return "#55bbff";
+    if (celsius <= 95)
+        return "#00ee77";
+    if (celsius <= 105)
+        return "#ffcc00";
+    return "#ff3333";
+}
 export function renderSingleTire(corner, pressureKpa, tempC, wear, optMinKpa, optMaxKpa) {
     const psi = pressureKpa / 6.895;
-    const tireColor = lmuTireColor(tempC);
+    const pColor = pressureColor(pressureKpa, optMinKpa, optMaxKpa);
+    const tColor = tempColor(tempC);
     const wColor = wearColor(wear);
-    const wearPct = Math.round(wear * 100);
     const wearBarW = Math.round(wear * 100);
-    const bgTint = dimColor(tireColor, 0.25);
-    // Tire shape: rounded rectangle (like a tire cross-section) with tread grooves
+    const bgTint = dimColor(pColor, 0.2);
     return `${SVG_OPEN}
 <rect width="${W}" height="${H}" fill="${BG}" rx="10"/>
-<!-- Tire body (rounded rectangle with thick sidewalls) -->
-<rect x="14" y="8" width="116" height="128" fill="${bgTint}" rx="22"/>
-<rect x="22" y="14" width="100" height="116" fill="${tireColor}" rx="16" opacity="0.3"/>
-<!-- Tread grooves -->
-<rect x="30" y="14" width="3" height="116" fill="${BG}" opacity="0.4" rx="1"/>
-<rect x="70" y="14" width="4" height="116" fill="${BG}" opacity="0.4" rx="1"/>
-<rect x="111" y="14" width="3" height="116" fill="${BG}" opacity="0.4" rx="1"/>
-<!-- Corner label -->
-<text x="72" y="32" text-anchor="middle" ${FONT} font-size="18" font-weight="900" fill="#fff" opacity="0.9">${corner}</text>
-<!-- Pressure (main value) -->
-<text x="72" y="70" text-anchor="middle" ${FONT} font-size="38" font-weight="900" fill="#fff">${psi.toFixed(1)}</text>
-<!-- Temperature -->
-<text x="72" y="98" text-anchor="middle" ${FONT} font-size="22" font-weight="900" fill="#fff">${tempC.toFixed(0)}°C</text>
-<!-- Wear bar at bottom -->
-<rect x="28" y="114" width="88" height="8" fill="rgba(0,0,0,0.5)" rx="3"/>
-<rect x="28" y="114" width="${Math.round(wear * 88)}" height="8" fill="${wColor}" rx="3"/>
+<rect x="6" y="6" width="132" height="132" fill="${bgTint}" rx="8"/>
+<text x="72" y="26" text-anchor="middle" ${FONT} font-size="18" font-weight="900" fill="#bbb">${corner}</text>
+<text x="72" y="68" text-anchor="middle" ${FONT} font-size="42" font-weight="900" fill="${pColor}">${psi.toFixed(1)}</text>
+<text x="72" y="88" text-anchor="middle" ${FONT} font-size="12" font-weight="600" fill="#888">PSI</text>
+<text x="72" y="112" text-anchor="middle" ${FONT} font-size="22" font-weight="900" fill="${tColor}">${tempC.toFixed(0)}°C</text>
+<rect x="22" y="124" width="100" height="10" fill="#222" rx="3"/>
+<rect x="22" y="124" width="${wearBarW}" height="10" fill="${wColor}" rx="3"/>
 ${SVG_CLOSE}`;
 }
 // ── Flag Alert ──────────────────────────────────────────────────────
