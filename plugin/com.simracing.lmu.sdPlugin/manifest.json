@@ -914,28 +914,36 @@
             "States": [{ "Image": "imgs/actions/fuel-calc", "Name": "Fuel Calc" }]
         },
         {
-            "UUID": "com.simracing.lmu.tire-pressure",
-            "Name": "Tire Pressure",
+            "UUID": "com.simracing.lmu.tire-fl",
+            "Name": "Tire FL",
             "Icon": "imgs/actions/tire-pressure",
-            "Tooltip": "Live 4-corner tire pressure (telemetry)",
+            "Tooltip": "Front-left tire: pressure, temp, wear (telemetry)",
             "Controllers": ["Keypad"],
-            "States": [{ "Image": "imgs/actions/tire-pressure", "Name": "Pressure" }]
+            "States": [{ "Image": "imgs/actions/tire-pressure", "Name": "FL" }]
         },
         {
-            "UUID": "com.simracing.lmu.tire-temp",
-            "Name": "Tire Temperature",
-            "Icon": "imgs/actions/tire-temp",
-            "Tooltip": "Live 4-corner tire temperature (telemetry)",
+            "UUID": "com.simracing.lmu.tire-fr",
+            "Name": "Tire FR",
+            "Icon": "imgs/actions/tire-pressure",
+            "Tooltip": "Front-right tire: pressure, temp, wear (telemetry)",
             "Controllers": ["Keypad"],
-            "States": [{ "Image": "imgs/actions/tire-temp", "Name": "Temp" }]
+            "States": [{ "Image": "imgs/actions/tire-pressure", "Name": "FR" }]
         },
         {
-            "UUID": "com.simracing.lmu.tire-wear",
-            "Name": "Tire Wear",
-            "Icon": "imgs/actions/tire-wear",
-            "Tooltip": "Live 4-corner tire wear percentage (telemetry)",
+            "UUID": "com.simracing.lmu.tire-rl",
+            "Name": "Tire RL",
+            "Icon": "imgs/actions/tire-pressure",
+            "Tooltip": "Rear-left tire: pressure, temp, wear (telemetry)",
             "Controllers": ["Keypad"],
-            "States": [{ "Image": "imgs/actions/tire-wear", "Name": "Wear" }]
+            "States": [{ "Image": "imgs/actions/tire-pressure", "Name": "RL" }]
+        },
+        {
+            "UUID": "com.simracing.lmu.tire-rr",
+            "Name": "Tire RR",
+            "Icon": "imgs/actions/tire-pressure",
+            "Tooltip": "Rear-right tire: pressure, temp, wear (telemetry)",
+            "Controllers": ["Keypad"],
+            "States": [{ "Image": "imgs/actions/tire-pressure", "Name": "RR" }]
         },
         {
             "UUID": "com.simracing.lmu.flag-display",

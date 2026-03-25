@@ -3,7 +3,7 @@
     {
       "Actions": {
         "2,0": {
-          "ActionID": "9178eca3-0cb8-4f7b-83d3-1d840a6f051e",
+          "ActionID": "7bbf7cfe-04b9-426a-92eb-e2a7797070b4",
           "LinkedTitle": true,
           "Name": "Hotkey",
           "Resources": null,
@@ -61,7 +61,7 @@
           "UUID": "com.elgato.streamdeck.system.hotkey"
         },
         "1,1": {
-          "ActionID": "396b035e-ceda-467c-a2bf-faf1577e8e8b",
+          "ActionID": "aa02fec9-04db-478f-addf-f9b4848c12ac",
           "LinkedTitle": true,
           "Name": "Hotkey",
           "Resources": null,
@@ -119,7 +119,7 @@
           "UUID": "com.elgato.streamdeck.system.hotkey"
         },
         "2,1": {
-          "ActionID": "07052b32-48ac-4eba-9d90-bad3a88edf2a",
+          "ActionID": "e8ca8162-29ad-460d-8142-3c6b97fb964f",
           "LinkedTitle": true,
           "Name": "Hotkey",
           "Resources": null,
@@ -177,7 +177,7 @@
           "UUID": "com.elgato.streamdeck.system.hotkey"
         },
         "3,1": {
-          "ActionID": "2f39a8b2-d88c-4a19-aece-e841fa89c97e",
+          "ActionID": "c52465ad-67ae-443f-9b0c-41d35fa69964",
           "LinkedTitle": true,
           "Name": "Hotkey",
           "Resources": null,
@@ -235,7 +235,7 @@
           "UUID": "com.elgato.streamdeck.system.hotkey"
         },
         "2,2": {
-          "ActionID": "4db3344b-196c-41e0-b2bc-9e3896d5bb93",
+          "ActionID": "2d7a0044-ee4d-483a-a4bc-460568314554",
           "LinkedTitle": true,
           "Name": "Hotkey",
           "Resources": null,
@@ -293,7 +293,7 @@
           "UUID": "com.elgato.streamdeck.system.hotkey"
         },
         "0,2": {
-          "ActionID": "c44e3cf7-000e-47e5-8431-e64bbc561b61",
+          "ActionID": "1a61a88e-f064-4e0b-88b1-69b3ec356bb3",
           "LinkedTitle": true,
           "Name": "Parent Folder",
           "Plugin": {

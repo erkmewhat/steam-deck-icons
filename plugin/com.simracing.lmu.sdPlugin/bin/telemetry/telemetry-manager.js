@@ -4,7 +4,7 @@
  * and notifies registered actions when values change.
  */
 import { RF2SharedMemory } from "./rf2-shared-memory.js";
-import { VEHICLE_TELEMETRY as VT, VEHICLE_SCORING as VS, SCORING_INFO as SI, WHEEL, telemetryOffset, scoringInfoOffset, vehicleScoringOffset, wheelOffset, } from "./rf2-offsets.js";
+import { VEHICLE_TELEMETRY as VT, VEHICLE_SCORING as VS, SCORING_INFO as SI, WHEEL, TELEMETRY_BUFFER as TB, telemetryOffset, scoringInfoOffset, vehicleScoringOffset, wheelOffset, } from "./rf2-offsets.js";
 /** Convert rF2 flag byte to string. */
 function flagToString(flagByte, yellowState, gamePhase) {
     // Game phase 8 = session over (checkered)
@@ -92,9 +92,9 @@ export class TelemetryManager {
             return;
         const prev = this.state;
         const s = { ...this.defaultState(), available: true };
-        // ── Find player vehicle index in scoring ────────────────────
-        // The player is NOT always at index 0. Scan for mIsPlayer == true.
+        // ── Find player vehicle in scoring (by mIsPlayer flag) ────────
         let playerScoringIdx = -1;
+        let playerID = -1;
         if (scrView) {
             const numVehicles = scrView.getInt32(scoringInfoOffset(SI.mNumVehicles), true);
             const count = Math.min(numVehicles, 128);
@@ -102,16 +102,25 @@ export class TelemetryManager {
                 const isPlayer = scrView.getUint8(vehicleScoringOffset(i, VS.mIsPlayer));
                 if (isPlayer) {
                     playerScoringIdx = i;
+                    playerID = scrView.getInt32(vehicleScoringOffset(i, VS.mID), true);
                     break;
                 }
             }
         }
-        // ── Find player vehicle index in telemetry ──────────────────
-        // Telemetry buffer also has mID per vehicle. The player vehicle has
-        // the same mID as the scoring entry. For now, use index 0 for
-        // telemetry (the shared memory plugin typically puts player first
-        // in the telemetry array), but use the found index for scoring.
-        const vi = 0; // telemetry vehicle index (player is usually first)
+        // ── Find player vehicle in telemetry (by matching mID) ──────
+        // Vehicle order differs between buffers — must match by ID.
+        let vi = 0;
+        if (playerID >= 0) {
+            const numTelVehicles = telView.getInt32(TB.NUM_VEHICLES, true);
+            const count = Math.min(numTelVehicles, 128);
+            for (let i = 0; i < count; i++) {
+                const id = telView.getInt32(telemetryOffset(i, VT.mID), true);
+                if (id === playerID) {
+                    vi = i;
+                    break;
+                }
+            }
+        }
         s.fuel = telView.getFloat64(telemetryOffset(vi, VT.mFuel), true);
         s.fuelCapacity = telView.getFloat64(telemetryOffset(vi, VT.mFuelCapacity), true);
         s.gear = telView.getInt32(telemetryOffset(vi, VT.mGear), true);

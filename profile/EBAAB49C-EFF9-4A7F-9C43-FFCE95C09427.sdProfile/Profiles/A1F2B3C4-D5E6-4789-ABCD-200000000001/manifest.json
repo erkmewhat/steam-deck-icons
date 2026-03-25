@@ -3,7 +3,7 @@
     {
       "Actions": {
         "0,0": {
-          "ActionID": "44263915-6c85-43e1-ab01-d5deaa1bb63c",
+          "ActionID": "b0ed7f16-5497-4df3-93a2-525ec53e53cc",
           "LinkedTitle": true,
           "Name": "Flag",
           "Plugin": {
@@ -20,7 +20,41 @@
           "UUID": "com.simracing.lmu.flag-display"
         },
         "1,0": {
-          "ActionID": "8f1dc9d4-c35f-4b52-b6b9-ef86908b8049",
+          "ActionID": "d284aadc-5ac4-4bdd-a906-e0082d4aeda9",
+          "LinkedTitle": true,
+          "Name": "FL",
+          "Plugin": {
+            "Name": "LMU Sim Racing",
+            "UUID": "com.simracing.lmu",
+            "Version": "1.0.0.0"
+          },
+          "Resources": null,
+          "Settings": {},
+          "State": 0,
+          "States": [
+            {}
+          ],
+          "UUID": "com.simracing.lmu.tire-fl"
+        },
+        "2,0": {
+          "ActionID": "63cf5098-c0cf-43a3-9e72-b65f4de087ca",
+          "LinkedTitle": true,
+          "Name": "FR",
+          "Plugin": {
+            "Name": "LMU Sim Racing",
+            "UUID": "com.simracing.lmu",
+            "Version": "1.0.0.0"
+          },
+          "Resources": null,
+          "Settings": {},
+          "State": 0,
+          "States": [
+            {}
+          ],
+          "UUID": "com.simracing.lmu.tire-fr"
+        },
+        "3,0": {
+          "ActionID": "ed9af954-aacc-4a65-b5e9-457eee345d45",
           "LinkedTitle": true,
           "Name": "Fuel",
           "Plugin": {
@@ -36,8 +70,8 @@
           ],
           "UUID": "com.simracing.lmu.fuel-display"
         },
-        "2,0": {
-          "ActionID": "bb396725-9912-4334-bb03-782375474831",
+        "4,0": {
+          "ActionID": "54c6772d-afb6-40ac-abc4-20fafc44e957",
           "LinkedTitle": true,
           "Name": "Fuel\nCalc",
           "Plugin": {
@@ -53,8 +87,8 @@
           ],
           "UUID": "com.simracing.lmu.fuel-calc"
         },
-        "3,0": {
-          "ActionID": "33dc4b80-9a6b-415e-9a5e-3bd8aa81d8cb",
+        "0,1": {
+          "ActionID": "a15eb1e7-b649-4d71-a44e-77512baac75c",
           "LinkedTitle": true,
           "Name": "Position",
           "Plugin": {
@@ -70,8 +104,42 @@
           ],
           "UUID": "com.simracing.lmu.position-display"
         },
-        "4,0": {
-          "ActionID": "a6452ce0-fd7e-4e3f-916d-ce7859070473",
+        "1,1": {
+          "ActionID": "b9087ddc-d1bf-4789-b4ff-69abfa260e4c",
+          "LinkedTitle": true,
+          "Name": "RL",
+          "Plugin": {
+            "Name": "LMU Sim Racing",
+            "UUID": "com.simracing.lmu",
+            "Version": "1.0.0.0"
+          },
+          "Resources": null,
+          "Settings": {},
+          "State": 0,
+          "States": [
+            {}
+          ],
+          "UUID": "com.simracing.lmu.tire-rl"
+        },
+        "2,1": {
+          "ActionID": "35db5608-a638-4365-bc7e-23e0fb140896",
+          "LinkedTitle": true,
+          "Name": "RR",
+          "Plugin": {
+            "Name": "LMU Sim Racing",
+            "UUID": "com.simracing.lmu",
+            "Version": "1.0.0.0"
+          },
+          "Resources": null,
+          "Settings": {},
+          "State": 0,
+          "States": [
+            {}
+          ],
+          "UUID": "com.simracing.lmu.tire-rr"
+        },
+        "3,1": {
+          "ActionID": "0411c536-d546-4531-af14-dc945801602b",
           "LinkedTitle": true,
           "Name": "Lap\nDelta",
           "Plugin": {
@@ -87,59 +155,8 @@
           ],
           "UUID": "com.simracing.lmu.lap-delta"
         },
-        "0,1": {
-          "ActionID": "ad2f46e5-6175-4639-a700-3252188582ce",
-          "LinkedTitle": true,
-          "Name": "Tire\nPress",
-          "Plugin": {
-            "Name": "LMU Sim Racing",
-            "UUID": "com.simracing.lmu",
-            "Version": "1.0.0.0"
-          },
-          "Resources": null,
-          "Settings": {},
-          "State": 0,
-          "States": [
-            {}
-          ],
-          "UUID": "com.simracing.lmu.tire-pressure"
-        },
-        "1,1": {
-          "ActionID": "b7f95e2a-1c18-4f2c-b1b9-757c069adc7c",
-          "LinkedTitle": true,
-          "Name": "Tire\nTemp",
-          "Plugin": {
-            "Name": "LMU Sim Racing",
-            "UUID": "com.simracing.lmu",
-            "Version": "1.0.0.0"
-          },
-          "Resources": null,
-          "Settings": {},
-          "State": 0,
-          "States": [
-            {}
-          ],
-          "UUID": "com.simracing.lmu.tire-temp"
-        },
-        "2,1": {
-          "ActionID": "5f277bdc-3a3d-48c9-85b0-2495233b8dd0",
-          "LinkedTitle": true,
-          "Name": "Tire\nWear",
-          "Plugin": {
-            "Name": "LMU Sim Racing",
-            "UUID": "com.simracing.lmu",
-            "Version": "1.0.0.0"
-          },
-          "Resources": null,
-          "Settings": {},
-          "State": 0,
-          "States": [
-            {}
-          ],
-          "UUID": "com.simracing.lmu.tire-wear"
-        },
-        "3,1": {
-          "ActionID": "9bb65dfa-4377-40bf-ab9c-fb39bcfa630d",
+        "4,1": {
+          "ActionID": "1a66c4df-d13e-431f-9aab-23d74fbe58a8",
           "LinkedTitle": true,
           "Name": "Battery",
           "Plugin": {
@@ -155,25 +172,8 @@
           ],
           "UUID": "com.simracing.lmu.battery-display"
         },
-        "4,1": {
-          "ActionID": "a95791de-b2cf-4a29-864f-413bb1a66009",
-          "LinkedTitle": true,
-          "Name": "Pit\nState",
-          "Plugin": {
-            "Name": "LMU Sim Racing",
-            "UUID": "com.simracing.lmu",
-            "Version": "1.0.0.0"
-          },
-          "Resources": null,
-          "Settings": {},
-          "State": 0,
-          "States": [
-            {}
-          ],
-          "UUID": "com.simracing.lmu.pit-state"
-        },
         "0,2": {
-          "ActionID": "3ea0f493-d999-4ca8-956e-42ff22212ea7",
+          "ActionID": "f0156454-236f-42a5-8334-6998358fed00",
           "LinkedTitle": true,
           "Name": "Parent Folder",
           "Plugin": {
@@ -188,6 +188,23 @@
             {}
           ],
           "UUID": "com.elgato.streamdeck.profile.backtoparent"
+        },
+        "3,2": {
+          "ActionID": "0cb60d13-e486-465d-ade7-b321fd00a9a2",
+          "LinkedTitle": true,
+          "Name": "Pit\nState",
+          "Plugin": {
+            "Name": "LMU Sim Racing",
+            "UUID": "com.simracing.lmu",
+            "Version": "1.0.0.0"
+          },
+          "Resources": null,
+          "Settings": {},
+          "State": 0,
+          "States": [
+            {}
+          ],
+          "UUID": "com.simracing.lmu.pit-state"
         }
       },
       "Type": "Keypad"

@@ -138,35 +138,25 @@ export function renderFuelCalc(lapsRemaining, fuelNeeded, fuelPerLap) {
 <text x="72" y="136" text-anchor="middle" ${FONT} font-size="13" font-weight="600" fill="#666">${fuelPerLap.toFixed(2)} L/lap</text>
 ${SVG_CLOSE}`;
 }
-/** 2x2 tire pressure grid with colored background cells. */
-export function renderTirePressure(pressures, optMinKpa, optMaxKpa) {
-    const labels = ["FL", "FR", "RL", "RR"];
-    const cells = pressures.map((kpa, i) => ({
-        label: labels[i],
-        value: (kpa / 6.895).toFixed(1),
-        color: pressureColor(kpa, optMinKpa, optMaxKpa),
-    }));
-    return renderTireGrid("PRESSURE", cells);
-}
-/** 2x2 tire temperature grid. */
-export function renderTireTemp(temps) {
-    const labels = ["FL", "FR", "RL", "RR"];
-    const cells = temps.map((c, i) => ({
-        label: labels[i],
-        value: `${c.toFixed(0)}°`,
-        color: tempColor(c),
-    }));
-    return renderTireGrid("TIRE TEMP", cells);
-}
-/** 2x2 tire wear grid. */
-export function renderTireWear(wear) {
-    const labels = ["FL", "FR", "RL", "RR"];
-    const cells = wear.map((w, i) => ({
-        label: labels[i],
-        value: `${Math.round(w * 100)}%`,
-        color: wearColor(w),
-    }));
-    return renderTireGrid("TIRE WEAR", cells);
+/** Single tire button — shows pressure (big), temp, and wear bar for one corner. */
+export function renderSingleTire(corner, pressureKpa, tempC, wear, optMinKpa, optMaxKpa) {
+    const psi = pressureKpa / 6.895;
+    const pColor = pressureColor(pressureKpa, optMinKpa, optMaxKpa);
+    const tColor = tempColor(tempC);
+    const wColor = wearColor(wear);
+    const wearPct = Math.round(wear * 100);
+    const wearBarW = Math.round(wear * 100);
+    const bgTint = dimColor(pColor);
+    return `${SVG_OPEN}
+<rect width="${W}" height="${H}" fill="${BG}" rx="10"/>
+<rect x="6" y="6" width="132" height="132" fill="${bgTint}" rx="8"/>
+<text x="72" y="26" text-anchor="middle" ${FONT} font-size="18" font-weight="900" fill="#bbb">${corner}</text>
+<text x="72" y="68" text-anchor="middle" ${FONT} font-size="42" font-weight="900" fill="${pColor}">${psi.toFixed(1)}</text>
+<text x="72" y="88" text-anchor="middle" ${FONT} font-size="12" font-weight="600" fill="#888">PSI</text>
+<text x="72" y="112" text-anchor="middle" ${FONT} font-size="22" font-weight="900" fill="${tColor}">${tempC.toFixed(0)}°C</text>
+<rect x="22" y="124" width="100" height="10" fill="#222" rx="3"/>
+<rect x="22" y="124" width="${wearBarW}" height="10" fill="${wColor}" rx="3"/>
+${SVG_CLOSE}`;
 }
 export function renderFlag(flagType) {
     const flag = FLAG_COLORS[flagType] || FLAG_COLORS.none;
