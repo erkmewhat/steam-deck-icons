@@ -200,6 +200,8 @@ bash tools/restart-streamdeck.sh   # Kill and relaunch SD app
 - **SD does not support animated GIFs/WebP** on state changes — use setState with static images only.
 - **setImage() with SVG data URIs** does not visually update buttons — use setState() only.
 - **Full SDK reference**: `tools/sd-sdk-reference.md` (1500 lines) — read before any plugin work.
+- **Yellow flag alert not working correctly** (v0.3.0) — flag detection or alert display has issues during live LMU sessions. Needs raw value logging of `gamePhase`, `yellowFlagState`, `sectorFlags[]`, `flagByte` to diagnose. RPM/gear display confirmed working.
+- **setImage() dynamic rendering must use PNG** — SVG data URIs cause flashing. Render SVG→PNG via resvg-js before calling setImage(). See `plugin/src/telemetry/svg-to-png.ts`.
 
 ---
 
