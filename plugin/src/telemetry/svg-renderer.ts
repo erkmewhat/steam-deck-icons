@@ -181,6 +181,43 @@ export function renderSingleTire(
 ${SVG_CLOSE}`;
 }
 
+/** Full-button flag alert — used to take over ALL buttons during flag changes. */
+export function renderFlagAlert(flagType: string, pulse: boolean): string {
+    const flag = FLAG_COLORS[flagType] || FLAG_COLORS.none;
+    const bg = pulse ? flag.bg : `${flag.bg}cc`; // slightly dimmed on off-pulse
+
+    if (flagType === "yellow") {
+        // Yellow flag alert — high-vis warning stripes
+        return `${SVG_OPEN}
+<rect width="${W}" height="${H}" fill="#ddaa00" rx="10"/>
+<rect x="0" y="0" width="20" height="${H}" fill="#000" opacity="0.3"/>
+<rect x="${W - 20}" y="0" width="20" height="${H}" fill="#000" opacity="0.3"/>
+<text x="72" y="56" text-anchor="middle" ${FONT} font-size="20" font-weight="900" fill="#000">YELLOW</text>
+<text x="72" y="90" text-anchor="middle" ${FONT} font-size="32" font-weight="900" fill="#000">FLAG</text>
+<text x="72" y="126" text-anchor="middle" ${FONT} font-size="22" font-weight="900" fill="#000">${pulse ? "\u26a0" : "\u26a0\u26a0\u26a0"}</text>
+${SVG_CLOSE}`;
+    }
+
+    if (flagType === "blue") {
+        return `${SVG_OPEN}
+<rect width="${W}" height="${H}" fill="#0066ee" rx="10"/>
+<text x="72" y="56" text-anchor="middle" ${FONT} font-size="20" font-weight="900" fill="#fff">BLUE FLAG</text>
+<text x="72" y="96" text-anchor="middle" ${FONT} font-size="18" font-weight="900" fill="#fff">LET PASS</text>
+${SVG_CLOSE}`;
+    }
+
+    if (flagType === "red") {
+        return `${SVG_OPEN}
+<rect width="${W}" height="${H}" fill="#dd0000" rx="10"/>
+<text x="72" y="56" text-anchor="middle" ${FONT} font-size="20" font-weight="900" fill="#fff">RED FLAG</text>
+<text x="72" y="96" text-anchor="middle" ${FONT} font-size="18" font-weight="900" fill="#fff">STOP</text>
+${SVG_CLOSE}`;
+    }
+
+    // Generic alert for other flag types
+    return renderFlag(flagType);
+}
+
 export function renderFlag(flagType: string): string {
     const flag = FLAG_COLORS[flagType] || FLAG_COLORS.none;
 
